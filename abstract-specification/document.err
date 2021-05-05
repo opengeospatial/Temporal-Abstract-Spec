@@ -1,0 +1,42 @@
+./document.err errors
+
+
+== AsciiDoc Input
+
+(ID _bibliography): Section not marked up as [bibliography]!
+	#<Asciidoctor::Section@46944084335360 {level: 1, title: "B. Bibliography", blocks: 6}>
+(Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="Simonis2018"/>], Standardized Big Data Processing in Hybrid Clouds. In: Proceedings of the 4th International Conference on Geographical Information Systems Theory, Applications and Management - Volume 1: GISTAM, pp. 205–210. SciTePress (2018).
+	#<Asciidoctor::List@46944084334580 {context: :ulist, style: nil, items: 1}>
+(Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="ogc14-083r2"/>], OGC: OGC 14-083r2: Moving Features Encoding Part I: XML Core, 2015
+	#<Asciidoctor::List@46944084333660 {context: :ulist, style: nil, items: 1}>
+(Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="ogc14-084r2"/>], OGC: OGC 14-084r2: Moving Features Encoding Extension: Simple Comma Separated Values
+	#<Asciidoctor::List@46944084332740 {context: :ulist, style: nil, items: 1}>
+(Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="ogc11-165r2"/>], OGC: OGC 11-165r2: CF-netCDF3 Data Model Extension standard, 2012
+	#<Asciidoctor::List@46944084331820 {context: :ulist, style: nil, items: 1}>
+(Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="ogc10-092r3"/>], OGC: OGC 10-092r3: NetCDF Binary Encoding Extension Standard: netCDF Classic and 64-bit Offset Format, 2011
+	#<Asciidoctor::List@46944084330900 {context: :ulist, style: nil, items: 1}>
+(Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="netcdf"/>], Lawrence Livermore National Laboratory: NetCDF CF Metadata Conventions – <link target="http://cfconventions.org/"/>
+	#<Asciidoctor::List@46944084329980 {context: :ulist, style: nil, items: 2}>
+(Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="acdd"/>], ESIP: Attribute Convention for Data Discovery (ACDD) – <link target="http://wiki.esipfed.org/index.php/"/>
+	#<Asciidoctor::List@46944084329980 {context: :ulist, style: nil, items: 2}>
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000073): Table should have title
+	<table id="_f01bf304-11bd-4fe4-a1ab-c9818d4ecbbf" unnumbered="true">
+	<tbody>
+	<tr>
+	<th valign="top" align="left">Name</th>
+	<th valign="top" align="left">Affiliation</th>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000183:380): element "clause" not allowed here; expected the element end-tag or element "submitters"
+(XML Line 000186:65): element "clause" not allowed here; expected the element end-tag or element "submitters"
+(XML Line 000190:109): element "clause" not allowed here; expected the element end-tag or element "submitters"
+(XML Line 000235:62): element "link" not allowed here; expected the element end-tag, text or element "br", "em", "hi", "index", "smallcap", "strike", "strong", "sub", "sup", "tt" or "underline"
+(XML Line 000252:102): value of attribute "obligation" is invalid; must be equal to "informative" or "normative"
+(XML Line 000258:6108): element "ext" not allowed here; expected the element end-tag or element "abstract", "accesslocation", "classification", "copyright", "extent", "keyword", "license", "medium", "place", "price", "relation", "series", "status" or "validity"
+(XML Line 000258:8768): element "ext" not allowed here; expected the element end-tag or element "abstract", "accesslocation", "classification", "copyright", "extent", "keyword", "license", "medium", "place", "price", "relation", "series", "status" or "validity"

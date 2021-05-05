@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="presentation" version="1.3.1">
+<bibdata type="standard">
+<title language="en" format="text/plain">Abstract specification topic for OGC (add title text)</title>
+<docidentifier type="ogc-external">http://www.opengis.net/doc/AS/dggs/1.0</docidentifier><docidentifier type="ogc-external">http://docs.opengeospatial.org/as/15-104r5/15-104r5.html</docidentifier><docidentifier type="ogc-internal">15-104r5</docidentifier>
+
+
+<docnumber>15-104r5</docnumber>
+<date type="published">
+<on>2017-08-01</on>
+</date>
+<date type="issued">
+<on>2017-06-13</on>
+</date>
+<date type="received">
+<on>2015-09-30</on>
+</date>
+<contributor>
+<role type="author"/>
+<organization>
+<name>Met Office</name>
+</organization>
+</contributor>
+<contributor>
+<role type="editor"/>
+<person>
+<name>
+<completename>Chris Little</completename>
+</name>
+</person>
+</contributor>
+<contributor>
+<role type="publisher"/>
+<organization>
+<name>Open Geospatial Consortium</name>
+</organization>
+</contributor>
+<edition>1.0</edition>
+
+<language current="true">en</language>
+<script current="true">Latn</script><abstract>
+<p>&lt;Insert abstract here.&gt;</p>
+</abstract>
+<status>
+<stage language="">swg-draft</stage><stage language="en">Candidate SWG Draft</stage>
+</status>
+<copyright>
+<from>2021</from>
+<owner>
+<organization>
+<name>Open Geospatial Consortium</name>
+</organization>
+</owner>
+</copyright>
+<keyword>ogcdoc</keyword>
+<keyword>OGC document</keyword>
+<keyword>time</keyword>
+<keyword>temporal</keyword>
+<ext>
+<doctype language="">abstract-specification-topic</doctype>
+<editorialgroup>
+<committee>technical</committee>
+</editorialgroup>
+</ext>
+</bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Table of contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Preface</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Annex</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
+</localized-string><localized-string key="internal_terms_boilerplate" language="en"><p>For the purposes of this document, 
+    the following terms and definitions apply.</p>
+</localized-string><localized-string key="norm_with_refs_pref" language="en">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en"><p>For the purposes of this document, 
+  the terms and definitions given in % apply.</p>
+</localized-string><localized-string key="internal_external_terms_boilerplate" language="en"><p>For the purposes of this document, the terms and definitions 
+  given in % and the following apply.</p>
+</localized-string><localized-string key="term_defined_in" language="en">[term defined in %]</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="formula" language="en">Formula</localized-string><localized-string key="inequality" language="en">Formula</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">Example</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">SOURCE</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="subject" language="en">Subject</localized-string><localized-string key="inherits" language="en">Inherits</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="submitters" language="en">Submitters</localized-string><localized-string key="recommendationtest" language="en">Recommendation Test</localized-string><localized-string key="requirementtest" language="en">Requirement Test</localized-string><localized-string key="permissiontest" language="en">Permission Test</localized-string><localized-string key="recommendationclass" language="en">Recommendation Class</localized-string><localized-string key="requirementclass" language="en">Requirement Class</localized-string><localized-string key="permissionclass" language="en">Permission Class</localized-string><localized-string key="abstracttest" language="en">Abstract Test</localized-string><localized-string key="conformanceclass" language="en">Conformance Class</localized-string><localized-string key="security_empty" language="en">No security considerations have been made for this %.</localized-string><localized-string key="stage_dict.swg-draft" language="en">Candidate SWG Draft</localized-string><localized-string key="stage_dict.oab-review" language="en">Candidate OAB Review Draft</localized-string><localized-string key="stage_dict.public-rfc" language="en">Candidate Public RFC Draft</localized-string><localized-string key="stage_dict.tc-vote" language="en">Candidate TC Vote Draft</localized-string><localized-string key="stage_dict.approved" language="en">Approved</localized-string><localized-string key="stage_dict.published" language="en">Approved</localized-string><localized-string key="stage_dict.deprecated" language="en">Deprecated</localized-string><localized-string key="stage_dict.retired" language="en">Retired</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <title depth="1">Copyright notice</title>
+
+      <p align="center" id="_fa850ca7-5a2c-4901-a96e-71c1fd3ba8bd">Copyright
+        &#169; 2021 Open Geospatial Consortium<br/>
+        To obtain additional rights of use, visit 
+        <link target="http://www.ogc.org/legal/">http://www.ogc.org/legal/</link></p>
+    </clause>
+    <clause>
+      <title depth="1">Note</title>
+      <p align="left" id="_aebc1b80-cc48-492d-986b-225a628fac64">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+      <p align="left" id="_23fb370c-d7f7-44b6-ae14-79233cb50f55">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+    </clause>
+  </copyright-statement>
+  <license-statement>
+    <clause>
+      <title depth="1">License Agreement</title>
+
+      <p id="_0ce47ad5-bc82-49bf-aac6-eba09fafbc28">Permission is hereby granted by the Open Geospatial
+        Consortium, (&#8220;Licensor&#8221;), free of charge and subject to the terms set
+        forth below, to any person obtaining a copy of this Intellectual Property and
+        any associated documentation, to deal in the Intellectual Property without
+        restriction (except as set forth below), including without limitation the
+        rights to implement, use, copy, modify, merge, publish, distribute, and/or
+        sublicense copies of the Intellectual Property, and to permit persons to whom
+        the Intellectual Property is furnished to do so, provided that all copyright notices
+        on the intellectual property are retained intact and that each person to whom
+        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
+
+      <p id="_ff4fc9f6-0845-4d44-9ae7-4ad656a53e0d">If you modify the Intellectual Property, all copies of
+        the modified Intellectual Property must include, in addition to the above
+        copyright notice, a notice that the Intellectual Property includes
+        modifications that have not been approved or adopted by LICENSOR.</p>
+
+      <p id="_7b0a45e4-e25b-4140-ac01-2048b8527aff">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
+        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
+        THE INTELLECTUAL PROPERTY IS PROVIDED &#8220;AS
+        IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
+        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
+        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
+        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
+        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER&#8217;S OWN RISK. IN NO
+        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
+        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
+        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
+        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
+        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
+        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
+
+      <p id="_baa82b84-06c7-4b1c-a993-14bd63541a6c">This license is effective until terminated. You may
+        terminate it at any time by destroying the Intellectual Property together with
+        all copies in any form. The license will also terminate if you fail to comply
+        with any term or condition of this Agreement. Except as provided in the
+        following sentence, no such termination of this license shall require the
+        termination of any third party end-user sublicense to the Intellectual Property
+        which is in force as of the date of notice of such termination. In addition,
+        should the Intellectual Property, or the operation of the Intellectual
+        Property, infringe, or in LICENSOR&#8217;s sole opinion be
+        likely to infringe, any patent, copyright, trademark or other right of a third
+        party, you agree that LICENSOR, in its sole discretion, may terminate this
+        license without any compensation or liability to you, your licensees or any
+        other party. You agree upon termination of any kind to destroy or cause to be
+        destroyed the Intellectual Property together with all copies in any form,
+        whether held by you or by any third party.</p>
+
+      <p id="_269eed61-14c2-4cfb-a546-52182fd74714">Except as contained in this notice, the name of
+        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
+        Property shall not be used in advertising or otherwise to promote the sale, use
+        or other dealings in this Intellectual Property without prior written
+        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
+        all times be the sole entity that may authorize you or any third party to use
+        certification marks, trademarks or other special designations to indicate
+        compliance with any LICENSOR standards or specifications.
+        This Agreement is
+        governed by the laws of the Commonwealth of Massachusetts. The application to
+        this Agreement of the United Nations Convention on Contracts for the
+        International Sale of Goods is hereby expressly excluded. In the event any
+        provision of this Agreement shall be deemed unenforceable, void or invalid, such
+        provision shall be modified so as to make it valid and enforceable, and as so
+        modified the entire Agreement shall remain in full force and effect. No
+        decision, action or inaction by LICENSOR shall be construed to be a waiver of
+        any rights or remedies available to it.</p>
+
+      <p id="_fb702776-db49-4d5e-bad5-77295c86109d">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    </clause>
+  </license-statement>
+
+  <legal-statement>
+    
+    <clause>
+      <title depth="1">Warning</title>
+      <p id="_7bdb3f3a-d2a3-4654-971f-c06a0fe372d8">This document is not an OGC Standard. This document is an OGC Abstract Specification Topic and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+      <p id="_a9925e2c-5d78-45f7-83c3-1f86b9500936">Further, an OGC Abstract Specification Topic should not be referenced as required or mandatory technology in procurements.</p>
+    </clause>
+    
+
+  </legal-statement>
+
+
+
+
+  <feedback-statement>
+    
+  </feedback-statement>
+</boilerplate>
+<preface><abstract id="_abstract"><title depth="1">I.<tab/>Abstract</title>
+<p id="_65197b52-cbd0-4154-bdb4-7a4ffd0efee6">&lt;Insert abstract here.&gt;</p>
+</abstract><clause id="_b9e78908-e867-46b4-be36-4678bac25f9f" type="keywords">
+<title depth="1">II.<tab/>Keywords</title>
+<p>The following are keywords to be used by search engines and
+    document catalogues.</p>
+<p>ogcdoc, OGC document, time, temporal</p></clause>
+<foreword id="_9a00a9ed-9eac-427e-9807-aeb46da5195e" obligation="informative"><title depth="1">III.<tab/>Preface</title><p id="_e82cac3e-1a43-41d6-98c3-2a8bb2c3464f">&lt;Insert Preface text here.&gt;</p>
+<note id="_4b7e0be7-2e5c-458d-a0df-f9c3fb756711"><name>NOTE</name><p id="_4fb9c57b-3957-4f7b-ac5e-bb9f33740184">Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work.</p>
+<p id="_035a5245-ed02-4528-a7d5-1a0a1bfd2a14">There are two ways to specify the Preface: &#8220;simple clause&#8221; or &#8220;full clasuse&#8221;</p>
+<p id="_1709358b-66b6-4f8f-acc8-a61865e86484">If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the <tt>.Preface</tt> label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.</p>
+<p id="_36fa23a6-256f-4e66-8cee-b9ab803076ba">If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title &#8220;Preface&#8221;, i.e. <tt>== Preface</tt>. (Simple preface content can also be encoded like full preface.)</p></note></foreword><clause type="security" id="_6f671e10-54a7-416a-8563-bc7dabd30191" obligation="informative"><title depth="1">IV.<tab/>Security Considerations</title><p id="_b12afe1f-89f1-4673-b882-3e3c93561643">No security considerations have been made for this document.</p></clause><clause id="_98127cba-9997-48f0-83d0-b2323b7e0c43" type="submitting_orgs">
+<title depth="1">V.<tab/>Submitting Organizations</title>
+<p>The following organizations submitted this Document to the
+   Open Geospatial Consortium (OGC):</p>
+ <ul><li>Met Office</li></ul>
+ </clause>
+<clause id="_introduction" obligation="informative">
+<title depth="1">VII.<tab/>Introduction</title>
+<p id="_58b5d6f6-b4d6-4da6-82f6-06d1efc76b7b">&lt;Insert introduction here.&gt;</p>
+</clause><clause id="_reference_notes" obligation="informative"><title depth="1">VIII.<tab/>Reference notes</title><p id="_aee39fe3-a157-4500-97ba-d885e45713e8">&lt;Place reference notes here.&gt;</p>
+<note id="_20474543-92a1-4414-a03b-5c5a9e78d31c"><name>NOTE</name>
+<p id="_826e7e97-78c6-4bcd-a713-62c166bf3daa">If you need to place any further sections in the preface area
+use the <tt>[.preface]</tt> attribute.</p>
+</note></clause><submitters id="_submitters"><title depth="1">VI.<tab/>Submitters</title><p id="_d1b4c44a-4457-40b7-8c87-be1529464719">All questions regarding this submission should be directed to the editor or the submitters:</p>
+<table id="_f01bf304-11bd-4fe4-a1ab-c9818d4ecbbf" unnumbered="true">
+<tbody>
+<tr>
+<th valign="top" align="left">Name</th>
+<th valign="top" align="left">Affiliation</th>
+</tr>
+<tr>
+<td valign="top" align="left">Chris Little</td>
+<td valign="top" align="left">Met Office
+&#8230;&#8203;</td>
+</tr>
+</tbody>
+</table></submitters></preface><sections>
+
+
+
+
+<clause id="_scope" type="scope" obligation="normative"><title depth="1">1.<tab/>Scope</title><p id="_d55590d9-8b4e-4371-8bec-e59ba7a84f20">&lt;Insert scope text here.&gt;</p>
+<note id="_dd0867d3-69e3-4c50-9e67-f764cbb0118c"><name>NOTE</name>
+<p id="_e379e86d-ab56-4066-80da-139da9a402ab">Give the subject of the document and aspects of the scope covered by the document.</p>
+</note></clause>
+<clause id="_conformance" type="conformance" obligation="normative"><title depth="1">2.<tab/>Conformance</title><p id="_97b03495-1e66-4490-aaec-b3538bc9f6d6">&lt;Insert conformance content here&gt;</p>
+<note id="_444e983d-2488-4d53-ae1d-e2761fee176e"><name>NOTE</name>
+<p id="_4f832545-8d0b-433a-84fd-708356342347">Provide a short description of the content approached in subsequent sections and the main subject of the document</p>
+</note></clause>
+
+<terms id="_terms_and_definitions" obligation="normative"><title depth="1">4.<tab/>Terms and definitions</title><p id="_f53a335c-46aa-4707-8d9d-4b7f777f2a5c">For the purposes of this document, 
+    the following terms and definitions apply.</p>
+<term id="term-example-term"><name>4.1.</name><preferred>example term</preferred><definition><p id="_d9ca7706-cc19-4dd7-9943-db3247432f8f">term used for exemplary purposes</p></definition>
+
+
+
+<termnote id="_86244c4d-7723-4c82-89f9-2efea42fd5ce"><name>Note 1 to entry</name>
+<p id="_96a5bb66-6695-4852-88c1-f7f52df2d24a">An example note.</p>
+</termnote><termnote id="_0bf56d9a-77da-464a-8cd8-7976f9ab30cf"><name>Note 2 to entry</name>
+<p id="_0ca9f4d0-0f22-44d5-865a-033eb497f17f">This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p>
+</termnote><termexample id="_39f38690-e2df-4c6c-a4dc-497aa882582d"><name>Example </name>
+<p id="_9c56dc3e-88e4-4b44-ba94-057c543619c8">Here&#8217;s an example of an example term.
+== Conventions</p>
+</termexample><termsource status="identical">
+<origin bibitemid="ogc07036" type="inline" citeas="OGC 07-036r1">OGC 07-036r1</origin>
+</termsource></term>
+<term id="term-identifiers"><name>4.2.</name><preferred>Identifiers</preferred><definition><p id="_19e1c658-8e8d-437f-ae74-417a19e17d6f">The normative provisions in this standard are denoted by the URI</p><p id="_36a4f0f1-c35b-4f49-bffa-efd9f7542490">
+<tt>
+<link target="http://www.opengis.net/spec/{standard}/{m.n}"/>
+</tt>
+</p><p id="_3b939f76-0050-4ed7-a169-1bf973afc831">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p></definition>
+
+</term>
+<term id="term-other-conventions"><name>4.3.</name>
+<preferred>Other conventions</preferred>
+<definition><p id="_5748b0c4-931d-47a6-8ecf-001f6eae6668">&lt;Place any other convention needed with its corresponding title&gt;</p></definition>
+</term></terms>
+<clause id="_other_clauses" obligation="normative"><title depth="1">5.<tab/>Other clauses</title><p id="_469f8861-bd84-4b48-8a32-f552bdd18448">&lt;Insert clause content here&gt;</p>
+<note id="_2612126a-022c-4333-a51f-68a25465c7d0"><name>NOTE</name>
+<p id="_e4712785-d9d4-46bc-a723-d3619299b480">Add any other clauses as needed</p>
+</note></clause>
+
+</sections><annex id="_annex_title" obligation="normative"><title><strong>Annex A</strong><br/>(normative)<br/><strong>Annex Title</strong></title><p id="_06f00015-8595-4957-a585-2c52e9fab4a9">&lt;Insert annex content here&gt;</p>
+<note id="_b9ae7128-239d-47e6-9a6e-571ff66b4846"><name>NOTE</name>
+<p id="_f4ac7e85-9372-4a44-8804-2e0290b004a7">Place annex material in sequential order and set <tt>obligation</tt> attribute as &#8220;normative&#8221; (default) or &#8220;informative&#8221; according to the case.</p>
+</note></annex><annex id="_df30c86c-7f44-4e24-9fe2-04c065180db4" obligation="" language="" script=""><title><strong>Annex B</strong><br/>(informative)</title><references id="_bibliography" normative="false" obligation="informative"><title depth="1">B.<tab/>Bibliography</title>
+
+
+
+
+</references></annex><bibliography><references id="_references" normative="true" obligation="informative"><title depth="1">3.<tab/>Normative references</title><p id="_c03abba4-bb51-48b5-acfa-c9a71bd7884c">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+ <bibitem id="iso19101" type="standard">  <fetched>2021-05-05</fetched>  <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>  <title type="title-main" format="text/plain" language="en" script="Latn">Reference model</title>  <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Fundamentals</title>  <title type="main" format="text/plain" language="en" script="Latn">Geographic information&#8201;&#8212;&#8201;Reference model&#8201;&#8212;&#8201;Part 1: Fundamentals</title>  <uri type="src">https://www.iso.org/standard/59164.html</uri>  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:59164:en</uri>  <uri type="rss">https://www.iso.org/contents/data/standard/05/91/59164.detail.rss</uri>  <docidentifier type="ISO">ISO 19101-1:2014</docidentifier>  <docidentifier type="URN">urn:iso:std:iso:19101:-1:stage-90.93:ed-1:en</docidentifier>  <docnumber>19101</docnumber>  <date type="published">    <on>2014</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      <name>International Organization for Standardization</name>      <abbreviation>ISO</abbreviation>      <uri>www.iso.org</uri>    </organization>  </contributor>  <edition>1</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">ISO 19101-1:2014 defines the reference model for standardization in the field of geographic information. This reference model describes the notion of interoperability and sets forth the fundamentals by which this standardization takes place.Although structured in the context of information technology and information technology standards, ISO 19101-1:2014 is independent of any application development method or technology implementation approach.</abstract>  <status>    <stage>90</stage>    <substage>93</substage>  </status>  <copyright>    <from>2014</from>    <owner>      <organization>        <name>ISO</name>      </organization>    </owner>  </copyright>  <relation type="obsoletes">    <bibitem type="standard">      <formattedref format="text/plain">ISO 19101:2002</formattedref>    </bibitem>  </relation>  <relation type="updates">    <bibitem type="standard">      <formattedref format="text/plain">ISO/WD 19101-1</formattedref>      <date type="circulated">        <on>2020</on>      </date>    </bibitem>  </relation>  <place>Geneva</place></bibitem> <bibitem id="iso19103" type="standard">  <fetched>2021-05-05</fetched>  <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>  <title type="title-main" format="text/plain" language="en" script="Latn">Conceptual schema language</title>  <title type="main" format="text/plain" language="en" script="Latn">Geographic information&#8201;&#8212;&#8201;Conceptual schema language</title>  <uri type="src">https://www.iso.org/standard/56734.html</uri>  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:56734:en</uri>  <uri type="rss">https://www.iso.org/contents/data/standard/05/67/56734.detail.rss</uri>  <docidentifier type="ISO">ISO 19103:2015</docidentifier>  <docidentifier type="URN">urn:iso:std:iso:19103:stage-90.60:ed-1:en</docidentifier>  <docnumber>19103</docnumber>  <date type="published">    <on>2015</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      <name>International Organization for Standardization</name>      <abbreviation>ISO</abbreviation>      <uri>www.iso.org</uri>    </organization>  </contributor>  <edition>1</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">ISO 19103:2015 provides rules and guidelines for the use of a conceptual schema language within the context of geographic information. The chosen conceptual schema language is the Unified Modeling Language (UML).ISO 19103.2015 provides a profile of the Unified Modelling Language (UML).The standardization target type of this standard is UML schemas describing geographic information.</abstract>  <status>    <stage>90</stage>    <substage>60</substage>  </status>  <copyright>    <from>2015</from>    <owner>      <organization>        <name>ISO</name>      </organization>    </owner>  </copyright>  <relation type="obsoletes">    <bibitem type="standard">      <formattedref format="text/plain">ISO/TS 19103:2005</formattedref>    </bibitem>  </relation>  <place>Geneva</place></bibitem> <bibitem id="ogc06103" type="standard">  <fetched>2021-05-05</fetched>  <title type="title-intro" format="text/plain" language="en" script="Latn">OpenGIS Implementation Specification for Geographic information</title>  <title type="title-main" format="text/plain" language="en" script="Latn">Simple feature access</title>  <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Common architecture</title>  <title type="main" format="text/plain" language="en" script="Latn">OpenGIS Implementation Specification for Geographic information&#8201;&#8212;&#8201;Simple feature access&#8201;&#8212;&#8201;Part 1: Common architecture</title>  <uri type="obp">https://portal.ogc.org/files/?artifact_id=25355</uri>  <docidentifier type="OGC">06-103r4</docidentifier>  <date type="published">    <on>2011</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename>John Herring</completename>      </name>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Open Geospatial Consortium</name>    </organization>  </contributor>  <edition>4</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">The OpenGIS&#174; Simple Features Interface Standard (SFS) provides a well-defined and common way for applications to store and access feature data in relational or object-relational databases, so that the data can be used to support other applications through a common feature model, data store and information access interface. OpenGIS Simple Features are geospatial features described using vector data elements such as points, lines and polygons.  </abstract>  <ext>    <doctype>standard</doctype>    <docsubtype>implementation</docsubtype>    <editorialgroup>      <committee>technical</committee>    </editorialgroup>  </ext></bibitem> <bibitem id="ogc07036" type="standard">  <fetched>2021-05-05</fetched>  <title type="title-intro" format="text/plain" language="en" script="Latn">OpenGIS Geography Markup Language (GML) Encoding Standard</title>  <title type="title-main" format="text/plain" language="en" script="Latn">with corrigendum</title>  <title type="main" format="text/plain" language="en" script="Latn">OpenGIS Geography Markup Language (GML) Encoding Standard&#8201;&#8212;&#8201;with corrigendum</title>  <uri type="obp">https://portal.ogc.org/files/?artifact_id=74183&amp;version=2</uri>  <docidentifier type="OGC">07-036r1</docidentifier>  <date type="published">    <on>2018</on>  </date>  <contributor>    <role type="author"/>    <person>      <name>        <completename>Clemens Portele</completename>      </name>    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      <name>Open Geospatial Consortium</name>    </organization>  </contributor>  <edition>1</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">The OpenGIS&#174; Geography Markup Language Encoding Standard (GML) The Geography Markup Language (GML) is an XML grammar for expressing geographical features. GML serves as a modeling language for geographic systems as well as an open interchange format for geographic transactions on the Internet. As with most XML based grammars, there are two parts to the grammar &#8211; the schema that describes the document and the instance document that contains the actual data. A GML document is described using a GML Schema. This allows users and developers to describe generic geographic data sets that contain points, lines and polygons. However, the developers of GML envision communities working to define community-specific application schemas [en.wikipedia.org/wiki/GML_Application_Schemas] that are specialized extensions of GML. Using application schemas, users can refer to roads, highways, and bridges instead of points, lines and polygons. If everyone in a community agrees to use the same schemas they can exchange data easily and be sure that a road is still a road when they view it.  Clients and servers with interfaces that implement the OpenGIS&#174; Web Feature Service Interface Standard[http://www.opengeospatial.org/standards/wfs] read and write GML data. GML is also an ISO standard (ISO 19136:2007) [www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=32554 ]. </abstract>  <ext>    <doctype>standard</doctype>    <docsubtype>implementation</docsubtype>    <editorialgroup>      <committee>technical</committee>    </editorialgroup>  </ext></bibitem></references></bibliography>
+</ogc-standard>
