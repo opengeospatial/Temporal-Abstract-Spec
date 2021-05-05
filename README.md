@@ -12,7 +12,7 @@ Copy in OGC staff by adding @ghobona to the Issue's body.
 
 ## To compile the document using a docker image
 
-`docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts  metanorma/mn  metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc`
+`docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts  metanorma/mn  metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf document.adoc`
 
 NOTE: You need to add the --agree-to-terms option to retrieve licenced fonts.
 

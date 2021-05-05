@@ -4,27 +4,27 @@
 == AsciiDoc Input
 
 (ID _bibliography): Section not marked up as [bibliography]!
-	#<Asciidoctor::Section@46944084335360 {level: 1, title: "B. Bibliography", blocks: 6}>
+	#<Asciidoctor::Section@47039507423900 {level: 1, title: "B. Bibliography", blocks: 6}>
 (Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="Simonis2018"/>], Standardized Big Data Processing in Hybrid Clouds. In: Proceedings of the 4th International Conference on Geographical Information Systems Theory, Applications and Management - Volume 1: GISTAM, pp. 205–210. SciTePress (2018).
-	#<Asciidoctor::List@46944084334580 {context: :ulist, style: nil, items: 1}>
+	#<Asciidoctor::List@47039507439460 {context: :ulist, style: nil, items: 1}>
 (Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="ogc14-083r2"/>], OGC: OGC 14-083r2: Moving Features Encoding Part I: XML Core, 2015
-	#<Asciidoctor::List@46944084333660 {context: :ulist, style: nil, items: 1}>
+	#<Asciidoctor::List@47039507438540 {context: :ulist, style: nil, items: 1}>
 (Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="ogc14-084r2"/>], OGC: OGC 14-084r2: Moving Features Encoding Extension: Simple Comma Separated Values
-	#<Asciidoctor::List@46944084332740 {context: :ulist, style: nil, items: 1}>
+	#<Asciidoctor::List@47039507437620 {context: :ulist, style: nil, items: 1}>
 (Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="ogc11-165r2"/>], OGC: OGC 11-165r2: CF-netCDF3 Data Model Extension standard, 2012
-	#<Asciidoctor::List@46944084331820 {context: :ulist, style: nil, items: 1}>
+	#<Asciidoctor::List@47039507436700 {context: :ulist, style: nil, items: 1}>
 (Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="ogc10-092r3"/>], OGC: OGC 10-092r3: NetCDF Binary Encoding Extension Standard: netCDF Classic and 64-bit Offset Format, 2011
-	#<Asciidoctor::List@46944084330900 {context: :ulist, style: nil, items: 1}>
+	#<Asciidoctor::List@47039507435780 {context: :ulist, style: nil, items: 1}>
 (Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="netcdf"/>], Lawrence Livermore National Laboratory: NetCDF CF Metadata Conventions – <link target="http://cfconventions.org/"/>
-	#<Asciidoctor::List@46944084329980 {context: :ulist, style: nil, items: 2}>
+	#<Asciidoctor::List@47039507434860 {context: :ulist, style: nil, items: 2}>
 (Section: Bibliography): no anchor on reference, markup may be malformed: see https://www.metanorma.com/author/topics/document-format/bibliography/ , https://www.metanorma.com/author/iso/topics/markup/#bibliographies: [<bookmark id="acdd"/>], ESIP: Attribute Convention for Data Discovery (ACDD) – <link target="http://wiki.esipfed.org/index.php/"/>
-	#<Asciidoctor::List@46944084329980 {context: :ulist, style: nil, items: 2}>
+	#<Asciidoctor::List@47039507434860 {context: :ulist, style: nil, items: 2}>
 
 
 == Metanorma XML Style Warning
 
 (XML Line 000073): Table should have title
-	<table id="_f01bf304-11bd-4fe4-a1ab-c9818d4ecbbf" unnumbered="true">
+	<table id="_7eabee42-1eaa-4a11-930c-568951aa9e6a" unnumbered="true">
 	<tbody>
 	<tr>
 	<th valign="top" align="left">Name</th>
