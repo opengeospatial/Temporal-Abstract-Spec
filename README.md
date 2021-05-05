@@ -8,7 +8,7 @@ Much effort over decades has gone into establishing complex structures to repres
 
 The aim of the document is to establish a clear terminology, so that people are clearly aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps help build better interoperable systems.
 
-
+Until more work is done, please see and use the repo Wiki to gather information and draft documents.
 
 
 ## About this document
