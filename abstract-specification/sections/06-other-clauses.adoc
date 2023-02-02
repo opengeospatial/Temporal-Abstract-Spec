@@ -101,6 +101,13 @@ If there are two or more clocks, stationary with respect to each other, and a pr
 However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.  
 
 == Other clauses
+
+Do we need more detail, such as temporal entities?
+
+Here are the various diagrams from the W3C Time Ontology:
+
+
+
 ====
 Add any other clauses as needed
 ====
