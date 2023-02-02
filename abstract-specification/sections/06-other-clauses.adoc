@@ -1,12 +1,17 @@
-
 == Abstract Temporal Reference Model
-My attempt at a Temporal Abstract Reference model after ISO19111:2019, aka OGC Abstract Specification Topic 2: Referencing by coordinates, OGC18-005r4 
+=== Introduction
+When OGC standards involve time, they generally refer to the ISO documents such as ISO 19108, ISO 19111, ISO8601, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates.
 
-External identifier of this OGC® document: http://www.opengis.net/doc/AS/topic-2/5.0
+Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the ISO8601 notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the attendant ambiguities, imprecision and inappropriate scope.
 
-URL for this OGC® document: http://docs.opengeospatial.org/as/18-005r4/18-005r4.html
+The aim of this document is to establish a clear terminology, so that people are clearly aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps help build better interoperable systems.
 
-This is a UML diagram using Mermaid. Not sure what the multiplicities should be.
+== Abstract Conceptual Model
+My attempt at a Temporal Abstract Reference model after http://docs.opengeospatial.org/as/18-005r4/18-005r4.html[ISO19111:2019], aka http://www.opengis.net/doc/AS/topic-2/5.0[OGC Abstract Specification Topic 2: Referencing by coordinates, OGC18-005r4] 
+
+The model is also informed by the https://www.w3.org/TR/owl-time/[W3C Time Ontology in OWL] 
+
+Below is a UML diagram using Mermaid. Not sure what the multiplicities should be.
 
 (Should be converted to PlantUML for Metanorma, by replacing Mermaid container with:
 
@@ -18,11 +23,72 @@ This is a UML diagram using Mermaid. Not sure what the multiplicities should be.
 
 ```mermaid
 classDiagram
+ReferenceSystem "1" *-- "1..*" SpatialReferenceSystem
 ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
     TemporalReferenceSystem "0..1" *-- "1" TemporalCoordinateReferenceSystem
     TemporalReferenceSystem "0..1" *-- "1" Calendar
     TemporalReferenceSystem "0..1" *-- "1" OrdinalTemporalReferenceSystem
 ```
+
+== Temporal Regimes
+To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical concepts.
+The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, of calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.
+
+=== Events and Operators
+The simplest way of relating entities in time is by events that can be ordered, that is, established in a sequence, and this seuence is used as an approximate measure of the passage of time.
+
+In this regime, no clocks or time measurement are defined, only events, that may be ordered in relation to each other. For example, geological layers, sediment or ice core layers, archaeological sequences, sequential entries in computer logs without coordinated time. 
+
+One set of events may be completely ordered with respect to each other, but another set of similar internally consistent events cannot be cross-referenced until extra information is available.
+
+In this regime, the Allen Operators [Allen, Ref 3] can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform operations like (C-A) as we have not defined any timescale or measurements. For example, ‘subtracting’ Ordovician from Jurassic is meaningless.
+
+This regime constitutes an ordinal temporal reference system, with discrete enumerated events.
+
+=== Simple Clocks and Discrete Timescales
+In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about sun, earth's rotation about its axis, heart beats, or vibrations of electrically stimulated quartz crystals. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each ‘tick’. A mechanism for counting, or possibly measuring, the ticks is desirable.
+
+There is no sub-division of a single clock tick. Measuring time consists of counting the complete number of repetitions since the clock started, or since some other event at a given clock count. 
+
+There is no time measurement before the clock started.
+
+It may seem that time can be measured between ‘ticks’ by interpolation, but this needs another clock, with faster ticks. This processing of devising more precise clocks continues down to the atomic scale, and then the process of physically trying to interpolate between ticks is not possible.
+
+The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice is it a compromise across about two hundred separate atomic clocks.
+
+This regime constitutes a coordinate temporal reference system, with discrete integer units of measure which can be subject to integer arithmetic.
+
+=== CRS and Continuous Timescales
+This regime takes a clock from the previous regime ands assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using arithmetic, rather than any physical device.
+
+It is also assumed that time can be extrapolated to before the time when the clock started and into the future.
+
+This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic, we have a Coordinate Reference System.
+
+Some examples are:
+ - Unix milliseconds since 1970-01-01T00:00:00.0Z
+ - Julian Days, and fractions of a day, since noon on 1st January, 4713 BCE.
+ 
+This regime also constitutes a coordinate temporal reference system, with continuous floating-point units of measure, which can be subject to the full range of arithmetic.
+
+=== Calendars
+In this regime, counts and measures of time are related to the rotations of the earth, moon and sun. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) must be a calendar, albeit a very simple one, as there is no year zero. That is, Year 34CE – Year 12CE is a duration of 2 years. Year 1CE-Year 1BCE is one year, not two. 
+
+This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia.
+
+=== Others
+This may in fact be a series of regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography.
+
+==== Relativistic
+A regime may be needed for ‘space-time’, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
+
+==== Accountancy
+The financial and managerial world often uses weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are inappropriate for scientific or technical purposes.
+
+== Synchronisation of clocks
+
+
+
 == Other clauses
 
 
