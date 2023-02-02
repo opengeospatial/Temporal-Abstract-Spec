@@ -1,7 +1,31 @@
 
+== Abstract Temporal Reference Model
+My attempt at a Temporal Abstract Reference model after ISO19111:2019, aka OGC Abstract Specification Topic 2: Referencing by coordinates, OGC18-005r4 
+
+External identifier of this OGC® document: http://www.opengis.net/doc/AS/topic-2/5.0
+
+URL for this OGC® document: http://docs.opengeospatial.org/as/18-005r4/18-005r4.html
+
+This is a UML diagram using Mermaid. Not sure what the multiplicities should be.
+
+(Should be converted to PlantUML for Metanorma, by replacing Mermaid container with:
+
+`[plantuml]
+@startuml
+.
+.
+@enduml`
+
+```mermaid
+classDiagram
+ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
+    TemporalReferenceSystem "0..1" *-- "1" TemporalCoordinateReferenceSystem
+    TemporalReferenceSystem "0..1" *-- "1" Calendar
+    TemporalReferenceSystem "0..1" *-- "1" OrdinalTemporalReferenceSystem
+```
 == Other clauses
 
-<Insert clause content here>
+
 
 [NOTE]
 ====
