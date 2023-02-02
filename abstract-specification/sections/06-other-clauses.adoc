@@ -90,8 +90,10 @@ A regime may be needed for ‘space-time’, off the planet Earth, such as for r
 
 Relativistic effects may need to be taken into account for satellites and other space craft becuase of their relative speed and position in Earth's gravity well.
 
+The key approach is to ensure each moving feature of interest has its own clock and time, known as its 'proper time'.
+
 ==== Accountancy
-The financial and managerial world often uses weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are inappropriate for scientific or technical purposes.
+The financial and administrative worlds often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
 
 == Synchronisation of clocks
 If there are two or more clocks, stationary with respect to each other, and a practical method of communicating their times to each other, the clocks can be perfetly synchronized.
@@ -99,10 +101,6 @@ If there are two or more clocks, stationary with respect to each other, and a pr
 However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.  
 
 == Other clauses
-
-
-
-[NOTE]
 ====
 Add any other clauses as needed
 ====
