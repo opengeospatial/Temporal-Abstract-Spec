@@ -10,3 +10,5 @@
 
 * [[[iso19111, ISO 19111:2019]]], ISO 19111:2019 Geographic information — Referencing by coordinates, 2019, https://www.iso.
 org/standard/74039.html
+
+* [[[ogcGeoPose, OGC GeoPose]]], OGC: GeoPose Specification draft, 2021. https://github.com/opengeospatial/GeoPose/
