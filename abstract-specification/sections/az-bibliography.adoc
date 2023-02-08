@@ -12,3 +12,25 @@
 org/standard/74039.html
 
 * [[[ogcGeoPose, OGC GeoPose]]], OGC: GeoPose Specification draft, 2021. https://github.com/opengeospatial/GeoPose/
+
+[3] OGC: OGC 22-038: Reference Frame Transformation Engineering Report, 2022. http://
+ogc.pages.ogc.org/T18-3Dplus_Data_Standards_and_Streaming/documents/D025/
+document.html
+
+[4] Astronomical Algorithms, Jean Meeus, https://www.agopax.it/Libri_astronomia/pdf/
+Astronomical%20Algorithms.pdf
+
+[5] Consultative Committee for Space Data Systems, NAVIGATION DATA—DEFINITIONS
+AND CONVENTIONS,2019, https://public.ccsds.org/Pubs/500x0g4.pdf
+
+[6] Springer Handbook of Global Navigation Satellite Systems, Peter J.G. Teunissen, Oliver
+Montenbruck, https://doi.org/10.1007/978-3-319-42928-1
+
+[7] IERS Earth rotation data — https://www.iers.org/IERS/EN/DataProducts/
+EarthOrientationData/eop.html
+
+[8] NASA NAIF, SPICE Documentation, retrieved January 2023, https://naif.jpl.nasa.gov/
+naif/tutorials.html
+
+[9] The Open Group, UNIX Time, retrieved January 2023, https://pubs.opengroup.org/
+onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16
