@@ -13,6 +13,25 @@ org/standard/74039.html
 
 * [[[ogcGeoPose, OGC GeoPose]]], OGC: GeoPose Specification draft, 2021. https://github.com/opengeospatial/GeoPose/
 
+SO: Geographic information — Reference model — Part 1: Fundamentals, 2014. https://www.
+iso.org/standard/59164.html
+
+ISO: Geographic information — Conceptual schema language, 2015. https://www.iso.org/
+standard/56734.html
+
+ISO: Geographic information — Spatial referencing by geographic identifiers, 2019. https://
+www.iso.org/standard/70742.html
+
+ISO: Geographic information — Well-known text representation of coordinate reference
+systems, 2019. https://www.iso.org/standard/76496.html
+
+ISO: Geographic information — Geography Markup Language (GML), 2007. https://www.iso.
+org/standard/32554.html
+
+Adrian Custer: OGC 09-083r4, GeoAPI 3.0 Implementation Standard with corrigendum. Open
+Geospatial Consortium (2018). https://portal.ogc.org/files/?artifact id=71648.
+
+
 [3] OGC: OGC 22-038: Reference Frame Transformation Engineering Report, 2022. http://
 ogc.pages.ogc.org/T18-3Dplus_Data_Standards_and_Streaming/documents/D025/
 document.html
