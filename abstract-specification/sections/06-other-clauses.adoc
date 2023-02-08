@@ -95,8 +95,63 @@ The key approach is to ensure each moving feature of interest has its own clock 
 ==== Accountancy
 The financial and administrative worlds often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
 
+== Attributes of the Regimes/Classes
+
+=== Attributes of Events and Ordinal Temp, oral Reference Systems
+Name/Id
+Listed or enumerated sequence of events
+First and last events
+Optional Epoch, defined in some other temporal reference system
+Optional location or region of applicability
+
+Example 1: Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Xi built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Yi, a comet was sighted" and later research identifies this as an appearence of Hailey's Comet.
+
+The events from the list may be instants, such as the change of reign, or intervals, such as the complete reign of each emperor. 
+
+Other documents may enable two such 'king lists' to be related, though not completely.
+
+=== Attributes of simple Clock and Discrete Timescale
+Name/Id
+Optional Epoch/starting time, defined in some other temporal reference system
+Optional name for each tick
+Optional End time or count
+Optional location
+
+Example 2: A well preserved fossilised log is recovered and the tree rings establish an annual 'tick'. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.
+
+=== Attribues of a CRS and Continuous Timescales
+Name/Id
+Optional Epoch/starting time, defined in some other temporal reference system
+Optional name for the measure
+Optional End time or measure
+Optional location
+
+Example 3: A long ice core is retrieved from a stable ice-sheet. From long term meteological observation the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.
+
+== Attributes of Calendars
+Name/id
+Astronomical Type (e.g. solar, sidereal, lunar, luni-solarc)
+Predictive type (e.g. observed or calculated)
+Epoch/start time
+Optional end time
+Optional location or region of applicability
+Constituent units or clocks and counts or timescales
+
+Example 4: The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country. 
+The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accomodate discrepancies, leap days annd leap seconds are intercalated in some years.
+
+Example 5: The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
+
+Example 6: The modern Jewish calendar is a calculated luni-solar calendar, and discrepancies h the solar year are addressed by adding 'leap months' every few years.
+
+Example 6: The Ba'hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday. 
+
+Example 7: The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in Cameroun.
+
+Example 8: Teams controlling remote vehicles on MArs use a solar calendar, with MArtian years and martian days (called sols). Months are not used because there are two moons, with different, rather short, 'months'.
+
 == Synchronisation of clocks
-If there are two or more clocks, stationary with respect to each other, and a practical method of communicating their times to each other, the clocks can be perfetly synchronized.
+If there are two or more clocks, stationary with respect to each other, and a practical method of communicating their times to each other, the clocks can be perfectly synchronized.
 
 However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.  
 
