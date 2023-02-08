@@ -4,6 +4,8 @@
 
 * [[[ogc22-036,OGC 22-036]]], OGC: OGC 22-036: TESTBED-18: 3D+ STANDARDS FRAMEWORK ENGINEERING REPORT (DRAFT) http://www.opengis.net/doc/PER/T18
 
+•  22-038r2 Testbed-18: Reference Frame Transformation Engineering Report
+
 * [[[iso19107,ISO 19107:2003]]], ISO 19107:2003 Geographic information — Spatial schema, 2003 https://www.iso.org/standard/26012.html
 
 * [[[iso19108, ISO 19108:2002]]], ISO 19108:2002 Geographic information — Temporal schema, 2002 https://www.iso.org/standard/26013.html
