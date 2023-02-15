@@ -10,6 +10,7 @@ The aim of the document is to establish a clear terminology, so that people are 
 
 Until more work is done, please see and use the repo Wiki to gather information and draft documents.
 
+The main content of the draft Abstract Conceptual Model is in [Section 6](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/abstract-specification/sections/06-other-clauses.adoc).
 
 ## About this document
 
