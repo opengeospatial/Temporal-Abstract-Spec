@@ -34,6 +34,8 @@ ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
 To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical concepts.
 The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, of calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.
 
+The regimes are applicable to other planets and outer space, but with due consideration.
+
 === Events and Operators
 The simplest way of relating entities in time is by events that can be ordered, that is, established in a sequence, and this sequence is used as an approximate measure of the passage of time.
 
@@ -83,7 +85,7 @@ This paper only addresses the internationally agreed Gregorian calendar. [Ref 1]
 A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System or an Ordinal Temporal Reference System.
 
 === Other Regimes
-There may in fact be a series of regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography. Local Solar Time may or may not correspond to the local statutary time in a country.
+There may in fact be a series of regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography. Local Solar Time may or may not correspond to the local statutary or legal time in a country.
 
 ==== Relativistic
 A regime may be needed for ‘space-time’, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
@@ -97,7 +99,9 @@ The financial and administrative worlds often use weeks, quarters, and other cal
 
 == Attributes of the Regimes/Classes
 
-=== Attributes of Events and Ordinal Temp, oral Reference Systems
+The top level `Reference System` is a super-class and does not have any other attributes or properties. 
+
+=== Attributes of Events and Ordinal Temporal Reference Systems
 Name/Id
 Listed or enumerated sequence of events
 First and last events
