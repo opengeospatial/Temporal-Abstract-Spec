@@ -67,6 +67,8 @@ the ACM, 1983, vol. 26 pp. 832-843.
 [13] ISO 8601:2004, Data elements and interchange formats - Information interchange -
 Representation of dates and times.
 
+[14] Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems: Second Edition by B. P. Zeigler, H. Praehofer, T. G. Kim, Academic Press, San Diego, CA, 2000.
+
 Universal Coordinated Time (UTC),
 
 Bureau International des Poids et Mesures (BIPM)
