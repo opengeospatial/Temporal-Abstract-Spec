@@ -28,6 +28,9 @@ ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
     TemporalReferenceSystem "0..1" *-- "1" TemporalCoordinateReferenceSystem
     TemporalReferenceSystem "0..1" *-- "1" Calendar
     TemporalReferenceSystem "0..1" *-- "1" OrdinalTemporalReferenceSystem
+Timescale
+Clock
+Epoch
 ```
 
 == Temporal Regimes
