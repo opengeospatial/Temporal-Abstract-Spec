@@ -33,7 +33,6 @@ org/standard/32554.html
 Adrian Custer: OGC 09-083r4, GeoAPI 3.0 Implementation Standard with corrigendum. Open
 Geospatial Consortium (2018). https://portal.ogc.org/files/?artifact id=71648.
 
-
 [3] OGC: OGC 22-038: Reference Frame Transformation Engineering Report, 2022. http://
 ogc.pages.ogc.org/T18-3Dplus_Data_Standards_and_Streaming/documents/D025/
 document.html
@@ -55,3 +54,21 @@ naif/tutorials.html
 
 [9] The Open Group, UNIX Time, retrieved January 2023, https://pubs.opengroup.org/
 onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16
+
+[10] Calendrical Calculations, Nachum Dershowitz, Edward M. Reingold. Paperback: 512
+pages. Cambridge University Press; 3rd edition (10 Dec 2007) Language: English. ISBN-
+10: 0521702380 ISBN-13: 978-0521702386
+
+[11] http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition
+
+[12] Allen, J. F., 'Maintaining Knowledge about Temporal Intervals', Communications of
+the ACM, 1983, vol. 26 pp. 832-843.
+
+[13] ISO 8601:2004, Data elements and interchange formats - Information interchange -
+Representation of dates and times.
+
+Universal Coordinated Time (UTC),
+
+Bureau International des Poids et Mesures (BIPM)
+
+International Earth Rotation and Reference Systems Service (IERS)
