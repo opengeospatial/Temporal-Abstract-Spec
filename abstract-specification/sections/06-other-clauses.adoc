@@ -53,7 +53,7 @@ In this regime, a clock is defined as any regularly repeating physical phenomena
 
 It is an assumption that the ticks are regular and homogeneous.
 
-There is no sub-division of a single clock tick. Measuring time consists of counting the complete number of repetitions since the clock started, or since some other event at a given clock count. 
+There is no sub-division between two successive clock ticks. Measuring time consists of counting the complete number of repetitions of ticks since the clock started, or since some other event at a given clock count. 
 
 There is no time measurement before the clock started, or after it stops.
 
