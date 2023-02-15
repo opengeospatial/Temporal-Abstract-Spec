@@ -1,17 +1,17 @@
 == Abstract Temporal Reference Model
 === Introduction
-When OGC standards involve time, they generally refer to the ISO documents such as ISO 19108, ISO 19111, ISO8601, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates.
+When OGC standards involve time, they generally refer to the ISO documents such as ISO 19108, ISO 19111, ISO8601, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates (equivalent to ISO 19111).
 
 Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the ISO8601 notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the attendant ambiguities, imprecision and inappropriate scope.
 
-The aim of this document is to establish a clear terminology, so that people are clearly aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps help build better interoperable systems.
+The aim of this document is to establish a clear terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.
 
 == Abstract Conceptual Model
-My attempt at a Temporal Abstract Reference Model after http://docs.opengeospatial.org/as/18-005r4/18-005r4.html[ISO19111:2019], aka http://www.opengis.net/doc/AS/topic-2/5.0[OGC Abstract Specification Topic 2: Referencing by coordinates, OGC18-005r4] 
+This attempt at a Temporal Abstract Reference Model follows http://docs.opengeospatial.org/as/18-005r4/18-005r4.html[ISO19111:2019], aka http://www.opengis.net/doc/AS/topic-2/5.0[OGC Abstract Specification Topic 2: Referencing by coordinates, OGC18-005r4] 
 
 The model is also informed by the https://www.w3.org/TR/owl-time/[W3C Time Ontology in OWL] 
 
-Below is a UML diagram using Mermaid. `Not sure what the multiplicities should be.`
+Below is a UML diagram using Mermaid. **Not sure what the multiplicities should be.**
 
 (Should be converted to PlantUML for Metanorma, by replacing Mermaid container with:
 
@@ -31,7 +31,8 @@ ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
 ```
 
 == Temporal Regimes
-To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical concepts.
+To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time and its measurement under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical concepts.
+
 The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, of calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.
 
 The regimes are applicable to other planets and outer space, but with due consideration.
@@ -50,20 +51,24 @@ This regime constitutes an Ordinal Temporal Reference System, with discrete enum
 === Simple Clocks and Discrete Timescales
 In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about sun, earth's rotation about its axis, heart beats, or vibrations of electrically stimulated quartz crystals. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each ‘tick’. A mechanism for counting, or possibly measuring, the ticks is desirable.
 
+It is an assumption that the ticks are regular and homogeneous.
+
 There is no sub-division of a single clock tick. Measuring time consists of counting the complete number of repetitions since the clock started, or since some other event at a given clock count. 
 
-There is no time measurement before the clock started.
+There is no time measurement before the clock started, or after it stops.
 
-It may seem that time can be measured between ‘ticks’ by interpolation, but this needs another clock, with faster ticks. This processing of devising more precise clocks continues down to the atomic scale, and then the process of physically trying to interpolate between ticks is not possible.
+It may seem that time can be measured between ‘ticks’ by interpolation, but this needs another clock, with faster ticks. This process of devising more precise clocks continues down to the atomic scale, and then the process of physically trying to interpolate between ticks is not possible.
 
 The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks.
+
+In this regime, the Allen Operators [Allen, Ref 3] can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform integer arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement.
 
 This regime constitutes a Temporal Coordinate Reference System, with discrete integer units of measure which can be subject to integer arithmetic.
 
 === CRS and Continuous Timescales
-This regime takes a clock from the previous regime ands assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using arithmetic, rather than any physical device.
+This regime takes a clock from the previous regime ands assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device.
 
-It is also assumed that time can be extrapolated to before the time when the clock started and into the future.
+It is also assumed that time can be extrapolated to before the time when the clock started and into the future, possibly past when the clock stops.
 
 This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic, we have a Coordinate Reference System.
 
