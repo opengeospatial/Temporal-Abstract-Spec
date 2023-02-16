@@ -13,6 +13,10 @@ The model is also informed by the https://www.w3.org/TR/owl-time/[W3C Time Ontol
 
 Below is a UML diagram using Mermaid. **Not sure what the multiplicities should be.**
 
+**Not clear what should be classes and what should be attributes of a class**
+
+**ALso, not a UML expert, so may have all sorts of things wrong that need correcting**
+
 (Should be converted to PlantUML for Metanorma, by replacing Mermaid container with:
 
 `[plantuml]
@@ -39,18 +43,18 @@ ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
     TemporalReferenceSystem "0..1" *-- "1" OrdinalTemporalReferenceSystem
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale
 TemporalCoordinateReferenceSystem "1" o-- "1" Epoch
+TemporalCoordinateReferenceSystem "1" o-- "0..1" ApplicableLocationOrDomain
 Calendar "1" o-- "0..1" Epoch
 Calendar "1" o-- "1..*" Timescale
+Calendar "1" o-- "0..1" ApplicableLocationOrDomain
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch
-Timescale "1" o-- "1" Clock
+OrdinalTemporalReferenceSystem "1" o-- "0..1" ApplicableLocationOrDomain
 OrdinalTemporalReferenceSystem "1" *-- "2..*" Event
-ApplicableLocationOrDomain "0..1" o-- "1" OrdinalTemporalReferenceSystem
-ApplicableLocationOrDomain "0..1" o-- "1" Calendar
-ApplicableLocationOrDomain "0..1" o-- "1" TemporalCoordinateReferenceSystem
+Timescale "1" o-- "1" Clock
 ```
 
 == Temporal Regimes
-To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time and its measurement under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical concepts.
+To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time and its measurement under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical cots.
 
 The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, of calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.
 
