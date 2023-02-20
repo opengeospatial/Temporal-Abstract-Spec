@@ -29,15 +29,15 @@ Below is a UML diagram using Mermaid. **Not sure what the multiplicities should 
 classDiagram
 class ReferenceSystem {
        Dimension 1..*
-       ApplicableLocationOrDomain 1
+       ApplicableLocationTimeOrDomain 1
     }
     class SpatialReferenceSystem {
        Dimension 1..*
-       ApplicableLocationOrDomain 1
+       ApplicableLocationTimeOrDomain 1
     }
     class TemporalReferenceSystem {
        Dimension 1
-       ApplicableLocationOrDomain 1
+       ApplicableLocationTimeOrDomain 1
     }
 ReferenceSystem "1" *-- "1..*" SpatialReferenceSystem
 ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
@@ -55,7 +55,7 @@ Timescale "1" o-- "1" Clock
 ```
 
 == Temporal Regimes
-To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time and its measurement under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical cots.
+To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time and its measurement under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical components.
 
 The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, of calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.
 
@@ -85,7 +85,7 @@ It may seem that time can be measured between ‘ticks’ by interpolation, but 
 
 The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differng alitudes and temperatures.
 
-In this regime, the Allen Operators [Allen, Ref 13] can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform integer arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement.
+In this regime, the Allen Operators [Allen, Ref 13] also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform integer arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement.
 
 This regime constitutes a Temporal Coordinate Reference System, with discrete integer units of measure which can be subject to integer arithmetic.
 
@@ -96,7 +96,7 @@ It is also assumed that time can be extrapolated to before the time when the clo
 
 This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic, we have a Coordinate Reference System.
 
-In this regime, the Allen Operators [Allen, Ref 13] can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform real number arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement, and between any two instants, we can always find an infinite number of instants.
+In this regime, the Allen Operators [Allen, Ref 13] also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform real number arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement, and between any two instants, we can always find an infinite number of other instants.
 
 Some examples are:
 
@@ -107,13 +107,13 @@ Some examples are:
 This regime also constitutes a Temporal Coordinate Reference System, with continuous floating-point units of measure, which can be subject to the full range of arithmetic.
 
 === Calendars
-In this regime, counts and measures of time are related to the rotations of the earth, moon and sun. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) must be a calendar, albeit a very simple one, as there is no year zero. That is, Year 34CE – Year 12CE is a duration of 2 years. Year 1CE-Year 1BCE is one year, not two. 
+In this regime, counts and measures of time are related to the rotations of the earth, moon and sun. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE-Year 1BCE is one year, not two as there is no year 0 CE or BCE. 
 
 Calendars are social constructs made by combining several clocks and associated timescales.
 
-This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia.
+This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other.
 
-A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System or an Ordinal Temporal Reference System.
+A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.
 
 === Other Regimes
 There may in fact be a series of regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography. Local Solar Time may or may not correspond to the local statutary or legal time in a country.
@@ -130,7 +130,11 @@ The financial and administrative worlds often use weeks, quarters, and other cal
 
 == Attributes of the Regimes/Classes
 
-The top level `Reference System` is a super-class and does not have any other attributes or properties. 
+The top level `Reference System` is a super-class and does not have many attributes or properties. So far, only the dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
+
+The Dimension is one  for time, or a vertical reference system, but may be as much as 6 for spatial location and orientation.
+
+Besides the conventional space and time, there may be other reference systems, such as wavelength/frequency, that can be addressed by the Abstract Conceptual Model.
 
 === Attributes of Events and Ordinal Temporal Reference Systems
 Name/Id
