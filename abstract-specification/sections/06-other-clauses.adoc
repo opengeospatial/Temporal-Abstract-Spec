@@ -83,7 +83,7 @@ There is no time measurement before the clock started, or after it stops.
 
 It may seem that time can be measured between ‘ticks’ by interpolation, but this needs another clock, with faster ticks. This process of devising more precise clocks continues down to the atomic scale, and then the process of physically trying to interpolate between ticks is not possible.
 
-The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks.
+The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differng alitudes and temperatures.
 
 In this regime, the Allen Operators [Allen, Ref 13] can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform integer arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement.
 
