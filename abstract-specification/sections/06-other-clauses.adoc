@@ -47,6 +47,7 @@ TemporalCoordinateReferenceSystem "1" o-- "0..1" ApplicableLocationOrDomain
 Calendar "1" o-- "0..1" Epoch
 Calendar "1" o-- "1..*" Timescale
 Calendar "1" o-- "0..1" ApplicableLocationOrDomain
+Calendar "1" o-- "1" Algorithm
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch
 OrdinalTemporalReferenceSystem "1" o-- "0..1" ApplicableLocationOrDomain
 OrdinalTemporalReferenceSystem "1" *-- "2..*" Event
