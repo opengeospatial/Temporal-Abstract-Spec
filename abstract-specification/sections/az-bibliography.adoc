@@ -55,9 +55,8 @@ naif/tutorials.html
 [9] The Open Group, UNIX Time, retrieved January 2023, https://pubs.opengroup.org/
 onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16
 
-[10] Calendrical Calculations, Nachum Dershowitz, Edward M. Reingold. Paperback: 512
-pages. Cambridge University Press; 3rd edition (10 Dec 2007) Language: English. ISBN-
-10: 0521702380 ISBN-13: 978-0521702386
+[10] Calendrical Calculations - The Ultimate Eidtion, Nachum Dershowitz, Edward M. Reingold. Paperback: 618
+pages. Cambridge University Press; 4th edition (2018) Language: English. ISBN-13: 978-1107683167
 
 [11] http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition
 
