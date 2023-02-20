@@ -29,12 +29,15 @@ Below is a UML diagram using Mermaid. **Not sure what the multiplicities should 
 classDiagram
 class ReferenceSystem {
        Dimension 1..*
+       ApplicableLocationOrDomain 1
     }
     class SpatialReferenceSystem {
        Dimension 1..*
+       ApplicableLocationOrDomain 1
     }
     class TemporalReferenceSystem {
        Dimension 1
+       ApplicableLocationOrDomain 1
     }
 ReferenceSystem "1" *-- "1..*" SpatialReferenceSystem
 ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
@@ -43,13 +46,10 @@ ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
     TemporalReferenceSystem "0..1" *-- "1" OrdinalTemporalReferenceSystem
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale
 TemporalCoordinateReferenceSystem "1" o-- "1" Epoch
-TemporalCoordinateReferenceSystem "1" o-- "0..1" ApplicableLocationOrDomain
 Calendar "1" o-- "0..1" Epoch
 Calendar "1" o-- "1..*" Timescale
-Calendar "1" o-- "0..1" ApplicableLocationOrDomain
 Calendar "1" o-- "1" Algorithm
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch
-OrdinalTemporalReferenceSystem "1" o-- "0..1" ApplicableLocationOrDomain
 OrdinalTemporalReferenceSystem "1" *-- "2..*" Event
 Timescale "1" o-- "1" Clock
 ```
