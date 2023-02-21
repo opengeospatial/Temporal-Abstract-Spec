@@ -39,18 +39,18 @@ class ReferenceSystem {
        Dimension 1
        ApplicableLocationTimeOrDomain 1
     }
-ReferenceSystem "1" *-- "1..*" SpatialReferenceSystem
-ReferenceSystem "1" *-- "1..*" TemporalReferenceSystem
-    TemporalReferenceSystem "0..1" *-- "1" TemporalCoordinateReferenceSystem
-    TemporalReferenceSystem "0..1" *-- "1" Calendar
-    TemporalReferenceSystem "0..1" *-- "1" OrdinalTemporalReferenceSystem
+ReferenceSystem "1" <|-- "1..*" SpatialReferenceSystem
+ReferenceSystem "1" <|-- "1..*" TemporalReferenceSystem
+    TemporalReferenceSystem "0..1" <|-- "1" TemporalCoordinateReferenceSystem
+    TemporalReferenceSystem "0..1" <|-- "1" Calendar
+    TemporalReferenceSystem "0..1" <|-- "1" OrdinalTemporalReferenceSystem
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale
 TemporalCoordinateReferenceSystem "1" o-- "1" Epoch
 Calendar "1" o-- "0..1" Epoch
 Calendar "1" o-- "1..*" Timescale
 Calendar "1" o-- "1" Algorithm
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch
-OrdinalTemporalReferenceSystem "1" *-- "2..*" Event
+OrdinalTemporalReferenceSystem "1" o-- "2..*" Event
 Timescale "1" o-- "1" Clock
 ```
 
