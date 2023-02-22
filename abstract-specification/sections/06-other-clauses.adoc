@@ -137,11 +137,15 @@ The Dimension is one  for time, or a vertical reference system, but may be as mu
 Besides the conventional space and time, there may be other reference systems, such as wavelength/frequency, that can be addressed by the Abstract Conceptual Model.
 
 === Attributes of Events and Ordinal Temporal Reference Systems
-Name/Id
-Listed or enumerated sequence of events
-First and last events
-Optional Epoch, defined in some other temporal reference system
-Optional location or region of applicability
+- Name/Id
+
+- Listed or enumerated sequence of events
+
+- First and last events
+
+- Optional Epoch, defined in some other temporal reference system
+
+- Optional location or region of applicability
 
 Example 1: Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Xi built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Yi, a comet was sighted" and later research identifies this as an appearence of Hailey's Comet.
 
@@ -150,31 +154,45 @@ The events from the list may be instants, such as the change of reign, or interv
 Other documents may enable two such 'king lists' to be related, though not completely.
 
 === Attributes of simple Clock and Discrete Timescale
-Name/Id
-Optional Epoch/starting time, defined in some other temporal reference system
-Optional name for each tick
-Optional End time or count
-Optional location
+- Name/Id
+
+- Optional Epoch/starting time, defined in some other temporal reference system
+
+- Optional name for each tick
+
+- Optional End time or count
+
+- Optional location
 
 Example 2: A well preserved fossilised log is recovered and the tree rings establish an annual 'tick'. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.
 
 === Attribues of a CRS and Continuous Timescales
-Name/Id
-Optional Epoch/starting time, defined in some other temporal reference system
-Optional name for the measure
-Optional End time or measure
-Optional location
+- Name/Id
+
+- Optional Epoch/starting time, defined in some other temporal reference system
+
+- Optional name for the measure
+
+- Optional End time or measure
+
+- Optional location
 
 Example 3: A long ice core is retrieved from a stable ice-sheet. From long term meteological observation the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.
 
 == Attributes of Calendars
-Name/id
-Astronomical Type (e.g. solar, sidereal, lunar, luni-solarc)
-Predictive type (e.g. observed or calculated)
-Epoch/start time
-Optional end time
-Optional location or region of applicability
-Constituent units or clocks and counts or timescales
+- Name/id
+
+- Astronomical Type (e.g. solar, sidereal, lunar, luni-solarc)
+
+- Predictive type (e.g. observed or calculated)
+
+- Epoch/start time
+
+- Optional end time
+
+- Optional location or region of applicability
+
+- Constituent units or clocks and counts or timescales
 
 Example 4: The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country. 
 The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accomodate discrepancies, leap days annd leap seconds are intercalated in some years.
