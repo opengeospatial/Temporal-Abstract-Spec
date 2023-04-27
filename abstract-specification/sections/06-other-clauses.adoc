@@ -107,26 +107,29 @@ Some examples are:
 This regime constitutes a Temporal Coordinate Reference System, with continuous, floating-point, units of measure, which can be subject to the full range of real arithmetic.
 
 === Calendars
-In this regime, counts and measures of time are related to the rotations of the earth, moon and sun. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE-Year 1BCE is one year, not two as there is no year 0 CE or BCE. 
+In this regime, counts and measures of time are related to the rotations of the earth, moon and sun. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE - Year 1BCE is one year, not two as there is no year 0CE or 0BCE. 
 
-Calendars are social constructs made by combining several clocks and associated timescales.
+Calendars are social constructs made by combining several clocks and their associated timescales.
 
-This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other.
+This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other.The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
 
 A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.
 
 === Other Regimes
-There may in fact be a series of regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography. Local Solar Time may or may not correspond to the local statutary or legal time in a country.
+There may in fact be a series of other regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time. 
+
+==== Local Solar Time
+Local solar time may or may not correspond to the local statutary or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.
 
 ==== Relativistic
 A regime may be needed for ‘space-time’, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
 
-Relativistic effects may need to be taken into account for satellites and other space craft becuase of their relative speed and position in Earth's gravity well.
+Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth's gravity well.
 
-The key approach is to ensure each moving feature of interest has its own clock and time, known as its 'proper time'.
+The key approach is to ensure each moving feature of interest has its own local clock and time, known as its 'proper time'. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.
 
 ==== Accountancy
-The financial and administrative worlds often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
+The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
 
 == Attributes of the Regimes/Classes
 
