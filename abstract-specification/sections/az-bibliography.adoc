@@ -2,35 +2,35 @@
 [appendix]
 == Bibliography
 
-* [[[ogc22-036,OGC 22-036]]], OGC: OGC 22-036: TESTBED-18: 3D+ STANDARDS FRAMEWORK ENGINEERING REPORT (DRAFT) http://www.opengis.net/doc/PER/T18
+* OGC: OGC 22-036: TESTBED-18: 3D+ STANDARDS FRAMEWORK ENGINEERING REPORT (DRAFT) http://www.opengis.net/doc/PER/T18
 
-•  22-038r2 Testbed-18: Reference Frame Transformation Engineering Report
+* OGC 22-038r2 Testbed-18: Reference Frame Transformation Engineering Report
 
-* [[[iso19107,ISO 19107:2003]]], ISO 19107:2003 Geographic information — Spatial schema, 2003 https://www.iso.org/standard/26012.html
+* ISO 19107:2003 Geographic information — Spatial schema, 2003 https://www.iso.org/standard/26012.html
 
-* [[[iso19108, ISO 19108:2002]]], ISO 19108:2002 Geographic information — Temporal schema, 2002 https://www.iso.org/standard/26013.html
+* ISO 19108:2002 Geographic information — Temporal schema, 2002 https://www.iso.org/standard/26013.html
 
-* [[[iso19111, ISO 19111:2019]]], ISO 19111:2019 Geographic information — Referencing by coordinates, 2019, https://www.iso.
+* ISO 19111:2019 Geographic information — Referencing by coordinates, 2019, https://www.iso.
 org/standard/74039.html
 
-* [[[ogcGeoPose, OGC GeoPose]]], OGC: GeoPose Specification draft, 2021. https://github.com/opengeospatial/GeoPose/
+* OGC: GeoPose Specification draft, 2021. https://github.com/opengeospatial/GeoPose/
 
-SO: Geographic information — Reference model — Part 1: Fundamentals, 2014. https://www.
+* ISO: Geographic information — Reference model — Part 1: Fundamentals, 2014. https://www.
 iso.org/standard/59164.html
 
-ISO: Geographic information — Conceptual schema language, 2015. https://www.iso.org/
+* ISO: Geographic information — Conceptual schema language, 2015. https://www.iso.org/
 standard/56734.html
 
-ISO: Geographic information — Spatial referencing by geographic identifiers, 2019. https://
+* ISO: Geographic information — Spatial referencing by geographic identifiers, 2019. https://
 www.iso.org/standard/70742.html
 
-ISO: Geographic information — Well-known text representation of coordinate reference
+* ISO: Geographic information — Well-known text representation of coordinate reference
 systems, 2019. https://www.iso.org/standard/76496.html
 
-ISO: Geographic information — Geography Markup Language (GML), 2007. https://www.iso.
+* ISO: Geographic information — Geography Markup Language (GML), 2007. https://www.iso.
 org/standard/32554.html
 
-Adrian Custer: OGC 09-083r4, GeoAPI 3.0 Implementation Standard with corrigendum. Open
+[2] OGC: OGC 09-083r4: GeoAPI 3.0 Implementation Standard with corrigendum. Open
 Geospatial Consortium (2018). https://portal.ogc.org/files/?artifact id=71648.
 
 [3] OGC: OGC 22-038: Reference Frame Transformation Engineering Report, 2022. http://
@@ -68,7 +68,7 @@ Representation of dates and times.
 
 [14] Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems: Second Edition by B. P. Zeigler, H. Praehofer, T. G. Kim, Academic Press, San Diego, CA, 2000.
  
-[15] A Brief Hsitory of Timekeeping, Chad Orzell. Paperback: 324 pages. Oneworld Publications; 1st edtion (2022) Language English. ISBM-13: 978-0-86154-321-2.
+[15] A Brief History of Timekeeping, Chad Orzell. Paperback: 324 pages. Oneworld Publications; 1st edtion (2022) Language English. ISBM-13: 978-0-86154-321-2.
 
 Universal Coordinated Time (UTC),
 
