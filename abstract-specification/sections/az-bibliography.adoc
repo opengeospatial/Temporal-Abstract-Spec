@@ -56,7 +56,7 @@ naif/tutorials.html
 onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16
 
 [10] Calendrical Calculations - The Ultimate Eidtion, Nachum Dershowitz, Edward M. Reingold. Paperback: 618
-pages. Cambridge University Press; 4th edition (2018) Language: English. ISBN-13: 978-1107683167
+pages. Cambridge University Press; 4th edition (2018) Language: English. ISBN-13: 978-1107683167.
 
 [11] http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition
 
@@ -67,6 +67,8 @@ the ACM, 1983, vol. 26 pp. 832-843.
 Representation of dates and times.
 
 [14] Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems: Second Edition by B. P. Zeigler, H. Praehofer, T. G. Kim, Academic Press, San Diego, CA, 2000.
+ 
+[15] A Brief Hsitory of Timekeeping, Chad Orzell. Paperback: 324 pages. Oneworld Publications; 1st edtion (2022) Language English. ISBM-13: 978-0-86154-321-2.
 
 Universal Coordinated Time (UTC),
 
