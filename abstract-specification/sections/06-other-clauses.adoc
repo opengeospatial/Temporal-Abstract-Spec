@@ -182,7 +182,7 @@ Example 2: A well preserved fossilised log is recovered and the tree rings estab
 
 - Optional location
 
-Example 3: A long ice core is retrieved from a stable ice-sheet. From long term meteological observation the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.
+Example 3: A long ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.
 
 == Attributes of Calendars
 - Name/id
