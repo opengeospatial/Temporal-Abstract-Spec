@@ -52,6 +52,8 @@ include::sections/04-terms_and_definitions.adoc[]
 
 include::sections/05-conventions.adoc[]
 
+include::sections/06-context.adoc[]
+
 // Add clause files as needed
 include::sections/06-other-clauses.adoc[]
 
