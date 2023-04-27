@@ -92,6 +92,8 @@ This regime constitutes a Temporal Coordinate Reference System, with discrete in
 === CRS and Continuous Timescales
 This regime takes a clock from the previous regime ands assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device.
 
+Alternatively, it may be that the ticks are not counted but measured, and the precision of the clock is determined by the precision of the measurements, such as depth in an ince core, or angular position of an astronomical body,such as the sun, moon or a star.
+
 It is also assumed that time can be extrapolated to before the time when the clock started and into the future, possibly past when the clock stops.
 
 This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (a name for the ‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic. It is a Coordinate Reference System.
