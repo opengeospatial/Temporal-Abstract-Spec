@@ -109,11 +109,11 @@ Some examples are:
 This regime constitutes a Temporal Coordinate Reference System, with continuous, floating-point, units of measure, which can be subject to the full range of real arithmetic.
 
 === Calendars
-In this regime, counts and measures of time are related to the various combinations of the rotations of the earth, moon and sun. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE - Year 1BCE is one year, not two as there is no year 0CE or 0BCE. 
+In this regime, counts and measures of time are related to the various combinations of the rotations of the earth, moon and sun or other astronomical bodies. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE - Year 1BCE is one year, not two as there is no year 0CE or 0BCE. 
 
 Calendars are social constructs made by combining several clocks and their associated timescales.
 
-This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other.The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
+This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
 
 A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.
 
