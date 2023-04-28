@@ -4,7 +4,7 @@ When OGC standards involve time, they generally refer to the ISO documents such 
 
 Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the ISO8601 notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the attendant ambiguities, imprecision and inappropriate scope.
 
-The aim of this document is to establish a clear terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.
+The aim of this document is to establish clear concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.
 
 == Abstract Conceptual Model
 This attempt at a Temporal Abstract Reference Model follows http://docs.opengeospatial.org/as/18-005r4/18-005r4.html[ISO19111:2019], aka http://www.opengis.net/doc/AS/topic-2/5.0[OGC Abstract Specification Topic 2: Referencing by coordinates, OGC18-005r4] 
@@ -73,7 +73,7 @@ In this regime, the Allen Operators [Allen, Ref 13] can be used. If A occurs bef
 This regime constitutes an Ordinal Temporal Reference System, with discrete enumerated ordered events.
 
 === Simple Clocks and Discrete Timescales
-In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about sun, earth's rotation about its axis, heart beats, or vibrations of electrically stimulated quartz crystals. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each ‘tick’. A mechanism for counting, or possibly measuring, the ticks is desirable.
+In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about sun, earth's rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each ‘tick’. A mechanism for counting, or possibly measuring, the ticks is desirable.
 
 It is an assumption that the ticks are regular and homogeneous.
 
@@ -92,9 +92,11 @@ This regime constitutes a Temporal Coordinate Reference System, with discrete in
 === CRS and Continuous Timescales
 This regime takes a clock from the previous regime ands assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device.
 
+Alternatively, it may be that the ticks are not counted but measured, and the precision of the clock is determined by the precision of the measurements, such as depth in an ince core, or angular position of an astronomical body,such as the sun, moon or a star.
+
 It is also assumed that time can be extrapolated to before the time when the clock started and into the future, possibly past when the clock stops.
 
-This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic, we have a Coordinate Reference System.
+This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (a name for the ‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic. It is a Coordinate Reference System.
 
 In this regime, the Allen Operators [Allen, Ref 13] also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform real number arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement, and between any two instants, we can always find an infinite number of other instants.
 
@@ -104,29 +106,32 @@ Some examples are:
 
 - Julian Days, and fractions of a day, since noon on 1st January, 4713 BCE.
  
-This regime also constitutes a Temporal Coordinate Reference System, with continuous floating-point units of measure, which can be subject to the full range of arithmetic.
+This regime constitutes a Temporal Coordinate Reference System, with continuous, floating-point, units of measure, which can be subject to the full range of real arithmetic.
 
 === Calendars
-In this regime, counts and measures of time are related to the rotations of the earth, moon and sun. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE-Year 1BCE is one year, not two as there is no year 0 CE or BCE. 
+In this regime, counts and measures of time are related to the various combinations of the rotations of the earth, moon and sun or other astronomical bodies. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE - Year 1BCE is one year, not two as there is no year 0CE or 0BCE. 
 
-Calendars are social constructs made by combining several clocks and associated timescales.
+Calendars are social constructs made by combining several clocks and their associated timescales.
 
-This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other.
+This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
 
 A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.
 
 === Other Regimes
-There may in fact be a series of regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography. Local Solar Time may or may not correspond to the local statutary or legal time in a country.
+There may in fact be a series of other regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time. 
+
+==== Local Solar Time
+Local solar time may or may not correspond to the local statutary or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.
 
 ==== Relativistic
 A regime may be needed for ‘space-time’, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
 
-Relativistic effects may need to be taken into account for satellites and other space craft becuase of their relative speed and position in Earth's gravity well.
+Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth's gravity well.
 
-The key approach is to ensure each moving feature of interest has its own clock and time, known as its 'proper time'.
+The key approach is to ensure each moving feature of interest has its own local clock and time, known as its 'proper time'. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.
 
 ==== Accountancy
-The financial and administrative worlds often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
+The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
 
 == Attributes of the Regimes/Classes
 
@@ -177,7 +182,7 @@ Example 2: A well preserved fossilised log is recovered and the tree rings estab
 
 - Optional location
 
-Example 3: A long ice core is retrieved from a stable ice-sheet. From long term meteological observation the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.
+Example 3: A long ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.
 
 == Attributes of Calendars
 - Name/id
@@ -199,27 +204,15 @@ The constituent timescales are days (earth's rotations), months (moon's orbit ar
 
 Example 5: The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
 
-Example 6: The modern Jewish calendar is a calculated luni-solar calendar, and discrepancies h the solar year are addressed by adding 'leap months' every few years.
+Example 6: The modern Jewish calendar is a calculated luni-solar calendar, and discrepancies in the solar year are addressed by adding 'leap months' every few years.
 
 Example 6: The Ba'hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday. 
 
-Example 7: The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in Cameroun.
+Example 7: The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in the grasslands of north-west Cameroun.
 
-Example 8: Teams controlling remote vehicles on MArs use a solar calendar, with MArtian years and martian days (called sols). Months are not used because there are two moons, with different, rather short, 'months'.
+Example 8: Teams controlling remote vehicles on Mars use a solar calendar, with Martian years and martian days (called sols). Months are not used because there are two moons, with different, rather short, 'months'.
 
 == Synchronisation of clocks
 If there are two or more clocks, stationary with respect to each other, and a practical method of communicating their times to each other, the clocks can be perfectly synchronized.
 
-However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.  
-
-== Other clauses
-
-Do we need more detail, such as temporal entities?
-
-Here are the various diagrams from the W3C Time Ontology:
-
-
-
-====
-Add any other clauses as needed
-====
+However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.  See [Orzell, Ref 15, pp187-191]
