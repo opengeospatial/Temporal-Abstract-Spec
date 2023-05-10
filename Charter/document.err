@@ -1,0 +1,75 @@
+./document.err errors
+
+
+== Document Attributes
+
+(): 'book' is not a legal document type: reverting to 'standard'
+(): '' is not a permitted subtype of Standard: reverting to 'implementation'
+(): Version required for standard
+
+
+== AsciiDoc Input
+
+(ID _references): Section not marked up as [bibliography]!
+	#<Asciidoctor::Section@504420 {level: 1, title: "9. References", blocks: 0}>
+
+
+== Anchors
+
+(XML Line 000142): Crossreference target similar_applicable_work is undefined
+	<xref target="similar_applicable_work">section 8.2</xref>
+
+
+== Style
+
+(): Abstract is missing!
+(): Keywords are missing!
+(): Submitting Organizations is missing!
+(): Submitters is missing!
+(): Prefatory material must be followed by (clause) Scope
+(): Scope must be followed by Conformance
+(): Normative References must be followed by Terms and Definitions
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000013): Table should have title
+	<table id="_c526d9fe-5b85-6ab2-2725-3b3bb43060b4"><tbody><tr><td valign="middle" align="right"/></tr><tr><td valign="middle" align="right"><strong>Open Geospatial Consortium</strong></td>
+	</tr><tr><td valign="middle" align="right">Submission Date: 2023-05-09</td>
+	</tr><tr><td valign="middle" align="right">Approval Date:   &lt;yyyy-mm-dd&gt;</td>
+	</tr><tr><td valign="middle" align="right">Internal reference number of this OGC® document:    23-999r0</td>
+	</tr><tr><td valign="middle" align="right">Category: OGC® Standards Working Group Charter</td>
+(XML Line 000022): Table should have title
+	<table id="_8b6d5dde-79de-79d9-f911-3359969788c8"><tbody><tr><td valign="middle" align="center"><strong>Temporal Abstract Specification</strong></td>
+	</tr></tbody>
+	</table>
+(XML Line 000026): Table should have title
+	<table id="_a71936af-a82b-5f0e-c573-c72320f00f64"><tbody><tr><td valign="middle" align="center"><strong>Copyright notice</strong></td>
+	</tr><tr><td valign="middle" align="center">Copyright © 2023 Open Geospatial Consortium</td>
+	</tr><tr><td valign="middle" align="center">To obtain additional rights of use, visit <link target="http://www.opengeospatial.org/legal/"/></td>
+	</tr></tbody>
+	</table>
+(XML Line 000076): Hanging paragraph in clause
+	<clause id="_scope_of_work" obligation="normative">
+	<title>Scope of work</title>
+	<p id="_446eff02-903b-288c-638b-ad1693ee9bab">This Standards Working Group will develop an Abstract Specification for Temporal data. It will seek to integrate coordinate reference systems (ISO 19111) and temporal reference systems (ISO 19108) in a single conceptual model. In the process it will also expand our concept of temporal data to better accomodate moving features and non-terrestrial envionments.</p>
+	
+	<p id="_9b3d2470-d35d-a373-2d3f-81f3d1388265">This work is expected to inform further work on the W3C Temporal Ontology and updates to ISO 19108.</p>
+(XML Line 000146): Hanging paragraph in clause
+	<clause id="_description_of_deliverables" obligation="normative">
+	<title>Description of deliverables</title>
+	<p id="_20f03014-9e26-c16d-bc18-e9858188cedf">There shall be two deliverables:</p>
+	
+	<ul id="_322e03ca-3155-add3-fd59-7296afdc6954"><li><p id="_0d09bc3e-aace-8903-036f-ca0b32b56020">an OGC Temporal Abstract Specification how much of a desciption do we need here?</p>
+(XML Line 000211): Table should have title
+	<table id="_b350f3fe-bcdc-7237-bf6a-bff4baef2e23"><tbody><tr><td valign="middle" align="left">Name</td>
+	<td valign="middle" align="left">Organization</td>
+	</tr><tr><td valign="middle" align="left">Charles Heazel</td>
+	<td valign="middle" align="left">Heazeltech LLC</td>
+	</tr></tbody>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000009:113): element "ext" incomplete; missing required element "editorialgroup"
+(XML Line 000176:104): element "clause" not allowed here; expected the element end-tag or element "submitters"

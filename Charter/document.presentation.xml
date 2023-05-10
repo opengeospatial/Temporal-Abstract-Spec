@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="presentation" version="2.0.6">
+<bibdata type="standard">
+<title language="en" format="text/plain">OGC Temporal Abstract Specification</title>
+<contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+</organization></contributor><language current="true">en</language><script current="true">Latn</script><status><stage language="">approved</stage><stage language="en">Approved</stage></status><copyright><from>2023</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+</organization></owner></copyright><ext><doctype language="">standard</doctype><subdoctype>implementation</subdoctype></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Table of contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Preface</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Annex</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
+</localized-string><localized-string key="internal_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the following additional terms and definitions apply.</p>
+</localized-string><localized-string key="norm_with_refs_pref" language="en">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the terms and definitions given in % additionally apply.</p>
+</localized-string><localized-string key="internal_external_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the terms and definitions given in % and the following additionally apply.</p>
+</localized-string><localized-string key="term_defined_in" language="en">(%)</localized-string><localized-string key="binary_and" language="en">%1 and %2</localized-string><localized-string key="multiple_and" language="en">%1, and %2</localized-string><localized-string key="binary_or" language="en">%1 or %2</localized-string><localized-string key="multiple_or" language="en">%1, or %2</localized-string><localized-string key="chain_and" language="en">%1 and %2</localized-string><localized-string key="chain_or" language="en">%1 or %2</localized-string><localized-string key="chain_from" language="en">%1 from %2</localized-string><localized-string key="chain_to" language="en">%1 to %2</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="formula" language="en">Formula</localized-string><localized-string key="inequality" language="en">Formula</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">Example</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">SOURCE</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="toc_figures" language="en">List of figures</localized-string><localized-string key="toc_tables" language="en">List of tables</localized-string><localized-string key="toc_recommendations" language="en">List of recommendations</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="subject" language="en">Subject</localized-string><localized-string key="inherits" language="en">Inherits</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="admitted" language="en">ADMITTED</localized-string><localized-string key="submitters" language="en">Submitters</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="security_empty" language="en">No security considerations have been made for this document.</localized-string><localized-string key="stage_dict.draft" language="en">Draft</localized-string><localized-string key="stage_dict.work-item-draft" language="en">Work Item Draft</localized-string><localized-string key="stage_dict.swg-draft" language="en">Candidate SWG Draft</localized-string><localized-string key="stage_dict.oab-review" language="en">Candidate OAB Review Draft</localized-string><localized-string key="stage_dict.public-rfc" language="en">Candidate Public RFC Draft</localized-string><localized-string key="stage_dict.tc-vote" language="en">Candidate TC Vote Draft</localized-string><localized-string key="stage_dict.approved" language="en">Approved</localized-string><localized-string key="stage_dict.published" language="en">Published</localized-string><localized-string key="stage_dict.deprecated" language="en">Deprecated</localized-string><localized-string key="stage_dict.rescinded" language="en">Rescinded</localized-string><localized-string key="stage_dict.retired" language="en">Retired</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings><misc-container><presentation-metadata><name>TOC Heading Levels</name><value>4</value></presentation-metadata><presentation-metadata><name>TOC Heading Levels</name><value>4</value></presentation-metadata><presentation-metadata><name>TOC Heading Levels</name><value>4</value></presentation-metadata></misc-container>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <title depth="1">Copyright notice</title>
+
+      <p align="center" id="_4380411b-aa89-cc2d-d393-9800128f1de1">Copyright
+        © 2023 Open Geospatial Consortium<br/>
+        To obtain additional rights of use, visit
+        <link target="http://www.ogc.org/legal/">http://www.ogc.org/legal/</link></p>
+    </clause>
+    <clause>
+      <title depth="1">Note</title>
+      <p align="left" id="_11e88dba-9912-1a89-a82d-7291bf232191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+      <p align="left" id="_15067213-c07b-cba0-7e18-395ab2e00ab3">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+    </clause>
+  </copyright-statement>
+  <license-statement>
+    <clause>
+      <title depth="1">License Agreement</title>
+
+      <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial
+        Consortium, (“Licensor”), free of charge and subject to the terms set
+        forth below, to any person obtaining a copy of this Intellectual Property and
+        any associated documentation, to deal in the Intellectual Property without
+        restriction (except as set forth below), including without limitation the
+        rights to implement, use, copy, modify, merge, publish, distribute, and/or
+        sublicense copies of the Intellectual Property, and to permit persons to whom
+        the Intellectual Property is furnished to do so, provided that all copyright notices
+        on the intellectual property are retained intact and that each person to whom
+        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
+
+      <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of
+        the modified Intellectual Property must include, in addition to the above
+        copyright notice, a notice that the Intellectual Property includes
+        modifications that have not been approved or adopted by LICENSOR.</p>
+
+      <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
+        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
+        THE INTELLECTUAL PROPERTY IS PROVIDED “AS
+        IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
+        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
+        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
+        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
+        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER’S OWN RISK. IN NO
+        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
+        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
+        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
+        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
+        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
+        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
+
+      <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may
+        terminate it at any time by destroying the Intellectual Property together with
+        all copies in any form. The license will also terminate if you fail to comply
+        with any term or condition of this Agreement. Except as provided in the
+        following sentence, no such termination of this license shall require the
+        termination of any third party end-user sublicense to the Intellectual Property
+        which is in force as of the date of notice of such termination. In addition,
+        should the Intellectual Property, or the operation of the Intellectual
+        Property, infringe, or in LICENSOR’s sole opinion be
+        likely to infringe, any patent, copyright, trademark or other right of a third
+        party, you agree that LICENSOR, in its sole discretion, may terminate this
+        license without any compensation or liability to you, your licensees or any
+        other party. You agree upon termination of any kind to destroy or cause to be
+        destroyed the Intellectual Property together with all copies in any form,
+        whether held by you or by any third party.</p>
+
+      <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of
+        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
+        Property shall not be used in advertising or otherwise to promote the sale, use
+        or other dealings in this Intellectual Property without prior written
+        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
+        all times be the sole entity that may authorize you or any third party to use
+        certification marks, trademarks or other special designations to indicate
+        compliance with any LICENSOR standards or specifications.
+        This Agreement is
+        governed by the laws of the Commonwealth of Massachusetts. The application to
+        this Agreement of the United Nations Convention on Contracts for the
+        International Sale of Goods is hereby expressly excluded. In the event any
+        provision of this Agreement shall be deemed unenforceable, void or invalid, such
+        provision shall be modified so as to make it valid and enforceable, and as so
+        modified the entire Agreement shall remain in full force and effect. No
+        decision, action or inaction by LICENSOR shall be construed to be a waiver of
+        any rights or remedies available to it.</p>
+
+      <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    </clause>
+  </license-statement>
+
+  <legal-statement>
+    
+    
+    <clause>
+      <title depth="1">Notice</title>
+      <p id="_a156d1c4-313c-340a-8480-366345e3e0d2">This document is an OGC Member approved international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+      </p>
+    </clause>
+    
+
+
+    
+
+  </legal-statement>
+
+
+
+
+  <feedback-statement>
+    
+    <clause id="boilerplate-standard-feedback">
+      <p id="_bbc1a653-f270-135d-9455-af930feb3587">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <link target="http://portal.opengeospatial.org/public_ogc/change_request.php">http://portal.opengeospatial.org/public_ogc/change_request.php</link></p>
+    </clause>
+    
+  </feedback-statement>
+</boilerplate>
+<preface><foreword id="_7a25b6ce-c551-0632-5e07-602143171bcf" obligation="informative" displayorder="1">
+<title depth="1">I.<tab/>Preface</title>
+<pagebreak/>
+<table id="_c526d9fe-5b85-6ab2-2725-3b3bb43060b4"><name>Table 1</name><tbody><tr><td valign="middle" align="right"/></tr><tr><td valign="middle" align="right"><strong>Open Geospatial Consortium</strong></td>
+</tr><tr><td valign="middle" align="right">Submission Date: 2023-05-09</td>
+</tr><tr><td valign="middle" align="right">Approval Date:   &#x3c;yyyy-mm-dd&#x3e;</td>
+</tr><tr><td valign="middle" align="right">Internal reference number of this OGC® document:    23-999r0</td>
+</tr><tr><td valign="middle" align="right">Category: OGC® Standards Working Group Charter</td>
+</tr><tr><td valign="middle" align="right">Authors:   Charles Heazel (Heazeltech LLC)</td>
+</tr></tbody>
+</table>
+
+<table id="_8b6d5dde-79de-79d9-f911-3359969788c8"><name>Table 2</name><tbody><tr><td valign="middle" align="center"><strong>Temporal Abstract Specification</strong></td>
+</tr></tbody>
+</table>
+
+<table id="_a71936af-a82b-5f0e-c573-c72320f00f64"><name>Table 3</name><tbody><tr><td valign="middle" align="center"><strong>Copyright notice</strong></td>
+</tr><tr><td valign="middle" align="center">Copyright © 2023 Open Geospatial Consortium</td>
+</tr><tr><td valign="middle" align="center">To obtain additional rights of use, visit <link target="http://www.opengeospatial.org/legal/"/></td>
+</tr></tbody>
+</table>
+
+<pagebreak/>
+<p id="_6f24d576-3ce6-219e-09cc-5f8ba330b553">To: OGC members &amp; interested parties</p>
+
+<p id="_63733f1b-a153-4145-72de-b82d07a9bedb">A new OGC Standards Working Group is being formed. The OGC members listed below have proposed the OGC Temporal Abstract Specification SWG.  The SWG proposal provided in this document meets the requirements of the OGC Technical Committee (TC) Policies and Procedures.</p>
+
+<p id="_121e33b9-9e86-607d-052a-fb89f9538c4a">The SWG name, statement of purpose, scope, list of deliverables, audience, and language specified in the proposal will constitute the SWG’s official charter. Technical discussions may occur no sooner than the SWG’s first meeting.</p>
+
+<p id="_57a48208-47ad-340e-2151-121f5f9fe58a">This SWG will operate under the OGC IPR Policy. The eligibility requirements for becoming a participant in the SWG at the first meeting (see details below) are that:</p>
+
+<ul id="_c109c0d3-bce2-e9dc-5e87-ed22457e94fc"><li><p id="_493f6a42-477e-d167-e4e6-36b6b5e0b582">You must be an employee of an OGC member organization or an individual
+member of OGC;</p>
+</li>
+<li><p id="_b29cede5-0202-5faa-1556-1eb7fcf1d001">The OGC member must have signed the OGC Membership agreement;</p>
+</li>
+<li><p id="_3b72ad34-fc5b-56e7-b314-f449087e8da3">You must notify the SWG chair of your intent to participate to the first meeting. Members may do so by logging onto the OGC Portal and navigating to the Observer page and clicking on the link for the SWG they wish to join and;</p>
+</li>
+<li><p id="_8dc55e47-05bb-a96f-2d44-83fb25c2f9ec">You must attend meetings of the SWG. The first meeting of this SWG is at the time and date fixed below. Attendance may be by teleconference.</p>
+</li>
+</ul>
+
+<p id="_f451fc25-e817-81d8-374b-fdc48ec584b3">Of course, participants also may join the SWG at any time. The OGC and the SWG welcomes all interested parties.</p>
+
+<p id="_194d3d1e-108b-e434-6c3c-f21c6603aba2">Non-OGC members who wish to participate may contact us about joining the OGC. In addition, the public may access some of the resources maintained for each SWG: the SWG public description, the SWG Charter, Change Requests, and public comments, which will be linked from the SWG’s page.</p>
+
+<p id="_30deebfc-cbb9-78b8-e516-2d3a8fe96204">Please feel free to forward this announcement to any other appropriate lists. The OGC is an open standards organization; we encourage your feedback.</p>
+</foreword><clause type="security" id="_81b1ace7-21d3-2259-3346-8f24ee71ed45" obligation="informative" displayorder="2"><title depth="1">II.<tab/>Security considerations</title><p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause></preface><sections>
+<clause id="_purpose_of_the_standards_working_group" obligation="normative" displayorder="4">
+<title depth="1">2.<tab/>Purpose of the Standards Working Group</title>
+<p id="_4aad8932-6c6b-614b-d8d0-17f65fae1032">The current OGC Standards treat time as an after-thought. After all, buildings don’t move and continents move very slowly. However, the adoption of Moving Features Standards by the geospatial community brings time to the forefront. The location of a Moving Feature is a unique event in space and time. Time is now part of the Feature Geometry. Temporal precision and accuracies of 1 millisecond and below are common. This SWG will revisit the existing ISO and OGC Standards with the intention of making time an integral part of Feature Geometry.</p>
+
+<p id="_605678ff-d7a1-0486-e424-947e9c26d73c">Once Features begin to move there is little to keep them Earth-bound. As a result, geospatial is moving off-planet. Investigations into the use of existing geospatial techologies on the Moon, Mars, and even interplanetary space were begun in Testbed 18 and will continue in Testbed 19. For this work to succeed, our concepts of space and time cannot be limited to terrestrial applications. Calendars for Lunar residents should not be based on Terrestrial astronomical phenomenon. Measurements of time must accomodate the vast distances and velocities encountered in interplanetary space. And all of this must cleanly integrate into a 4D spatial-temporal geometry.</p>
+
+<p id="_706be07f-87e1-0a99-186c-17595c87bb15">This work will leverage the ISO TC211 Harmonized UML Model. The Harmonized model is a single conceptual model encompasing most of the ISO TC211 suite of standards. It provides a rigourous, accessible, and navigatable representation of those standards. The Temporal Abstract Specification will be based on an extension to this model. Thereby assuring that the Temporal Abstract Specification is complete, correct, and coherent.</p>
+</clause>
+
+<clause id="_business_value_proposition" obligation="normative" displayorder="5">
+<title depth="1">3.<tab/>Business value proposition</title>
+<p id="_59c88095-04a1-f98f-ad9a-d1ecc5147297">Existing standards treat location and time as separate properties defined by different reference systems. This makes representations of Moving Features as trajectories in space and time difficult. Techniques must be developed to assure that the spatial and temporal properties are properly correlated. Furthermore, the use of different spatial and temporal reference systems restrict the analytics available. What is the distance between two events in spacetime? Integration of space and time into a single geometry greatly simplifies these tasks.</p>
+
+<p id="_23449d4a-ebef-0a8f-6351-cd87849eb4b7">Expanding the scope of this geometry to non-Terrestrial applications broadens the market for many geospatial disciplines. Facilities planning, construction, maintenance, and disposition should not requrire different tools depending on where the facility will be located. Facilities management tools that work on the Earth should also work for Lunar and Martian facilities.</p>
+
+<p id="_a4af15ff-91c7-a105-a160-591e14724c6b">Moving Features that are not planet-bound face additional issues. Due the the distances and velocities involved, Special and General Relativity begin to have a noticable effect. The mathematics for addressing relativistic effects are based on Minkowski spacetime. A 4D spatial-temporal reference system. Accomodation of Minkowski spacetime and similar 4D Coordinate Reference Systems is essential if OGC Standards are going to support this domain.</p>
+</clause>
+
+<clause id="_scope_of_work" obligation="normative" displayorder="6">
+<title depth="1">4.<tab/>Scope of work</title>
+<p id="_446eff02-903b-288c-638b-ad1693ee9bab">This Standards Working Group will develop an Abstract Specification for Temporal data. It will seek to integrate coordinate reference systems (ISO 19111) and temporal reference systems (ISO 19108) in a single conceptual model. In the process it will also expand our concept of temporal data to better accomodate moving features and non-terrestrial envionments.</p>
+
+<p id="_9b3d2470-d35d-a373-2d3f-81f3d1388265">This work is expected to inform further work on the W3C Temporal Ontology and updates to ISO 19108.</p>
+
+<clause id="_statement_of_relationship_of_planned_work_to_the_current_ogc_standards_baseline" obligation="normative">
+<title depth="2">4.1.<tab/>Statement of relationship of planned work to the current OGC Standards baseline</title>
+<p id="_9bd934ee-111f-63f9-0822-7e2dad9157b5">The Temporal Abstract Specification will integrate date and time into the foundational ISO and OGC standards related to Feature Geometry.  Specifically:</p>
+
+<ul id="_887163b5-c71a-16a3-896a-80f51c7755b3"><li><p id="_56c2adff-3dc3-9282-dca4-117ac517dfa7">ISO 19107 — 4D spacetime geometries and how they impact existing 3D implementations</p>
+</li>
+<li><p id="_03d79a00-3184-4d0f-07c5-15c66a552084">ISO 19108 — Proposed changes and updates to the current version of ISO 19108 to accomodate new temporal requirements</p>
+</li>
+<li><p id="_7e8dfefa-01fb-05fc-d0ae-1ecd038592f2">ISO 19111 — Modifications may be needed to fully integrate spatial and temporal reference systems into ISO 19111 conformant reference systems for spacetime.</p>
+</li>
+<li><p id="_1a848d5f-540a-51e3-ae67-7dfe3a6f495d">ISO 19141 — Enhance to take advantage of 4D spacetime geometries.</p>
+</li>
+<li><p id="_ec6d305f-9a14-03bd-4e2d-b7dca00633e2">W3C Time Ontology in OWL — A semantic representation of temporal concepts.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_what_is_out_of_scope" obligation="normative">
+<title depth="2">4.2.<tab/>What is out of scope?</title>
+<p id="_c1b96c84-9ccf-1999-678c-5ed4fd490d71">AS an Abstract Specification this Standard will not address encodings or specific representations of temporal concepts.</p>
+</clause>
+
+<clause id="_specific_existing_work_used_as_starting_point" obligation="normative">
+<title depth="2">4.3.<tab/>Specific existing work used as starting point</title>
+<p id="_398d85e1-db6e-93c4-d1c9-d1290076f5db">OGC Testbed 18 explored the question of “Can we use existing geospatial standards and technology for non-Terrestrial applications?”</p>
+
+<p id="_9df83a34-3671-28bf-ea2d-611cefb3f981">Some Observations:</p>
+
+<ol id="_0c2dc0d2-6f4d-cce3-4b44-3615c0a24166" type="arabic"><li><p id="_90922589-c148-f052-6374-0c3928d86b21">Many temporal reference systems are not coordinate reference systems</p>
+</li>
+<li><p id="_0de2e83a-7025-62bd-9727-2876628c2393">There is no temporal equivalent to the Compound Reference System</p>
+</li>
+<li><p id="_02a0a7b9-e7f0-9591-5ca8-1a593f7c354b">DateTime should be represented as a compound reference system consisting of a TM_Calendar and TM_Clock reference system.</p>
+</li>
+<li><p id="_5e1413ef-a68a-997c-b6fa-5e5d2446c2cb">TM_Calendar should be a type of TM_OrdinalReferenceSystem.</p>
+</li>
+<li><p id="_f751de3d-9b9b-c579-35a8-37540acc209f">TM_Clock should not be defined in terms of a “day”. Many clocks count elapsed time since an epoc. Date and time are not considered.</p>
+</li>
+<li><p id="_388ac9df-210d-6787-1b5d-0ef2c4499d50">TM_Clock should be a type of TM_CoordinateSystem</p>
+</li>
+<li><p id="_b8c641ff-b2a5-ba09-d622-8aa8c4d6409c">TM_Calendar can be defined as a Compound Reference System composed of days, months, and years. This would allow to define meaningful calendars for the Moon, Mars, and other non-Terrestrial environments.</p>
+</li>
+<li><p id="_56210fbc-9ef6-3c6d-dfde-a1bca847764d">Is there an ordinal equivalent to TM_Clock. Sunrise, noon, sunset, and midnight?</p>
+</li>
+<li><p id="_9377cc62-f8a5-b4b2-8e45-62b3341f693e">Can a calendar be defined in terms of planting season, Saints days, or other arbitrary events?</p>
+</li>
+</ol>
+</clause>
+
+<clause id="_is_this_a_persistent_swg" obligation="normative">
+<title depth="2">4.4.<tab/>Is this a persistent SWG</title>
+<p id="_b029db08-9e57-e59c-697a-f627d5a0f27b">[ ] YES</p>
+
+<p id="_a5c12eaa-cac0-bf58-9031-c0a2fb87f4b7">[x] NO</p>
+</clause>
+
+<clause id="_when_can_the_swg_be_inactivated" obligation="normative">
+<title depth="2">4.5.<tab/>When can the SWG be inactivated</title>
+<p id="_0d917119-ceec-3f6f-fae9-94db0e23c7e1">The Temporal Abstract Specification SWG is not a persistent SWG. It may be deactivated once the deliverables have been delivered and accepted by the OGC membership as OGC Standards.</p>
+
+<p id="_cf25dd47-3312-1bf1-5f7c-4562cf586c70">This charter may be extended beyond that point if coordination with efforts such as those described in <xref target="similar_applicable_work">section 8.2</xref> are still under way.</p>
+</clause>
+</clause>
+
+<clause id="_description_of_deliverables" obligation="normative" displayorder="7">
+<title depth="1">5.<tab/>Description of deliverables</title>
+<p id="_20f03014-9e26-c16d-bc18-e9858188cedf">There shall be two deliverables:</p>
+
+<ul id="_322e03ca-3155-add3-fd59-7296afdc6954"><li><p id="_0d09bc3e-aace-8903-036f-ca0b32b56020">an OGC Temporal Abstract Specification how much of a desciption do we need here?</p>
+</li>
+<li><p id="_f296479c-aec0-0d98-2e0e-b8b30d3eb8ab">an OGC Temporal Abstract Specification Ontology how much of a desciption do we need here?</p>
+</li>
+<li><p id="_bb0d9134-4e10-4729-07f4-03ba06b85a1f">an optional OGC Temporal Abstract Specification Users Guide how much of a desciption do we need here?</p>
+</li>
+</ul>
+
+<clause id="_initial_deliverables" obligation="normative">
+<title depth="2">5.1.<tab/>Initial deliverables</title>
+</clause>
+
+<clause id="_additional_swg_tasks" obligation="normative">
+<title depth="2">5.2.<tab/>Additional SWG tasks</title>
+</clause>
+</clause>
+
+<clause id="_ipr_policy_for_this_swg" obligation="normative" displayorder="8">
+<title depth="1">6.<tab/>IPR Policy for this SWG</title>
+<p id="_73d80d91-e846-7282-d004-254caa13f2aa">[x] RAND-Royalty Free</p>
+
+<p id="_dd3ca517-fd60-ca7f-5e4e-34d81f1b770b">[ ] RAND for fee</p>
+</clause>
+
+<clause id="_anticipated_audience_participants" obligation="normative" displayorder="9">
+<title depth="1">7.<tab/>Anticipated audience / participants</title>
+</clause>
+
+<clause id="_domain_working_group_endorsement" obligation="normative" displayorder="10">
+<title depth="1">8.<tab/>Domain Working Group endorsement</title>
+<p id="_103c49fd-08b8-fc1c-84c4-4c4163efc8e4">The Temporal Abstract Specification SWG was created by and endorsed by the Temporal Domain Working Group.</p>
+</clause>
+
+<clause id="_other_informative_information_about_the_work_of_this_swg" obligation="normative" displayorder="11">
+<title depth="1">9.<tab/>Other informative information about the work of this SWG</title>
+<clause id="_collaboration" obligation="normative">
+<title depth="2">9.1.<tab/>Collaboration</title>
+<p id="_e1ec7ce1-6880-956b-1307-9969030bbe9c">The Temporal Abstract Specification SWG will perform its work in public in a GitHub repository operated by OGC and managed by the Temporal Abstract Specification SWG chairs.</p>
+</clause>
+
+<clause id="_similar_or_applicable_standards_work_ogc_and_elsewhere" obligation="normative">
+<title depth="2">9.2.<tab/>Similar or applicable standards work (OGC and elsewhere)</title>
+<p id="_da7b0902-3dc8-1ecc-6c1b-388ea17da88f">The following Standards and projects may be relevant to the SWG’s planned work, although none currently provide the functionality anticipated by this committee’s deliverables:</p>
+
+<p id="_638ffc76-cacd-f4a2-cda9-a055da692a90">The SWG intends to seek and if possible maintain liaison with each of the organizations maintaining the above works.</p>
+</clause>
+
+<clause id="_details_of_first_meeting" obligation="normative">
+<title depth="2">9.3.<tab/>Details of first meeting</title>
+<p id="_16e01e24-92a1-d7e1-4c35-994788cc3749">The first meeting of the SWG will be held by telephone conference call at 10AM EDT on 1 October 2007. Call-in information will be provided to the SWG’s e-mail list and on the portal calendar in advance of the meeting.</p>
+</clause>
+
+<clause id="_projected_on_going_meeting_schedule" obligation="normative">
+<title depth="2">9.4.<tab/>Projected on-going meeting schedule</title>
+<p id="_d4ec8ced-4f12-afb2-8cbd-8e48e3fcfbb1">The work of the SWG will be carried out primarily by email and conference calls, possibly every two weeks, with face-to-face meetings perhaps at each of the OGC TC meetings.</p>
+</clause>
+
+<clause id="_supporters_of_this_charter" obligation="normative">
+<title depth="2">9.5.<tab/>Supporters of this Charter</title>
+<p id="_7d2b6cff-abcc-fffb-479b-c197fe9b2d37">The following people support this proposal and are committed to the Charter and projected meeting schedule. These members are known as SWG Founding or Charter members. The charter members agree to the SoW and IPR terms as defined in this charter. The charter members have voting rights beginning the day the SWG is officially formed. Charter Members are shown on the public SWG page. Extend the table as necessary.</p>
+
+<table id="_b350f3fe-bcdc-7237-bf6a-bff4baef2e23"><name>Table 4</name><tbody><tr><td valign="middle" align="left">Name</td>
+<td valign="middle" align="left">Organization</td>
+</tr><tr><td valign="middle" align="left">Charles Heazel</td>
+<td valign="middle" align="left">Heazeltech LLC</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_conveners" obligation="normative">
+<title depth="2">9.6.<tab/>Conveners</title>
+<p id="_4bf761ab-cba0-59bc-7976-4de80db16739">Charles Heazel</p>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="true" obligation="informative" displayorder="3">
+<title depth="1">1.<tab/>Normative references</title><p id="_7a57430e-eeb6-b3a6-76b7-0eb0912d03a8">There are no normative references in this document.</p>
+</references></bibliography>
+</ogc-standard>

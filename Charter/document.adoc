@@ -1,0 +1,262 @@
+:Title: OGC Temporal Abstract Specification
+:titletext: Temporal Abstract Specification
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc:
+:toc-placement!:
+:toclevels: 4
+:numbered:
+:sectanchors:
+:source-highlighter: pygments
+
+<<<
+[cols = ">",frame = "none",grid = "none"]
+|===
+|{set:cellbgcolor:#FFFFFF}
+|[big]*Open Geospatial Consortium*
+|Submission Date: 2023-05-09
+|Approval Date:   <yyyy-mm-dd>
+|Internal reference number of this OGC(R) document:    23-999r0
+|Category: OGC(R) Standards Working Group Charter
+|Authors:   Charles Heazel (Heazeltech LLC)
+|===
+
+[cols = "^", frame = "none"]
+|===
+|[big]*{titletext}*
+|===
+
+[cols = "^", frame = "none", grid = "none"]
+|===
+|*Copyright notice*
+|Copyright (C) 2023 Open Geospatial Consortium
+|To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
+|===
+
+<<<
+
+////
+Version of 2018-12-12
+Some Instructions
+This document is the template to be used for proposing the formation of a new Standards Working Group (SWG).
+
+The first step is to complete the SWG Charter for the proposed new SWG.
+
+The next step is to email the draft SWG charter to the Technical Committee Chair (TCC).  The TCC will review the draft charter and make any necessary comments and provide guidance.
+
+Finally, once the Charter is ready, the SWG charter will be posted to the OGC Pending Documents and the vote process in the Technical Committee Policies and Procedures will start.
+
+Any questions, please contact OGC staff.
+////
+
+To: OGC members & interested parties
+
+A new OGC Standards Working Group is being formed. The OGC members listed below have proposed the OGC Temporal Abstract Specification SWG.  The SWG proposal provided in this document meets the requirements of the OGC Technical Committee (TC) Policies and Procedures.
+
+The SWG name, statement of purpose, scope, list of deliverables, audience, and language specified in the proposal will constitute the SWG's official charter. Technical discussions may occur no sooner than the SWG's first meeting.
+
+This SWG will operate under the OGC IPR Policy. The eligibility requirements for becoming a participant in the SWG at the first meeting (see details below) are that:
+
+* You must be an employee of an OGC member organization or an individual
+member of OGC;
+
+* The OGC member must have signed the OGC Membership agreement;
+
+* You must notify the SWG chair of your intent to participate to the first meeting. Members may do so by logging onto the OGC Portal and navigating to the Observer page and clicking on the link for the SWG they wish to join and;
+
+* You must attend meetings of the SWG. The first meeting of this SWG is at the time and date fixed below. Attendance may be by teleconference.
+
+Of course, participants also may join the SWG at any time. The OGC and the SWG welcomes all interested parties.
+
+Non-OGC members who wish to participate may contact us about joining the OGC. In addition, the public may access some of the resources maintained for each SWG: the SWG public description, the SWG Charter, Change Requests, and public comments, which will be linked from the SWG’s page.
+
+Please feel free to forward this announcement to any other appropriate lists. The OGC is an open standards organization; we encourage your feedback.
+
+== Purpose of the Standards Working Group
+
+The current OGC Standards treat time as an after-thought. After all, buildings don't move and continents move very slowly. However, the adoption of Moving Features Standards by the geospatial community brings time to the forefront. The location of a Moving Feature is a unique event in space and time. Time is now part of the Feature Geometry. Temporal precision and accuracies of 1 millisecond and below are common. This SWG will revisit the existing ISO and OGC Standards with the intention of making time an integral part of Feature Geometry.
+
+Once Features begin to move there is little to keep them Earth-bound. As a result, geospatial is moving off-planet. Investigations into the use of existing geospatial techologies on the Moon, Mars, and even interplanetary space were begun in Testbed 18 and will continue in Testbed 19. For this work to succeed, our concepts of space and time cannot be limited to terrestrial applications. Calendars for Lunar residents should not be based on Terrestrial astronomical phenomenon. Measurements of time must accomodate the vast distances and velocities encountered in interplanetary space. And all of this must cleanly integrate into a 4D spatial-temporal geometry. 
+
+This work will leverage the ISO TC211 Harmonized UML Model. The Harmonized model is a single conceptual model encompasing most of the ISO TC211 suite of standards. It provides a rigourous, accessible, and navigatable representation of those standards. The {titletext} will be based on an extension to this model. Thereby assuring that the {titletext} is complete, correct, and coherent.
+
+////
+Proposers will describe the purpose of the Standards Working Group and its overall mission in relation to OGC processes, the OGC Standards baseline, and OGC’s business plan.
+////
+
+== Business value proposition
+
+Existing standards treat location and time as separate properties defined by different reference systems. This makes representations of Moving Features as trajectories in space and time difficult. Techniques must be developed to assure that the spatial and temporal properties are properly correlated. Furthermore, the use of different spatial and temporal reference systems restrict the analytics available. What is the distance between two events in spacetime? Integration of space and time into a single geometry greatly simplifies these tasks.
+
+Expanding the scope of this geometry to non-Terrestrial applications broadens the market for many geospatial disciplines. Facilities planning, construction, maintenance, and disposition should not requrire different tools depending on where the facility will be located. Facilities management tools that work on the Earth should also work for Lunar and Martian facilities.
+
+Moving Features that are not planet-bound face additional issues. Due the the distances and velocities involved, Special and General Relativity begin to have a noticable effect. The mathematics for addressing relativistic effects are based on Minkowski spacetime. A 4D spatial-temporal reference system. Accomodation of Minkowski spacetime and similar 4D Coordinate Reference Systems is essential if OGC Standards are going to support this domain.
+
+////
+This section provides a statement describing the value of this standards activity in relation to the OGC Membership, the geospatial community, and the wider IT community. This statement can be in terms of the interoperability problem being solved, processing Change requests to meet market (and Member requirements), a policy requirement and/or some other business value proposition. The proposition described in this section does not have to be in economic terms.
+////
+
+== Scope of work
+
+This Standards Working Group will develop an Abstract Specification for Temporal data. It will seek to integrate coordinate reference systems (ISO 19111) and temporal reference systems (ISO 19108) in a single conceptual model. In the process it will also expand our concept of temporal data to better accomodate moving features and non-terrestrial envionments.
+
+This work is expected to inform further work on the W3C Temporal Ontology and updates to ISO 19108.
+////
+This section describes the scope of work (SOW) for the work of the SWG. There are typically at least three (3) cases that justify the formation of a SWG: A group of members decide to develop a new OGC candidate Standard from scratch, there is a draft submission being discussed by OGC members, or there are outstanding Change Requests for an existing OGC Standard and a revision is required.
+
+The following describes the characteristics of a SOW for each of these cases.
+
+For a SWG focused on defining and documenting a new OGC candidate Standard from “scratch,” the SOW SHALL include a statement of the requirements and use cases for the candidate Standard being developed. The SOW SHALL also include a justification statement for developing a new candidate OGC Standard. The SOW SHALL also describe how the new candidate Standard is related to the existing OGC Standards baseline and the OGC Reference Model. The final deliverable of a “from scratch” focused SWG SHALL be a candidate Standard ready for submission using the OGC standards process.
+
+For a SWG focused on processing a draft submission such as a specification developed outside the OGC and submitted into the OGC for consideration, the SOW would include evaluation of the submission in terms of the relationship to the existing OGC Standards baseline (see section below). The final deliverable of such a SWG SHALL be a candidate Standard for consideration by the membership for adoption.
+
+For a SWG focused on revisions to an existing adopted Standard, the SOW should include a statement that the SWG will collect all outstanding Change Request Proposals (CRPs), evaluate each of the proposals, and make edits to the Standard based on CRPs and related decisions of the SWG membership. The SWG, at their discretion, may also ask the membership for any additional change requests that have not been previous submitted. Again, the final deliverable of a revision focused SWG SHALL be a revision of the candidate Standard for consideration by the membership for adoption.
+
+In all cases, the SWG Charter shall provide a basic timeline plan for their activities.
+////
+
+=== Statement of relationship of planned work to the current OGC Standards baseline
+
+The {titletext} will integrate date and time into the foundational ISO and OGC standards related to Feature Geometry.  Specifically:
+
+* ISO 19107 - 4D spacetime geometries and how they impact existing 3D implementations
+* ISO 19108 - Proposed changes and updates to the current version of ISO 19108 to accomodate new temporal requirements
+* ISO 19111 - Modifications may be needed to fully integrate spatial and temporal reference systems into ISO 19111 conformant reference systems for spacetime.
+* ISO 19141 - Enhance to take advantage of 4D spacetime geometries.
+* W3C Time Ontology in OWL - A semantic representation of temporal concepts.
+
+////
+This section describes the relationship of the proposed standards activity to the existing Standards baseline. For the 3 cases:
+If defining a new Standard, a statement of the relationship to the existing Standards baseline including statements related to overlap (if any) with existing OGC Standards functionality, harmonization issues, and so forth.
+
+If processing change requests and performing a revision to an existing Standard, a simple statement to this effect shall be made.
+
+If processing a draft submission of a specification developed outside the OGC process, a clear statement of the relationship to the existing Standards baseline including statements related to overlap (if any) with existing OGC Standards functionality, harmonization issues, and so forth. This information is provided to allow a focus of the discussion on criteria for considering any new solution that may be incompatible with older ones, overlaps existing functionality in the current baseline, and criteria for either deprecating older solutions, or simultaneously endorsing more than one option.
+////
+
+=== What is out of scope?
+
+AS an Abstract Specification this Standard will not address encodings or specific representations of temporal concepts.
+
+////
+A short description of any activities that will be out of scope for the SWG. For example, a SWG may limit consideration of CRPs after a specified date or milestone.
+////
+
+=== Specific existing work used as starting point
+
+OGC Testbed 18 explored the question of "Can we use existing geospatial standards and technology for non-Terrestrial applications?" 
+
+Some Observations:
+
+. Many temporal reference systems are not coordinate reference systems
+. There is no temporal equivalent to the Compound Reference System
+. DateTime should be represented as a compound reference system consisting of a TM_Calendar and TM_Clock reference system.
+. TM_Calendar should be a type of TM_OrdinalReferenceSystem. 
+. TM_Clock should not be defined in terms of a "day". Many clocks count elapsed time since an epoc. Date and time are not considered.
+. TM_Clock should be a type of TM_CoordinateSystem
+. TM_Calendar can be defined as a Compound Reference System composed of days, months, and years. This would allow to define meaningful calendars for the Moon, Mars, and other non-Terrestrial environments.
+. Is there an ordinal equivalent to TM_Clock. Sunrise, noon, sunset, and midnight?
+. Can a calendar be defined in terms of planting season, Saints days, or other arbitrary events?
+
+
+////
+This section provides reference information relevant to the work of the SWG. For example, a document reference for a draft submission or a list of CRPs for a SWG focused on revision to an adopted specification.
+////
+
+=== Is this a persistent SWG
+
+[ ] YES
+
+[x] NO
+
+=== When can the SWG be inactivated
+
+The {titletext} SWG is not a persistent SWG. It may be deactivated once the deliverables have been delivered and accepted by the OGC membership as OGC Standards. 
+
+This charter may be extended beyond that point if coordination with efforts such as those described in <<similar_applicable_work,section 8.2>> are still under way. 
+
+== Description of deliverables
+
+There shall be two deliverables:
+
+* an OGC {titletext} [red]#how much of a desciption do we need here?#
+* an OGC {titletext} Ontology [red]#how much of a desciption do we need here?#
+* an optional OGC {titletext} Users Guide [red]#how much of a desciption do we need here?#
+
+////
+This section describes what the deliverables will be for this SWG activity. Deliverables could be a revision to an existing Standard, including revisions to schemas. A deliverable could also be a best practices document.
+
+This section also includes a preliminary schedule of activities. For example, an RFC focused SWG schedule would provide a plan and schedule that includes the start date, target date for release of the candidate Standard for public review, date for consolidation of comments, date for edits to document based on comments, and a final target date for making a recommendation to the Membership. This information will be made public and will also be used as input to a RoadMap for the document. Therefore, the more detail the better.
+////
+
+=== Initial deliverables
+
+////
+Describe the initial Standard(s) to be developed by the SWG.
+////
+
+=== Additional SWG tasks
+
+////
+Describe each additional Standard to be developed by the SWG as an additional task after the deliverables from the initial charter have been completed. This section is blank in a new charter, then is populated with each task approval request per the OGC TC Policies and Procedures.
+////
+
+== IPR Policy for this SWG
+
+[x] RAND-Royalty Free
+
+[ ] RAND for fee
+
+== Anticipated audience / participants
+
+////
+Description of the target participants in this SWG. For example, if the SWG were focused on a candidate spatial query language standard: Those involved in the design, development, implementation, or use of elements listed above in "Scope of the Work".  This includes search service providers, prospective users of search services exposed as XML, information architects and bibliographic, metadata, and content provider.
+
+This is not meant as a limiting statement but instead is intended to provide guidance to interested potential participants as to whether they wish to participate in this SWG.
+////
+
+== Domain Working Group endorsement
+
+The {titletext} SWG was created by and endorsed by the Temporal Domain Working Group. 
+
+== Other informative information about the work of this SWG
+
+=== Collaboration
+
+The {titletext} SWG will perform its work in public in a GitHub repository operated by OGC and managed by the {titletext} SWG chairs.
+
+[similar_applicable_work]
+=== Similar or applicable standards work (OGC and elsewhere)
+
+The following Standards and projects may be relevant to the SWG's planned work, although none currently provide the functionality anticipated by this committee's deliverables:
+
+
+The SWG intends to seek and if possible maintain liaison with each of the organizations maintaining the above works.
+
+=== Details of first meeting
+
+The first meeting of the SWG will be held by telephone conference call at [red]#10AM EDT on 1 October 2007#. Call-in information will be provided to the SWG's e-mail list and on the portal calendar in advance of the meeting.
+
+=== Projected on-going meeting schedule
+
+The work of the SWG will be carried out primarily by email and conference calls, possibly every two weeks, with face-to-face meetings perhaps at each of the OGC TC meetings.
+
+=== Supporters of this Charter
+
+The following people support this proposal and are committed to the Charter and projected meeting schedule. These members are known as SWG Founding or Charter members. The charter members agree to the SoW and IPR terms as defined in this charter. The charter members have voting rights beginning the day the SWG is officially formed. Charter Members are shown on the public SWG page. Extend the table as necessary.
+
+|===
+|Name |Organization
+|Charles Heazel |Heazeltech LLC
+|===
+
+=== Conveners
+
+Charles Heazel
+
+== References
+
+////
+Optional list of references.
+////

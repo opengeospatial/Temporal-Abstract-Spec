@@ -1,3 +1,6 @@
 
 [bibliography]
 == References
+
+* [[ISO19111,nofetch(ISO 19111)]] ISO: ISO 19111:2019, _Geographic information – Referencing by coordinates_, 2019, https://www.iso.
+org/standard/74039.html

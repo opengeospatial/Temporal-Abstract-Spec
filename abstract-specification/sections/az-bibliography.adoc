@@ -2,18 +2,15 @@
 [appendix]
 == Bibliography
 
-* OGC: OGC 22-036: TESTBED-18: 3D+ STANDARDS FRAMEWORK ENGINEERING REPORT (DRAFT) http://www.opengis.net/doc/PER/T18
-
-* OGC 22-038r2 Testbed-18: Reference Frame Transformation Engineering Report
-
-* ISO 19107:2003 Geographic information — Spatial schema, 2003 https://www.iso.org/standard/26012.html
-
-* ISO 19108:2002 Geographic information — Temporal schema, 2002 https://www.iso.org/standard/26013.html
-
-* ISO 19111:2019 Geographic information — Referencing by coordinates, 2019, https://www.iso.
+* [[[ISO19107,nofetch(ISO 19107)]]] ISO: ISO 19107:2003, _Geographic Information – Spatial Schema_, 2003 https://www.iso.org/standard/26012.html
+* [[[ISO19108,nofetch(ISO 19108)]]] ISO: ISO 19108:2002/Cor 1:2006, _Geographic information – Temporal schema — Technical Corrigendum 1_, 2002 https://www.iso.org/standard/26013.html
+* [[[ISO19111,nofetch(ISO 19111)]]] ISO: ISO 19111:2019, _Geographic information – Referencing by coordinates_, 2019, https://www.iso.
 org/standard/74039.html
+* [[[OGC22036,nofetch(OGC 22-036)]]] OGC: _TESTBED-18 3D+ STANDARDS FRAMEWORK ENGINEERING REPORT (DRAFT)_ http://www.opengis.net/doc/PER/T18
+* [[[OGC22038,nofetch(OGC 22-038r2)]]] OGC: _TESTBED-18 Reference Frame Transformation Engineering Report_
+* [[[OGCgeopose,nofetch(OGC GeoPose)]]] OGC: _GeoPose Specification draft_, 2021. https://github.com/opengeospatial/GeoPose/
 
-* OGC: GeoPose Specification draft, 2021. https://github.com/opengeospatial/GeoPose/
+////
 
 * ISO: Geographic information — Reference model — Part 1: Fundamentals, 2014. https://www.
 iso.org/standard/59164.html
@@ -75,3 +72,5 @@ Universal Coordinated Time (UTC),
 Bureau International des Poids et Mesures (BIPM)
 
 International Earth Rotation and Reference Systems Service (IERS)
+
+////

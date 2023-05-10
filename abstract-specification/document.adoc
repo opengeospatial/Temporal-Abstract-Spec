@@ -12,17 +12,18 @@
 :comment: ### Internal reference number; mandatory
 :docnumber: 15-104r5
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: 2015-09-30
+:received-date: 2023-05-09
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2017-06-13
+:issued-date: 2023-05-09
 :comment: ### Date on which the standard was published; mandatory
-:published-date: 2017-08-01
+:published-date: 2023-05-09
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/AS/dggs/1.0
 :comment: ### Identifier embedded into a document type-specific external URL
 :referenceURLID: http://docs.opengeospatial.org/as/15-104r5/15-104r5.html
 :comment: ### Author one
 :fullname: Chris Little
+:fullname: Charles Heazel
 :comment: ### Role of the authors; mandatory
 :role: editor
 :comment: ### Comma delimited keywords; mandatory

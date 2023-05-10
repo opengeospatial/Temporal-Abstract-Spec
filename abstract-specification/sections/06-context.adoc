@@ -2,13 +2,13 @@
 
 === Context
 
-When OGC standards involve time, they generally refer to the ISO documents such as ISO 19108, ISO 19111, ISO8601, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates (equivalent to ISO 19111).
+When OGC standards involve time, they generally refer to the ISO documents such as ISO 19108, ISO 19111, ISO 8601, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates (equivalent to ISO 19111).
 
 When dealing with temporal reference systems, it is necessary to understand all of these standards and how they interact. ISO Technical Committee 211 (TC211) provides a useful tool for integrating their standards. The https://github.com/ISO-TC211/HMMG[Harmonized UML model ] provides a single integrated model for most of the TC211 Standards. That model will provide the foundation for the Abstract Temporal Reference Model.
 
 The role of temporal reference systems in the TC211 universe is illustrated below.
 
-image::images/context.png[Temporal Reference Model Context]
+image::sections/images/Context.png[Temporal Reference Model Context]
 
 Some Observations:
 
@@ -21,6 +21,18 @@ Some Observations:
 . TM_Calendar can be defined as a Compound Reference System composed of days, months, and years. This would allow to define meaningful calendars for the Moon, Mars, and other non-Terrestrial environments.
 . Is there an ordinal equivalent to TM_Clock. Sunrise, noon, sunset, and midnight?
 . Can a calendar be defined in terms of planting season, Saints days, or other arbitrary events?
+
+Here is an illlustration of the connections between ISO 19111 and ISO 19108
+
+image::sections/images/Temporal.png[ISO 19111 and 19108]
+
+The Temporal Reference System (ISO 19108)
+
+image::sections/images/TemporalCRS.png[Temporal Reference System]
+
+Temporal Transormations.
+
+image::sections/images/Transforms.png[Temporal Transformations]
 
 
 
