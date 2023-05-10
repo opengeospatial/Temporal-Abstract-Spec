@@ -8,9 +8,10 @@ Much effort over decades has gone into establishing complex structures to repres
 
 The aim of the document is to establish a clear terminology, so that people are clearly aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps help build better interoperable systems.
 
-Until more work is done, please see and use the repo Wiki to gather information and draft documents.
+The current draft documents available from the following locations:
 
-The main content of the draft Abstract Conceptual Model is in [Section 6](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/abstract-specification/sections/06-other-clauses.adoc).
+* Charter (draft) in [HTML](https://htmlpreview.github.io/?https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/Charter/document.html), [PDF](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/Charter/document.pdf), and [Word](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/Charter/document.doc) formats.
+* Abstract Specification (draft) in [HTML](https://htmlpreview.github.io/?https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/abstract-specification/document.html), [PDF](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/abstract-specification/document.pdf), and [Word](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/abstract-specification/document.doc) formats.
 
 ## About this document
 
