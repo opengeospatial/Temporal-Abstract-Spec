@@ -40,7 +40,7 @@ ReferenceSystem "1" <|-- "1..*" TemporalReferenceSystem
     TemporalReferenceSystem "0..1" <|-- "1" OrdinalTemporalReferenceSystem
 class TemporalCoordinateReferenceSystem {
 NameOrId
-OptionalEpochOrStartingTimeDefinedInSomeOtherTemporalReferenceSystem
+OptionalEpochDefinedInSomeOtherTemporalReferenceSystem
 OptionalNameForEachTick
 OptionalEndTimeOrCount
 OptionalLocation
@@ -192,7 +192,7 @@ Other documents may enable two such 'king lists' to be related, though not compl
 === Attributes of simple Clock and Discrete Timescale
 - Name/Id
 
-- Optional Epoch/starting time, defined in some other temporal reference system
+- Optional Epoch/starting time defined in some other temporal reference system
 
 - Optional name for each tick
 
