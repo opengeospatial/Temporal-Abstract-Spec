@@ -17,9 +17,9 @@ ogcdoc, OGC document, abstract specification, conceptual model, time, temporal r
 [abstract]
 == Abstract
 
-Traditionally, geospatial communities used 2D coordinates and the vertical and temporal aspects were considered attributes rather than fully fledged coordinate systems. In an increasingly dynamic, speedier and multidimensional world, much confusion and lack of interoperability has occurred because of inconsistent approaches to time. Much effort has been expended by various international bodies to establish the Gregorian Calendar as a consistent timeline. This suffices for low precision, for example of one minute, but not so when second or sub-second accuracy is required. Also, there has been differing practice and no consensus on whether leap seconds should be part of the Gregorian timeline.
+Traditionally, geospatial communities used 2D coordinates and the vertical and temporal aspects were considered attributes rather than fully fledged coordinate systems. In an increasingly dynamic, speedier and multidimensional world, much confusion and lack of interoperability has occurred because of inconsistent approaches to time. Much effort has been expended by various international bodies to establish the Gregorian Calendar as a consistent timeline. This suffices for low precision, such as to the nearest minute, but not so when second or sub-second accuracy is required. For example, there has been differing practices and no consensus on whether leap seconds should be part of the Gregorian timeline.
 
-The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightfoward  defining document. This document aims to to give clear consistent definitions of the fundamental concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps they can contribute to building better and more interoperable systems sing other more detailed documents such as logical and implementation standards that have an agreed common conceptual basis and terminology.
+The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightfoward  defining document. This document aims to to give clear consistent definitions of the fundamental concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps they can contribute to building better and more interoperable systems using other more detailed documents such as logical and implementation standards that have an agreed common conceptual basis and terminology.
 
 This document is consistent with ISO 19111:2019 Geographic information — Referencing by Coordinates and W3C Time Ontology in OWL.
 
@@ -58,6 +58,3 @@ When OGC standards involve time, they generally refer to the ISO documents such 
 Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the ISO8601 notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the attendant ambiguities, imprecision and inappropriate scope.
 
 The aim of this document is to establish clear concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.
-
-[.preface]
-
