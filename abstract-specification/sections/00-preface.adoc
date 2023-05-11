@@ -18,8 +18,11 @@ If the Preface contains subclauses, it needs to be encoded as a full preface cla
 [abstract]
 == Abstract
 
-<Insert abstract here.>
+Traditionally, geospatial communities used 2D coordinates and the vertical and temporal aspects were considered attributes rather than fully fledged coordinate systems. In an increasingly dynamic, speedier and multidimensional world, much confusion and lack of interoperability has occurred because of inconsistent approaches to time. Much effort has been expended by various international bodies to establish the Gregorian Calendar as a consistent timeline. This suffices for low precision, of say minutes, but not so when second or sub-second accuracy is required. Also, there has also been iffereing practice and no consensus on whether leap seconds should be part of the Gregorian timeline.
 
+The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightfoward  defining document. This Abstract Topic specification aims to to give clear consistent definitions of the fundamental concepts, so that other, more detailed standard documents such as logical and implementation standards have an agreed conceptual basis, thus improving interoperability.
+
+This document is consistent with ISO 19111:2019 Geographic information — Referencing by Coordinates and W3C Time Ontology in OWL.
 
 [.preface]
 == Submitters
@@ -30,6 +33,7 @@ All questions regarding this submission should be directed to the editor or the 
 |===
 h| Name h| Affiliation
 | Chris Little | Met Office
+| Charles Heazel | Heazel 
 ...
 |===
 
