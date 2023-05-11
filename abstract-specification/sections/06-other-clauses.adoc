@@ -38,13 +38,39 @@ ReferenceSystem "1" <|-- "1..*" TemporalReferenceSystem
     TemporalReferenceSystem "0..1" <|-- "1" TemporalCoordinateReferenceSystem
     TemporalReferenceSystem "0..1" <|-- "1" Calendar
     TemporalReferenceSystem "0..1" <|-- "1" OrdinalTemporalReferenceSystem
+class TemporalCoordinateReferenceSystem {
+NameOrId
+OptionalEpochOrStartingTimeDefinedInSomeOtherTemporalReferenceSystem
+OptionalNameForEachTick
+OptionalEndTimeOrCount
+OptionalLocation
+OptionalNotation
+}
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale
 TemporalCoordinateReferenceSystem "1" o-- "1" Epoch
 TemporalCoordinateReferenceSystem "1" --> "1..*" Notation
+class Calendar {
+   NameOrId
+   AstronomicalAttribute [e.g. solar, sidereal, lunar, luni-solar]
+   PredictiveAttribute [e.g. observed or calculated]
+   EpochOrStartTime
+   OptionalEndTime
+   OptionalLocationOrRegionOfApplicability
+   ConstituentUnitsOrClocksAndCountsOrTimescales
+   OptionalNotation
+   }
 Calendar "1" o-- "0..1" Epoch
 Calendar "1" o-- "1..*" Timescale
 Calendar "1" o-- "1" Algorithm
 Calendar "1" --> "1..*" Notation
+class OrdinalTemporalReferenceSystem {
+    NameOrId
+    ListedOrEnumeratedSequenceOfEvents
+    FirstAndLastEvents
+    OptionalEpochDefinedInSomeOtherTemporalReferenceSystem
+    OptionalLocationOrRegionOfApplicability
+    OptionalNotations 
+    }
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch
 OrdinalTemporalReferenceSystem "1" o-- "2..*" Event
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation
