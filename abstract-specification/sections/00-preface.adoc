@@ -1,5 +1,5 @@
 
-.Preface
+== Preface
 Attention is drawn to the possibility that some of the elements of this document may be the
 subject of patent rights. The Open Geospatial Consortium shall not be held responsible for
 identifying any or all such patent rights.
@@ -7,7 +7,12 @@ identifying any or all such patent rights.
 Recipients of this document are requested to submit, with their comments, notification of any
 relevant patent claims or other intellectual property rights of which they may be aware that
 might be infringed by any implementation of the standard set forth in this document, and to
-provide supporting documentatio
+provide supporting documentation.
+
+[keywords]
+== Keywords
+The following are keywords to be used by search engines and document catalogues.
+ogcdoc, OGC document, abstract specification, conceptual model, time, temporal referencing, referencing by coordinates, calendar, clock, timescale
 
 [abstract]
 == Abstract
@@ -21,6 +26,20 @@ This document is consistent with ISO 19111:2019 Geographic information — Refer
 The aim of this document is to establish clear concepts and terminology.
 
 [.preface]
+== Security Considerations
+
+No security considerations have been made for this document.
+
+[organizations]
+== Submitting Organizations
+
+The following organizations submitted this Document to the Open Geospatial Consortium (OGC)
+
+- Met Office
+
+- HeazelTech
+
+[submitters]
 == Submitters
 
 All questions regarding this submission should be directed to the editor or the submitters:
@@ -28,9 +47,8 @@ All questions regarding this submission should be directed to the editor or the 
 [%unnumbered]
 |===
 h| Name h| Affiliation
-| Chris Little | Met Office
+| Chris Little (editor) | Met Office
 | Chuck Heazel | HeazelTech
-...
 |===
 
 [.preface]
@@ -42,6 +60,4 @@ Much effort over decades has gone into establishing complex structures to repres
 The aim of this document is to establish clear concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.
 
 [.preface]
-== Reference notes
 
-<Place reference notes here.>
