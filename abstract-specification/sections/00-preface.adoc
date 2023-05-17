@@ -53,8 +53,8 @@ h| Name h| Affiliation
 
 [.preface]
 == Introduction
-When OGC standards involve time, they generally refer to the ISO documents such as ISO 19108 (now obsolete), ISO 19111, ISO8601, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates (equivalent to ISO 19111).
+When OGC standards involve time, they generally refer to the ISO documents such as ISO 19108 (now largely superceded), ISO 19111, ISO 8601, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates (equivalent to ISO 19111).
 
-Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the ISO8601 notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the attendant ambiguities, imprecision and inappropriate scope.
+Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the ISO 8601 notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the attendant ambiguities, imprecision and inappropriate scope.
 
 The aim of this document is to establish clear concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.
