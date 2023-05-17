@@ -10,8 +10,6 @@ org/standard/74039.html
 * [[[OGC22038,nofetch(OGC 22-038r2)]]] OGC: _TESTBED-18 Reference Frame Transformation Engineering Report_
 * [[[OGCgeopose,nofetch(OGC GeoPose)]]] OGC: _GeoPose Specification draft_, 2021. https://github.com/opengeospatial/GeoPose/
 
-////
-
 * ISO: Geographic information — Reference model — Part 1: Fundamentals, 2014. https://www.
 iso.org/standard/59164.html
 
@@ -52,7 +50,7 @@ naif/tutorials.html
 [9] The Open Group, UNIX Time, retrieved January 2023, https://pubs.opengroup.org/
 onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16
 
-[10] Calendrical Calculations - The Ultimate Eidtion, Nachum Dershowitz, Edward M. Reingold. Paperback: 618
+[10] Calendrical Calculations - The Ultimate Edition, Nachum Dershowitz, Edward M. Reingold. Paperback: 618
 pages. Cambridge University Press; 4th edition (2018) Language: English. ISBN-13: 978-1107683167.
 
 [11] http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition
@@ -65,12 +63,12 @@ Representation of dates and times.
 
 [14] Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems: Second Edition by B. P. Zeigler, H. Praehofer, T. G. Kim, Academic Press, San Diego, CA, 2000.
  
-[15] A Brief History of Timekeeping, Chad Orzell. Paperback: 324 pages. Oneworld Publications; 1st edtion (2022) Language English. ISBM-13: 978-0-86154-321-2.
+[15] A Brief History of Timekeeping, Chad Orzell. Paperback: 324 pages. Oneworld Publications; 1st edtion (2022) Language English. ISBN-13: 978-0-86154-321-2.
+
+[16] A Treatise on Time and Space, J. R. Lucas. Paperback: 321 pages. Methuen and Co. Ltd; 1st edition (1973). ISBN 0-416-84190-2.
 
 Universal Coordinated Time (UTC),
 
 Bureau International des Poids et Mesures (BIPM)
 
 International Earth Rotation and Reference Systems Service (IERS)
-
-////
