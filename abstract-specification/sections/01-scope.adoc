@@ -1,9 +1,4 @@
 
 == Scope
 
-<Insert scope text here.>
-
-[NOTE]
-====
-Give the subject of the document and aspects of the scope covered by the document.
-====
+This document defines the major underlying concepts regarding time. It does not define any concrete temporal reference systems or give detailed guidance on implementations.
