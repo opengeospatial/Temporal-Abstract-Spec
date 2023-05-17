@@ -14,9 +14,9 @@
 :comment: ### Date on which the standard was updated; mandatory
 :received-date: 2023-05-09
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2023-05-09
+:issued-date: 2023-05-11
 :comment: ### Date on which the standard was published; mandatory
-:published-date: 2023-05-09
+:published-date: 2023-05-11
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/AS/dggs/1.0
 :comment: ### Identifier embedded into a document type-specific external URL
