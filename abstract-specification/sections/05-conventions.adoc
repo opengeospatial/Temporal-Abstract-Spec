@@ -8,6 +8,8 @@
 
     CRS Coordinate Reference System
     
+    TRS Temporal Reference System
+    
     UML Unified Modelling Language
 
 === Identifiers
