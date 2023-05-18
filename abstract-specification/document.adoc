@@ -10,13 +10,13 @@
 :comment: ### Version number; optional. Dot-delimited, preferably with this structure <version number>.<minor version number>
 :edition: 1.0
 :comment: ### Internal reference number; mandatory
-:docnumber: 15-104r5
+:docnumber: 23-032
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: 2023-05-09
+:received-date: 2023-05-18
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2023-05-11
+:issued-date: 2023-05-18
 :comment: ### Date on which the standard was published; mandatory
-:published-date: 2023-05-11
+:published-date: 2023-05-18
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/AS/dggs/1.0
 :comment: ### Identifier embedded into a document type-specific external URL
