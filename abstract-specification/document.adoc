@@ -18,9 +18,9 @@
 :comment: ### Date on which the standard was published; mandatory
 :published-date: 2023-05-18
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
-:external-id: http://www.opengis.net/doc/AS/dggs/1.0
+:external-id: http://www.opengis.net/doc/AS/Temporal/1.0
 :comment: ### Identifier embedded into a document type-specific external URL
-:referenceURLID: http://docs.opengeospatial.org/as/15-104r5/15-104r5.html
+:referenceURLID: http://docs.opengeospatial.org/as/23-032r1/23-032r1.html
 :comment: ### Author one
 :fullname: Chris Little
 :fullname: Charles Heazel
