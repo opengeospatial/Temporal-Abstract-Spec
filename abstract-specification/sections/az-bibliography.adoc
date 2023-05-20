@@ -1,55 +1,92 @@
 
-[appendix]
+[bibliography]
 == Bibliography
 
-[1] [[ISO19107,nofetch(ISO 19107)]] ISO: ISO 19107:2003, _Geographic Information – Spatial Schema_, 2003, https://www.iso.org/standard/26012.html
+* [[[ISO_19107,ISO 19107]]]
 
-[2] [[ISO19108,nofetch(ISO 19108)]] ISO: ISO 19108:2002/Cor 1:2006, _Geographic information – Temporal schema — Technical Corrigendum 1_, 2002, https://www.iso.org/standard/26013.html
+* [[[ISO_19108,ISO 19108]]]
 
-[3] [[ISO19111,nofetch(ISO 19111)]] ISO: ISO 19111:2019, _Geographic information – Referencing by coordinates_, 2019, https://www.iso.org/standard/74039.html
+* [[[ISO_19108_Cor1,ISO 19108:2002/Cor 1:2006]]]
 
-[4] [[OGC22036,nofetch(OGC 22-036)]] OGC: _Testbed-18, 3D+ Standards Framework Engineering Report (DRAFT)_ http://www.opengis.net/doc/PER/T18
+* [[[ISO_8601,ISO 8601:2004]]]
 
-[5] [[OGC22038,nofetch(OGC 22-038r2)]] OGC: _Testbed-18, Reference Frame Transformation Engineering Report_
+* [[[OGC22036,OGC 22-036]]]
 
-[6] [[OGCgeopose,nofetch(OGC GeoPose)]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
+* [[[OGC22038,OGC 22-038r2]]]
 
-[7] ISO: Geographic information — Reference model — Part 1: Fundamentals, 2014, https://www.iso.org/standard/59164.html
+* [[[OGCgeopose,OGC 21-056r10]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
 
-[8] ISO: Geographic information — Conceptual schema language, 2015, https://www.iso.org/standard/56734.html
+* [[[ISO_19101-1,ISO 19101-1:2014]]]
 
-[9] ISO: Geographic information — Spatial referencing by geographic identifiers, 2019, https://www.iso.org/standard/70742.html
+* [[[ISO_19103,ISO 19103]]]
 
-[10] ISO: Geographic information — Well-known text representation of coordinate referencesystems, 2019. https://www.iso.org/standard/76496.html
+* [[[ISO_19112,ISO 19112:2019]]]
 
-[11] ISO: Geographic information — Geography Markup Language (GML), 2007, https://www.iso.org/standard/32554.html
+* [[[ISO_19162,ISO 19162:2019]]]
 
-[12] OGC: OGC 09-083r4: GeoAPI 3.0 Implementation Standard with corrigendum. OpenGeospatial Consortium (2018). https://portal.ogc.org/files/?artifact id=71648.
+* [[[ISO_19136,ISO 19136:2007]]]
 
-[13] OGC: OGC 22-038: Reference Frame Transformation Engineering Report, 2022, http://ogc.pages.ogc.org/T18-3Dplus_Data_Standards_and_Streaming/documents/D025/document.html
+* [[[OGC09-083,OGC 09-083r4]]]
 
-[14] Astronomical Algorithms, Jean Meeus, https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
+* [[[OGC_18-005r4,OGC 18-005r4]]]
 
-[15] Consultative Committee for Space Data Systems, Navigation Data — Definitions and Conventions, 2019, https://public.ccsds.org/Pubs/500x0g4.pdf
+* [[[IETF_RFC_3339,IETF RFC 3339]]]
 
-[16] Springer Handbook of Global Navigation Satellite Systems, Peter J.G. Teunissen, Oliver Montenbruck, https://doi.org/10.1007/978-3-319-42928-1
+* [[[CEN_ENV_1613,CEN ENV 1613:1995]]]
 
-[17] International Earth Rotation and Reference Systems Service (IERS), https://www.iers.org/IERS/EN/DataProducts/EarthOrientationData/eop.html
+* [[[astro_algo,Astronomical Algorithms]]], Jean Meeus. _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
 
-[18] NASA NAIF, SPICE Documentation, retrieved January 2023, https://naif.jpl.nasa.gov/naif/tutorials.html
+* [[[CCSDS_500x0g4,CCDSS 500x0g4]]], Consultative Committee for Space Data Systems. _Navigation Data — Definitions and Conventions_. 2019. https://public.ccsds.org/Pubs/500x0g4.pdf
 
-[19] The Open Group, UNIX Time, retrieved January 2023, https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16
+* [[[Springer_GNSS,Springer Handbook of Global Navigation Satellite Systems]]],
+Peter J.G. Teunissen, Oliver Montenbruck.
+_Springer Handbook of Global Navigation Satellite Systems_.
+https://doi.org/10.1007/978-3-319-42928-1
 
-[20] Calendrical Calculations - The Ultimate Edition, Nachum Dershowitz, Edward M. Reingold. Paperback: 618 pages. Cambridge University Press; 4th edition (2018) Language: English. ISBN-13: 978-1107683167. Also http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition
+* [[[IERS,International Earth Rotation and Reference Systems Service]]],
+IERS.
+https://www.iers.org/IERS/EN/DataProducts/EarthOrientationData/eop.html
 
-[21] A Brief History of Timekeeping, Chad Orzell. Paperback: 324 pages. Oneworld Publications; 1st edtion (2022) Language English. ISBN-13: 978-0-86154-321-2.
+* [[[SPICE,SPICE Documentation]]]
+NASA NAIF.
+_SPICE Documentation_.
+https://naif.jpl.nasa.gov/naif/tutorials.html [last accessed 2023-01]
 
-[22] A Treatise on Time and Space, J. R. Lucas. Paperback: 321 pages. Methuen and Co. Ltd; 1st edition (1973). ISBN 0-416-84190-2.
+* [[[unix_time,UNIX Time]]]
+The Open Group.
+_UNIX Time_.
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16 [last accessed 2023-01]
 
-[23] Allen, J. F., 'Maintaining Knowledge about Temporal Intervals', Communications of the ACM, 1983, vol. 26 pp. 832-843.
+* [[[calendrical,Calendrical Calculations]]]
+Nachum Dershowitz, Edward M. Reingold.
+_Calendrical Calculations - The Ultimate Edition_.
+Cambridge University Press. 2018.
+ISBN-13: 978-1107683167.
+http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
 
-[24] ISO 8601:2004, Data elements and interchange formats - Information interchange - Representation of dates and times.
+* [[[history_timekeeping,A Brief History of Timekeeping]]]
+Chad Orzell.
+_A Brief History of Timekeeping_.
+Oneworld Publications. 2022.
+ISBN-13: 978-0-86154-321-2.
 
-[25] Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems: Second Edition by B. P. Zeigler, H. Praehofer, T. G. Kim, Academic Press, San Diego, CA, 2000.
+* [[[treatise,A Treatise on Time and Space]]]
+J. R. Lucas.
+_A Treatise on Time and Space_
+Methuen and Co. Ltd. 1973.
+ISBN 0-416-84190-2.
 
-[26] Bureau International des Poids et Mesures (BIPM), Establishment of International Atomic Time and Coordinated Universal Time,   https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
+* [[[temporal_knowledge,Maintaining Knowledge about Temporal Intervals]]]
+Allen, J. F.
+_Maintaining Knowledge about Temporal Intervals_
+Communications of the ACM, 1983, vol. 26 pp. 832-843.
+
+* [[[theory,Theory of Modelling and Simulation]]]
+B. P. Zeigler, H. Praehofer, T. G. Kim.
+_Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems_
+Edition 2. San Diego: Academic Press. 2000.
+
+* [[[bipm_define,Establishment of International Atomic Time and Coordinated Universal Time]]]
+Bureau International des Poids et Mesures (BIPM).
+_Establishment of International Atomic Time and Coordinated Universal Time_.
+https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
