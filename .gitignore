@@ -3,4 +3,5 @@ relaton
 iev
 _files
 *.err
+Gemfile.lock
 
