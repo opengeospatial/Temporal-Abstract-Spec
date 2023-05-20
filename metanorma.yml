@@ -1,0 +1,10 @@
+---
+metanorma:
+  source:
+    files:
+      - abstract-specification/document.adoc
+
+  collection:
+    organization: "OGC"
+    name: "Abstract Conceptual Model for Time"
+
