@@ -28,11 +28,10 @@ jobs:
         uses: actions-mn/cache@v1
 
       - name: Metanorma generate site
-        uses: actions-mn/build-and-publish@main
+        uses: actions-mn/build-and-publish@v1
         with:
           agree-to-terms: true
-          output-dir: ./_site
-
+          token: ${{ secrets.GITHUB_TOKEN }}
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
     environment:
