@@ -5,9 +5,9 @@
 :committee: technical
 :edition: 1.0
 :docnumber: 23-032
-:received-date: 2023-05-18
-:issued-date: 2023-05-18
-:published-date: 2023-05-18
+:received-date: 2023-05-23
+:issued-date: 2023-05-23
+:published-date: 2023-05-23
 :external-id: http://www.opengis.net/doc/AS/Temporal/1.0
 :referenceURLID: http://docs.opengeospatial.org/as/23-032r1/23-032r1.html
 :fullname: Chris Little
@@ -34,10 +34,10 @@ include::sections/04-terms_and_definitions.adoc[]
 
 include::sections/05-conventions.adoc[]
 
-include::sections/06-context.adoc[]
-
 // Add clause files as needed
 include::sections/06-other-clauses.adoc[]
+
+include::sections/07-context.adoc[]
 
 // Annexes (add annex files as needed)
 include::sections/aa-annexA.adoc[]

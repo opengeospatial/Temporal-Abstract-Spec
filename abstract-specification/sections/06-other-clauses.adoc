@@ -194,13 +194,23 @@ There may in fact be a series of other regimes, which are out of scope of this d
 
 Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.
 
+==== Spacetime
+
+When dealing with moving objects, we find that the location of the object in space depends on its location in time. That is to say, that the location is an event in space and time.  
+
+Originally developed by <<minkowski,Hermann Minknowski>> to support work in Special Relativity, the concept of Spacetime is useful whenever the location of an object in space is dependent on its location in time.
+
+Since the speed of light in a vacum is a constant, Spacetime uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthagonal axis all with the same units of measure.
+
 ==== Relativistic
 
 A regime may be needed for 'space-time', off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
 
-Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth's gravity well.
+Once off the planet Earth, distances and velocities grow very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of Spacetime events as measured between two moving objects. The core concepts are the <<lorentz_transform,Lorentz Transforms>>. These transforms allow one to calculate the degree of "contraction" a measurement undergos due to the relative velocity between the observing and observed object.
 
-The key approach is to ensure each moving feature of interest has its own local clock and time, known as its 'proper time'. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.
+The key to this approach is to ensure each moving feature of interest has its own local clock and time, known as its 'proper time'. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.
+
+Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth's gravity well.
 
 ==== Accountancy
 
