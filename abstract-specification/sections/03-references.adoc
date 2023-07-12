@@ -4,8 +4,7 @@
 
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
-* [[ISO19111,nofetch(ISO 19111)]] ISO: ISO 19111:2019, _Geographic information – Referencing by coordinates_, 2019, https://www.iso.
-org/standard/74039.html
+* [[[ISO_19111,nofetch(ISO 19111)]]] ISO: ISO 19111:2019, _Geographic information – Referencing by coordinates_, 2019, https://www.iso.org/standard/74039.html
 
-* [[W3COWLTime,nofetch(W3C OWL Time)]] W3C: Time Ontology in OWL, 2017, https://www.w3.org/TR/2017/REC-owl-time-20171019/
-
+* [[[W3COWLTime,nofetch(W3C REC-owl-time-20171019)]]] W3C: Time Ontology in OWL, 2017, https://www.w3.org/TR/2017/REC-owl-time-20171019/
+include::..\..\..\Temporal-Abstract-Spec - Copy\abstract-specification\sections\03-references.adoc[]

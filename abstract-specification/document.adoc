@@ -1,43 +1,24 @@
 = Topic nn - Abstract Conceptual Model for Time
-:comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :doctype: abstract-specification-topic
-:comment: ### Language of the document; mandatory. Specified in two-letter code: "en" for English, "fr" for French
 :language: en
-:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :status: swg-draft
-:comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
-:comment: ### Version number; optional. Dot-delimited, preferably with this structure <version number>.<minor version number>
 :edition: 1.0
-:comment: ### Internal reference number; mandatory
 :docnumber: 23-032
-:comment: ### Date on which the standard was updated; mandatory
-:received-date: 2023-05-18
-:comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2023-05-18
-:comment: ### Date on which the standard was published; mandatory
-:published-date: 2023-05-18
-:comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
+:received-date: 2023-05-23
+:issued-date: 2023-05-23
+:published-date: 2023-05-23
 :external-id: http://www.opengis.net/doc/AS/Temporal/1.0
-:comment: ### Identifier embedded into a document type-specific external URL
 :referenceURLID: http://docs.opengeospatial.org/as/23-032r1/23-032r1.html
-:comment: ### Author one
 :fullname: Chris Little
-:fullname: Charles Heazel
-:comment: ### Role of the authors; mandatory
+:fullname_2: Charles Heazel
 :role: editor
-:comment: ### Comma delimited keywords; mandatory
-:keywords: ogcdoc, OGC document, time, temporal
-:comment: ### Semicolon-delimited list of the submitting organizations; mandatory
-:submitting-organizations: Met Office
-:comment: ### Name of the AsciiDoc file; mandatory
-:docfile: document.adoc
-:comment: ### Metanorma flavor; mandatory
+:role_2: editor
+:keywords: ogcdoc, OGC document, abstract specification, conceptual model, time, temporal referencing, referencing by coordinates, calendar, clock, timescale
+:submitting-organizations: Met Office, HeazelTech
 :mn-document-class: ogc
-:mn-output-extensions: xml,html,doc,pdf,rxl
-:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.com/author/ref/document-attributes/#caches, https://www.metanorma.com/author/topics/building/reference-lookup/#lookup-result-caching
+:mn-output-extensions: html,pdf,rxl
 :local-cache-only:
-:comment: ### Encode all images in HTML output as inline data-URIs; optional
 :data-uri-image:
 
 // Clauses
@@ -53,10 +34,10 @@ include::sections/04-terms_and_definitions.adoc[]
 
 include::sections/05-conventions.adoc[]
 
-include::sections/06-context.adoc[]
-
 // Add clause files as needed
 include::sections/06-other-clauses.adoc[]
+
+include::sections/07-context.adoc[]
 
 // Annexes (add annex files as needed)
 include::sections/aa-annexA.adoc[]

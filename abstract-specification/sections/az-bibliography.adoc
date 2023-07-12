@@ -1,74 +1,109 @@
 
-[appendix]
+[bibliography]
 == Bibliography
 
-* [[[ISO19107,nofetch(ISO 19107)]]] ISO: ISO 19107:2003, _Geographic Information – Spatial Schema_, 2003 https://www.iso.org/standard/26012.html
-* [[[ISO19108,nofetch(ISO 19108)]]] ISO: ISO 19108:2002/Cor 1:2006, _Geographic information – Temporal schema — Technical Corrigendum 1_, 2002 https://www.iso.org/standard/26013.html
-* [[[ISO19111,nofetch(ISO 19111)]]] ISO: ISO 19111:2019, _Geographic information – Referencing by coordinates_, 2019, https://www.iso.
-org/standard/74039.html
-* [[[OGC22036,nofetch(OGC 22-036)]]] OGC: _TESTBED-18 3D+ STANDARDS FRAMEWORK ENGINEERING REPORT (DRAFT)_ http://www.opengis.net/doc/PER/T18
-* [[[OGC22038,nofetch(OGC 22-038r2)]]] OGC: _TESTBED-18 Reference Frame Transformation Engineering Report_
-* [[[OGCgeopose,nofetch(OGC GeoPose)]]] OGC: _GeoPose Specification draft_, 2021. https://github.com/opengeospatial/GeoPose/
+* [[[ISO_19107,nofetch(ISO 19107)]]]
 
-* ISO: Geographic information — Reference model — Part 1: Fundamentals, 2014. https://www.
-iso.org/standard/59164.html
+* [[[ISO_19108,nofetch(ISO 19108)]]]
 
-* ISO: Geographic information — Conceptual schema language, 2015. https://www.iso.org/
-standard/56734.html
+* [[[ISO_19108_Cor1,nofetch(ISO 19108:2002/Cor 1:2006)]]]
 
-* ISO: Geographic information — Spatial referencing by geographic identifiers, 2019. https://
-www.iso.org/standard/70742.html
+* [[[ISO_8601,nofetch(ISO 8601:2004)]]]
 
-* ISO: Geographic information — Well-known text representation of coordinate reference
-systems, 2019. https://www.iso.org/standard/76496.html
+* [[[OGC22036,nofetch(OGC 22-036)]]]
 
-* ISO: Geographic information — Geography Markup Language (GML), 2007. https://www.iso.
-org/standard/32554.html
+* [[[OGC22038,nofetch(OGC 22-038r2)]]]
 
-[2] OGC: OGC 09-083r4: GeoAPI 3.0 Implementation Standard with corrigendum. Open
-Geospatial Consortium (2018). https://portal.ogc.org/files/?artifact id=71648.
+* [[[OGCgeopose,nofetch(OGC 21-056r10)]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
 
-[3] OGC: OGC 22-038: Reference Frame Transformation Engineering Report, 2022. http://
-ogc.pages.ogc.org/T18-3Dplus_Data_Standards_and_Streaming/documents/D025/
-document.html
+* [[[ISO_19101-1,nofetch(ISO 19101-1:2014)]]]
 
-[4] Astronomical Algorithms, Jean Meeus, https://www.agopax.it/Libri_astronomia/pdf/
-Astronomical%20Algorithms.pdf
+* [[[ISO_19103,nofetch(ISO 19103)]]]
 
-[5] Consultative Committee for Space Data Systems, NAVIGATION DATA—DEFINITIONS
-AND CONVENTIONS,2019, https://public.ccsds.org/Pubs/500x0g4.pdf
+* [[[ISO_19112,nofetch(ISO 19112:2019)]]]
 
-[6] Springer Handbook of Global Navigation Satellite Systems, Peter J.G. Teunissen, Oliver
-Montenbruck, https://doi.org/10.1007/978-3-319-42928-1
+* [[[ISO_19162,nofetch(ISO 19162:2019)]]]
 
-[7] IERS Earth rotation data — https://www.iers.org/IERS/EN/DataProducts/
-EarthOrientationData/eop.html
+* [[[ISO_19136,nofetch(ISO 19136:2007)]]]
 
-[8] NASA NAIF, SPICE Documentation, retrieved January 2023, https://naif.jpl.nasa.gov/
-naif/tutorials.html
+* [[[OGC09-083,nofetch(OGC 09-083r4)]]]
 
-[9] The Open Group, UNIX Time, retrieved January 2023, https://pubs.opengroup.org/
-onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16
+* [[[OGC_18-005r4,nofetch(OGC 18-005r4)]]]
 
-[10] Calendrical Calculations - The Ultimate Edition, Nachum Dershowitz, Edward M. Reingold. Paperback: 618
-pages. Cambridge University Press; 4th edition (2018) Language: English. ISBN-13: 978-1107683167.
+* [[[IETF_RFC_3339,nofetch(IETF RFC 3339)]]]
 
-[11] http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition
+* [[[CEN_ENV_1613,nofetch(CEN ENV 1613:1995)]]]
 
-[12] Allen, J. F., 'Maintaining Knowledge about Temporal Intervals', Communications of
-the ACM, 1983, vol. 26 pp. 832-843.
+* [[[astro_algo,nofetch(Astronomical Algorithms)]]], Jean Meeus. _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
 
-[13] ISO 8601:2004, Data elements and interchange formats - Information interchange -
-Representation of dates and times.
+* [[[CCSDS_500x0g4,nofetch(CCDSS 500x0g4)]]], Consultative Committee for Space Data Systems. _Navigation Data — Definitions and Conventions_. 2019. https://public.ccsds.org/Pubs/500x0g4.pdf
 
-[14] Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems: Second Edition by B. P. Zeigler, H. Praehofer, T. G. Kim, Academic Press, San Diego, CA, 2000.
- 
-[15] A Brief History of Timekeeping, Chad Orzell. Paperback: 324 pages. Oneworld Publications; 1st edtion (2022) Language English. ISBN-13: 978-0-86154-321-2.
+* [[[Springer_GNSS,nofetch(Springer Handbook of Global Navigation Satellite Systems)]]],
+Peter J.G. Teunissen, Oliver Montenbruck.
+_Springer Handbook of Global Navigation Satellite Systems_.
+https://doi.org/10.1007/978-3-319-42928-1
 
-[16] A Treatise on Time and Space, J. R. Lucas. Paperback: 321 pages. Methuen and Co. Ltd; 1st edition (1973). ISBN 0-416-84190-2.
+* [[[IERS,nofetch(International Earth Rotation and Reference Systems Service)]]],
+IERS.
+https://www.iers.org/IERS/EN/DataProducts/EarthOrientationData/eop.html
 
-Universal Coordinated Time (UTC),
+* [[[SPICE,nofetch(SPICE Documentation)]]]
+NASA NAIF.
+_SPICE Documentation_.
+https://naif.jpl.nasa.gov/naif/tutorials.html [last accessed 2023-01]
 
-Bureau International des Poids et Mesures (BIPM)
+* [[[unix_time,nofetch(UNIX Time)]]]
+The Open Group.
+_UNIX Time_.
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16 [last accessed 2023-01]
 
-International Earth Rotation and Reference Systems Service (IERS)
+* [[[calendrical,nofetch(Calendrical Calculations)]]]
+Nachum Dershowitz, Edward M. Reingold.
+_Calendrical Calculations - The Ultimate Edition_.
+Cambridge University Press. 2018.
+ISBN-13: 978-1107683167.
+http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
+
+* [[[history_timekeeping,nofetch(A Brief History of Timekeeping)]]]
+Chad Orzell.
+_A Brief History of Timekeeping_.
+Oneworld Publications. 2022.
+ISBN-13: 978-0-86154-321-2.
+
+* [[[lorentz,nofetch(Lorentz Paper)]]] 
+H. Lorentz.
+_Electromagnetic phenomena in a system moving with any velocity smaller than that of light_
+Proceedings of the Royal Netherlands Academy of Arts and Sciences, 1904
+https://en.wikisource.org/wiki/Electromagnetic_phenomena[https://en.wikisource.org/wiki/Electromagnetic_phenomena]
+
+* [[lorentz_transform,nofetch(Lorentz Transforms)]]]
+_Lorentz Transform_.
+Wolfram MathWorld.
+https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfram.com/LorentzTransformation.html]
+
+* [[[minkowski,nofetch(Minkowski Space and Time)]]] H. Minkowski. 
+_Space and Time, Minkowski's Papers on Relativity_ 
+Minkowski Institute Press, Montreal 2012. 
+https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
+
+* [[[treatise,nofetch(A Treatise on Time and Space)]]]
+J. R. Lucas.
+_A Treatise on Time and Space_
+Methuen and Co. Ltd. 1973.
+ISBN 0-416-84190-2.
+
+* [[[temporal_knowledge,nofetch(Maintaining Knowledge about Temporal Intervals)]]]
+Allen, J. F.
+_Maintaining Knowledge about Temporal Intervals_
+Communications of the ACM, 1983, vol. 26 pp. 832-843.
+
+* [[[theory,nofetch(Theory of Modelling and Simulation)]]]
+B. P. Zeigler, H. Praehofer, T. G. Kim.
+_Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems_
+Edition 2. San Diego: Academic Press. 2000.
+
+* [[[bipm_define,nofetch(Establishment of International Atomic Time and Coordinated Universal Time)]]]
+Bureau International des Poids et Mesures (BIPM).
+_Establishment of International Atomic Time and Coordinated Universal Time_.
+https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
+

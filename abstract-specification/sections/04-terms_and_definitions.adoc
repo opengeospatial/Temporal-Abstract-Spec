@@ -1,37 +1,50 @@
 
-== Terms and Definitions
+== Terms and definitions
+
+=== conceptual model
+
+description of common concepts and their relationships, particularly in order to
+facilitate exchange of information between parties within a specific domain. A
+conceptual model is explicitly chosen to be independent of design or
+implementation concerns.
+
+[.source]
+<<CEN ENV 1613:1995>>
 
 === compound coordinate reference system
 
 coordinate reference system using at least two independent coordinate reference systems
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
-NOTE: Coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.
+NOTE: Coordinate reference systems are independent of each other if coordinate
+values in one cannot be converted or transformed into coordinate values in the
+other.
 
 === coordinate
 
 one of a sequence of numbers designating the position of a point
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
-NOTE: In a spatial coordinate reference system, the coordinate numbers are qualified by units.
+NOTE: In a spatial coordinate reference system, the coordinate numbers are
+qualified by units.
 
 === coordinate epoch
 
 epoch to which coordinates in a dynamic coordinate reference system are referenced
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === coordinate reference system
 
 coordinate system that is related to an object by a datum
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: Geodetic and vertical datums are referred to as reference frames.
 
@@ -42,23 +55,22 @@ NOTE: For geodetic and vertical reference frames, the object will be the Earth. 
 set of mathematical rules for specifying how coordinates are to be assigned to points
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === datum
-
-reference frame
+admitted:[reference frame]
 
 parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a coordinate system
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === derived coordinate reference system
 
 coordinate reference system that is defined through the application of a specified coordinate conversion to the coordinates within a previously established coordinate reference system
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: The previously established coordinate reference system is referred to as the base coordinate reference system.
 
@@ -71,20 +83,19 @@ NOTE: The coordinate conversion between the base and derived coordinate referenc
 coordinate reference system that has a dynamic reference frame
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: Coordinates of points on or near the crust of the Earth that are referenced to a dynamic coordinate reference system may change with time, usually due to crustal deformations such as tectonic motion and glacial isostatic adjustment.
 
 NOTE: Metadata for a dataset referenced to a dynamic coordinate reference system should include coordinate epoch information.
 
 === dynamic reference frame
-
-dynamic datum
+admitted:[dynamic datum]
 
 reference frame in which the defining parameters include time evolution
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: The defining parameters that have time evolution are usually a coordinate set.
 
@@ -92,7 +103,7 @@ NOTE: The defining parameters that have time evolution are usually a coordinate 
 
 coordinate reference system based on an engineering datum
 
-[example] 
+[example]
 System for identifying relative positions within a few kilometres of the reference point, such as a building or construction site.
 
 [example]
@@ -102,22 +113,22 @@ Coordinate reference system local to a moving object such as a ship or an orbiti
 Internal coordinate reference system for an image. This has continuous axes. It may be the foundation for a grid.
 
 === engineering datum
-
-local datum
+admitted:[local datum]
 
 datum describing the relationship of a coordinate system to a local reference
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: Engineering datum excludes both geodetic and vertical reference frames.
 
 === epoch
+domain:[geodesy]
 
-<geodesy> point in time
+point in time
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: In this document an epoch is expressed in the Gregorian calendar as a decimal year.
 
@@ -129,14 +140,14 @@ NOTE: In this document an epoch is expressed in the Gregorian calendar as a deci
 epoch of coordinates that define a dynamic reference frame
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === linear coordinate system
 
 one-dimensional coordinate system in which a linear feature forms the axis
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 [example]
 Distances along a pipeline.
@@ -149,7 +160,7 @@ Depths down a deviated oil well bore.
 epoch at which the parameter values of a time-dependent coordinate transformation are valid
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: The transformation parameter values first need to be propagated to the epoch of the coordinates before the coordinate transformation can be applied.
 
@@ -158,21 +169,21 @@ NOTE: The transformation parameter values first need to be propagated to the epo
 coordinate reference system based on a parametric datum
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === parametric coordinate system
 
 one-dimensional coordinate system where the axis units are parameter values which are not inherently spatial
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === parametric datum
 
 datum describing the relationship of a parametric coordinate system to an object
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: The object is normally the Earth.
 
@@ -181,27 +192,26 @@ NOTE: The object is normally the Earth.
 coordinate operation that changes coordinates within one coordinate reference system due to the motion of the point
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: The change of coordinates is from those at an initial epoch to those at another epoch.
 
 NOTE: In this document the point motion is due to tectonic motion or crustal deformation.
 
 === reference frame
-
-datum
+admitted:[datum]
 
 parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a coordinate system
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
-=== spatio-parametric coordinate reference system 
+=== spatio-parametric coordinate reference system
 
 compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a parametric coordinate reference system
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: Normally the spatial component is “horizontal” and the parametric component is “vertical”.
 
@@ -210,21 +220,21 @@ NOTE: Normally the spatial component is “horizontal” and the parametric comp
 compound coordinate reference system comprised of spatial, parametric and temporal coordinate reference systems
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === spatio-temporal coordinate reference system
 
 compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a temporal coordinate reference system
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === static coordinate reference system
 
 coordinate reference system that has a static reference frame
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: Coordinates of points on or near the crust of the Earth that are referenced to a static coordinate reference system do not change with time.
 
@@ -237,39 +247,39 @@ static datum
 reference frame in which the defining parameters exclude time evolution
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === temporal coordinate reference system
 
 coordinate reference system based on a temporal datum
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === temporal coordinate system
+domain:[geodesy]
 
-<geodesy> one-dimensional coordinate system where the axis is time
+one-dimensional coordinate system where the axis is time
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 === temporal datum
 
 datum describing the relationship of a temporal coordinate system to an object
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: The object is normally time on the Earth.
 
 === terrestrial reference system
-
-TRS
+admitted:[TRS]
 
 set of conventions defining the origin, scale, orientation and time evolution of a spatial reference system co-rotating with the Earth in its diurnal motion in space
 
 [.source]
-<<ISO19111>>
+<<ISO_19111>>
 
 NOTE: The abstract concept of a TRS is realised through a terrestrial reference frame that usually consists of a set of physical points with precisely determined coordinates and optionally their rates of change. In this document terrestrial reference frame is included within the geodetic reference frame element of the data model
 

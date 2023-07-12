@@ -1,0 +1,57 @@
+== Abstract Temporal Reference Model
+
+=== Context
+
+When OGC standards involve time, they generally refer to the ISO documents such
+as <<ISO_19108>>, <<ISO_19111>>, <<ISO_8601>>, and their freely available OGC
+equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates
+(equivalent to <<ISO_19111>).
+
+When dealing with temporal reference systems, it is necessary to understand all
+of these standards and how they interact. ISO Technical Committee 211 (ISO/TC
+211) provides a useful tool for integrating their standards. The
+https://github.com/ISO-TC211/HMMG[ISO/TC 211 Harmonized Model Management Group]
+provides a single integrated model for most of the ISO/TC 211 standards. That
+model will provide the foundation for the Abstract Temporal Reference Model.
+
+The Abstract Temporal Reference Model is a "Conceptual" model. It both defines concepts and the associations between those concepts. This "conceptual" model is an extension of a higher level "Semantic" model.
+
+The W3C Time Ontology (<<W3COWLTime>>) is illustrated below.
+
+image::sections/images/Ontology.png[W3C Time Ontology]
+
+The Abstract Temporal Model divides the world into Spatial, Temporal, and SpatialTemporal Reference Systems.
+
+image::sections/images/AbstractTemporalModel.png[Abstract Temporal Model]
+
+The Temporal Reference System is further divided into Temporal Coordinate Reference Systems and Temporal Ordinal Reference Systems.
+
+image::sections/images/TemporalReferenceSystem.png[Temporal Reference System]
+
+The Temporal Coordinate Reference Systems provide a link to ISO 19111 - Geographic information - Referencing by coordinates.
+
+image::sections/images/TemporalCoordinateReferenceSystem.png[Temporal Coordinate Reference System]
+
+ISO 19111 provides a model for coordinate transformations which can be re-used for temporal coordinate reference systems.
+
+image::sections/images/TemporalCoordinateReferenceSystemTransformations.png[Temporal Coordinate Reference System]
+
+Some Observations:
+
+. Many temporal reference systems are not coordinate reference systems
+
+. There is no temporal equivalent to the Compound Reference System
+
+. DateTime should be represented as a compound reference system consisting of a TM_Calendar and TM_Clock reference system.
+
+. TM_Calendar could be a type of TM_OrdinalReferenceSystem.
+
+. TM_Clock should not be defined in terms of a "day". Many clocks count elapsed time since an epoch. Date and time are not considered.
+
+. TM_Clock should be a type of TM_CoordinateSystem
+
+. TM_Calendar can be defined as a Compound Reference System composed of days, months, and years. This would allow to define meaningful calendars for the Moon, Mars, and other non-Terrestrial environments.
+
+. Is there an ordinal equivalent to TM_Clock. Sunrise, noon, sunset, and midnight?
+
+. Can a calendar be defined in terms of planting season, Saints days, or other arbitrary events?

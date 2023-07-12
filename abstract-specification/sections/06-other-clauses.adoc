@@ -1,22 +1,54 @@
-== Abstract Temporal Reference Model
-== Abstract Conceptual Model
-This attempt at a Temporal Abstract Reference Model follows http://docs.opengeospatial.org/as/18-005r4/18-005r4.html[ISO19111:2019], aka http://www.opengis.net/doc/AS/topic-2/5.0[OGC Abstract Specification Topic 2: Referencing by coordinates, OGC18-005r4] 
 
-The model is also informed by the https://www.w3.org/TR/owl-time/[W3C Time Ontology in OWL] 
+== Characteristics of an Abstract Conceptual Model
 
-Below is a UML diagram using Mermaid. 
+The terms and definitions clause in this Abstract Specification provides a short definition for "conceptual model". This clause provides additional information on the OGC use of "conceptual model".
 
-**Also, not a UML expert, so may have all sorts of things wrong that need correcting**
+A conceptual model organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain. The aim of a conceptual model is to express the meaning of terms and concepts used by domain experts to discuss the problem, and to find the correct relationships between different concepts.
 
-(Should be converted to PlantUML for Metanorma, by replacing Mermaid container with:
+A conceptual model:
 
-`[plantuml]
+. is a representation of a system, made of the composition of concepts which are
+used to help people know, understand, or simulate a subject the model
+represents. A documented conceptual model represents 'concepts' (entities), the
+relationships between them, and a vocabulary;
+
+. is explicitly defined to be independent of design or implementation concerns;
+
+. organizes the vocabulary needed to communicate consistently and thoroughly
+about the know-how of a problem domain;
+
+. starts with a glossary of terms and definitions. There is a very high premium
+on high-quality, design-independent definitions, free of data or implementation
+biases; the model also emphasizes rich vocabulary; and
+
+. is always about identifying the correct choice of terms to use in
+communications, including statements of rules and requirements, especially where
+high precision and subtle distinctions need to be made. The core concepts of a
+temporal geospatial problem domain are typically quite stable over time.
+
+== Temporal Abstract Conceptual Model
+
+This attempt at a Temporal Abstract Conceptual Model follows <<ISO_19111>>,
+which is the ISO adoption of <<OGC_18-005r4>>.
+
+The model is also informed by <<W3COWLTime>>.
+
+[NOTE]
+====
+This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
+the Mermaid container with the following.
+====
+
+[source,plantuml]
+----
 @startuml
 .
 .
-@enduml`
+@enduml
+----
 
-```mermaid
+[source,mermaid]
+----
 classDiagram
 class ReferenceSystem {
        Dimension 1..*
@@ -69,187 +101,263 @@ class OrdinalTemporalReferenceSystem {
     FirstAndLastEvents
     OptionalEpochDefinedInSomeOtherTemporalReferenceSystem
     OptionalLocationOrRegionOfApplicability
-    OptionalNotations 
+    OptionalNotations
     }
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch
 OrdinalTemporalReferenceSystem "1" o-- "2..*" Event
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation
 Timescale "1" o-- "1" Clock
-```
+----
 
-== Temporal Regimes
+
+== Temporal regimes
+
+=== General
+
 To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time and its measurement under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical components.
 
 The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, of calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.
 
 The regimes are applicable to other planets and outer space, but with due consideration.
 
+
 === Events and Operators
+
 The simplest way of relating entities in time is by events that can be ordered, that is, established in a sequence, and this sequence is used as an approximate measure of the passage of time.
 
-In this regime, no clocks or time measurements are defined, only events, that are ordered in relation to each other. For example, geological layers, sediment or ice core layers, archaeological sequences, sequential entries in computer logs without coordinated time. 
+In this regime, no clocks or time measurements are defined, only events, that are ordered in relation to each other. For example, geological layers, sediment or ice core layers, archaeological sequences, sequential entries in computer logs without coordinated time.
 
 One set of events may be completely ordered with respect to each other, but another set of similar internally consistent events cannot be cross-referenced until extra information is available. Even then, only partial orderings may be possible.
 
-In this regime, the Allen Operators [Allen, Ref 13] can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform arithmetic operations like (B-A) or (C-A) as we have not defined any timescale or measurements. For example, ‘subtracting’ Ordovician from Jurassic is meaningless.
+In this regime, the Allen Operators (<<temporal_knowledge>>) can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform arithmetic operations like (B-A) or (C-A) as we have not defined any timescale or measurements. For example, 'subtracting' Ordovician from Jurassic is meaningless.
 
 This regime constitutes an Ordinal Temporal Reference System, with discrete enumerated ordered events.
 
 === Simple Clocks and Discrete Timescales
-In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about sun, earth's rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each ‘tick’. A mechanism for counting, or possibly measuring, the ticks is desirable.
+
+In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about sun, earth's rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each 'tick'. A mechanism for counting, or possibly measuring, the ticks is desirable.
 
 It is an assumption that the ticks are regular and homogeneous.
 
-There is no sub-division between two successive clock ticks. Measuring time consists of counting the complete number of repetitions of ticks since the clock started, or since some other event at a given clock count. 
+There is no sub-division between two successive clock ticks. Measuring time consists of counting the complete number of repetitions of ticks since the clock started, or since some other event at a given clock count.
 
 There is no time measurement before the clock started, or after it stops.
 
-It may seem that time can be measured between ‘ticks’ by interpolation, but this needs another clock, with faster ticks. This process of devising more precise clocks continues down to the atomic scale, and then the process of physically trying to interpolate between ticks is not possible.
+It may seem that time can be measured between 'ticks' by interpolation, but this needs another clock, with faster ticks. This process of devising more precise clocks continues down to the atomic scale, and then the process of physically trying to interpolate between ticks is not possible.
 
-The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differng alitudes and temperatures.
+The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differing altitudes and temperatures.
 
-In this regime, the Allen Operators [Allen, Ref 13] also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform integer arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement.
+In this regime, the Allen Operators (<<temporal_knowledge>>) also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform integer arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement.
 
 This regime constitutes a Temporal Coordinate Reference System, with discrete integer units of measure which can be subject to integer arithmetic.
 
 === CRS and Continuous Timescales
+
 This regime takes a clock from the previous regime ands assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device.
 
 Alternatively, it may be that the ticks are not counted but measured, and the precision of the clock is determined by the precision of the measurements, such as depth in an ince core, or angular position of an astronomical body,such as the sun, moon or a star.
 
 It is also assumed that time can be extrapolated to before the time when the clock started and into the future, possibly past when the clock stops.
 
-This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (a name for the ‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic. It is a Coordinate Reference System.
+This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (a name for the 'tick marks' on the axis), positive and negative directions and the full range of normal arithmetic. It is a Coordinate Reference System.
 
-In this regime, the Allen Operators [Allen, Ref 13] also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform real number arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement, and between any two instants, we can always find an infinite number of other instants.
+In this regime, the Allen Operators (<<temporal_knowledge>>) also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform real number arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement, and between any two instants, we can always find an infinite number of other instants.
 
 Some examples are:
 
-- Unix milliseconds since 1970-01-01T00:00:00.0Z
+. Unix milliseconds since 1970-01-01T00:00:00.0Z
 
-- Julian Days, and fractions of a day, since noon on 1st January, 4713 BCE.
- 
+. Julian Days, and fractions of a day, since noon on 1st January, 4713 BCE.
+
 This regime constitutes a Temporal Coordinate Reference System, with continuous, floating-point, units of measure, which can be subject to the full range of real arithmetic.
 
+
 === Calendars
-In this regime, counts and measures of time are related to the various combinations of the rotations of the earth, moon and sun or other astronomical bodies. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE - Year 1BCE is one year, not two as there is no year 0CE or 0BCE. 
+
+In this regime, counts and measures of time are related to the various combinations of the rotations of the earth, moon and sun or other astronomical bodies. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE - Year 1BCE is one year, not two as there is no year 0CE or 0BCE.
 
 Calendars are social constructs made by combining several clocks and their associated timescales.
 
-This paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
+This paper only addresses the internationally agreed Gregorian calendar. <<astro_algo>> provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
 
 A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.
 
+
 === Other Regimes
-There may in fact be a series of other regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time. 
+
+==== General
+
+There may in fact be a series of other regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time.
+
 
 ==== Local Solar Time
-Local solar time may or may not correspond to the local statutary or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.
+
+Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.
+
+==== Spacetime
+
+When dealing with moving objects, we find that the location of the object in space depends on its location in time. That is to say, that the location is an event in space and time.  
+
+Originally developed by <<minkowski,Hermann Minknowski>> to support work in Special Relativity, the concept of Spacetime is useful whenever the location of an object in space is dependent on its location in time.
+
+Since the speed of light in a vacum is a constant, Spacetime uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthagonal axis all with the same units of measure.
 
 ==== Relativistic
-A regime may be needed for ‘space-time’, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
+
+A regime may be needed for 'space-time', off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
+
+Once off the planet Earth, distances and velocities grow very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of Spacetime events as measured between two moving objects. The core concepts are the <<lorentz_transform,Lorentz Transforms>>. These transforms allow one to calculate the degree of "contraction" a measurement undergos due to the relative velocity between the observing and observed object.
+
+The key to this approach is to ensure each moving feature of interest has its own local clock and time, known as its 'proper time'. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.
 
 Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth's gravity well.
 
-The key approach is to ensure each moving feature of interest has its own local clock and time, known as its 'proper time'. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.
-
 ==== Accountancy
+
 The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
 
 == Notation
 
-There are often widely agreed, commonly accepted, notations used for temporal reference systems, but few have been standardised. Any particualr notation may be capable of expressing a wider range of times than are valid for the reference system.
+There are often widely agreed, commonly accepted, notations used for temporal reference systems, but few have been standardised. Any particular notation may be capable of expressing a wider range of times than are valid for the reference system.
 
-Example 0: The IETF RFC3999 timestamp notation, a restrictive profile of the ISO8601, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.
+[example]
+The <<IETF_RFC_3999>> timestamp notation, a restrictive profile of <<ISO_8601>>,
+can express times before 1588CE, when the Gregorian calendar was first
+introduced in some parts of the world.
+
 
 == Attributes of the Regimes/Classes
 
 The top level `Reference System` is a super-class and does not have many attributes or properties. So far, only the dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
 
-The Dimension is one  for time, or a vertical reference system, but may be as much as 6 for spatial location and orientation.
+The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location and orientation.
 
 Besides the conventional space and time, there may be other reference systems, such as wavelength/frequency, that can be addressed by the Abstract Conceptual Model.
 
 === Attributes of Events and Ordinal Temporal Reference Systems
-- Name/Id
 
-- Listed or enumerated sequence of events
+. Name/Id
 
-- First and last events
+. Listed or enumerated sequence of events
 
-- Optional Epoch, defined in some other temporal reference system
+. First and last events
 
-- Optional location or region of applicability
+. Optional Epoch, defined in some other temporal reference system
 
-- Optional notations
+. Optional location or region of applicability
 
-Example 1: Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Xi built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Yi, a comet was sighted" and later research identifies this as an appearence of Hailey's Comet.
+. Optional notations
 
-The events from the list may be instants, such as the change of reign, or intervals, such as the complete reign of each emperor. 
+[example]
+Ancient annals of a country may give a sequence of emperors which could be used
+to 'date' another event such as "Emperor Xi built a canal", or may be used to
+date a particular reign. For example: "In the reign of Emperor Yi, a comet was
+sighted" and later research identifies this as an appearance of Hailey's Comet.
+
+The events from the list may be instants, such as the change of reign, or intervals, such as the complete reign of each emperor.
 
 Other documents may enable two such 'king lists' to be related, though not completely.
 
 === Attributes of simple Clock and Discrete Timescale
-- Name/Id
 
-- Optional Epoch/starting time defined in some other temporal reference system
+. Name/Id
 
-- Optional name for each tick
+. Optional Epoch/starting time defined in some other temporal reference system
 
-- Optional End time or count
+. Optional name for each tick
 
-- Optional location
+. Optional End time or count
 
-- Optional Notation
+. Optional location
 
-Example 2: A well preserved fossilised log is recovered and the tree rings establish an annual 'tick'. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.
+. Optional Notation
+
+[example]
+A well preserved fossilised log is recovered and the tree rings establish an
+annual 'tick'. The start and end times may be known accurately by comparison and
+matching with other known tree ring sequences, or perhaps only dated imprecisely
+via Carbon Dating, or its archaeological or geological context.
 
 === Attributes of a CRS and Continuous Timescales
-- Name/Id
 
-- Optional Epoch/starting time, defined in some other temporal reference system
+. Name/Id
 
-- Optional name for the measure
+. Optional Epoch/starting time, defined in some other temporal reference system
 
-- Optional End time or measure
+. Optional name for the measure
 
-- Optional location
+. Optional End time or measure
 
-- Optional Notation
+. Optional location
 
-Example 3: A long ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.
+. Optional Notation
+
+[example]
+A long ice core is retrieved from a stable ice-sheet. From long term
+meteorological observations, the rate of accumulation of ice is known, so linear
+length can be equated to time (assuming a stable climate too). This enable the
+dates of some previously unknown large scale volcanic eruptions to be identified
+and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb
+tests increase the confidence in the timing accuracy.
 
 == Attributes of Calendars
-- Name/id
 
-- Astronomical Type (e.g. solar, sidereal, lunar, luni-solarc)
+. Name/id
 
-- Predictive type (e.g. observed or calculated)
+. Astronomical Type (e.g. solar, sidereal, lunar, luni-solar)
 
-- Epoch/start time
+. Predictive type (e.g. observed or calculated)
 
-- Optional end time
+. Epoch/start time
 
-- Optional location or region of applicability
+. Optional end time
 
-- Constituent units or clocks and counts or timescales
+. Optional location or region of applicability
 
-- Optional Notation
+. Constituent units or clocks and counts or timescales
 
-Example 4: The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country. 
-The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accomodate discrepancies, leap days annd leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are ISO 8601 and its various restrictive profiles. 
+. Optional Notation
 
-Example 5: The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
+[example]
+The modern Gregorian calendar is calculated solar calendar, with various epochs
+from 1588 CE through to 1922 CE depending on location or country.
++
+The constituent timescales are days (earth's rotations), months (moon's orbit
+around the earth), years (earth's orbit around the sun) and seconds determined
+by atomic clocks. To accommodate discrepancies, leap days and leap seconds are
+intercalated in some years. The commonest notations for the Gregorian calendar
+are ISO 8601 and its various restrictive profiles.
 
-Example 6: The modern Jewish calendar is a calculated luni-solar calendar, and discrepancies in the solar year are addressed by adding 'leap months' every few years.
+[example]
+The modern Islamic calendar is an observed lunar calendar, and the major
+religious dates progress throughout the year, year on year. The important months
+are determined by the observation of new moons from Mecca.
 
-Example 6: The Ba'hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday. 
+[example]
+The modern Jewish calendar is a calculated luni-solar calendar, and
+discrepancies in the solar year are addressed by adding 'leap months' every few
+years.
 
-Example 7: The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in the grasslands of north-west Cameroun.
+[example]
+The Ba'hai calendar is a calculated solar calendar, but without any other
+astronomical aspects. The year consists of 19 months of 19 days each, with 4 or
+5 intercalated days for a new year holiday.
 
-Example 8: Teams controlling remote vehicles on Mars use a solar calendar, with Martian years and martian days (called sols). Months are not used because there are two moons, with different, rather short, 'months'.
+[example]
+The West African Yoruba traditional calendar is a solar calendar with months,
+but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of
+4 days are used. This perhaps gave rise to the fortnightly (every 8 days)
+markets in many villages in the grasslands of north-west Cameroun.
+
+[example]
+Teams controlling remote vehicles on Mars use a solar calendar, with Martian
+years and martian days (called sols). Months are not used because there are two
+moons, with different, rather short, 'months'.
 
 == Synchronisation of clocks
+
 If there are two or more clocks, stationary with respect to each other, and a practical method of communicating their times to each other, the clocks can be perfectly synchronized.
 
-However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.  See [Orzell, Ref 15, pp187-191]
+However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.
+
+See <<history_timekeeping,page="187-191">>.
