@@ -82,13 +82,13 @@ note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordi
     TemporalReferenceSystem "0..1" o-- "1" Calendar : consists of
     TemporalReferenceSystem "0..1" o-- "1" OrdinalTemporalReferenceSystem: consists of
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale
-TemporalCoordinateReferenceSystem "1" o-- "1" Epoch
+TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has a
 TemporalCoordinateReferenceSystem "1" --> "1..*" Notation
-Calendar "1" o-- "0..1" Epoch
+Calendar "1" o-- "0..1" Epoch : has a
 Calendar "1" o-- "1..*" Timescale
 Calendar "1" o-- "1" Algorithm
 Calendar "1" --> "1..*" Notation
-OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch
+OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has a
 OrdinalTemporalReferenceSystem "1" o-- "2..*" Event
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation
 Timescale "1" o-- "1" Clock
