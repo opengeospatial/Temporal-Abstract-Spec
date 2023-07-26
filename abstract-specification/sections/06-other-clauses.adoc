@@ -80,12 +80,12 @@ class OrdinalTemporalReferenceSystem {
 note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
     TemporalReferenceSystem "0..1" o-- "1" TemporalCoordinateReferenceSystem : consists of
     TemporalReferenceSystem "0..1" o-- "1" Calendar : consists of
-    TemporalReferenceSystem "0..1" o-- "1" OrdinalTemporalReferenceSystem: consists of
-TemporalCoordinateReferenceSystem "1" o-- "1" Timescale
+    TemporalReferenceSystem "0..1" o-- "1" OrdinalTemporalReferenceSystem : consists of
+TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
 TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
 TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
 Calendar "1" o-- "0..1" Epoch : has an
-Calendar "1" o-- "1..*" Timescale
+Calendar "1" o-- "1..*" Timescale : has a
 Calendar "1" o-- "1" Algorithm : has a
 Calendar "1" --> "1..*" Notation : can use
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
