@@ -89,7 +89,7 @@ Calendar "1" o-- "1..*" Timescale
 Calendar "1" o-- "1" Algorithm
 Calendar "1" --> "1..*" Notation
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has a
-OrdinalTemporalReferenceSystem "1" o-- "2..*" Event
+OrdinalTemporalReferenceSystem "1" o-- "2..*" Event : Consists of
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation
 Timescale "1" o-- "1" Clock
 ```
