@@ -91,6 +91,9 @@ Calendar "1" --> "1..*" Notation : can use
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Event : Consists of
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
+class Timescale {
+       Bounds 2
+       Arithmetic 1
 Timescale "1" o-- "1" Clock : has a
 Timescale "1" o-- "1" UnitOfMeasure : has a
 ```
