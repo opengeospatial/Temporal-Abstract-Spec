@@ -85,9 +85,9 @@ TemporalCoordinateReferenceSystem "1" o-- "1" Timescale
 TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
 TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
 Calendar "1" o-- "0..1" Epoch : has an
-Calendar "1" o-- "1..*" Timescale : can use
+Calendar "1" o-- "1..*" Timescale
 Calendar "1" o-- "1" Algorithm
-Calendar "1" --> "1..*" Notation
+Calendar "1" --> "1..*" Notation : can use
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Event : Consists of
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
