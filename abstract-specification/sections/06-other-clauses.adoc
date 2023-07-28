@@ -48,23 +48,23 @@ the Mermaid container with the following.
 ```mermaid
 classDiagram
 class ReferenceSystem {
-       <<Abstract Class>>
+       <<abstract>>
        dimension = 1..*
        applicableLocationTimeOrDomain 
     }
 class SpatialReferenceSystem {
-       <<Abstract Class>>
+       <<abstract>>
        dimension = 1..3
        applicableLocationTimeOrDomain 
     }
 class TemporalReferenceSystem {
-       <<Abstract Class>>
+       <<abstract>>
        dimension = 1
        applicableLocationTimeOrDomain 
     }
 note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
-ReferenceSystem "1" o-- "0..*" SpatialReferenceSystem : has a
-ReferenceSystem "1" o-- "0..*" TemporalReferenceSystem : has a
+ReferenceSystem "1" <|-- "0..*" SpatialReferenceSystem : is a
+ReferenceSystem "1" <|-- "0..*" TemporalReferenceSystem : is a
 class TemporalCoordinateReferenceSystem {
        dimension = 1
        applicableLocationTimeOrDomain 
@@ -78,9 +78,9 @@ class OrdinalTemporalReferenceSystem {
        applicableLocationTimeOrDomain 
     }
 note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
-    TemporalReferenceSystem "0..1" o-- "1" TemporalCoordinateReferenceSystem : consists of
-    TemporalReferenceSystem "0..1" o-- "1" Calendar : consists of
-    TemporalReferenceSystem "0..1" o-- "1" OrdinalTemporalReferenceSystem : consists of
+    TemporalReferenceSystem "0..1" <|-- "1" TemporalCoordinateReferenceSystem : is a
+    TemporalReferenceSystem "0..1" <|-- "1" Calendar : is a
+    TemporalReferenceSystem "0..1" <|-- "1" OrdinalTemporalReferenceSystem : is a
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
 TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
 TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
@@ -92,8 +92,8 @@ OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Event : Consists of
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
 class Timescale {
-       earliestBound 
-       latestBound 
+       earliestCount 
+       latestCount 
        arithmetic 
     }
 Timescale "1" o-- "1" Clock : has a
