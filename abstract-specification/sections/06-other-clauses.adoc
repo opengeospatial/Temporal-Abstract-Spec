@@ -63,8 +63,8 @@ class TemporalReferenceSystem {
        applicableLocationTimeOrDomain 
     }
 note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
-ReferenceSystem "1" <|-- "0..*" SpatialReferenceSystem : is a
-ReferenceSystem "1" <|-- "0..*" TemporalReferenceSystem : is a
+ReferenceSystem <|-- SpatialReferenceSystem : is a
+ReferenceSystem <|-- TemporalReferenceSystem : is a
 class TemporalCoordinateReferenceSystem {
        dimension = 1
        applicableLocationTimeOrDomain 
@@ -78,9 +78,9 @@ class OrdinalTemporalReferenceSystem {
        applicableLocationTimeOrDomain 
     }
 note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
-    TemporalReferenceSystem "0..1" <|-- "1" TemporalCoordinateReferenceSystem : is a
-    TemporalReferenceSystem "0..1" <|-- "1" Calendar : is a
-    TemporalReferenceSystem "0..1" <|-- "1" OrdinalTemporalReferenceSystem : is a
+    TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
+    TemporalReferenceSystem <|-- Calendar : is a
+    TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
 TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
 TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
