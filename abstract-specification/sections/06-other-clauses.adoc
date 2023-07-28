@@ -89,7 +89,7 @@ Calendar "1" o-- "1..*" Timescale : has a
 Calendar "1" o-- "1..*" Algorithm : has a
 Calendar "1" --> "1..*" Notation : can use
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
-OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Event : Consists of
+OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Event : consists of
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
 class Timescale {
        earliestCount 
