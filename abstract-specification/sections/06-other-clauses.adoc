@@ -175,7 +175,7 @@ A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate R
 
 ==== General
 
-There may in be a series of other regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time.
+There may be a series of other regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time.
 
 ==== Local Solar Time
 
