@@ -216,9 +216,11 @@ introduced in some parts of the world.
 
 == Attributes of the Regimes/Classes
 
-The top level `Reference System` is an abstract super-class and does not have many attributes or properties. So far, only the dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
+The top level `ReferenceSystem` is an abstract super-class and does not have many attributes or properties. So far, only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
 
-The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location and orientation.
+The `ReferenceSystem` has two abstract sub-classes: `SpatialReferenceSystem`, which is defined in ISO19111, and `TemporalReferenceSystem`, each with the attributes of Dimension and Domain of Applicabiity.
+
+The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location with orientation.
 
 Besides the conventional space and time, there may be other reference systems, such as wavelength/frequency, that can be addressed by the Abstract Conceptual Model.
 
@@ -230,17 +232,14 @@ Besides the conventional space and time, there may be other reference systems, s
 
 . First and last events
 
-. Optional Epoch, defined in some other temporal reference system
+. Optional Epoch, defined in some temporal reference system
 
-. Optional location or region of applicability
+. Optional location, time or domain of applicability
 
 . Optional notations
 
 [example]
-Ancient annals of a country may give a sequence of emperors which could be used
-to 'date' another event such as "Emperor Xi built a canal", or may be used to
-date a particular reign. For example: "In the reign of Emperor Yi, a comet was
-sighted" and later research identifies this as an appearance of Hailey's Comet.
+Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Xi built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Yi, a comet was sighted" and later research identifies this as an appearance of Hailey's Comet.
 
 The events from the list may be instants, such as the change of reign, or intervals, such as the complete reign of each emperor.
 
@@ -250,15 +249,17 @@ Other documents may enable two such 'king lists' to be related, though not compl
 
 . Name/Id
 
-. Optional Epoch/starting time defined in some other temporal reference system
+. Optional Epoch/starting time defined in some temporal reference system
 
 . Optional name for each tick
 
 . Optional End time or count
 
-. Optional location
+. Optional Unit of Measure and number of ticks per Unit
 
-. Optional Notation
+. Optional location, time or domain of applicability
+
+. Optional notations
 
 [example]
 A well preserved fossilised log is recovered and the tree rings establish an
@@ -270,20 +271,20 @@ via Carbon Dating, or its archaeological or geological context.
 
 . Name/Id
 
-. Optional Epoch/starting time, defined in some other temporal reference system
+. Optional Epoch/starting time, defined in some temporal reference system
 
-. Optional name for the measure
+. Optional name for the Unit of Measure
 
 . Optional End time or measure
 
-. Optional location
+. Optional location, time or domain of applicability
 
-. Optional Notation
+. Optional notations
 
 [example]
 A long ice core is retrieved from a stable ice-sheet. From long term
 meteorological observations, the rate of accumulation of ice is known, so linear
-length can be equated to time (assuming a stable climate too). This enable the
+length can be equated to time (assuming a stable climate too). This enables the
 dates of some previously unknown large scale volcanic eruptions to be identified
 and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb
 tests increase the confidence in the timing accuracy.
@@ -296,15 +297,17 @@ tests increase the confidence in the timing accuracy.
 
 . Predictive type (e.g. observed or calculated)
 
-. Epoch/start time
+. Optional Epoch/starting time, defined in some temporal reference system
 
 . Optional end time
 
-. Optional location or region of applicability
+. Optional location, time or domain of applicability
 
 . Constituent units or clocks and counts or timescales
 
-. Optional Notation
+. Algorithms to link constituent timescales
+
+. Optional Notations
 
 [example]
 The modern Gregorian calendar is calculated solar calendar, with various epochs
@@ -335,7 +338,7 @@ astronomical aspects. The year consists of 19 months of 19 days each, with 4 or
 The West African Yoruba traditional calendar is a solar calendar with months,
 but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of
 4 days are used. This perhaps gave rise to the fortnightly (every 8 days)
-markets in many villages in the grasslands of north-west Cameroun.
+markets in many villages in the grasslands of north-west Cameroon.
 
 [example]
 Teams controlling remote vehicles on Mars use a solar calendar, with Martian
