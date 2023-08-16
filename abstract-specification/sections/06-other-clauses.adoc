@@ -249,9 +249,11 @@ Other documents may enable two such 'king lists' to be related, though not compl
 
 . Name/Id
 
-. Optional Epoch/starting time defined in some temporal reference system
+. Optional Epoch, defined in some temporal reference system
 
 . Optional name for each tick
+
+. Optional Start time or count
 
 . Optional End time or count
 
@@ -266,6 +268,9 @@ A well preserved fossilised log is recovered and the tree rings establish an
 annual 'tick'. The start and end times may be known accurately by comparison and
 matching with other known tree ring sequences, or perhaps only dated imprecisely
 via Carbon Dating, or its archaeological or geological context.
+
+[example]
+A clock is started, but undergoes a calibration process against some standard clock, so the initial, reliable Start Time does not start at Count Zero. The clock is accidentally knocked so that it is no longer correctly calibrated, but is still working. The End Time is not the last time that the clock counts. 
 
 === Attributes of a CRS and Continuous Timescales
 
