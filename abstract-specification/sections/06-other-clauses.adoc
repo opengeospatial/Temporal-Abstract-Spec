@@ -228,13 +228,13 @@ Besides the conventional space and time, there may be other reference systems, s
 
 . Name/Id
 
-. Listed or enumerated sequence of events
-
-. First and last events
+. Optional location, time or domain of applicability
 
 . Optional Epoch, defined in some temporal reference system
 
-. Optional location, time or domain of applicability
+. Listed or enumerated sequence of events
+
+. First and last events
 
 . Optional notations
 
@@ -249,6 +249,8 @@ Other documents may enable two such 'king lists' to be related, though not compl
 
 . Name/Id
 
+. Optional location, time or domain of applicability
+
 . Optional Epoch, defined in some temporal reference system
 
 . Optional name for each tick
@@ -258,8 +260,6 @@ Other documents may enable two such 'king lists' to be related, though not compl
 . Optional End time or count
 
 . Optional Unit of Measure and number of ticks per Unit
-
-. Optional location, time or domain of applicability
 
 . Optional notations
 
@@ -276,13 +276,13 @@ A clock is started, but undergoes a calibration process against some standard cl
 
 . Name/Id
 
+. Optional location, time or domain of applicability
+
 . Optional Epoch/starting time, defined in some temporal reference system
 
 . Optional name for the Unit of Measure
 
 . Optional End time or measure
-
-. Optional location, time or domain of applicability
 
 . Optional notations
 
