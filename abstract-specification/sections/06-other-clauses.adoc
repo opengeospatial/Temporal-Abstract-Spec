@@ -65,15 +65,15 @@ class TemporalReferenceSystem {
 note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
 ReferenceSystem <|-- SpatialReferenceSystem : is a
 ReferenceSystem <|-- TemporalReferenceSystem : is a
+class OrdinalTemporalReferenceSystem {
+       dimension = 1
+       applicableLocationTimeOrDomain 
+    }
 class TemporalCoordinateReferenceSystem {
        dimension = 1
        applicableLocationTimeOrDomain 
     }
 class Calendar {
-       dimension = 1
-       applicableLocationTimeOrDomain 
-    }
-class OrdinalTemporalReferenceSystem {
        dimension = 1
        applicableLocationTimeOrDomain 
     }
