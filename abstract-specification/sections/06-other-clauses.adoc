@@ -92,8 +92,8 @@ OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Event : consists of
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
 class Timescale {
-       earliestCount 
-       latestCount 
+       StartCount 
+       EndCount 
        arithmetic 
     }
 Timescale "1" o-- "1" Clock : has a
