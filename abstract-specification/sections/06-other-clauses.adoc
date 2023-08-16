@@ -54,7 +54,7 @@ class ReferenceSystem {
     }
 class SpatialReferenceSystem {
        <<abstract>>
-       dimension = 1..3
+       dimension = 1..*
        applicableLocationTimeOrDomain 
     }
 class TemporalReferenceSystem {
