@@ -278,41 +278,48 @@ A clock is started, but undergoes a calibration process against some standard cl
 
 . Optional location, time or domain of applicability
 
-. Optional Epoch/starting time, defined in some temporal reference system
+. Optional Epoch, defined in some temporal reference system
 
 . Optional name for the Unit of Measure
+
+. Optional Start time or measure
 
 . Optional End time or measure
 
 . Optional notations
 
 [example]
-A long ice core is retrieved from a stable ice-sheet. From long term
+A long, deep, ice core is retrieved from a stable ice-sheet. From long term
 meteorological observations, the rate of accumulation of ice is known, so linear
 length can be equated to time (assuming a stable climate too). This enables the
 dates of some previously unknown large scale volcanic eruptions to be identified
 and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb
 tests increase the confidence in the timing accuracy.
 
+[example]
+A long, deep, sediment core is extract from the bottom of a lake with a long geological history. two layers in the core are date using radiocarbon dated. Assuming steady rates of sediment deposition, a continuous timescale can be inerpolated between the dated layers, and extrapolated before and after the dated layers. 
+
 == Attributes of Calendars
 
 . Name/id
+
+. Optional location, time or domain of applicability
+
+. Optional Epoch, defined in some temporal reference system
 
 . Astronomical Type (e.g. solar, sidereal, lunar, luni-solar)
 
 . Predictive type (e.g. observed or calculated)
 
-. Optional Epoch/starting time, defined in some temporal reference system
+. Optional Start time
 
-. Optional end time
-
-. Optional location, time or domain of applicability
+. Optional End time
 
 . Constituent units or clocks and counts or timescales
 
 . Algorithms to link constituent timescales
 
-. Optional Notations
+. Optional notations
 
 [example]
 The modern Gregorian calendar is calculated solar calendar, with various epochs
