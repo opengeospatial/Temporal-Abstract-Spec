@@ -357,6 +357,40 @@ Teams controlling remote vehicles on Mars use a solar calendar, with Martian
 years and martian days (called sols). Months are not used because there are two
 moons, with different, rather short, 'months'.
 
+== Attributes of Timescales
+
+. Name/id
+
+. Optional location, time or domain of applicability
+
+. Optional Epoch, defined in some temporal reference system
+
+. Arithmetic, whether counted integers or measured real/floating point numbers
+
+. Optional Unit of Measure
+
+[example]
+TAI (International Atomic Time, Temps Atomique International) is coordinated by the BIPM (Inernational Bureau of Weights and measures, Bureau International de Poids et Mesures) in Paris, France. it is based on the average of hundreds of separate atomic clocks around the world, all corrected to be at mean sea level and standard pressure and temperature. The epoch is defined by Julian Date 2443144.5003725 (1 January 1977 00:00:32.184).
+
+[example]
+The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as "Period 2". Many computer based timescales, such as Unix Time, are based on the Julian Day timescale, but with different epochs, to fit the numbers into limited computer words.
+
+== Attributes of Clocks
+
+. Name/id
+
+. Optional location, time or domain of applicability
+
+. Optional Epoch, defined in some temporal reference system
+
+' Tick definition
+
+[example]
+An atomic clock may be calibrated to be valid only for a given temperature range and altitude.
+
+[example]
+A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multipe of a second. The famous London "Big Ben" clock's pendulum is 4.4m long and ticks every two seconds.
+
 == Synchronisation of clocks
 
 If there are two or more clocks, stationary with respect to each other, and a practical method of communicating their times to each other, the clocks can be perfectly synchronized.
