@@ -191,7 +191,7 @@ Since the speed of light in a vacuum is a measurable constant, space-time uses t
 
 ==== Relativistic
 
-A regime may be needed for 'space-time', off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
+A regime may be needed for 'space-time', off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects such as gravity may be relevant.
 
 Once off the planet Earth, distances and velocities grow very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of space-time events as measured between two moving objects. The core concepts are the <<lorentz_transform,Lorentz Transforms>>. These transforms allow one to calculate the degree of "contraction" a measurement undergos due to the relative velocity between the observing and observed object.
 
