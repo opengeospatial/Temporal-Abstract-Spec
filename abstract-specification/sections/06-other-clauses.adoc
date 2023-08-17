@@ -260,6 +260,8 @@ Other documents may enable two such 'king lists' to be related, though not compl
 
 . Optional Epoch, defined in some temporal reference system
 
+. Arithmetic: Integer
+
 . Optional name for each tick
 
 . Optional Start time or count
@@ -286,6 +288,8 @@ A clock is started, but undergoes a calibration process against some standard cl
 . Optional location, time or domain of applicability
 
 . Optional Epoch, defined in some temporal reference system
+
+. Aarithmetic: Real/floating point
 
 . Optional name for the Unit of Measure
 
