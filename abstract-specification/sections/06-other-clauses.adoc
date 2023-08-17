@@ -48,39 +48,40 @@ the Mermaid container with the following.
 ```mermaid
 classDiagram
 class ReferenceSystem {
-       <<abstract>>
-       dimension = 1..*
-       applicableLocationTimeOrDomain 
+        <<abstract>>
+        dimension = 1..*
+        applicableLocationTimeOrDomain 
     }
 class SpatialReferenceSystem {
-       <<abstract>>
-       dimension = 1..*
-       applicableLocationTimeOrDomain 
+        <<abstract>>
+        dimension = 1..*
+        applicableLocationTimeOrDomain 
     }
 class TemporalReferenceSystem {
-       <<abstract>>
-       dimension = 1
-       applicableLocationTimeOrDomain 
+        <<abstract>>
+        dimension = 1
+        applicableLocationTimeOrDomain 
     }
 note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
 ReferenceSystem <|-- SpatialReferenceSystem : is a
 ReferenceSystem <|-- TemporalReferenceSystem : is a
 class OrdinalTemporalReferenceSystem {
-       dimension = 1
-       applicableLocationTimeOrDomain 
+        dimension = 1
+        applicableLocationTimeOrDomain 
     }
 class TemporalCoordinateReferenceSystem {
-       dimension = 1
-       applicableLocationTimeOrDomain 
+        dimension = 1
+        applicableLocationTimeOrDomain 
     }
 class Calendar {
-       dimension = 1
-       applicableLocationTimeOrDomain 
+        dimension = 1
+        applicableLocationTimeOrDomain 
     }
 note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
-    TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
-    TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
-    TemporalReferenceSystem <|-- Calendar : is a
+TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
+TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
+TemporalReferenceSystem <|-- Calendar : is a
+
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
@@ -92,12 +93,18 @@ Calendar "1" --> "1..*" Notation : can use
 Calendar "1" o-- "1..*" Timescale : has a
 Calendar "1" o-- "1..*" Algorithm : has a
 class Timescale {
-       StartCount 
-       EndCount 
-       arithmetic 
+        StartCount 
+        EndCount 
+        arithmetic 
     }
 Timescale "1" o-- "1" Clock : has a
 Timescale "1" o-- "1" UnitOfMeasure : has a
+class Clock {
+        Tick definition
+    }
+class UnitOfMeasure {
+        Direction
+    }
 ```
 
 == Temporal regimes
@@ -390,6 +397,17 @@ An atomic clock may be calibrated to be valid only for a given temperature range
 
 [example]
 A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multipe of a second. The famous London "Big Ben" clock's pendulum is 4.4m long and ticks every two seconds.
+
+== Attributes of Units of Measure
+
+The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of `Timescale` or `TemporalCoordinateReferenceSystem` rather than the Unit of Measure, but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, Mya (Millions of Years Ago) increasing earlier, Atmospheric Pressure in HPa (HectoPascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
+
+. Name/Id/Abbreviation
+
+. Direction
+
+[example]
+The number of the years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of the years in the Current Era (CE, previously known as AD) increase further into the future. This is an example of two timescales, adjacent but wth no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.
 
 == Synchronisation of clocks
 
