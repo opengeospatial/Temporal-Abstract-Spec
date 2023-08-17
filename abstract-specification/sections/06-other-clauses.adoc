@@ -7,36 +7,26 @@ A conceptual model organizes the vocabulary needed to communicate consistently a
 
 A conceptual model:
 
-. is a representation of a system, made of the composition of concepts which are
-used to help people know, understand, or simulate a subject the model
-represents. A documented conceptual model represents 'concepts' (entities), the
-relationships between them, and a vocabulary;
+. is a representation of a system, made of the composition of concepts which are used to help people know, understand, or simulate a subject the model represents. A documented conceptual model represents 'concepts' (entities), the relationships between them, and a vocabulary;
 
 . is explicitly defined to be independent of design or implementation concerns;
 
-. organizes the vocabulary needed to communicate consistently and thoroughly
-about the know-how of a problem domain;
+. organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain;
 
-. starts with a glossary of terms and definitions. There is a very high premium
-on high-quality, design-independent definitions, free of data or implementation
-biases; the model also emphasizes rich vocabulary; and
+. starts with a glossary of terms and definitions. There is a very high premium on high-quality, design-independent definitions, free of data or implementation biases; the model also emphasizes rich vocabulary; and
 
-. is always about identifying the correct choice of terms to use in
-communications, including statements of rules and requirements, especially where
-high precision and subtle distinctions need to be made. The core concepts of a
-temporal geospatial problem domain are typically quite stable over time.
+. is always about identifying the correct choice of terms to use in communications, including statements of rules and requirements, especially where
+high precision and subtle distinctions need to be made. The core concepts of a temporal geospatial problem domain are typically quite stable over time.
 
 == Temporal Abstract Conceptual Model
 
-This attempt at a Temporal Abstract Conceptual Model follows <<ISO_19111>>,
-which is the ISO adoption of <<OGC_18-005r4>>.
+This attempt at a Temporal Abstract Conceptual Model follows <<ISO_19111>>, which is the ISO adoption of <<OGC_18-005r4>>.
 
 The model is also informed by <<W3COWLTime>>.
 
 [NOTE]
 ====
-This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
-the Mermaid container with the following.
+This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing the Mermaid container with the following.
 ====
 
 `[plantuml]
@@ -217,9 +207,7 @@ The financial and administrative domains often use weeks, quarters, and other ca
 There are often widely agreed, commonly accepted, notations used for temporal reference systems, but few have been standardised. Any particular notation may be capable of expressing a wider range of times than are valid for the reference system.
 
 [example]
-The <<IETF_RFC_3999>> timestamp notation, a restrictive profile of <<ISO_8601>>,
-can express times before 1588CE, when the Gregorian calendar was first
-introduced in some parts of the world.
+The <<IETF_RFC_3999>> timestamp notation, a restrictive profile of <<ISO_8601>>, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.
 
 == Attributes of the Regimes/Classes
 
@@ -233,26 +221,28 @@ Besides the conventional space and time, there may be other reference systems, s
 
 === Attributes of Events and Ordinal Temporal Reference Systems
 
+An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can be compared.
+
 . Name/Id
 
 . Optional location, time or domain of applicability
 
 . Optional Epoch, defined in some temporal reference system
 
-. Listed or enumerated sequence of events
-
-. First and last events
+. Listed or enumerated sequence of events with the first and last events
 
 . Optional notations
 
 [example]
 Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Xi built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Yi, a comet was sighted" and later research identifies this as an appearance of Hailey's Comet.
 
-The events from the list may be instants, such as the change of reign, or intervals, such as the complete reign of each emperor.
+The events from the list may be instants, such as the change of reign, or intervals, such as the complete reign of each king.
 
 Other documents may enable two such 'king lists' to be related, though not completely.
 
 === Attributes of simple Clock and Discrete Timescale
+
+A clock is a regular, repeating, physical event, or 'tick', that can be counted. The sequence of tick counts is a timescale. The ticks may be grouped into a Unit of Measure for convenience. Other events can be compared to the ticks on the timescale.
 
 . Name/Id
 
@@ -273,15 +263,59 @@ Other documents may enable two such 'king lists' to be related, though not compl
 . Optional notations
 
 [example]
-A well preserved fossilised log is recovered and the tree rings establish an
-annual 'tick'. The start and end times may be known accurately by comparison and
-matching with other known tree ring sequences, or perhaps only dated imprecisely
-via Carbon Dating, or its archaeological or geological context.
+A well preserved fossilised log is recovered and the tree rings establish an annual 'tick'. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.
 
 [example]
-A clock is started, but undergoes a calibration process against some standard clock, so the initial, reliable Start Time does not start at Count Zero. The clock is accidentally knocked so that it is no longer correctly calibrated, but is still working. The End Time is not the last time that the clock counts. 
+A clock is started, but undergoes a calibration process against some standard clock, so the initial, reliable Start Time does not start at Count Zero. The clock is accidentally knocked so that it is no longer correctly calibrated, but is still working. The End Time is not the last time that the clock ticks. 
+
+=== Attributes of Clocks
+
+. Name/id
+
+. Optional location, time or domain of applicability
+
+. Optional Epoch, defined in some temporal reference system
+
+. Tick definition
+
+[example]
+An atomic clock may be calibrated to be valid only for a given temperature range and altitude.
+
+[example]
+A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multipe of a second. The famous London "Big Ben" clock's pendulum is 4.4m long and ticks every two seconds.
+
+=== Attributes of Timescales
+
+. Name/id
+
+. Optional location, time or domain of applicability
+
+. Optional Epoch, defined in some temporal reference system
+
+. Arithmetic, whether counted integers or measured real/floating point numbers
+
+. Optional Unit of Measure
+
+[example]
+TAI (International Atomic Time, Temps Atomique International) is coordinated by the BIPM (Inernational Bureau of Weights and measures, Bureau International de Poids et Mesures) in Paris, France. it is based on the average of hundreds of separate atomic clocks around the world, all corrected to be at mean sea level and standard pressure and temperature. The epoch is defined by Julian Date 2443144.5003725 (1 January 1977 00:00:32.184).
+
+[example]
+The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as "Period 2". Many computer based timescales, such as Unix Time, are based on the Julian Day timescale, but with different epochs, to fit the numbers into limited computer words.
+
+=== Attributes of Units of Measure
+
+The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of `Timescale` or `TemporalCoordinateReferenceSystem` rather than a separate class `UnitOfMeasure`, but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in HPa (HectoPascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
+
+. Name/Id/Abbreviation
+
+. Direction
+
+[example]
+The number of the years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of the years in the Current Era (CE, previously known as AD) increase further into the future. This is an example of two timescales, adjacent but wth no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.
 
 === Attributes of a CRS and Continuous Timescales
+
+Some clocks allow the measurement of intervals between ticks, such as the movement of the sun across the sky. Alternatively, the ticks may not be completely distinguishable, but are still stable enough over the time of applicability to allow measurements rather than counting to determine the passage of time.  
 
 . Name/Id
 
@@ -300,17 +334,14 @@ A clock is started, but undergoes a calibration process against some standard cl
 . Optional notations
 
 [example]
-A long, deep, ice core is retrieved from a stable ice-sheet. From long term
-meteorological observations, the rate of accumulation of ice is known, so linear
-length can be equated to time (assuming a stable climate too). This enables the
-dates of some previously unknown large scale volcanic eruptions to be identified
-and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb
-tests increase the confidence in the timing accuracy.
+A long, deep, ice core is retrieved from a stable ice-sheet. From long termmeteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enables the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests detected in the ice core increase the confidence in the timing accuracy.
 
 [example]
-A long, deep, sediment core is extract from the bottom of a lake with a long geological history. two layers in the core are date using radiocarbon dated. Assuming steady rates of sediment deposition, a continuous timescale can be inerpolated between the dated layers, and extrapolated before and after the dated layers. 
+A long, deep, sediment core is extracted from the bottom of a lake with a long geological history. Two layers in the core are dated using radiocarbon dating. Assuming steady rates of sediment deposition, a continuous timescale can be interpolated between the dated layers, and extrapolated before and after the dated layers. 
 
-== Attributes of Calendars
+=== Attributes of Calendars
+
+Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. calculated algorithms are used to determine which instants or intervals on the ompound timescale are identified and labelled.
 
 . Name/id
 
@@ -333,85 +364,25 @@ A long, deep, sediment core is extract from the bottom of a lake with a long geo
 . Optional notations
 
 [example]
-The modern Gregorian calendar is calculated solar calendar, with various epochs
-from 1588 CE through to 1922 CE depending on location or country.
-+
-The constituent timescales are days (earth's rotations), months (moon's orbit
-around the earth), years (earth's orbit around the sun) and seconds determined
-by atomic clocks. To accommodate discrepancies, leap days and leap seconds are
-intercalated in some years. The commonest notations for the Gregorian calendar
-are ISO 8601 and its various restrictive profiles.
+The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.
+
+The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are ISO8601 and its various restrictive profiles.
 
 [example]
-The modern Islamic calendar is an observed lunar calendar, and the major
-religious dates progress throughout the year, year on year. The important months
-are determined by the observation of new moons from Mecca.
+The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
 
 [example]
-The modern Jewish calendar is a calculated luni-solar calendar, and
-discrepancies in the solar year are addressed by adding 'leap months' every few
+The modern Jewish calendar is a calculated luni-solar calendar, and discrepancies in the solar year are addressed by adding 'leap months' every few
 years.
 
 [example]
-The Ba'hai calendar is a calculated solar calendar, but without any other
-astronomical aspects. The year consists of 19 months of 19 days each, with 4 or
-5 intercalated days for a new year holiday.
+The Ba'hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday.
 
 [example]
-The West African Yoruba traditional calendar is a solar calendar with months,
-but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of
-4 days are used. This perhaps gave rise to the fortnightly (every 8 days)
-markets in many villages in the grasslands of north-west Cameroon.
+The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in the grasslands of north-west Cameroon.
 
 [example]
-Teams controlling remote vehicles on Mars use a solar calendar, with Martian
-years and martian days (called sols). Months are not used because there are two
-moons, with different, rather short, 'months'.
-
-== Attributes of Timescales
-
-. Name/id
-
-. Optional location, time or domain of applicability
-
-. Optional Epoch, defined in some temporal reference system
-
-. Arithmetic, whether counted integers or measured real/floating point numbers
-
-. Optional Unit of Measure
-
-[example]
-TAI (International Atomic Time, Temps Atomique International) is coordinated by the BIPM (Inernational Bureau of Weights and measures, Bureau International de Poids et Mesures) in Paris, France. it is based on the average of hundreds of separate atomic clocks around the world, all corrected to be at mean sea level and standard pressure and temperature. The epoch is defined by Julian Date 2443144.5003725 (1 January 1977 00:00:32.184).
-
-[example]
-The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as "Period 2". Many computer based timescales, such as Unix Time, are based on the Julian Day timescale, but with different epochs, to fit the numbers into limited computer words.
-
-== Attributes of Clocks
-
-. Name/id
-
-. Optional location, time or domain of applicability
-
-. Optional Epoch, defined in some temporal reference system
-
-. Tick definition
-
-[example]
-An atomic clock may be calibrated to be valid only for a given temperature range and altitude.
-
-[example]
-A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multipe of a second. The famous London "Big Ben" clock's pendulum is 4.4m long and ticks every two seconds.
-
-== Attributes of Units of Measure
-
-The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of `Timescale` or `TemporalCoordinateReferenceSystem` rather than the Unit of Measure, but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, Mya (Millions of Years Ago) increasing earlier, Atmospheric Pressure in HPa (HectoPascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
-
-. Name/Id/Abbreviation
-
-. Direction
-
-[example]
-The number of the years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of the years in the Current Era (CE, previously known as AD) increase further into the future. This is an example of two timescales, adjacent but wth no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.
+Teams controlling remote vehicles on Mars use a solar calendar, with Martian years and Martian days (called Sols). Months are not used because there are two moons, with different, rather short, orbital periods.
 
 == Synchronisation of clocks
 
