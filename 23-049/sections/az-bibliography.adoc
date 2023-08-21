@@ -1,38 +1,35 @@
-
 [bibliography]
 == Bibliography
 
-* [[[ISO_19107,nofetch(ISO 19107)]]]
+* [[[iso8601,nofetch(ISO 8601:2004)]]] ISO: 8601
 
-* [[[ISO_19108,nofetch(ISO 19108)]]]
+* [[[iso19107,nofetch(ISO 19107)]]] ISO: 19107
 
-* [[[ISO_19108_Cor1,nofetch(ISO 19108:2002/Cor 1:2006)]]]
+* [[[iso19108,nofetch(ISO 19108)]]] ISO: 19108
 
-* [[[ISO_8601,nofetch(ISO 8601:2004)]]]
+* [[[iso19108_Cor1,nofetch(ISO 19108:2002/Cor 1:2006)]]] ISO: 19108/cor 1
 
-* [[[OGC22036,nofetch(OGC 22-036)]]]
+* [[[ogc22036,nofetch(OGC 22-036)]]] OGC: 22-036
 
-* [[[OGC22038,nofetch(OGC 22-038r2)]]]
+* [[[ogc22038,nofetch(OGC 22-038r2)]]] OGC: 22-038
 
 * [[[OGCgeopose,nofetch(OGC 21-056r10)]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
 
-* [[[ISO_19101-1,nofetch(ISO 19101-1:2014)]]]
+* [[[iso19101-1,nofetch(ISO 19101-1:2014)]]] ISO: 19101-1
 
-* [[[ISO_19103,nofetch(ISO 19103)]]]
+* [[[iso19112,nofetch(ISO 19112:2019)]]] ISO: 19112
 
-* [[[ISO_19112,nofetch(ISO 19112:2019)]]]
+* [[[iso19162,nofetch(ISO 19162:2019)]]] ISO: 19162
 
-* [[[ISO_19162,nofetch(ISO 19162:2019)]]]
+* [[[iso19136,nofetch(ISO 19136:2007)]]] ISO: 19136
 
-* [[[ISO_19136,nofetch(ISO 19136:2007)]]]
+* [[[ogc09083,nofetch(OGC 09-083r4)]]] OGC: 09-083
 
-* [[[OGC09-083,nofetch(OGC 09-083r4)]]]
+* [[[ogc18005r4,nofetch(OGC 18-005r4)]]] OGC: 18-005
 
-* [[[OGC_18-005r4,nofetch(OGC 18-005r4)]]]
+* [[[rfc3339,nofetch(IETF RFC 3339)]]] IETF: RFC 3339
 
-* [[[IETF_RFC_3339,nofetch(IETF RFC 3339)]]]
-
-* [[[CEN_ENV_1613,nofetch(CEN ENV 1613:1995)]]]
+* [[[CEN_ENV_1613,nofetch(CEN ENV 1613:1995)]]] CEN: Cen Env 1613
 
 * [[[astro_algo,nofetch(Astronomical Algorithms)]]], Jean Meeus. _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
 

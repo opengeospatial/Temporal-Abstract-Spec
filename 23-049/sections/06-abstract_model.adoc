@@ -7,29 +7,17 @@ A conceptual model organizes the vocabulary needed to communicate consistently a
 
 A conceptual model:
 
-. is a representation of a system, made of the composition of concepts which are
-used to help people know, understand, or simulate a subject the model
-represents. A documented conceptual model represents 'concepts' (entities), the
-relationships between them, and a vocabulary;
+. is a representation of a system, made of the composition of concepts which are used to help people know, understand, or simulate a subject the model represents. A documented conceptual model represents 'concepts' (entities), the relationships between them, and a vocabulary;
 
 . is explicitly defined to be independent of design or implementation concerns;
 
-. organizes the vocabulary needed to communicate consistently and thoroughly
-about the know-how of a problem domain;
-
-. starts with a glossary of terms and definitions. There is a very high premium
-on high-quality, design-independent definitions, free of data or implementation
-biases; the model also emphasizes rich vocabulary; and
-
-. is always about identifying the correct choice of terms to use in
-communications, including statements of rules and requirements, especially where
-high precision and subtle distinctions need to be made. The core concepts of a
-temporal geospatial problem domain are typically quite stable over time.
+. organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain;
+. starts with a glossary of terms and definitions. There is a very high premium on high-quality, design-independent definitions, free of data or implementation biases; the model also emphasizes rich vocabulary; and
+. is always about identifying the correct choice of terms to use in communications, including statements of rules and requirements, especially where high precision and subtle distinctions need to be made. The core concepts of a temporal geospatial problem domain are typically quite stable over time.
 
 == Temporal Abstract Conceptual Model
 
-This attempt at a Temporal Abstract Conceptual Model follows <<ISO_19111>>,
-which is the ISO adoption of <<OGC_18-005r4>>.
+This attempt at a Temporal Abstract Conceptual Model follows <<iso19111,ISO 19111>>, which is the ISO adoption of <<OGC_18-005r4>>.
 
 The model is also informed by <<W3COWLTime>>.
 
@@ -104,7 +92,6 @@ The first three regimes have deep underlying physical and mathematical foundatio
 
 The regimes are applicable to other planets and outer space, but with due consideration.
 
-
 === Events and Operators
 
 The simplest way of relating entities in time is by events that can be ordered, that is, established in a sequence, and this sequence is used as an approximate measure of the passage of time.
@@ -149,12 +136,10 @@ In this regime, the Allen Operators (<<temporal_knowledge>>) also can be used. I
 
 Some examples are:
 
-. Unix milliseconds since 1970-01-01T00:00:00.0Z
-
-. Julian Days, and fractions of a day, since noon on 1st January, 4713 BCE.
+* Unix milliseconds since 1970-01-01T00:00:00.0Z
+* Julian Days, and fractions of a day, since noon on 1st January, 4713 BCE.
 
 This regime constitutes a Temporal Coordinate Reference System, with continuous, floating-point, units of measure, which can be subject to the full range of real arithmetic.
-
 
 === Calendars
 
@@ -166,10 +151,7 @@ This paper only addresses the internationally agreed Gregorian calendar. <<astro
 
 A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.
 
-
 === Other Regimes
-
-==== General
 
 There may in fact be a series of other regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time.
 
@@ -205,10 +187,7 @@ The financial and administrative domains often use weeks, quarters, and other ca
 There are often widely agreed, commonly accepted, notations used for temporal reference systems, but few have been standardised. Any particular notation may be capable of expressing a wider range of times than are valid for the reference system.
 
 [example]
-The <<IETF_RFC_3999>> timestamp notation, a restrictive profile of <<ISO_8601>>,
-can express times before 1588CE, when the Gregorian calendar was first
-introduced in some parts of the world.
-
+The <<IETF_RFC_3999>> timestamp notation, a restrictive profile of <<ISO_8601>>, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.
 
 == Attributes of the Regimes/Classes
 
@@ -233,10 +212,7 @@ Besides the conventional space and time, there may be other reference systems, s
 . Optional notations
 
 [example]
-Ancient annals of a country may give a sequence of emperors which could be used
-to 'date' another event such as "Emperor Xi built a canal", or may be used to
-date a particular reign. For example: "In the reign of Emperor Yi, a comet was
-sighted" and later research identifies this as an appearance of Hailey's Comet.
+Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Xi built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Yi, a comet was sighted" and later research identifies this as an appearance of Hailey's Comet.
 
 The events from the list may be instants, such as the change of reign, or intervals, such as the complete reign of each emperor.
 
@@ -257,9 +233,7 @@ Other documents may enable two such 'king lists' to be related, though not compl
 . Optional Notation
 
 [example]
-A well preserved fossilised log is recovered and the tree rings establish an
-annual 'tick'. The start and end times may be known accurately by comparison and
-matching with other known tree ring sequences, or perhaps only dated imprecisely
+A well preserved fossilised log is recovered and the tree rings establish an annual 'tick'. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely
 via Carbon Dating, or its archaeological or geological context.
 
 === Attributes of a CRS and Continuous Timescales
@@ -277,12 +251,7 @@ via Carbon Dating, or its archaeological or geological context.
 . Optional Notation
 
 [example]
-A long ice core is retrieved from a stable ice-sheet. From long term
-meteorological observations, the rate of accumulation of ice is known, so linear
-length can be equated to time (assuming a stable climate too). This enable the
-dates of some previously unknown large scale volcanic eruptions to be identified
-and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb
-tests increase the confidence in the timing accuracy.
+A long ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.
 
 == Attributes of Calendars
 
@@ -303,40 +272,24 @@ tests increase the confidence in the timing accuracy.
 . Optional Notation
 
 [example]
-The modern Gregorian calendar is calculated solar calendar, with various epochs
-from 1588 CE through to 1922 CE depending on location or country.
+The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.
 +
-The constituent timescales are days (earth's rotations), months (moon's orbit
-around the earth), years (earth's orbit around the sun) and seconds determined
-by atomic clocks. To accommodate discrepancies, leap days and leap seconds are
-intercalated in some years. The commonest notations for the Gregorian calendar
-are ISO 8601 and its various restrictive profiles.
+The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are ISO 8601 and its various restrictive profiles.
 
 [example]
-The modern Islamic calendar is an observed lunar calendar, and the major
-religious dates progress throughout the year, year on year. The important months
-are determined by the observation of new moons from Mecca.
+The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
 
 [example]
-The modern Jewish calendar is a calculated luni-solar calendar, and
-discrepancies in the solar year are addressed by adding 'leap months' every few
-years.
+The modern Jewish calendar is a calculated luni-solar calendar, and discrepancies in the solar year are addressed by adding 'leap months' every few years.
 
 [example]
-The Ba'hai calendar is a calculated solar calendar, but without any other
-astronomical aspects. The year consists of 19 months of 19 days each, with 4 or
-5 intercalated days for a new year holiday.
+The Ba'hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday.
 
 [example]
-The West African Yoruba traditional calendar is a solar calendar with months,
-but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of
-4 days are used. This perhaps gave rise to the fortnightly (every 8 days)
-markets in many villages in the grasslands of north-west Cameroun.
+The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in the grasslands of north-west Cameroun.
 
 [example]
-Teams controlling remote vehicles on Mars use a solar calendar, with Martian
-years and martian days (called sols). Months are not used because there are two
-moons, with different, rather short, 'months'.
+Teams controlling remote vehicles on Mars use a solar calendar, with Martian years and martian days (called sols). Months are not used because there are two moons, with different, rather short, 'months'.
 
 == Synchronisation of clocks
 

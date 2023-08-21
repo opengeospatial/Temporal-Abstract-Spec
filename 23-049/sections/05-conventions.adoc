@@ -16,7 +16,6 @@ UML:: Unified Modelling Language
 
 The normative provisions in this standard are denoted by the URI:
 
-`http://www.opengis.net/spec/{standard}/{m.n}`
+`http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0`
 
-All requirements and conformance tests that appear in this document are denoted
-by partial URIs which are relative to this base.
+All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.

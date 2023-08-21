@@ -1,28 +1,28 @@
-== Abstract Temporal Reference Model
+== Temporal Abstract Formal Conceptual Model
+
+The Temporal Abstract Conceptual Model has been built using a UML model. This provides formalization of the astract concepts which can be evaluated against other related ISO and OGC standards. 
 
 === Context
 
-When OGC standards involve time, they generally refer to the ISO documents such
-as <<ISO_19108>>, <<ISO_19111>>, <<ISO_8601>>, and their freely available OGC
-equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates
-(equivalent to <<ISO_19111>).
+When OGC standards involve time, they generally refer to the ISO documents such as <<iso19108,ISO 19108>>, <<iso19111,ISO 19111>>, <<iso8601,ISO 8601>>, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates (equivalent to <<iso19111,ISO 19111>).
 
-When dealing with temporal reference systems, it is necessary to understand all
-of these standards and how they interact. ISO Technical Committee 211 (ISO/TC
-211) provides a useful tool for integrating their standards. The
-https://github.com/ISO-TC211/HMMG[ISO/TC 211 Harmonized Model Management Group]
-provides a single integrated model for most of the ISO/TC 211 standards. That
-model will provide the foundation for the Abstract Temporal Reference Model.
+When dealing with temporal reference systems, it is necessary to understand all of these standards and how they interact. ISO Technical Committee 211 (ISO/TC211) provides a useful tool for integrating their standards. The https://github.com/ISO-TC211/HMMG[ISO/TC 211 Harmonized Model Management Group] provides a single integrated model for most of the ISO/TC 211 standards. That model will provide the foundation for the Abstract Temporal Reference Model.
 
 The Abstract Temporal Reference Model is a "Conceptual" model. It both defines concepts and the associations between those concepts. This "conceptual" model is an extension of a higher level "Semantic" model.
+
+=== OWL Ontology
 
 The W3C Time Ontology (<<W3COWLTime>>) is illustrated below.
 
 image::sections/images/Ontology.png[W3C Time Ontology]
 
+=== Abstract Temporal Model
+
 The Abstract Temporal Model divides the world into Spatial, Temporal, and SpatialTemporal Reference Systems.
 
 image::sections/images/AbstractTemporalModel.png[Abstract Temporal Model]
+
+=== Temporal Reference Systems
 
 The Temporal Reference System is further divided into Temporal Coordinate Reference Systems and Temporal Ordinal Reference Systems.
 
@@ -32,9 +32,31 @@ The Temporal Coordinate Reference Systems provide a link to ISO 19111 - Geograph
 
 image::sections/images/TemporalCoordinateReferenceSystem.png[Temporal Coordinate Reference System]
 
+image::sections/images/Calendar.png[Calendar]
+
+image::sections/images/TemporalOrdinalReferenceSystem.png[Temporal Ordinal Reference System]
+
+=== Temporal Objects
+
+image::sections/images/Calendar_Date.png[Calendar Date]
+
+image::sections/images/Coordinate.png[Coordinates]
+
+image::sections/images/TemporalDuration.png[Temporal Duration]
+
+image::sections/images/TemporalEntity.png[Temporal Entity]
+
+image::sections/images/TemporalPosition.png[Temporal Position]
+
+=== Temporal Transformations
+
 ISO 19111 provides a model for coordinate transformations which can be re-used for temporal coordinate reference systems.
 
 image::sections/images/TemporalCoordinateReferenceSystemTransformations.png[Temporal Coordinate Reference System]
+
+image::sections/images/Transforms.png[Transformations]
+
+
 
 Some Observations:
 
