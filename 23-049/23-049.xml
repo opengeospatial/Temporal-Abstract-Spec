@@ -14,7 +14,7 @@
 
 <p>The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightforward defining document. This document aims to to give clear consistent definitions of the fundamental concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps they can contribute to building better and more interoperable systems using other more detailed documents such as logical and implementation standards that have an agreed common conceptual basis and terminology.</p>
 
-<p>This document is consistent with <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref> and <eref type="inline" bibitemid="W3COWLTime" citeas="W3C REC-owl-time-20171019"/> in OWL.</p>
+<p>This document is consistent with <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref> and <eref type="inline" bibitemid="w3cowltime" citeas="W3C REC-owl-time-20171019">W3C Time Ontology</eref> in OWL.</p>
 
 <p>The aim of this document is to establish clear concepts and terminology.</p>
 </abstract><status><stage>swg-draft</stage></status><copyright><from>2023</from><owner><organization>
@@ -135,7 +135,7 @@
 
 <p id="_92422dca-5e04-47b2-be97-997e8ea0873e">The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightforward defining document. This document aims to to give clear consistent definitions of the fundamental concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps they can contribute to building better and more interoperable systems using other more detailed documents such as logical and implementation standards that have an agreed common conceptual basis and terminology.</p>
 
-<p id="_25387c35-c02e-a2df-8865-64a956de8718">This document is consistent with <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref> and <eref type="inline" bibitemid="W3COWLTime" citeas="W3C REC-owl-time-20171019"/> in OWL.</p>
+<p id="_d4206428-1604-4374-6345-eefc296438a5">This document is consistent with <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref> and <eref type="inline" bibitemid="w3cowltime" citeas="W3C REC-owl-time-20171019">W3C Time Ontology</eref> in OWL.</p>
 
 <p id="_72f0dc4d-fad8-9e3a-f7aa-3c719d44c87a">The aim of this document is to establish clear concepts and terminology.</p>
 </abstract><foreword id="_preface" obligation="informative">
@@ -145,7 +145,7 @@
 <p id="_25f6b7a1-8657-2655-9eff-47df179631e0">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
 </foreword><clause id="_introduction" obligation="informative">
 <title>Introduction</title>
-<p id="_77e3f161-8372-316f-d0e9-cbec38f4ebb4">When OGC standards involve time, they generally refer to the ISO documents such as <eref type="inline" bibitemid="iso19108" citeas="ISO 19108">ISO 19108</eref> (now largely superseded), <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>, <eref type="inline" bibitemid="iso8601" citeas="ISO 8601">ISO 8601</eref>, and their freely available OGC equivalents, such as <xref target="OGC_18-005r4"/> (the equivalent to <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>).</p>
+<p id="_8bca7211-9a3c-63ca-a566-dd965cd1f896">When OGC standards involve time, they generally refer to the ISO documents such as <eref type="inline" bibitemid="iso19108" citeas="ISO 19108">ISO 19108</eref> (now largely superseded), <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>, <eref type="inline" bibitemid="iso8601" citeas="ISO 8601">ISO 8601</eref>, and their freely available OGC equivalents, such as <eref type="inline" bibitemid="ogc18005" citeas="OGC 18-005r4">OGC_18-005r4</eref> (the equivalent to <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>).</p>
 
 <p id="_f6d0212a-595f-da11-ddf2-d9735beb8ed1">Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the <eref type="inline" bibitemid="iso8601" citeas="ISO 8601">ISO 8601</eref> notation, and many date-time schemas. Because of this effort, many people use calendar based “coordinates”, with the attendant ambiguities, imprecision and inappropriate scope.</p>
 
@@ -207,14 +207,126 @@ minimum necessary to define data structures to full object implementation.</p>
 <p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
 <p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p>
 
-<term id="term-conceptual-model"><preferred><expression>
+<term id="conceptual-model_definition"><preferred><expression>
 <name>conceptual model</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_348aecb1-bc11-df91-efb3-6f933bc25a6f">description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain. A conceptual model is explicitly chosen to be independent of design or implementation concerns.</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_a1a9d3e4-3060-4861-fc52-40e11c81ab32">description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain. A conceptual model is explicitly chosen to be independent of design or implementation concerns.</p></verbal-definition></definition>
 
 
- <termsource status="identical" type="authoritative"><origin bibitemid="CEN ENV 1613:1995" type="inline" citeas=""/></termsource></term>
+ <termsource status="identical" type="authoritative"><origin bibitemid="cen_env_1613" type="inline" citeas="CEN ENV 1613">CEN ENV 1613:1995</origin>
+</termsource></term>
+
+<term id="coordinate-reference-system_definition"><preferred><expression>
+<name>coordinate reference system</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_4cecff49-5b0f-a0d8-cbbd-ffdc8e4e6743"><xref target="coordinate-system_definition">coordinate system</xref> that is related to an object by a <xref target="datum_definition">datum</xref></p></verbal-definition></definition>
+
+
+
+
+
+
+ <termnote id="_51a255f3-db65-d30e-e494-42254695f433"><p id="_69c52292-a75f-0347-6b55-0ae608ec2481">Geodetic and vertical datums are referred to as reference frames.</p>
+</termnote><termnote id="_9c63b966-deb1-606b-a2e1-c1f6831dab84"><p id="_ec4849b6-0edb-54e8-2473-f977b13efefe">For geodetic and vertical reference frames, the object will be the Earth. In planetary applications, geodetic and vertical reference frames may be applied to other celestial bodies.</p>
+</termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
+</termsource></term>
+
+<term id="coordinate-system_definition"><preferred><expression>
+<name>coordinate system</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_7fc2cb81-a340-933f-82f5-7602b3589da3">set of mathematical rules for specifying how coordinates are to be assigned to points</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
+</termsource></term>
+
+<term id="datum_definition"><preferred><expression>
+<name>datum</name>
+</expression>
+</preferred><admitted><expression>
+<name>reference frame</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_d27c758e-8645-610c-8b56-57025a1da73a">parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <xref target="coordinate-system_definition">coordinate system</xref></p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
+</termsource></term>
+
+<term id="epoch_definition"><preferred><expression>
+<name>epoch</name>
+</expression>
+</preferred>
+
+
+<domain>geodesy</domain><definition><verbal-definition><p id="_57e88c72-5a21-3348-1598-e0ca91c17dd3">point in time</p></verbal-definition></definition>
+
+
+
+
+
+
+ <termnote id="_7980e6f3-3992-9b1f-2725-3aa6784c7ae4"><p id="_d562b9d8-3085-7842-bdd2-164acc91ce92">In this document an epoch is expressed in the Gregorian calendar as a decimal year.</p>
+</termnote><termexample id="_f302d968-207b-5fb9-ff29-37d924f44394"><p id="_ec1ec154-93f1-f1ae-bdde-b2c47f74f8e3">2017-03-25 in the Gregorian calendar is epoch 2017.23.</p>
+</termexample><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
+</termsource></term>
+
+<term id="reference-frame_definition"><preferred><expression>
+<name>reference frame</name>
+</expression>
+</preferred><admitted><expression>
+<name>datum</name>
+</expression>
+</admitted>
+
+
+
+<definition><verbal-definition><p id="_17c9d023-0d8b-246b-4ff0-b66f1c0455e9">parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <xref target="coordinate-system_definition">coordinate system</xref></p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
+</termsource></term>
+
+<term id="temporal-coordinate-refrence-system_definition"><preferred><expression>
+<name>temporal coordinate reference system</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_66d6eac0-6466-37ce-c340-df107a8c0dff"><xref target="coordinate-reference-system_definition">coordinate reference system</xref> based on a <xref target="temporal-datum_definition">temporal datum</xref></p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
+</termsource></term>
+
+<term id="temporal-coordinate-system_definition"><preferred><expression>
+<name>temporal coordinate system</name>
+</expression>
+</preferred>
+
+
+<domain>geodesy</domain><definition><verbal-definition><p id="_e157e368-ac10-8221-808e-a0fec3b708ed">one-dimensional <xref target="coordinate-system_definition">coordinate system</xref> where the axis is time</p></verbal-definition></definition>
+
+
+ <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
+</termsource></term>
+
+<term id="temporal-datum_definition"><preferred><expression>
+<name>temporal datum</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_6f8432b9-43f6-4f51-3ed7-b2fb2b00f357"><xref target="datum_definition">datum</xref> describing the relationship of a <xref target="temporal-coordinate-system_definition">temporal coordinate system</xref> to an object</p></verbal-definition></definition>
+
+
+
+
+ <termnote id="_c4553ca8-f123-b2ef-6da3-df16e1f6c435"><p id="_d9b37a18-4c55-c3b1-d79a-69cd575845f8">The object is normally time on the Earth.</p>
+</termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
+</termsource></term>
 </terms>
 
 <clause id="_conventions" obligation="normative">
@@ -265,9 +377,9 @@ minimum necessary to define data structures to full object implementation.</p>
 
 <clause id="_temporal_abstract_conceptual_model" obligation="normative">
 <title>Temporal Abstract Conceptual Model</title>
-<p id="_ce43396b-c5f6-55ca-235a-44a59459526e">This attempt at a Temporal Abstract Conceptual Model follows <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>, which is the ISO adoption of <xref target="OGC_18-005r4"/>.</p>
+<p id="_2ad07633-2fce-1d19-5e66-d98db7e0c6e7">This attempt at a Temporal Abstract Conceptual Model follows <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>, which is the ISO adoption of <eref type="inline" bibitemid="ogc18005" citeas="OGC 18-005r4">OGC_18-005r4</eref>.</p>
 
-<p id="_a9023265-4a93-53d6-d8e3-e24bfb6edfaf">The model is also informed by <eref type="inline" bibitemid="W3COWLTime" citeas="W3C REC-owl-time-20171019"/>.<note id="_d5cd9626-5482-156e-ffaa-d6835c12f4dc"><p id="_35e1d44b-e51d-1b47-db88-850534bf64e4">This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
+<p id="_f60494e3-ec35-ae9a-1b6c-78a7608242a5">The model is also informed by the <eref type="inline" bibitemid="w3cowltime" citeas="W3C REC-owl-time-20171019">W3C Time Ontology</eref>.<note id="_d5cd9626-5482-156e-ffaa-d6835c12f4dc"><p id="_35e1d44b-e51d-1b47-db88-850534bf64e4">This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
 the Mermaid container with the following.</p>
 </note></p>
 
@@ -356,7 +468,7 @@ class UnitOfMeasure {
 
 <p id="_ffe4727f-afd5-0298-1b74-057a6fb99a10">One set of events may be completely ordered with respect to each other, but another set of similar internally consistent events cannot be cross-referenced until extra information is available. Even then, only partial orderings may be possible.</p>
 
-<p id="_a986b351-91e7-75cf-cf7b-9bb54ef03c36">In this regime, the Allen Operators (<eref type="inline" bibitemid="temporal_knowledge" citeas="Maintaining Knowledge about Temporal Intervals"/>) can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform arithmetic operations like (B-A) or (C-A) as we have not defined any timescale or measurements. For example, in geology, ‘subtracting’ Ordovician from Jurassic is meaningless; or in archeology, ‘subtracting’ a layer with a certain type of pottery remains from the layer containing burnt wood and bones is again not meaningful. Only the ordering can be deduced.</p>
+<p id="_eca69697-c458-3c10-85c4-fd9ac023e074">In this regime, the <eref type="inline" bibitemid="temporal-knowledge" citeas="Maintaining Knowledge about Temporal Intervals">Allen Operators</eref> can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform arithmetic operations like (B-A) or (C-A) as we have not defined any timescale or measurements. For example, in geology, ‘subtracting’ Ordovician from Jurassic is meaningless; or in archeology, ‘subtracting’ a layer with a certain type of pottery remains from the layer containing burnt wood and bones is again not meaningful. Only the ordering can be deduced.</p>
 
 <p id="_03e2e22e-0e50-ed41-8cf1-599ce108894c">This regime constitutes an Ordinal Temporal Reference System, with discrete enumerated ordered events.</p>
 </clause>
@@ -375,7 +487,7 @@ class UnitOfMeasure {
 
 <p id="_410b2c2a-4f5a-b5c7-9dfc-5fe7472ffb78">The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differing altitudes and temperatures.</p>
 
-<p id="_31b3fb94-81a2-043f-8e99-699459645869">In this regime, the Allen Operators (<eref type="inline" bibitemid="temporal_knowledge" citeas="Maintaining Knowledge about Temporal Intervals"/>) also can be used. If L occurs before M and M occurs before N, then we can correctly deduce that L occurs before N. The full set of operators also covers pairs of intervals. So if M occurs in the interval (L,N), we can now perform integer arithmetic operations like (M-L) or (N-L) as we have defined an integer timescale or measurement.</p>
+<p id="_13be9b5d-ee86-fa64-aeb7-dea278c66c5f">In this regime, the <eref type="inline" bibitemid="temporal-knowledge" citeas="Maintaining Knowledge about Temporal Intervals">Allen Operators</eref> also can be used. If L occurs before M and M occurs before N, then we can correctly deduce that L occurs before N. The full set of operators also covers pairs of intervals. So if M occurs in the interval (L,N), we can now perform integer arithmetic operations like (M-L) or (N-L) as we have defined an integer timescale or measurement.</p>
 
 <p id="_8ce54d30-561b-05cf-d886-c90fee632ad7">This regime constitutes a Temporal Coordinate Reference System, with discrete integer units of measure which can be subject to integer arithmetic.</p>
 </clause>
@@ -390,7 +502,7 @@ class UnitOfMeasure {
 
 <p id="_889702a7-c112-b2e3-f2b1-a6ba83417591">This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (a name for the ‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic. It is a Coordinate Reference System.</p>
 
-<p id="_40ceb90c-cf5a-b39a-719b-5a6fcbb7fe70">In this regime, the Allen Operators (<eref type="inline" bibitemid="temporal_knowledge" citeas="Maintaining Knowledge about Temporal Intervals"/>) also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform real number arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement, and between any two instants, we can always find an infinite number of other instants.</p>
+<p id="_4d8a5e82-6b72-8e41-6330-779df3b98216">In this regime, the <eref type="inline" bibitemid="temporal-knowledge" citeas="Maintaining Knowledge about Temporal Intervals">Allen Operators</eref> also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform real number arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement, and between any two instants, we can always find an infinite number of other instants.</p>
 
 <p id="_2926b475-98d6-1e3f-f525-4f8ba83fdb9c">Some examples are:</p>
 
@@ -409,7 +521,7 @@ class UnitOfMeasure {
 
 <p id="_f91d6d0d-486d-ba31-017a-d6a372158d11">Calendars are social constructs made by combining several clocks and their associated timescales.</p>
 
-<p id="_a272346e-d7e8-a329-1aa8-ce88ad118755">This paper only addresses the internationally agreed Gregorian calendar. <eref type="inline" bibitemid="astro_algo" citeas="Astronomical Algorithms"/> provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.</p>
+<p id="_47bef48d-903a-cafa-32f3-b9d7e3f330ae">This paper only addresses the internationally agreed Gregorian calendar. <eref type="inline" bibitemid="astro_algo" citeas="Astronomical Algorithms">Astronomical Algorithms</eref> by Jean Meeus provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.</p>
 
 <p id="_6ec58f6a-1e02-e223-68bf-0902afbc32f8">A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.</p>
 </clause>
@@ -436,7 +548,7 @@ class UnitOfMeasure {
 <title>Relativistic</title>
 <p id="_45847b36-4835-d2f9-83e7-c250cbcef856">A regime may be needed for ‘space-time’, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects such as gravity may be relevant.</p>
 
-<p id="_1f5a869c-0c66-5b2b-df30-78e86ddbd57f">Once off the planet Earth, distances and velocities can become very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of Space-time events as measured between two moving objects. The core concepts are the <xref target="lorentz_transform">Lorentz Transforms</xref>. These transforms allow one to calculate the degree of “contraction” a measurement undergos due to the relative velocity between the observing and observed object.</p>
+<p id="_1f5a869c-0c66-5b2b-df30-78e86ddbd57f">Once off the planet Earth, distances and velocities can become very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of Space-time events as measured between two moving objects. The core concepts are the <eref type="inline" bibitemid="lorentz_transform" citeas="Lorentz Transforms">Lorentz Transforms</eref>. These transforms allow one to calculate the degree of “contraction” a measurement undergos due to the relative velocity between the observing and observed object.</p>
 
 <p id="_cf49872e-cd2b-b129-ec03-ba9b1c254e96">The key to this approach is to ensure each moving feature of interest has its own local clock and time, known as its ‘proper time’. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.</p>
 
@@ -456,7 +568,7 @@ class UnitOfMeasure {
 <title>Notation</title>
 <p id="_a1f8a5ae-f6ed-c1c8-d4fd-91d651504ccf">There are often widely agreed, commonly accepted, notations used for temporal reference systems, but few have been standardised. Any particular notation may be capable of expressing a wider range of times than are valid for the reference system.</p>
 
-<example id="_8b23dd6d-70fe-445b-dbf5-66c2cc3b4394"><p id="_1293bb34-d890-272f-2881-c97c79733bac">The <xref target="IETF_RFC_3999"/> timestamp notation, a restrictive profile of <xref target="ISO_8601"/>, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.</p>
+<example id="_6e5872bf-58ca-e356-e461-891ffbd08bc2"><p id="_dfbd8aee-6379-57d1-9bc3-b80d72b016cf">The <eref type="inline" bibitemid="rfc3339" citeas="IETF RFC 3339">IETF RFC 3339</eref> timestamp notation, a restrictive profile of <eref type="inline" bibitemid="iso8601" citeas="ISO 8601">ISO 8601</eref>, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.</p>
 </example>
 </clause>
 
@@ -558,10 +670,10 @@ class UnitOfMeasure {
 </li>
 </ol>
 
-<example id="_6172032e-a879-4898-b313-aee5e8dcdf08"><p id="_5f8076ea-6018-f4cd-9585-04db95bce4a5">TAI (International Atomic Time, Temps Atomique International) is coordinated by the BIPM (International Bureau of Weights and Measures, Bureau International de Poids et Measures) in Paris, France. It is based on the average of hundreds of separate atomic clocks around the world, all corrected to be at mean sea level and standard pressure and temperature. The epoch is defined by Julian Date 2443144.5003725 (1 January 1977 00:00:32.184).</p>
+<example id="_6172032e-a879-4898-b313-aee5e8dcdf08"><p id="_5f8076ea-6018-f4cd-9585-04db95bce4a5">TAI (International Atomic Time, Temps Atomique International) is coordinated by the <eref type="inline" bibitemid="bipm_define" citeas="Establishment of International Atomic Time and Coordinated Universal Time">BIPM</eref> (International Bureau of Weights and Measures, Bureau International de Poids et Measures) in Paris, France. It is based on the average of hundreds of separate atomic clocks around the world, all corrected to be at mean sea level and standard pressure and temperature. The epoch is defined by Julian Date 2443144.5003725 (1 January 1977 00:00:32.184).</p>
 </example>
 
-<example id="_de9e6a85-a383-5a73-7724-cf6f72521e9b"><p id="_afbd5b90-eae2-d43e-f90c-74dc9f4553f7">The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as “Period 2”. Many computer based timescales, such as Unix Time, are based on the Julian DAy timescale, but with different epochs, to fit the numbers into the limited computer words.</p>
+<example id="_2a0b5766-066e-5650-1766-8aa18ba9135d"><p id="_04ad8472-e98d-2695-d704-3a2e3e534c54">The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as “Period 2”. Many computer based timescales, such as <eref type="inline" bibitemid="unix_time" citeas="UN UNIX Time">Unix Time</eref>, are based on the Julian Day timescale, but with different epochs, to fit the numbers into the limited computer words.</p>
 </example>
 </clause>
 
@@ -662,224 +774,24 @@ class UnitOfMeasure {
 
 <p id="_fb5eaaee-ba1f-8c14-3631-ecf1f9a79ff3">However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.</p>
 
-<p id="_5ea71504-ef05-0f52-c4da-0283fadac2a3">See <eref type="inline" bibitemid="history_timekeeping" citeas="A Brief History of Timekeeping"><localityStack><locality type="page"><referenceFrom>187-191</referenceFrom></locality></localityStack></eref>.</p>
+<p id="_2e72aeca-6bcf-19c7-da28-5a5053616ed2">See <eref type="inline" bibitemid="history_timekeeping" citeas="A Brief History of Timekeeping">A Brief History of Timekeeping</eref> page=”187-191”.</p>
 </clause>
 
 
 
 
-
-
-
-
-</sections><annex id="_annex_title" obligation="normative">
-<title>Annex Title</title>
-<p id="_c299a6eb-d7d7-0cb5-2b05-5ca1f74acf7f">&lt;Insert annex content here&gt;</p>
-
-<note id="_350c0cbe-8464-1ee3-de5d-5f35c0e0096e"><p id="_ef6ee8a0-3cad-bb3c-18bd-a9364d9a17f0">Place annex material in sequential order and set <tt>obligation</tt> attribute as “normative” (default) or “informative” according to the case.</p>
-</note>
-</annex><annex id="iso-glossary" obligation="informative">
-<title>ISO Glossary</title>
-<p id="_0eef70e6-dc67-fc14-e664-4252a6e73b4f">The following concepts from the ISO TC211 Harmonized UML model are referenced by the Temporal Conceptual UML model but do not play a major role in its’ definition. They are provided here to support a more complete understanding of the model.</p>
-
-<p id="Area-section"><strong>Area</strong><br/>
-The measure of the physical extent of any topologically 2-D geometric object. Usually measured in “square” units of length.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="Boolean-section"><strong>Boolean</strong><br/>
-Boolean is the mathematical datatype associated with two-valued logic<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="CC_CoordinateOperation-section"><strong>CC_CoordinateOperation</strong><br/>
-A mathematical operation on coordinates that transforms or converts coordinates to another coordinate reference system.<br/>
-[<eref type="inline" bibitemid="iso19111" citeas="ISO 19111"/>]</p>
-
-<p id="Character-section"><strong>Character</strong><br/>
-A symbol  from a standard character-set.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="CharacterString-section"><strong>CharacterString</strong><br/>
-Characterstring  is a family  of  datatypes which  represent strings of symbols  from  standard character-sets.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="CRS2-section"><strong>CRS</strong><br/>
-Coordinate reference system which is usually single but may be compound.<br/>
-[<eref type="inline" bibitemid="iso19111" citeas="ISO 19111"/>]</p>
-
-<p id="CV_DiscreteCoverage-section"><strong>CV_DiscreteCoverage</strong><br/>
-A subclass of CV_Coverage that returns a single record of values for any direct position within a single geometric object in  its spatiotemporal domain.<br/>
-[<xref target="iso19123"/>]</p>
-
-<p id="CV_DomainObject-section"><strong>CV_DomainObject</strong><br/>
-An element of the domain of the CV_Coverage. It is an aggregation of objects that may include any combination of GM_Objects (ISO 19107:2003), TM_GeometricPrimitives (ISO 10108), or spatial or temporal objects defined in other standards, such as the CV_GridPoint defined in this International Standard.<br/>
-[<xref target="iso19123"/>]</p>
-
-<p id="CV_GridPointValuePair-section"><strong>CV_GridPointValuePair</strong><br/>
-A subtype of CV_GeometryValuePair that has a GM_GridPoint as the value of its geometry attribute.<br/>
-[<xref target="iso19123"/>]</p>
-
-<p id="CV_GridValuesMatrix-section"><strong>CV_GridValuesMatrix</strong><br/>
-The geometry represented by the various offset vectors is in the image plane of the grid.<br/>
-[<xref target="iso19123"/>]</p>
-
-<p id="CV_ReferenceableGrid-section"><strong>CV_ReferenceableGrid</strong><br/>
-A subclass of CV_Coverage that relates the grid coordinates to an external coordinate reference system.<br/>
-[<xref target="iso19123"/>]</p>
-
-<p id="Date-section"><strong>Date</strong><br/>
-Date gives values for year, month and day. Representation of Date is specified in ISO 8601. Principles for date and time are further discussed in ISO 19108.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="DateTime-section"><strong>DateTime</strong><br/>
-A DateTime is a combination of a date and a time types. Representation of DateTime is specified in ISO 8601. Principles for date and time are further discussed in ISO 19108.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="Distance-section"><strong>Distance</strong><br/>
-Used as a type for returning distances and possibly lengths.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="EngineeringCRS-section"><strong>Engineering CRS</strong><br/>
-A contextually local coordinate reference system which can be divided into two broad categories:</p>
-
-<ol id="_fd9cb1f9-1001-55aa-5996-5cdfc54164c4" type="arabic"><li><p id="_c7c2303d-ec28-dd56-6184-0509c730961a">earth-fixed systems applied to engineering activities on or near the surface of the earth;</p>
-</li>
-<li><p id="_31a81022-eef5-5949-fc87-6a23c1185bf1">CRSs on moving platforms such as road vehicles, vessels, aircraft or spacecraft.<br/>
-[<eref type="inline" bibitemid="iso19111" citeas="ISO 19111"/>]</p>
-</li>
-</ol>
-
-<p id="GenericName-section"><strong>Generic Name</strong><br/>
-Generic Name is the abstract class for all names in a NameSpace. Each instance of a GenericName is either a LocalName or a ScopedName.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="Geometry-section"><strong>Geometry</strong><br/>
-Geometry is the root class of the geometric object taxonomy and supports interfaces common to all geographically referenced geometric objects.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="GM_CompositePoint-section"><strong>GM_CompositePoint</strong><br/>
-A GM_Complex containing one and only one GM_Point.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="GM_CompositeSolid-section"><strong>GM_CompositeSolid</strong><br/>
-A set of geometric solids adjoining one another along common boundary geometric surfaces<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="GM_GenericSurface-section"><strong>GM_GenericSurface</strong><br/>
-GM_Surface and GM_SurfacePatch both represent sections of surface geometry, and therefore share a number of operation signatures. These are defined in the interface class GM_GenericSurface.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="GM_LineString-section"><strong>GM_LineString</strong><br/>
-Consists of sequence of line segments, each having a parameterization like the one for GM_LineSegment<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="GM_MultiPrimitive-section"><strong>GM_MultiPrimitive</strong><br/>
-The root class for all primitive aggregates. The association role “element” shall be the set of GM_Primitives contained in this GM_MultiPrimitive. The attribute declaration here specializes the one at GM_Aggregate to include only GM_Primitives in this type of aggregate.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="GM_OrientableSurface-section"><strong>GM_OrientableSurface</strong><br/>
-A surface and an orientation inherited from GM_OrientablePrimitive. If the orientation is “+”, then the GM_OrientableSurface is a GM_Surface. If the orientation is “-”, then the GM_OrientableSurface is a reference to a GM_Surface with an upNormal that reverses the direction for this GM_OrientableSurface, the sense of “the top of the surface”.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="GM_PolyhedralSurface-section"><strong>GM_PolyhedralSurface</strong><br/>
-A GM_Surface composed of polygon surfaces (GM_Polygon) connected along their common boundary curves.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="GM_Position-section"><strong>GM_Position</strong><br/>
-A union type consisting of either a DirectPosition or of a reference to a GM_Point from which a DirectPosition shall be obtained.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="GM_Primitive-section"><strong>GM_Primitive</strong><br/>
-The abstract root class of the geometric primitives. Its main purpose is to define the basic “boundary” operation that ties the primitives in each dimension together.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="Integer-section"><strong>Integer</strong><br/>
-An exact integer value, with no fractional part.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="IoT_definition"><strong>Internet of Things</strong><br/>
-The network of physical objects—“things”—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the Internet.<br/>
-<link target="https://en.wikipedia.org/wiki/Internet_of_things">Wikipedia</link></p>
-
-<p id="IO_IdentifiedObjectBase-section"><strong>IO_IdentifiedObjectBase</strong><br/>
-Supplementary identification and remarks information for a CRS or CRS-related object.<br/>
-[<eref type="inline" bibitemid="iso19111" citeas="ISO 19111"/>]</p>
-
-<p id="Length-section"><strong>Length</strong><br/>
-The measure of distance as an integral, i.e. the limit of an infinite sum of distances between points on a curve.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="Measure-section"><strong>Measure</strong><br/>
-The result from performing the act or process of ascertaining the extent, dimensions, or quantity of some entity.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="number-section"><strong>Number</strong><br/>
-The base type for all number data, giving the basic algebraic operations.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="Point-section"><strong>Point</strong><br/>
-GM_Point is the basic data type for a geometric object consisting of one and only one point.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="Real-section"><strong>Real</strong><br/>
-The common binary Real finite implementation using base 2.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="RS_ReferenceSystem-section"><strong>RS_ReferenceSystem</strong><br/>
-Description of a spatial and temporal reference system used by a dataset.<br/>
-[<eref type="inline" bibitemid="iso19111" citeas="ISO 19111"/>]</p>
-
-<p id="ScopedName-section"><strong>Scoped Name</strong><br/>
-ScopedName is a composite of a LocalName for locating another NameSpace and a GenericName valid in that NameSpace. ScopedName contains a LocalName as head and a GenericName, which might be a LocalName or a ScopedName, as tail.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="Solid-section"><strong>Solid</strong><br/>
-GM_Solid, a subclass of GM_Primitive, is the basis for 3-dimensional geometry. The extent of a solid is defined by the boundary surfaces.<br/>
-[<eref type="inline" bibitemid="iso19107" citeas="ISO 19107"/>]</p>
-
-<p id="Time-section"><strong>Time</strong><br/>
-Time is the designation of an instant on a selected time scale, astronomical or atomic.  It is used in the sense of time of day.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="TM_Duration-section"><strong>TM_Duration</strong><br/>
-A data type to be used for describing length or distance in the temporal dimension.<br/>
-[<eref type="inline" bibitemid="iso19108" citeas="ISO 19108"/>]</p>
-
-<p id="TM_TemporalPosition-section"><strong>TM_TemporalPosition</strong><br/>
-The position of a TM_Instant relative to a TM_ReferenceSystem.<br/>
-[<eref type="inline" bibitemid="iso19108" citeas="ISO 19108"/>]</p>
-
-<p id="UnitOfMeasure-section"><strong>Unit of Measure</strong><br/>
-Any of the systems devised to measure some physical quantity such distance or area or a system devised to measure such things as the passage of time.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="URI-section"><strong>URI</strong><br/>
-Uniform Resource Identifier (URI), is a compact string of characters used to identify or name a resource<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-
-<p id="Volume-section"><strong>Volume</strong><br/>
-Volume is the measure of the physical space of any 3-D geometric object.<br/>
-[<eref type="inline" bibitemid="iso19103" citeas="ISO 19103"/>]</p>
-</annex><annex id="_6d13544c-bb7c-929a-399f-f598c80d8091" obligation="informative">
+</sections><annex id="_4127f684-aa60-d7dc-2794-e3fd865cd326" obligation="informative">
 <title>Glossary</title>
-<terms id="glossary" obligation="normative"><term id="conceptual-model_definition"><preferred><expression>
-<name>conceptual model</name>
-</expression>
-</preferred>
-<definition><verbal-definition><p id="_975439ba-0747-b9e6-4561-84e43678eda6">description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain. A conceptual model is explicitly chosen to be independent of design or implementation concerns.</p></verbal-definition></definition>
-
-
- <termsource status="identical" type="authoritative"><origin bibitemid="CEN ENV 1613:1995" type="inline" citeas=""/></termsource></term>
-
-<term id="compound-coordinate-reference-system_definition"><preferred><expression>
+<terms id="glossary" obligation="normative"><term id="compound-coordinate-reference-system_definition"><preferred><expression>
 <name>compound coordinate reference system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_5e32b325-1626-ea39-e21b-1ccac0eb71fb">coordinate reference system using at least two independent coordinate reference systems</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_efd47019-c8ef-bc7d-f0ea-0818342acd21">coordinate reference system using at least two independent coordinate reference systems</p></verbal-definition></definition>
 
 
 
 
- <termnote id="_fdd2f92a-8d45-74a0-b842-db84befce574"><p id="_a2320855-047b-1f67-9c8b-31f1221ce8fa">Coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.</p>
+ <termnote id="_81e94975-d37b-2f77-5164-ab86d2380b38"><p id="_2e4f01a9-8b2b-73df-130c-91ba9d5ceb9c">Coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -887,12 +799,12 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>coordinate</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_e4eb88bf-ef12-7892-8dc8-31416dbd609c">one of a sequence of numbers designating the position of a point</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_4c803190-19f2-65ca-cecc-d2072bae9c54">one of a sequence of numbers designating the position of a point</p></verbal-definition></definition>
 
 
 
 
- <termnote id="_b04297da-c343-4d70-3234-ae4786c86abc"><p id="_77a4a115-a57e-b7ce-0147-fef12ce52c1a">In a spatial coordinate reference system, the coordinate numbers are qualified by units.</p>
+ <termnote id="_e275da9b-d3ea-4c9f-9b86-f9cc5635f3ee"><p id="_e375c10c-dfb1-9ecd-a646-2925a836fdba">In a spatial coordinate reference system, the coordinate numbers are qualified by units.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -900,49 +812,7 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>coordinate epoch</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_3893a66f-c511-c2e5-605b-e703114fa2bd">epoch to which coordinates in a dynamic coordinate reference system are referenced</p></verbal-definition></definition>
-
-
- <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
-</termsource></term>
-
-<term id="coordinate-reference-system_definition"><preferred><expression>
-<name>coordinate reference system</name>
-</expression>
-</preferred>
-<definition><verbal-definition><p id="_31f3e85b-cf44-3f16-ea54-a4ed5e393338">coordinate system that is related to an object by a datum</p></verbal-definition></definition>
-
-
-
-
-
-
- <termnote id="_fafacaee-aba3-72c6-23f9-5041ba09d9f6"><p id="_1f47b573-424c-1d90-f214-a7d8596044ac">Geodetic and vertical datums are referred to as reference frames.</p>
-</termnote><termnote id="_7057a29d-074e-db37-4f06-db7fcee670ad"><p id="_59069ba2-a1fe-0f50-0302-b585aa2006bb">For geodetic and vertical reference frames, the object will be the Earth. In planetary applications, geodetic and vertical reference frames may be applied to other celestial bodies.</p>
-</termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
-</termsource></term>
-
-<term id="coordinate-system_definition"><preferred><expression>
-<name>coordinate system</name>
-</expression>
-</preferred>
-<definition><verbal-definition><p id="_496c5d71-3049-1e53-65e2-3d5dcd7f8dea">set of mathematical rules for specifying how coordinates are to be assigned to points</p></verbal-definition></definition>
-
-
- <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
-</termsource></term>
-
-<term id="datum_definition"><preferred><expression>
-<name>datum</name>
-</expression>
-</preferred><admitted><expression>
-<name>reference frame</name>
-</expression>
-</admitted>
-
-
-
-<definition><verbal-definition><p id="_aec2ff5b-dccb-e68e-b813-08d72bdff5b7">parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a coordinate system</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_939017da-0997-2696-6fdb-308e5b6e3cc8">epoch to which coordinates in a dynamic coordinate reference system are referenced</p></verbal-definition></definition>
 
 
  <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
@@ -952,7 +822,7 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>derived coordinate reference system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_ebd0ff08-839e-2e3e-dc3b-3a521124cba2">coordinate reference system that is defined through the application of a specified coordinate conversion to the coordinates within a previously established coordinate reference system</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_19dc4a32-43b7-0a1b-4b4d-2816ff3c25e8">coordinate reference system that is defined through the application of a specified coordinate conversion to the coordinates within a previously established coordinate reference system</p></verbal-definition></definition>
 
 
 
@@ -961,9 +831,9 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 
 
 
- <termnote id="_760ee904-d956-1814-b770-f716767fd807"><p id="_ca84f6c9-0936-4acc-6c47-1e5455bfaf0a">The previously established coordinate reference system is referred to as the base coordinate reference system.</p>
-</termnote><termnote id="_5abbaf79-c1fb-c429-8a97-baffd5337f33"><p id="_454df935-93fe-48a9-e07a-6b9b38c8fa3f">A derived coordinate reference system inherits its datum or reference frame from its base coordinate reference system.</p>
-</termnote><termnote id="_72471f73-6bed-28c2-2466-49fbdc63ccc4"><p id="_4e7e15a3-7569-e921-07d1-01dbb3f5c148">The coordinate conversion between the base and derived coordinate reference system is implemented using the parameters and formula(s) specified in the definition of the coordinate conversion.</p>
+ <termnote id="_53962dd9-8be9-c198-6aec-ea14c05a9485"><p id="_e1afb502-50a4-a9de-322b-7d01deb1415c">The previously established coordinate reference system is referred to as the base coordinate reference system.</p>
+</termnote><termnote id="_b2229c47-3dc5-f84f-51e8-9f72264a8225"><p id="_cf5500aa-34a5-f4c3-1145-ca3636e493d0">A derived coordinate reference system inherits its datum or reference frame from its base coordinate reference system.</p>
+</termnote><termnote id="_21e68774-20e0-bf92-3b2d-86a12132718a"><p id="_f2f35c8e-8702-ce22-955f-87f5bbc2e017">The coordinate conversion between the base and derived coordinate reference system is implemented using the parameters and formula(s) specified in the definition of the coordinate conversion.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -971,15 +841,15 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>dynamic coordinate reference system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_ae924134-add6-768b-7c7d-9bd6a4d4e0fe">coordinate reference system that has a dynamic reference frame</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_40ab559c-4001-4043-3e50-aa5651ef30ee">coordinate reference system that has a dynamic reference frame</p></verbal-definition></definition>
 
 
 
 
 
 
- <termnote id="_543d4820-3f07-8224-b888-656df00539fa"><p id="_d0bda5b6-5dbd-1d7f-025d-239390cf3f49">Coordinates of points on or near the crust of the Earth that are referenced to a dynamic coordinate reference system may change with time, usually due to crustal deformations such as tectonic motion and glacial isostatic adjustment.</p>
-</termnote><termnote id="_040a76c5-8be6-5cfd-40c8-0abf83837975"><p id="_aa6df1a8-5d1a-c13d-48af-16997b10f8ac">Metadata for a dataset referenced to a dynamic coordinate reference system should include coordinate epoch information.</p>
+ <termnote id="_fae19e2c-431d-38a0-a448-c2c5a71e1170"><p id="_d59f7d80-5ead-4dbc-4b0b-13bfc61807f3">Coordinates of points on or near the crust of the Earth that are referenced to a dynamic coordinate reference system may change with time, usually due to crustal deformations such as tectonic motion and glacial isostatic adjustment.</p>
+</termnote><termnote id="_e21888eb-067a-3446-a358-eefba2a9dbcf"><p id="_b44a0d72-2869-7676-ce58-c0e6b39d7dcc">Metadata for a dataset referenced to a dynamic coordinate reference system should include coordinate epoch information.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -993,12 +863,12 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 
 
 
-<definition><verbal-definition><p id="_c84d3ae1-ed17-7896-629a-5b3742524577">reference frame in which the defining parameters include time evolution</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_e919e9c5-014f-6200-1240-a07c6815c184">reference frame in which the defining parameters include time evolution</p></verbal-definition></definition>
 
 
 
 
- <termnote id="_c28881e2-272a-5473-491b-e933bbe0ffe0"><p id="_5fe289a4-46a1-9e0b-4947-eeb2519fc1e5">The defining parameters that have time evolution are usually a coordinate set.</p>
+ <termnote id="_66d82f73-d80b-5549-be5a-bda44f77cf14"><p id="_87163565-6e1f-7a00-b80b-f83b3669db27">The defining parameters that have time evolution are usually a coordinate set.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -1006,16 +876,16 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>engineering coordinate reference system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_ae872726-5484-5594-e0d6-3de58b37d108">coordinate reference system based on an engineering datum</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_a8bb649a-fd9a-f36f-ac7f-3f635f88cd05">coordinate reference system based on an engineering datum</p></verbal-definition></definition>
 
 
 
 
 
 
- <termexample id="_9314a0ab-fc71-5e7f-82c8-6eb7c52b562b"><p id="_a1fc301f-27ce-4b00-310b-0517630b85c4">System for identifying relative positions within a few kilometres of the reference point, such as a building or construction site.</p>
-</termexample><termexample id="_fa0e705b-cd5d-6634-3270-8f5003796542"><p id="_13af22b2-de3d-ec65-9934-3715a72f2eb9">Coordinate reference system local to a moving object such as a ship or an orbiting spacecraft.</p>
-</termexample><termexample id="_c253d5f3-5904-5e0a-5872-789f50756cb0"><p id="_01ba1600-ad55-6555-c8b8-41674f02564f">Internal coordinate reference system for an image. This has continuous axes. It may be the foundation for a grid.</p>
+ <termexample id="_d5f294a6-6c83-28ee-adf3-ae51cc8e39b6"><p id="_7621abf9-809b-5b85-5c59-d7d33673fa49">System for identifying relative positions within a few kilometres of the reference point, such as a building or construction site.</p>
+</termexample><termexample id="_87247b22-670c-8d9a-e5c0-c0902b8c437b"><p id="_02086279-ac76-e3c6-eedc-93da2596b4d6">Coordinate reference system local to a moving object such as a ship or an orbiting spacecraft.</p>
+</termexample><termexample id="_7180877e-f211-d633-e6d4-765364b0dfe1"><p id="_34ff6321-6976-339d-ba6d-efb9816554a1">Internal coordinate reference system for an image. This has continuous axes. It may be the foundation for a grid.</p>
 </termexample></term>
 
 <term id="engineering-datum_definition"><preferred><expression>
@@ -1028,38 +898,20 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 
 
 
-<definition><verbal-definition><p id="_4489cece-5ebf-2e4e-e754-51e545d9abc5">datum describing the relationship of a coordinate system to a local reference</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_25b8653b-e90c-d8a8-7287-21d088f9f830">datum describing the relationship of a coordinate system to a local reference</p></verbal-definition></definition>
 
 
 
 
- <termnote id="_89059f4d-d101-4d3c-4775-ee71d5823ad1"><p id="_5a589f5f-41f1-732b-be0f-106d49e3ac35">Engineering datum excludes both geodetic and vertical reference frames.</p>
+ <termnote id="_1f37ddef-7264-cfac-f7a7-09c44c7ef4f5"><p id="_7fd201a7-a658-c4be-330f-79298dce6f0c">Engineering datum excludes both geodetic and vertical reference frames.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
-</termsource></term>
-
-<term id="epoch_definition"><preferred><expression>
-<name>epoch</name>
-</expression>
-</preferred>
-
-
-<domain>geodesy</domain><definition><verbal-definition><p id="_39bfe010-c7ab-b48c-55dd-eace8e84a1f0">point in time</p></verbal-definition></definition>
-
-
-
-
-
-
- <termnote id="_deda0e60-edc8-a625-3213-2d96d459f68e"><p id="_0495af18-f924-4824-5ea7-ae21238ba9a5">In this document an epoch is expressed in the Gregorian calendar as a decimal year.</p>
-</termnote><termexample id="_4786f1b4-3740-3da4-1333-155ee19b0626"><p id="_fd5c117a-2455-6cc0-6340-23724bf338a3">2017-03-25 in the Gregorian calendar is epoch 2017.23.</p>
-</termexample><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
 <term id="frame-reference-epoch_definition"><preferred><expression>
 <name>frame reference epoch</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_62b5d945-872b-d508-377e-c5a78dd53a14">epoch of coordinates that define a dynamic reference frame</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_c4d0ebda-ec11-6fd7-5d56-edc03af0174f">epoch of coordinates that define a dynamic reference frame</p></verbal-definition></definition>
 
 
  <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
@@ -1069,15 +921,15 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>linear coordinate system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_e2536798-993d-393a-0207-5b5630659bc3">one-dimensional coordinate system in which a linear feature forms the axis</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_b285bf20-d5d0-51ca-8cfa-12df48a5805d">one-dimensional coordinate system in which a linear feature forms the axis</p></verbal-definition></definition>
 
 
 
 
 
 
- <termexample id="_43be9b76-1bed-72ac-8cbc-1e2861ae7df5"><p id="_81034094-a7fd-3996-5371-06aec362c878">Distances along a pipeline.</p>
-</termexample><termexample id="_15cea14d-736a-1fa3-bfb4-527748fbdfd7"><p id="_08e34e60-f262-f6ed-1e2e-772441450397">Depths down a deviated oil well bore.</p>
+ <termexample id="_a1bd1de3-3b7e-a3ec-a287-14c573821176"><p id="_9f514c55-b23c-070a-ba65-c1cdfcbbb284">Distances along a pipeline.</p>
+</termexample><termexample id="_7d4a4ff7-8ac1-fcfd-eee6-1e4e7dca219a"><p id="_61e030f6-53de-afeb-c947-b7f29f184938">Depths down a deviated oil well bore.</p>
 </termexample><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -1085,12 +937,12 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>parameter reference epoch</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_73dfba8a-77b6-1a78-1755-081c8a1f9e3b">epoch at which the parameter values of a time-dependent coordinate transformation are valid</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_5d2d473b-f82a-f8f8-c74c-dac58c15fa50">epoch at which the parameter values of a time-dependent coordinate transformation are valid</p></verbal-definition></definition>
 
 
 
 
- <termnote id="_7d748d05-d63c-3e67-71ca-d3f59a0c8c5d"><p id="_37ce624b-7261-e372-a91f-37a578a5f170">The transformation parameter values first need to be propagated to the epoch of the coordinates before the coordinate transformation can be applied.</p>
+ <termnote id="_6d4a0782-137d-62a1-728d-f65c133f7775"><p id="_d0d2f14b-6a2a-d0ce-5178-88599bcdb64a">The transformation parameter values first need to be propagated to the epoch of the coordinates before the coordinate transformation can be applied.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -1098,7 +950,7 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>parametric coordinate reference system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_4dbdd4b6-a7c8-abe8-22c2-b18c2897e50b">coordinate reference system based on a parametric datum</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_4ddc0155-cd26-f874-fc3b-74f8b10c1040">coordinate reference system based on a parametric datum</p></verbal-definition></definition>
 
 
  <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
@@ -1108,7 +960,7 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>parametric coordinate system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_6a256f23-dbc7-7e71-d644-4e17e84d9d76">one-dimensional coordinate system where the axis units are parameter values which are not inherently spatial</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_5b15281f-1383-2f63-4644-2f553607e5de">one-dimensional coordinate system where the axis units are parameter values which are not inherently spatial</p></verbal-definition></definition>
 
 
  <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
@@ -1118,12 +970,12 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>parametric datum</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_35829e6d-b4dd-2bc8-0d75-62879acba482">datum describing the relationship of a parametric coordinate system to an object</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_bafe606d-319f-4347-801a-d37f159b1165">datum describing the relationship of a parametric coordinate system to an object</p></verbal-definition></definition>
 
 
 
 
- <termnote id="_00174634-4e5c-2a3c-4539-7a1cc3b07271"><p id="_335ef2a4-f444-48b7-b153-b6427b50aec1">The object is normally the Earth.</p>
+ <termnote id="_a0a5628e-9173-0adc-767d-dfa97f9d5ec0"><p id="_d5173499-b84e-aaaa-5daf-7d974ef74f66">The object is normally the Earth.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -1131,44 +983,28 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>point motion operation</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_01d346a4-5aeb-0ee6-5bd9-dca6c5ee3e31">coordinate operation that changes coordinates within one coordinate reference system due to the motion of the point</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_9a5b9437-43cb-978f-ffe5-1a609f2c5e52">coordinate operation that changes coordinates within one coordinate reference system due to the motion of the point</p></verbal-definition></definition>
 
 
 
 
 
 
- <termnote id="_c24900f6-938d-278f-7a50-91c82b51f44e"><p id="_9c4ed4de-bd27-7eee-c814-d9e6ffcae782">The change of coordinates is from those at an initial epoch to those at another epoch.</p>
-</termnote><termnote id="_2be26a13-4009-f7ef-3f32-c6113ac23e33"><p id="_1a35828c-aadc-8c5c-4832-71eb33c6d7b1">In this document the point motion is due to tectonic motion or crustal deformation.</p>
+ <termnote id="_e88e6c16-6fc4-7e63-ab17-3c161828c2ce"><p id="_61a915dd-5a5d-beb5-0d2a-d9b539a995fc">The change of coordinates is from those at an initial epoch to those at another epoch.</p>
+</termnote><termnote id="_e62104ab-27d7-f3d3-715d-dfa0548f5fef"><p id="_abeacb65-63a2-b3ca-90a0-911023b23fa1">In this document the point motion is due to tectonic motion or crustal deformation.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
-</termsource></term>
-
-<term id="reference-frame_definition"><preferred><expression>
-<name>reference frame</name>
-</expression>
-</preferred><admitted><expression>
-<name>datum</name>
-</expression>
-</admitted>
-
-
-
-<definition><verbal-definition><p id="_316eaa97-5952-69c2-199b-4928f0c25261">parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a coordinate system</p></verbal-definition></definition>
-
-
- <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
 <term id="spatio-parametric-coordinate-reference-system_definition"><preferred><expression>
 <name>spatio-parametric coordinate reference system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_4419da07-ef1c-481c-fa32-a4e6cfe2c85b">compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a parametric coordinate reference system</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_f8c31f9d-c5c6-5fa5-eccc-5813f54cef73">compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a parametric coordinate reference system</p></verbal-definition></definition>
 
 
 
 
- <termnote id="_f6c82c16-0bc7-2ff1-914b-785f2c9df1b3"><p id="_c862215e-b682-b996-d8f5-12c7bc647883">Normally the spatial component is “horizontal” and the parametric component is “vertical”.</p>
+ <termnote id="_4a96518d-1646-048c-b356-396f6a997dc8"><p id="_b9935a80-f807-0361-fd0e-0790faf54692">Normally the spatial component is “horizontal” and the parametric component is “vertical”.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -1176,7 +1012,7 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>spatio-parametric-temporal coordinate reference system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_814317d3-5bc7-e3e4-c42b-9cf615775489">compound coordinate reference system comprised of spatial, parametric and temporal coordinate reference systems</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_1eefd1f6-09da-6bdd-2874-3d1d8a1a6a9f">compound coordinate reference system comprised of spatial, parametric and temporal coordinate reference systems</p></verbal-definition></definition>
 
 
  <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
@@ -1186,7 +1022,7 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>spatio-temporal coordinate reference system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_5f35dc93-1a94-8217-ca24-5e8d5426be38">compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a temporal coordinate reference system</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_f1020dfb-e301-14f7-490e-2005ed3ea9ac">compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a temporal coordinate reference system</p></verbal-definition></definition>
 
 
  <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
@@ -1196,15 +1032,15 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>static coordinate reference system</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_e8a29563-f8f5-adb9-0a3f-a3aadc52876e">coordinate reference system that has a static reference frame</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_c983853a-7434-9faf-9873-f0dc8379a933">coordinate reference system that has a static reference frame</p></verbal-definition></definition>
 
 
 
 
 
 
- <termnote id="_a8ca2cad-cea3-e9dc-a766-6b03dcc2e589"><p id="_8442892f-4be8-6866-299a-5de55832e1b7">Coordinates of points on or near the crust of the Earth that are referenced to a static coordinate reference system do not change with time.</p>
-</termnote><termnote id="_2b6205b4-f3c3-3903-9b4b-43368b7fad8e"><p id="_0b24f2b9-1a8b-a7f9-e7e0-7bc01210afb3">Metadata for a dataset referenced to a static coordinate reference system does not require coordinate epoch information.</p>
+ <termnote id="_a7775ad3-5814-a1fd-bdac-a4941e6d96f4"><p id="_d01b81cd-1226-78d3-33cf-af35fa257b43">Coordinates of points on or near the crust of the Earth that are referenced to a static coordinate reference system do not change with time.</p>
+</termnote><termnote id="_f3d423a2-b2a6-f0b2-c98c-468482ea952e"><p id="_0a01d5c1-6e9e-123f-44cf-773765c3b1cd">Metadata for a dataset referenced to a static coordinate reference system does not require coordinate epoch information.</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
@@ -1212,47 +1048,12 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <name>static reference frame</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_be57914c-24af-9d6e-58ac-a7faa16c85b0">static datum</p><p id="_32d8b01f-20d6-f6ee-5105-10cfdd2ffab3">reference frame in which the defining parameters exclude time evolution</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_729e1050-f56b-e858-0cb9-2f904c12c422">static datum</p><p id="_19e114ed-b8d8-e1c9-ba0a-d6c1e7324a53">reference frame in which the defining parameters exclude time evolution</p></verbal-definition></definition>
 
 
 
 
  <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
-</termsource></term>
-
-<term id="temporal-coordinate-refrence-system_definition"><preferred><expression>
-<name>temporal coordinate reference system</name>
-</expression>
-</preferred>
-<definition><verbal-definition><p id="_7c40ec71-d594-f02a-b355-a8c0d94d4ed8">coordinate reference system based on a temporal datum</p></verbal-definition></definition>
-
-
- <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
-</termsource></term>
-
-<term id="temporal-coordinate-system_definition"><preferred><expression>
-<name>temporal coordinate system</name>
-</expression>
-</preferred>
-
-
-<domain>geodesy</domain><definition><verbal-definition><p id="_d02401ef-ed48-270f-03a6-41cd6a5069b3">one-dimensional coordinate system where the axis is time</p></verbal-definition></definition>
-
-
- <termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
-</termsource></term>
-
-<term id="temporal-datum_definition"><preferred><expression>
-<name>temporal datum</name>
-</expression>
-</preferred>
-<definition><verbal-definition><p id="_d05a1ca2-85b5-5cb2-faf7-db94c967be7b">datum describing the relationship of a temporal coordinate system to an object</p></verbal-definition></definition>
-
-
-
-
- <termnote id="_5e678303-6003-9517-5c3a-c00f0ae89120"><p id="_a71b894a-9357-f0bb-ee14-b4d3c25d572a">The object is normally time on the Earth.</p>
-</termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 
 <term id="terrestrial-reference-system_definition"><preferred><expression>
@@ -1265,12 +1066,12 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 
 
 
-<definition><verbal-definition><p id="_afde221a-b112-f42f-de45-a1d80b40fea3">set of conventions defining the origin, scale, orientation and time evolution of a spatial reference system co-rotating with the Earth in its diurnal motion in space</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_c1aae8f6-b8d7-bebc-c19d-b686f96f9f48">set of conventions defining the origin, scale, orientation and time evolution of a spatial reference system co-rotating with the Earth in its diurnal motion in space</p></verbal-definition></definition>
 
 
 
 
- <termnote id="_885cc9c2-62a0-b039-5343-c1b0a74fb6e3"><p id="_738e2e83-a51a-b7f9-07ba-7ab62135439d">The abstract concept of a TRS is realised through a terrestrial reference frame that usually consists of a set of physical points with precisely determined coordinates and optionally their rates of change. In this document terrestrial reference frame is included within the geodetic reference frame element of the data model</p>
+ <termnote id="_2b2e13c7-939e-3853-2994-bd2b18c0b588"><p id="_fe6a123c-27a9-4cc2-cb30-6d57f8be5209">The abstract concept of a TRS is realised through a terrestrial reference frame that usually consists of a set of physical points with precisely determined coordinates and optionally their rates of change. In this document terrestrial reference frame is included within the geodetic reference frame element of the data model</p>
 </termnote><termsource status="identical" type="authoritative"><origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>
 </termsource></term>
 </terms>
@@ -1278,169 +1079,49 @@ Volume is the measure of the physical space of any 3-D geometric object.<br/>
 <title>Normative references</title><p id="_307b20e2-9e40-db56-abbf-2822ab2941cc">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 
 
-<bibitem id="iso19103"><formattedref format="application/x-isodoc+xml">ISO: ISO 19103:2015, <em>Geographic information – Conceptual schema language</em>, 2015, <link target="https://www.iso.org/standard/56734.html"/></formattedref><docidentifier type="ISO">ISO 19103</docidentifier><docnumber>19103</docnumber></bibitem>
-<bibitem id="iso19111"><formattedref format="application/x-isodoc+xml">ISO: ISO 19111:2019, <em>Geographic information – Referencing by coordinates</em>, 2019, <link target="https://www.iso.org/standard/74039.html"/></formattedref><docidentifier type="ISO">ISO 19111</docidentifier><docnumber>19111</docnumber></bibitem>
-<bibitem id="W3COWLTime"><formattedref format="application/x-isodoc+xml">W3C: Time Ontology in OWL, 2017, <link target="https://www.w3.org/TR/2017/REC-owl-time-20171019/"/></formattedref><docidentifier type="W3C">W3C REC-owl-time-20171019</docidentifier><docnumber>3C REC-owl-time-20171019</docnumber></bibitem>
+<bibitem id="rfc3339"><formattedref format="application/x-isodoc+xml">IETF: RFC 3339 <em>Date and Time on the Internet: Timestamps</em>. <link target="https://www.rfc-editor.org/rfc/rfc3339"/></formattedref><docidentifier type="IETF">IETF RFC 3339</docidentifier><docnumber>3339</docnumber></bibitem>
+<bibitem id="iso8601"><formattedref format="application/x-isodoc+xml">ISO/TC 211: 8601:2004 <em>Data elements and interchange formats — Information interchange — Representation of dates and times</em>, 2004, <link target="https://www.iso.org/standard/40874.html"/></formattedref><docidentifier type="ISO">ISO 8601</docidentifier><docnumber>8601</docnumber><date type="published"><on>2004</on></date></bibitem>
+<bibitem id="iso19111"><formattedref format="application/x-isodoc+xml">ISO/TC 211: ISO 19111:2019, <em>Geographic information – Referencing by coordinates</em>, 2019, <link target="https://www.iso.org/standard/74039.html"/></formattedref><docidentifier type="ISO">ISO 19111</docidentifier><docnumber>19111</docnumber></bibitem>
+<bibitem id="temporal-knowledge"><formattedref format="application/x-isodoc+xml">Allen, J. F. <em>Maintaining Knowledge about Temporal Intervals</em>Communications of the ACM, 1983, vol. 26 pp. 832-843.</formattedref><docidentifier>Maintaining Knowledge about Temporal Intervals</docidentifier></bibitem>
+<bibitem id="ogc18005"><formattedref format="application/x-isodoc+xml">OGC: 18-005, <em>OGC Abstract Specification Topic 2: Referencing by coordinates Corrigendum</em>, 2021, <link target="https://docs.ogc.org/as/18-005r5/18-005r5.html"/></formattedref><docidentifier type="OGC">OGC 18-005r4</docidentifier><docnumber>18-005r4</docnumber></bibitem>
+<bibitem id="w3cowltime"><formattedref format="application/x-isodoc+xml">W3C: Time Ontology in OWL, 2017, <link target="https://www.w3.org/TR/2017/REC-owl-time-20171019/"/></formattedref><docidentifier type="W3C">W3C REC-owl-time-20171019</docidentifier><docnumber>3C REC-owl-time-20171019</docnumber></bibitem>
 </references><references id="_bibliography" normative="false" obligation="informative">
-<title>Bibliography</title><bibitem id="iso8601">
-  <formattedref format="application/x-isodoc+xml">ISO: 8601</formattedref>
-  <docidentifier type="ISO">ISO 8601</docidentifier>
-  <docnumber>8601</docnumber>
-  <date type="published">
-    <on>2004</on>
-  </date>
-</bibitem><bibitem id="iso19107">
-  <formattedref format="application/x-isodoc+xml">ISO: 19107</formattedref>
-  <docidentifier type="ISO">ISO 19107</docidentifier>
-  <docnumber>19107</docnumber>
-</bibitem><bibitem id="iso19108">
-  <formattedref format="application/x-isodoc+xml">ISO: 19108</formattedref>
-  <docidentifier type="ISO">ISO 19108</docidentifier>
-  <docnumber>19108</docnumber>
-</bibitem><bibitem id="iso19108_Cor1">
-  <formattedref format="application/x-isodoc+xml">ISO: 19108/cor 1</formattedref>
-  <docidentifier type="ISO">ISO 19108:2002/Cor 1</docidentifier>
-  <docnumber>19108:2002/Cor 1</docnumber>
-  <date type="published">
-    <on>2002</on>
-  </date>
-</bibitem><bibitem id="ogc22036">
-  <formattedref format="application/x-isodoc+xml">OGC: 22-036</formattedref>
-  <docidentifier type="OGC">OGC 22-036</docidentifier>
-  <docnumber>22-036</docnumber>
-</bibitem><bibitem id="ogc22038">
-  <formattedref format="application/x-isodoc+xml">OGC: 22-038</formattedref>
-  <docidentifier type="OGC">OGC 22-038r2</docidentifier>
-  <docnumber>22-038r2</docnumber>
-</bibitem><bibitem id="OGCgeopose">
-  <formattedref format="application/x-isodoc+xml">OGC: <em>GeoPose Specification draft</em>, 2021, <link target="https://github.com/opengeospatial/GeoPose/"/></formattedref>
-  <docidentifier type="OGC">OGC 21-056r10</docidentifier>
-  <docnumber>21-056r10</docnumber>
-</bibitem><bibitem id="iso19101-1">
-  <formattedref format="application/x-isodoc+xml">ISO: 19101-1</formattedref>
-  <docidentifier type="ISO">ISO 19101-1</docidentifier>
-  <docnumber>19101-1</docnumber>
-  <date type="published">
-    <on>2014</on>
-  </date>
-</bibitem><bibitem id="iso19112">
-  <formattedref format="application/x-isodoc+xml">ISO: 19112</formattedref>
-  <docidentifier type="ISO">ISO 19112</docidentifier>
-  <docnumber>19112</docnumber>
-  <date type="published">
-    <on>2019</on>
-  </date>
-</bibitem><bibitem id="iso19162">
-  <formattedref format="application/x-isodoc+xml">ISO: 19162</formattedref>
-  <docidentifier type="ISO">ISO 19162</docidentifier>
-  <docnumber>19162</docnumber>
-  <date type="published">
-    <on>2019</on>
-  </date>
-</bibitem><bibitem id="iso19136">
-  <formattedref format="application/x-isodoc+xml">ISO: 19136</formattedref>
-  <docidentifier type="ISO">ISO 19136</docidentifier>
-  <docnumber>19136</docnumber>
-  <date type="published">
-    <on>2007</on>
-  </date>
-</bibitem><bibitem id="ogc09083">
-  <formattedref format="application/x-isodoc+xml">OGC: 09-083</formattedref>
-  <docidentifier type="OGC">OGC 09-083r4</docidentifier>
-  <docnumber>09-083r4</docnumber>
-</bibitem><bibitem id="ogc18005r4">
-  <formattedref format="application/x-isodoc+xml">OGC: 18-005</formattedref>
-  <docidentifier type="OGC">OGC 18-005r4</docidentifier>
-  <docnumber>18-005r4</docnumber>
-</bibitem><bibitem id="rfc3339">
-  <formattedref format="application/x-isodoc+xml">IETF: RFC 3339</formattedref>
-  <docidentifier type="IETF">IETF RFC 3339</docidentifier>
-  <docnumber>3339</docnumber>
-</bibitem><bibitem id="CEN_ENV_1613">
-  <formattedref format="application/x-isodoc+xml">CEN: Cen Env 1613</formattedref>
-  <docidentifier type="CEN">CEN ENV 1613</docidentifier>
-  <docnumber>1613</docnumber>
-  <date type="published">
-    <on>1995</on>
-  </date>
-</bibitem><bibitem id="astro_algo">
+<title>Bibliography</title><bibitem id="astro_algo">
   <formattedref format="application/x-isodoc+xml">Jean Meeus. <em>Astronomical Algorithms</em>. <link target="https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf"/></formattedref>
   <docidentifier>Astronomical Algorithms</docidentifier>
-  
-</bibitem><bibitem id="CCSDS_500x0g4">
-  <formattedref format="application/x-isodoc+xml">Consultative Committee for Space Data Systems. <em>Navigation Data — Definitions and Conventions</em>. 2019. <link target="https://public.ccsds.org/Pubs/500x0g4.pdf"/></formattedref>
-  <docidentifier type="CC">CCDSS 500×0g4</docidentifier>
-  <docnumber>500×0g4</docnumber>
-</bibitem><bibitem id="Springer_GNSS">
-  <formattedref format="application/x-isodoc+xml">Peter J.G. Teunissen, Oliver Montenbruck. <em>Springer Handbook of Global Navigation Satellite Systems</em>. <link target="https://doi.org/10.1007/978-3-319-42928-1"/></formattedref>
-  <docidentifier>Springer Handbook of Global Navigation Satellite Systems</docidentifier>
-  
-</bibitem><bibitem id="IERS">
-  <formattedref format="application/x-isodoc+xml">IERS. <link target="https://www.iers.org/IERS/EN/DataProducts/EarthOrientationData/eop.html"/></formattedref>
-  <docidentifier>International Earth Rotation and Reference Systems Service</docidentifier>
-  
-</bibitem><bibitem id="SPICE">
-  <formattedref format="application/x-isodoc+xml">NASA NAIF. <em>SPICE Documentation</em>. <link target="https://naif.jpl.nasa.gov/naif/tutorials.html"/> [last accessed 2023-01]</formattedref>
-  <docidentifier>SPICE Documentation</docidentifier>
-  
-</bibitem><bibitem id="unix_time">
-  <formattedref format="application/x-isodoc+xml">The Open Group. <em>UNIX Time</em>. <link target="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16"/> [last accessed 2023-01]</formattedref>
-  <docidentifier type="UN">UNIX Time</docidentifier>
-  
-</bibitem><bibitem id="calendrical">
-  <formattedref format="application/x-isodoc+xml">Nachum Dershowitz, Edward M. Reingold. <em>Calendrical Calculations — The Ultimate Edition</em>. Cambridge University Press. 2018. ISBN-13: 978-1107683167. <link target="http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition"/> [last accessed 2023-01]</formattedref>
-  <docidentifier>Calendrical Calculations</docidentifier>
-  
-</bibitem><bibitem id="history_timekeeping">
-  <formattedref format="application/x-isodoc+xml">Chad Orzell. <em>A Brief History of Timekeeping</em>. Oneworld Publications. 2022. ISBN-13: 978-0-86154-321-2.</formattedref>
-  <docidentifier>A Brief History of Timekeeping</docidentifier>
-  
-</bibitem><bibitem id="lorentz">
-  <formattedref format="application/x-isodoc+xml"/>
-  <docidentifier>Lorentz Paper</docidentifier>
-  
-</bibitem><bibitem id="minkowski">
-  <formattedref format="application/x-isodoc+xml">H. Minkowski. <em>Space and Time, Minkowski’s Papers on Relativity</em>Minkowski Institute Press, Montreal 2012. <link target="https://minkowskiinstitute.org/ebookstore/book1/">https://minkowskiinstitute.org/ebookstore</link></formattedref>
-  <docidentifier>Minkowski Space and Time</docidentifier>
-  
-</bibitem><bibitem id="treatise">
-  <formattedref format="application/x-isodoc+xml"/>
-  <docidentifier>A Treatise on Time and Space</docidentifier>
-  
-</bibitem><bibitem id="temporal_knowledge">
-  <formattedref format="application/x-isodoc+xml">Allen, J. F. <em>Maintaining Knowledge about Temporal Intervals</em>Communications of the ACM, 1983, vol. 26 pp. 832-843.</formattedref>
-  <docidentifier>Maintaining Knowledge about Temporal Intervals</docidentifier>
-  
-</bibitem><bibitem id="theory">
-  <formattedref format="application/x-isodoc+xml"/>
-  <docidentifier>Theory of Modelling and Simulation</docidentifier>
   
 </bibitem><bibitem id="bipm_define">
   <formattedref format="application/x-isodoc+xml">Bureau International des Poids et Mesures (BIPM). <em>Establishment of International Atomic Time and Coordinated Universal Time</em>. <link target="https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc"/></formattedref>
   <docidentifier>Establishment of International Atomic Time and Coordinated Universal Time</docidentifier>
   
+</bibitem><bibitem id="cen_env_1613">
+  <formattedref format="application/x-isodoc+xml">CEN: Env 1613:1995 <em>Medical informatics — Messages for exchange of laboratory information</em>, 1995</formattedref>
+  <docidentifier type="CEN">CEN ENV 1613</docidentifier>
+  <docnumber>1613</docnumber>
+  <date type="published">
+    <on>1995</on>
+  </date>
+</bibitem><bibitem id="history_timekeeping">
+  <formattedref format="application/x-isodoc+xml">Chad Orzell. <em>A Brief History of Timekeeping</em>. Oneworld Publications. 2022. ISBN-13: 978-0-86154-321-2.</formattedref>
+  <docidentifier>A Brief History of Timekeeping</docidentifier>
+  
+</bibitem><bibitem id="iso19108">
+  <formattedref format="application/x-isodoc+xml">ISO/TC 211: ISO 19108:2002 <em>Geographic information — Temporal schema</em>, 2021, <link target="https://www.iso.org/standard/26013.html"/></formattedref>
+  <docidentifier type="ISO">ISO 19108</docidentifier>
+  <docnumber>19108</docnumber>
+</bibitem><bibitem id="lorentz_transform">
+  <formattedref format="application/x-isodoc+xml"><em>Lorentz Transform</em>. Wolfram MathWorld. <link target="https://mathworld.wolfram.com/LorentzTransformation.html"/></formattedref>
+  <docidentifier>Lorentz Transforms</docidentifier>
+  
+</bibitem><bibitem id="minkowski">
+  <formattedref format="application/x-isodoc+xml">H. Minkowski. <em>Space and Time, Minkowski’s Papers on Relativity</em>Minkowski Institute Press, Montreal 2012. <link target="https://minkowskiinstitute.org/ebookstore/book1/">https://minkowskiinstitute.org/ebookstore</link></formattedref>
+  <docidentifier>Minkowski Space and Time</docidentifier>
+  
+</bibitem><bibitem id="unix_time">
+  <formattedref format="application/x-isodoc+xml">The Open Group. <em>UNIX Time</em>. <link target="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16"/> [last accessed 2023-01]</formattedref>
+  <docidentifier type="UN">UNIX Time</docidentifier>
+  
 </bibitem>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

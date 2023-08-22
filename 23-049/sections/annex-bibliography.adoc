@@ -1,0 +1,35 @@
+
+[bibliography]
+== Bibliography
+
+* [[[astro_algo,nofetch(Astronomical Algorithms)]]], Jean Meeus. _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
+
+* [[[bipm_define,nofetch(Establishment of International Atomic Time and Coordinated Universal Time)]]]
+Bureau International des Poids et Mesures (BIPM).
+_Establishment of International Atomic Time and Coordinated Universal Time_.
+https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
+
+* [[[cen_env_1613,nofetch(CEN ENV 1613:1995)]]] CEN: Env 1613:1995 _Medical informatics - Messages for exchange of laboratory information_, 1995
+
+* [[[history_timekeeping,nofetch(A Brief History of Timekeeping)]]]
+Chad Orzell.
+_A Brief History of Timekeeping_.
+Oneworld Publications. 2022.
+ISBN-13: 978-0-86154-321-2.
+
+* [[[iso19108,nofetch(ISO 19108)]]] ISO/TC 211: ISO 19108:2002 _Geographic information — Temporal schema_, 2021, https://www.iso.org/standard/26013.html[https://www.iso.org/standard/26013.html]
+
+* [[[lorentz_transform,nofetch(Lorentz Transforms)]]]
+_Lorentz Transform_.
+Wolfram MathWorld.
+https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfram.com/LorentzTransformation.html]
+
+* [[[minkowski,nofetch(Minkowski Space and Time)]]] H. Minkowski. 
+_Space and Time, Minkowski's Papers on Relativity_ 
+Minkowski Institute Press, Montreal 2012. 
+https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
+
+* [[[unix_time,nofetch(UNIX Time)]]]
+The Open Group.
+_UNIX Time_.
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16 [last accessed 2023-01]

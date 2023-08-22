@@ -4,8 +4,17 @@
 
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
-* [[[iso19103,nofetch(ISO 19103)]]] ISO: ISO 19103:2015, _Geographic information – Conceptual schema language_, 2015, https://www.iso.org/standard/56734.html
+* [[[rfc3339,nofetch(IETF RFC 3339)]]] IETF: RFC 3339 _Date and Time on the Internet: Timestamps_. https://www.rfc-editor.org/rfc/rfc3339[https://www.rfc-editor.org/rfc/rfc3339]
 
-* [[[iso19111,nofetch(ISO 19111)]]] ISO: ISO 19111:2019, _Geographic information – Referencing by coordinates_, 2019, https://www.iso.org/standard/74039.html
+* [[[iso8601,nofetch(ISO 8601:2004)]]] ISO/TC 211: 8601:2004 _Data elements and interchange formats — Information interchange — Representation of dates and times_, 2004, https://www.iso.org/standard/40874.html[https://www.iso.org/standard/40874.html]
 
-* [[[W3COWLTime,nofetch(W3C REC-owl-time-20171019)]]] W3C: Time Ontology in OWL, 2017, https://www.w3.org/TR/2017/REC-owl-time-20171019/
+* [[[iso19111,nofetch(ISO 19111)]]] ISO/TC 211: ISO 19111:2019, _Geographic information – Referencing by coordinates_, 2019, https://www.iso.org/standard/74039.html[https://www.iso.org/standard/74039.html]
+
+* [[[temporal-knowledge,nofetch(Maintaining Knowledge about Temporal Intervals)]]]
+Allen, J. F.
+_Maintaining Knowledge about Temporal Intervals_
+Communications of the ACM, 1983, vol. 26 pp. 832-843.
+
+* [[[ogc18005,nofetch(OGC 18-005r4)]]] OGC: 18-005, _OGC Abstract Specification Topic 2: Referencing by coordinates Corrigendum_, 2021, https://docs.ogc.org/as/18-005r5/18-005r5.html[https://docs.ogc.org/as/18-005r5/18-005r5.html]
+
+* [[[w3cowltime,nofetch(W3C REC-owl-time-20171019)]]] W3C: Time Ontology in OWL, 2017, https://www.w3.org/TR/2017/REC-owl-time-20171019/[https://www.w3.org/TR/2017/REC-owl-time-20171019/]

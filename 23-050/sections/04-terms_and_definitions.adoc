@@ -1,0 +1,10 @@
+
+== Terms and definitions
+
+=== conceptual model
+
+description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain. A conceptual model is explicitly chosen to be independent of design or implementation concerns.
+
+[.source]
+<<CEN ENV 1613:1995>>
+
