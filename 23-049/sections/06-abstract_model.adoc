@@ -38,54 +38,64 @@ the Mermaid container with the following.
 ```mermaid
 classDiagram
 class ReferenceSystem {
-       <<Abstract>>
-       dimension = 1..*
-       applicableLocationTimeOrDomain
+        <<abstract>>
+        dimension = 1..*
+        applicableLocationTimeOrDomain 
     }
 class SpatialReferenceSystem {
-       <<Abstract>>
-       dimension = 1..3
-       applicableLocationTimeOrDomain
+        <<abstract>>
+        dimension = 1..*
+        applicableLocationTimeOrDomain 
     }
 class TemporalReferenceSystem {
-       <<Abstract>>
-       dimension = 1
-       applicableLocationTimeOrDomain
+        <<abstract>>
+        dimension = 1
+        applicableLocationTimeOrDomain 
     }
 note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
-ReferenceSystem o-- SpatialReferenceSystem : is a
-ReferenceSystem o-- TemporalReferenceSystem : ia a
-class OrdinalTemporalReferenceSystem (
-       dimension = 1
-       applicationLocationTimeOrDomain
+ReferenceSystem <|-- SpatialReferenceSystem : is a
+ReferenceSystem <|-- TemporalReferenceSystem : is a
+class OrdinalTemporalReferenceSystem {
+        dimension = 1
+        applicableLocationTimeOrDomain 
     }
 class TemporalCoordinateReferenceSystem {
-       dimension = 1
-       applicableLocationTimeOrDomain
+        dimension = 1
+        applicableLocationTimeOrDomain 
     }
 class Calendar {
-       dimension = 1
-       applicableLocationTimeOrDomain
+        dimension = 1
+        applicableLocationTimeOrDomain 
     }
 note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
-    TemporalReferenceSystem o-- OrdinalTemporalReferenceSystem: is a
-    TemporalReferenceSystem o-- TemporalCoordinateReferenceSystem : is a
-    TemporalReferenceSystem o-- Calendar : is a
-    
-OrdinalTemporalReferenceSystem
-OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch
-OrdinalTemporalReferenceSystem "1" o-- "2..*" Event
-OrdinalTemporalReferenceSystem "1" --> "1..*" Notation
-TemporalCoordinateReferenceSystem "1" o-- "1" Timescale
-TemporalCoordinateReferenceSystem "1" o-- "1" Epoch
-TemporalCoordinateReferenceSystem "1" --> "1..*" Notation
-Calendar "1" o-- "0..1" Epoch
-Calendar "1" o-- "1..*" Timescale
-Calendar "1" o-- "1" Algorithm
-Calendar "1" --> "1..*" Notation
-Timescale "1" o-- "1" Clock
-```
+TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
+TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
+TemporalReferenceSystem <|-- Calendar : is a
 
+OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
+OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
+OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
+TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
+TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
+TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
+Calendar "1" o-- "0..1" Epoch : has an
+Calendar "1" --> "1..*" Notation : can use
+Calendar "1" o-- "1..*" Timescale : has a
+Calendar "1" o-- "1..*" Algorithm : has a
+class Timescale {
+        StartCount 
+        EndCount 
+        arithmetic 
+    }
+Timescale "1" o-- "1" Clock : has a
+Timescale "1" o-- "1" UnitOfMeasure : has a
+class Clock {
+        Tick definition
+    }
+class UnitOfMeasure {
+        Direction
+    }
+```
 == Temporal regimes
 
 === General

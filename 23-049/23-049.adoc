@@ -7,7 +7,7 @@
 :docnumber: 23-049
 :received-date: 2023-05-23
 :issued-date: 2023-05-23
-:published-date: 2023-08-21
+:published-date: 2023-08-22
 :external-id: http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0
 :referenceURLID: http://docs.opengeospatial.org/as/23-049/23-049.html
 :fullname: Chris Little
@@ -37,9 +37,9 @@ include::sections/05-conventions.adoc[]
 // Add clause files as needed
 include::sections/06-abstract_model.adoc[]
 
-include::sections/07-formal_abstract_model.adoc[]
+// include::sections/07-formal_abstract_model.adoc[]
 
-include::sections/08-data_dictionary.adoc[]
+// include::sections/08-data_dictionary.adoc[]
 
 // Annexes (add annex files as needed)
 include::sections/aa-annexA.adoc[]
