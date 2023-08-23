@@ -1,0 +1,2312 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+  <!--
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline; }
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Overpass",sans-serif; }
+
+code, pre, tt, kbd, samp {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none; }
+
+code *, pre *, tt *, kbd *, samp * {
+  font-family: "Space Mono",monospace !important;
+  font-variant-ligatures: none; }
+
+p code, dt code, li code, label code, legend code, caption code, th code, td code,
+p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
+p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
+p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
+  font-size: 0.8em; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass",sans-serif; }
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Overpass",sans-serif; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
+
+.h2Annex {
+  font-family: "Overpass",sans-serif; }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto; }
+  dl dt p, dl dd p {
+    margin-top: 0; }
+  dl dt {
+    grid-column-start: 1; }
+  dl dd {
+    grid-column-start: 2; }
+
+b, strong {
+  font-weight: bold; }
+
+div.document-stage-band, div.document-type-band {
+  background-color: #333333; }
+
+a.FootnoteRef + a.FootnoteRef:before {
+  content: ", ";
+  vertical-align: super; }
+
+.addition {
+  color: blue; }
+
+.deletion {
+  color: red;
+  text-decoration: line-through; }
+
+#standard-band {
+  background-color: #3D9970; }
+
+#standard {
+  border-bottom: solid 3px #3D9970; }
+
+#abstract-specification-topic-band {
+  background-color: #3D9970; }
+
+#abstract-specification-topic {
+  border-bottom: solid 3px #3D9970; }
+
+#reference-model-band {
+  background-color: #3D9970; }
+
+#reference-model {
+  border-bottom: solid 3px #3D9970; }
+
+#best-practice-band {
+  background-color: #39CCCC; }
+
+#best-practice {
+  border-bottom: solid 3px #39CCCC; }
+
+#discussion-paper-band {
+  background-color: #39CCCC; }
+
+#discussion-paper {
+  border-bottom: solid 3px #39CCCC; }
+
+#white-paper-band {
+  background-color: #39CCCC; }
+
+#white-paper {
+  border-bottom: solid 3px #39CCCC; }
+
+#technical-paper-band {
+  background-color: #39CCCC; }
+
+#technical-paper {
+  border-bottom: solid 3px #39CCCC; }
+
+#engineering-report-band {
+  background-color: #39CCCC; }
+
+#engineering-report {
+  border-bottom: solid 3px #39CCCC; }
+
+#release-notes-band {
+  background-color: #FFDC00; }
+
+#release-notes {
+  border-bottom: solid 3px #FFDC00; }
+
+#user-guide-band {
+  background-color: #FFDC00; }
+
+#user-guide {
+  border-bottom: solid 3px #FFDC00; }
+
+#community-practice-band {
+  background-color: #FF851B; }
+
+#community-practice {
+  border-bottom: solid 3px #FF851B; }
+
+#community-standard-band {
+  background-color: #FF851B; }
+
+#community-standard {
+  border-bottom: solid 3px #FF851B; }
+
+#other-band {
+  background-color: #0074D9; }
+
+#other {
+  border-bottom: solid 3px #0074D9; }
+
+#policy-band {
+  background-color: #0074D9; }
+
+#policy {
+  border-bottom: solid 3px #0074D9; }
+
+#change-request-supporting-document-band {
+  background-color: #0074D9; }
+
+#change-request-supporting-document {
+  border-bottom: solid 3px #0074D9; }
+
+#test-suite-band {
+  background-color: #001F3F; }
+
+#test-suite {
+  border-bottom: solid 3px #001F3F; }
+
+#candidate-band {
+  background-color: #8B9EB7; }
+
+#candidate {
+  border-bottom: solid 3px #8B9EB7; }
+
+#working-draft-band {
+  background-color: #8B9EB7; }
+
+#working-draft {
+  border-bottom: solid 3px #8B9EB7; }
+
+#proposal-band {
+  background-color: #8B9EB7; }
+
+#proposal {
+  border-bottom: solid 3px #8B9EB7; }
+
+#oab-review-band {
+  background-color: #8B9EB7; }
+
+#oab-review {
+  border-bottom: solid 3px #8B9EB7; }
+
+#committee-draft-band {
+  background-color: #8B9EB7; }
+
+#committee-draft {
+  border-bottom: solid 3px #8B9EB7; }
+
+#swg-draft-band {
+  background-color: #8B9EB7; }
+
+#swg-draft {
+  border-bottom: solid 3px #8B9EB7; }
+
+#public-rfc-band {
+  background-color: #48a0e7; }
+
+#public-rfc {
+  border-bottom: solid 3px #48a0e7; }
+
+#tc-vote-band {
+  background-color: #fd06fd; }
+
+#tc-vote {
+  border-bottom: solid 3px #fd06fd; }
+
+#published-band {
+  background-color: #9abd48; }
+
+#published {
+  border-bottom: solid 3px #9abd48; }
+
+#deprecated-band {
+  background-color: #7e0d13; }
+
+#deprecated {
+  border-bottom: solid 3px #7e0d13; }
+
+#retired-band {
+  background-color: #7e0d13; }
+
+#retired {
+  border-bottom: solid 3px #7e0d13; }
+
+.coverpage-maturity, .coverpage-stage {
+  font-family: "Overpass",sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase; }
+
+.icon-svg {
+  width: 100%;
+  color: #5ecf86; }
+
+.wrapper-top {
+  background: #00335b;
+  background: linear-gradient(130deg, #00335b 45%, #f1f8ff 100%);
+  color: #ffffff;
+  padding: 5em 0;
+  width: 100%; }
+
+.wrapper-top-bottom {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #00335b;
+  border-right: 100px solid transparent;
+  position: absolute; }
+
+.document-type-band {
+  top: 260px; }
+
+.document-stage-band > :first-child {
+  height: 240px; }
+
+.coverpage-metadata {
+  margin-top: 35px;
+  padding-top: 15px;
+  margin-right: 25px;
+  border-top: solid 1px white; }
+
+.coverpage-metadata,
+.coverpage-alt-formats {
+  font-size: 12px;
+  font-family: "Overpass",sans-serif;
+  margin-left: 1em;
+  text-align: left; }
+  .coverpage-metadata span,
+  .coverpage-alt-formats span {
+    display: block;
+    text-align: left; }
+    .coverpage-metadata span a,
+    .coverpage-alt-formats span a {
+      color: white; }
+      .coverpage-metadata span a:hover,
+      .coverpage-alt-formats span a:hover {
+        text-decoration: underline;
+        background: none;
+        box-shadow: none !important;
+        font-weight: 400; }
+  .coverpage-metadata .value,
+  .coverpage-alt-formats .value {
+    font-size: 15px;
+    margin-bottom: 15px; }
+  .coverpage-metadata .label,
+  .coverpage-alt-formats .label {
+    font-size: 12px;
+    padding: 0; }
+
+.coverpage-alt-formats span {
+  display: inline;
+  text-align: left; }
+  .coverpage-alt-formats span a {
+    padding-right: 5px; }
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Overpass",sans-serif;
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 1em; }
+  .coverpage-title span {
+    font-family: "Overpass",sans-serif;
+    font-size: 1.8em;
+    line-height: 1; }
+
+.docstage-box table {
+  width: auto; }
+
+.docstage-box th {
+  background-color: #93c0d6; }
+
+.docstage-box td {
+  vertical-align: top;
+  background-color: #daeef3;
+  padding: 0.5em;
+  border: 0; }
+
+.docstage-box th:first-child {
+  border-radius: 1em 0 0 0; }
+
+.docstage-box th:last-child {
+  border-radius: 0 1em 0 0; }
+
+.docstage-box tr:first-child {
+  border-radius: 0 0 0 1em; }
+
+.docstage-box tr:last-child {
+  border-radius: 0 1em 0 0; }
+
+.docstage-box tr:last-child > td:first-child {
+  border-radius: 0 0 0 1em; }
+
+.docstage-box tr:last-child > td:last-child {
+  border-radius: 0 0 1em 0; }
+
+.WordSection11 {
+  padding: 0 2em 0 3em; }
+
+.info-section {
+  padding: 0 2em 0 5em; }
+
+.prefatory-section {
+  padding: 0 3em 0 6em; }
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none; }
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em; }
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass",sans-serif;
+  text-transform: none;
+  font-weight: 300;
+  margin-left: 1em; }
+
+.coverpage-logo img {
+  width: 500px;
+  height: auto; }
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0; }
+
+.copyright {
+  padding: 1em;
+  font-size: 0.9em;
+  text-align: left; }
+
+/* Document Identity */
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em; }
+
+.coverpage-title .title-second {
+  display: none; }
+
+.coverpage-stage-block {
+  font-family: "Overpass",sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase; }
+
+.authors {
+  margin-top: 2em; }
+  .authors span {
+    display: block;
+    line-height: 2; }
+  .authors span.roletag {
+    display: inline-block;
+    font-size: 12px;
+    color: #00335b;
+    background-color: white;
+    padding: 2px 5px;
+    margin-left: 7px;
+    border-radius: 5px; }
+
+/* Draft Warning */
+.coverpage-warning {
+  border: #f36f36 solid 2px;
+  color: #f36f36 !important;
+  margin: 1em 2em;
+  color: #2e81c2;
+  padding: 2em 1em 1em 1em;
+  border-radius: 25px; }
+  .coverpage-warning h1 {
+    font-family: "Overpass",sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2em; }
+
+@media print {
+  .document-info, .copyright {
+    page-break-before: always; }
+  .coverpage {
+    height: 23cm; }
+  .info-section {
+    display: none; }
+  .wrapper-top {
+    top: 0;
+    padding-top: 4cm;
+    padding-bottom: 4cm; }
+  .wrapper-top-bottom {
+    margin-top: -5px;
+    display: none; } }
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #00335b;
+  background-color: #f6f8fa; }
+  body main {
+    margin: 0 3em 0 6em; }
+  @media screen and (min-width: 768px) {
+    body {
+      padding-left: 360px; } }
+  @media print {
+    body {
+      padding-left: 0; } }
+dl {
+  grid-template-columns: minmax(0, 1fr) 93%; }
+  dl pre {
+    overflow-x: scroll; }
+
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+    padding: 5px 10px; }
+  #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+    color: #00335b;
+    text-decoration: none;
+    display: block; }
+    #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+      box-shadow: none;
+      color: white; }
+
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px; }
+
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px; }
+
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #00335b;
+  box-shadow: inset -5px 0px 10px -5px #00335b !important; }
+  #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: white; }
+
+@media print {
+  #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+    background: white;
+    box-shadow: none !important; }
+  #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+    color: #00335b; }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black; } }
+
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  font-size: 14px; }
+
+#toc li:before, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:before {
+  content: " ";
+  display: none; }
+
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  font-weight: 600; }
+
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  background: none;
+  box-shadow: none; }
+
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%; }
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 45px;
+    background-color: #f1f8ff; } }
+
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white; } }
+
+@media screen and (min-width: 768px) {
+  nav {
+    marign-right: 30px; } }
+
+@media screen and (min-width: 768px) {
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #00335b;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100; }
+    #toggle span {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%); } }
+
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none; } }
+
+@media print {
+  #toggle {
+    display: none; } }
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #00335b;
+  margin: 2em 0; }
+  @media screen and (min-width: 768px) {
+    .rule.toc {
+      display: none; } }
+@media screen and (min-width: 768px) {
+  h1.toc-contents {
+    margin-top: 1em; }
+  ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0;
+    margin: 0; } }
+
+#toc-list ul {
+  margin-bottom: 0.25em; }
+
+#toc-list li {
+  list-style-type: none; }
+
+.figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto; }
+  .figure .FigureTitle, .figure .figure-title {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+  .figure > img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+    height: auto; }
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d; }
+  .document-stage-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 300;
+    height: 160px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-stage-band {
+      display: none; } }
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102; }
+  .document-type-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-type-band {
+      display: none; } }
+  .document-type-band .document-type {
+    top: 20px; }
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important; }
+
+#standard-band p {
+  height: 135px; }
+
+#proposal-band p {
+  height: 150px; }
+
+#standard-band,
+#published-band {
+  color: #7ba812; }
+
+#standard,
+#published {
+  color: #9ABD48; }
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #00335b;
+  font-weight: 400;
+  margin-top: 1.6em;
+  margin-bottom: 0.3em; }
+
+h1, .h1 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  margin-top: 2em; }
+  h1 #content, .h1 #content {
+    margin-top: 2em; }
+
+h2, .h2 {
+  margin-top: 1.3em;
+  font-size: 1.7em;
+  font-weight: 300; }
+  h2 p, .h2 p {
+    display: inline; }
+
+h3, .h3 {
+  margin-top: 1.3em;
+  font-size: 1.5em;
+  font-weight: 100; }
+
+h4, .h4 {
+  font-size: 1.4em; }
+
+.contact-info {
+  padding: 2em;
+  margin-top: 5em;
+  width: 280px;
+  text-align: left;
+  border: #00335b solid 2px;
+  color: #00335b !important;
+  border-radius: 25px; }
+  .contact-info a:hover {
+    text-decoration: underline;
+    background: none;
+    box-shadow: 0 0 0 0; }
+  .contact-info a, .contact-info a:hover {
+    color: #00335b; }
+  .contact-info p, .contact-info a {
+    font-family: "Space Mono",monospace;
+    font-variant-ligatures: none;
+    font-weight: 400; }
+  .contact-info #boilerplate-name {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 0; }
+  .contact-info #boilerplate-address {
+    font-size: 1em;
+    line-height: 1.3em;
+    margin-top: 0; }
+
+ul, ol {
+  margin-left: 1.2em; }
+
+ul > li {
+  list-style: none; }
+  ul > li:before {
+    content: "\2014";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em; }
+  ul > li p:first-child {
+    display: inline; }
+  ul > li:first-child {
+    margin-top: 1em; }
+
+ul ul > li:first-child {
+  margin-top: 0; }
+
+ol ul > li:first-child {
+  margin-top: 0; }
+
+span.keyword {
+  font-weight: 600; }
+
+/* Tables */
+table {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+  /*color: #010d16;*/ }
+  table, table th, table td {
+    border: 1px solid black;
+    font-size: 0.95em; }
+  table th, table td {
+    padding: 1em; }
+  table td.header {
+    font-weigth: 400; }
+  table thead tr th {
+    background-color: #5d99d6; }
+  table td, table th {
+    padding: 1em; }
+  table td.header {
+    font-weight: 400; }
+
+.docstage-box table,
+.docstage-box table th,
+.docstage-box table td {
+  border: none; }
+
+table.recommendtest {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+  color: #010d16; }
+  table.recommendtest, table.recommendtest th, table.recommendtest td {
+    border: none !important;
+    font-size: 0.95em; }
+  table.recommendtest th, table.recommendtest td {
+    padding: 1em; }
+  table.recommendtest td.header {
+    font-weigth: 400; }
+  table.recommendtest tr:nth-child(even) {
+    background: #ffffff; }
+  table.recommendtest tr:nth-child(odd) {
+    background: #ffffff; }
+  table.recommendtest thead tr th {
+    background-color: #5d99d6; }
+  table.recommendtest td, table.recommendtest th {
+    padding: 1em; }
+  table.recommendtest td.header {
+    font-weight: 400; }
+
+td > p:first-child, th > p:first-child {
+  margin-top: 0em; }
+
+td > p:last-child, th > p:last-child {
+  margin-bottom: 0em; }
+
+p.TableTitle {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400; }
+
+/* Terms */
+.TermNum {
+  font-weight: 300; }
+
+.TermNum, .Terms, .AltTerms {
+  color: #00335b;
+  font-family: "Overpass",sans-serif; }
+
+h2.TermNum {
+  margin-bottom: 0; }
+
+p.AltTerms {
+  font-size: 24px;
+  margin-top: 1em; }
+
+span.AdmittedLabel {
+  color: #00335b;
+  background-color: #CFE2F3;
+  font-size: 70%;
+  vertical-align: top; }
+
+/* Links, selection */
+a, a:visited {
+  text-decoration: none;
+  color: #2e81c2; }
+
+a:hover {
+  color: #00335b;
+  background: white;
+  box-shadow: 3px 0 0 white, -3px 0 0 white; }
+
+::selection,
+::-moz-selection {
+  background: white;
+  color: #00335b; }
+
+/* Bibliograhy */
+p.Biblio, p.NormRef {
+  margin-top: 1em;
+  margin-left: 2em; }
+
+/* Blocks */
+.SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+pre {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow-y: auto;
+  overflow-x: scroll;
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none; }
+
+.Admonition {
+  padding: 1em 1.2em 1.2em 1.2em;
+  margin: 1em 0 1em 0;
+  background-color: #fcad88;
+  border-top: 10px solid #eb5a06;
+  color: #290404; }
+  .Admonition .AdmonitionTitle {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+  .Admonition.Important {
+    background-color: #f58cff;
+    color: #5d1364;
+    border-top: 10px solid #9503a8; }
+  .Admonition.Warning {
+    background-color: #ff989d;
+    color: #270204;
+    border-top: 10px solid #e4010c; }
+  .Admonition p, .Admonition.Important p, .Admonition.Warning p {
+    margin: 0; }
+
+.figure, pre, .pseudocode {
+  background-color: #e1eef1;
+  color: #424242;
+  font-size: 0.8em; }
+
+.Note {
+  background-color: #fff8bb;
+  color: #7d760b;
+  padding: 1.2em;
+  margin: 1em 0 1em 0; }
+  .Note p {
+    margin: 0; }
+
+.example {
+  background-color: #e1eef1;
+  color: #424242;
+  padding: 1.2em;
+  margin: 2em 0 1em 0;
+  padding-left: 2em; }
+  .example .example-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-left: -1.5em; }
+  .example pre, .example .pseudocode {
+    background: none; }
+
+.Quote {
+  background-color: #e1eef1;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.formula {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center; }
+
+.recommend .RecommendationTitle, .recommendtest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.require .RecommendationTitle, .requiretest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.permission .RecommendationTitle, .permissiontest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.RecommendationTestTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+/*
+.recommend {
+  &, .example_label {
+    background-color: #f8ffbd;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.permission {
+  &, .example_label {
+    background-color: #cdfdbe;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.require {
+  &, .example_label {
+    background-color: #d3e6ff;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+*/
+.recommend .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.require .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.permission .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle {
+  font-weight: normal;
+  text-align: left; }
+
+#myBtn {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #00335b;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px; }
+  #myBtn:hover {
+    opacity: 1; }
+  @media print {
+    #myBtn {
+      display: none; } }
+a.anchorjs-link:hover {
+  background: none;
+  color: #2e81c2;
+  box-shadow: none; }
+
+@page {
+  margin: 2cm 1cm; }
+
+@media print {
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+    page-break-after: avoid;
+    margin-top: 1.2em; }
+  h1, .h1 {
+    font-size: 1.5em;
+    line-height: 1.5; }
+    h1.content, .h1.content {
+      margin-top: 2em;
+      line-height: 2.5em; }
+  h2, .h2 {
+    font-size: 1.2em; }
+  h3, .h3 {
+    font-size: 1em; }
+  .prefatory-section {
+    page-break-before: always; }
+  .note, .pseudocode {
+    page-break-inside: avoid; }
+  .Note {
+    background-color: #fff495;
+    color: #47430c;
+    padding: 5px;
+    margin: 2em 0 1em 0; }
+    .Note p {
+      padding: 0 5px 0 5px; }
+  nav {
+    line-height: 1; } }
+
+/* Footnotes */
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.footnote {
+  font-size: 0.9em; }
+
+span.hi {
+  background-color: yellow; }
+
+-->
+</style><title>Topic 24 - Abstract Conceptual Model for Time</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--TOC script import-->
+<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
+</script>
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com" /> 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
+
+<!--Font awesome import for the link icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<style class="anchorjs"></style>
+</head>
+  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
+    <div class="title-section"><div class="document-stage-band" id="swg-draft-band">
+    <p class="document-stage">Candidate SWG Draft</p>
+</div>
+
+<div class="document-type-band" id="abstract-specification-topic-band">
+    <p class="document-type">OGC Abstract Specification Topic</p>
+</div>
+
+
+
+  <div id="toggle"> <span>&#x2022;</span> </div>
+
+  <header>
+
+<!--<div class="WordSection1">-->
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+  <div class="coverpage-doc-identity">
+
+    <div class="coverpage-title">
+      <span class="title-first">Topic 24 - Abstract Conceptual Model for Time</span>
+      <!--<span class="title-second"></span>-->
+    </div>
+  </div>
+
+  <div class="coverpage-logo">
+    <span><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTUxMS42NSA1MDYuNzYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO30uY2xzLTJ7Y2xpcC1wYXRoOnVybCgjY2xpcC1wYXRoKTt9LmNscy0ze2ZpbGw6IzAwYjFmZjt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5NzguMjUiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBpZD0iQmx1ZV9Ib3Jpem9udGFsX0xvY2t1cCIgZGF0YS1uYW1lPSJCbHVlIEhvcml6b250YWwgTG9ja3VwIj48ZyBjbGFzcz0iY2xzLTIiPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIyMDQuMDcgMzY1LjI3IDIwNC4wNyA1MDYuNzMgMC4wMSAzODguOTEgMCAxNTMuMTUgMjA0LjA3IDI3MC45NyAyMDQuMDcgMzE4LjExIDE2My4zNCAyOTQuNjEgMTQyLjkzIDI4Mi44MiAxNDIuOTIgMjgyLjgyIDQwLjg0IDIyMy44OCA0MC44NCAzNjUuMzMgMTYzLjM0IDQzNi4wNiAxNjMuMzQgMzg4LjkxIDEwMi4wOSAzNTMuNTUgMTAyLjA5IDMyOS45NyAxMDIuMDkgMzA2LjQgMjA0LjA3IDM2NS4yNyIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTQyOC42OCwyMzUuNzYsMjI0LjUsMzUzLjY0LDQyOC42OCw0NzEuNTIsNjMyLjg1LDM1My42NFptMCwxODguNjFMMzA2LjE3LDM1My42NGwxMjIuNTItNzAuNzMsMTIyLjQ5LDcwLjczLTIwLjQxLDExLjc5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIzMjYuNzggMjcwLjQgMzY3LjYyIDI0Ni44MyA0MDguNDUgMjIzLjI1IDQwOC40NiAyNzAuNCA0NDkuMTggMjQ2Ljg5IDQ0OS4xOCAxNTMuMTIgMjQ1LjEyIDI3MC45NCAyNDUuMTIgMzE3LjU1IDI0NS4xMiAzMTcuNTUgMjQ1LjEyIDMzMS42MyAyNDUuMTIgNTA2LjE3IDI0NS4wMSA1MDYuMTEgMjQ1LjAxIDUwNi43NiA0NDkuMTggMzg4Ljg4IDQ0OS4xOCAyOTQuMDQgNDA4LjQ2IDMxNy41NiA0MDguNDYgMzY0LjcxIDI4NS45NSA0MzUuNDQgMjg1Ljk2IDI5My45OCAzMjYuNzggMjcwLjQiLz48ZyBjbGFzcz0iY2xzLTIiPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTg4MC41NywzOTguMTdjLTMyLjgxLDAtNTctMjQuMDYtNTctNTYuMDVzMjQuMi01Ni4wNSw1Ny01Ni4wNSw1Ni45MSwyNCw1Ni45MSw1Ni4wNS0yNC4xNSw1Ni4wNi01Ni45MSw1Ni4wNlptMzguODctNTYuMDVjMC0yMi4zLTE2LjU5LTM5LTM4Ljg3LTM5cy0zOSwxNi44NC0zOSwzOSwxNi42OSwzOSwzOSwzOSwzOC44Ny0xNi42OSwzOC44Ny0zOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEwMDAuNDgsMzEwLjc2YzI0Ljk0LDAsNDMuMTgsMTguNjIsNDMuMTgsNDMuNzFzLTE4LjI0LDQzLjc1LTQzLjE4LDQzLjc1YTQxLjY3LDQxLjY3LDAsMCwxLTI3LjY3LTEwLjA5VjQyNkg5NTUuNjdWMzEyLjhoMTEuNTVMOTcwLjQ0LDMyM2E0MS41LDQxLjUsMCwwLDEsMzAtMTIuMjZabTI1Ljg0LDQzLjcxYzAtMTUuNzEtMTEuNDctMjcuMzUtMjcuMTktMjcuMzVzLTI3LjMsMTEuNzUtMjcuMywyNy4zNSwxMS41OSwyNy4zNSwyNy4zLDI3LjM1LDI3LjE5LTExLjY0LDI3LjE5LTI3LjM1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTE0MS4xOSwzNTQuNjdhNTYuMTUsNTYuMTUsMCwwLDEtLjM1LDUuNjNoLTY3LjY1YzIuMTQsMTMuNSwxMS44NiwyMS44MSwyNS41MSwyMS44MSwxMCwwLDE4LTQuNjEsMjIuNDItMTIuMjFoMThjLTYuNjMsMTcuNi0yMS44NSwyOC4yOC00MC40NiwyOC4yOC0yNC4zNywwLTQyLjgzLTE4LjgxLTQyLjgzLTQzLjcxczE4LjQyLTQzLjcsNDIuODMtNDMuN2MyNS41MSwwLDQyLjQ5LDE5LjY0LDQyLjQ5LDQzLjlabS02Ny41OC04LjNIMTEyNGMtMy4wOC0xMi42Ni0xMi42Mi0yMC4xMy0yNS4zMS0yMC4xMy0xMi44OSwwLTIyLjI4LDcuNzctMjUuMDksMjAuMTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMjAzLjUsMzEwLjljMTkuNDksMCwzMS42NiwxNC41MywzMS42NiwzNS4wNnY1MC4xOUgxMjE4VjM0OS40NGMwLTE1LjE0LTYuNTktMjMuMTgtMTkuMTItMjMuMTgtMTMuMSwwLTIyLjM5LDEwLjU0LTIyLjM5LDI1LjI2djQ0LjYzaC0xNy4xNFYzMTIuOGgxMS45NWwzLjMyLDExLjYzYzYuMzEtOC40MSwxNi42MS0xMy41MywyOC44NS0xMy41M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik05MzMuNDUsNDkwLjJjLS40NCwzMy4xMi0yMi44LDU2Ljg5LTU0LjU0LDU2Ljg5cy01NS4zLTIzLjctNTUuMy01NiwyMy4yOS01Niw1NC45NS01NmMyNi4zNSwwLDQ4LjQsMTYuNTksNTMuMjgsNDAuMUg5MTMuNTZjLTQuNjMtMTMuODktMTguMzYtMjIuOTQtMzQuNjUtMjIuOTQtMjEuODQsMC0zNy4yNiwxNi0zNy4yNiwzOC44M3MxNSwzOC44NiwzNy4yNiwzOC44NmMxNy4yNSwwLDMxLjI3LTkuNzUsMzUuMzEtMjQuNDNIODc1LjdWNDkwLjE5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEwMzEuMzEsNTAzLjU4YTUzLjE5LDUzLjE5LDAsMCwxLS4zNiw1LjYzSDk2My4zYzIuMTQsMTMuNTEsMTEuODcsMjEuODEsMjUuNTEsMjEuODEsMTAsMCwxOC00LjYsMjIuNDMtMTIuMmgxOGMtNi42NCwxNy41OS0yMS44NSwyOC4yNy00MC40NiwyOC4yNy0yNC4zNywwLTQyLjgzLTE4LjgxLTQyLjgzLTQzLjdzMTguNDItNDMuNzEsNDIuODMtNDMuNzFjMjUuNSwwLDQyLjQ5LDE5LjY1LDQyLjQ5LDQzLjlabS02Ny41OC04LjI5aDUwLjRjLTMuMDgtMTIuNjYtMTIuNjItMjAuMTQtMjUuMzItMjAuMTQtMTIuODgsMC0yMi4yNyw3Ljc4LTI1LjA4LDIwLjE0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTA4Ny45NCw1NDcuMDljLTI1LjQ5LDAtNDQuNTYtMTguNjUtNDQuNTYtNDMuNzFzMTkuMDctNDMuNyw0NC41Ni00My43LDQ0LjU2LDE4LjYxLDQ0LjU2LDQzLjcxUzExMTMuMzksNTQ3LjA5LDEwODcuOTQsNTQ3LjA5Wm0yNy4xMi00My43MWMwLTE1Ljk1LTExLjM0LTI3LjM0LTI3LjEyLTI3LjM0cy0yNy4xMiwxMS4zOS0yNy4xMiwyNy4zNCwxMS4zNCwyNy4zNSwyNy4xMiwyNy4zNSwyNy4xMi0xMS4zOSwyNy4xMi0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTExNDQuNDQsNTE4LjZoMTYuNzRjLjQ0LDguODEsNy44NCwxMy40MSwxNy44OCwxMy40MSw5LjIxLDAsMTYuMjgtMy44OSwxNi4yOC0xMC44NiwwLTcuOS04Ljk0LTkuNzEtMTkuMTUtMTEuNDMtMTMuODktMi4zOC0zMC4yNS01LjUzLTMwLjI1LTI0Ljg1LDAtMTQuOTUsMTIuOTItMjUuMTksMzIuMzEtMjUuMTlzMzEuOTMsMTAuNTQsMzIuMjYsMjYuNzFoLTE2LjIyYy0uMzMtNy45My02LjM3LTEyLjE5LTE2LjQ0LTEyLjE5LTkuNDcsMC0xNS4zMyw0LTE1LjMzLDEwLjEyLDAsNy4zNSw4LjUsOC44MSwxOC41NiwxMC40NiwxNC4wOCwyLjM2LDMxLjE5LDUuMDcsMzEuMTksMjUuNjIsMCwxNi4xOS0xMy40OSwyNi42OS0zMy44LDI2LjY5cy0zMy41OS0xMS4yLTM0LTI4LjQ5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTI3NS40OSw0NTkuNjhjMjQuOTQsMCw0My4xOCwxOC42MSw0My4xOCw0My43MXMtMTguMjQsNDMuNzUtNDMuMTgsNDMuNzVhNDEuNjUsNDEuNjUsMCwwLDEtMjcuNjctMTAuMXYzNy45aC0xNy4xNFY0NjEuNzFoMTEuNTVsMy4yMiwxMC4yNGE0MS40OCw0MS40OCwwLDAsMSwzMC0xMi4yN1ptMjUuODUsNDMuN2MwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zMSwxMS43NC0yNy4zMSwyNy4zNCwxMS41OSwyNy4zNSwyNy4zMSwyNy4zNSwyNy4xOS0xMS42MywyNy4xOS0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0MjAsNDYxLjY3VjU0NWgtMTMuODJsLTEuNjctMTAuMTRhNDEuODQsNDEuODQsMCwwLDEtMzAuMjIsMTIuMjFjLTI0Ljg0LDAtNDMuNC0xOC43Ni00My40LTQzLjc1czE4LjU2LTQzLjY2LDQzLjQtNDMuNjZjMTIuMjgsMCwyMi45MSw0LjY0LDMwLjQ4LDEyLjQxbDItMTAuNDJabS0xNy4xOCw0MS42N2MwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zLDExLjc0LTI3LjMsMjcuMzQsMTEuNTksMjcuMzUsMjcuMywyNy4zNSwyNy4xOS0xMS42NCwyNy4xOS0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0OTEuMDgsNTI5LjV2MTUuNTZoLTEyLjczYy0xOC4yNiwwLTI5LjUzLTExLjI2LTI5LjUzLTI5LjY4di0zOWgtMTQuOTF2LTMuMzJsMjktMzAuODJoMi45MXYxOS40NmgyNC44djE0LjY4SDE0NjZWNTE0YzAsOS45Myw1LjUzLDE1LjQ3LDE1LjYzLDE1LjQ3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE1MDcuNDIsNDMxLjEyaDE3Ljd2MTcuNjdoLTE3LjdabS4yOCwzMC41OWgxNy4xNHY4My4zNUgxNTA3LjdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTYzMi4yLDQ2MS42N1Y1NDVoLTEzLjgybC0xLjY3LTEwLjE0YTQxLjg0LDQxLjg0LDAsMCwxLTMwLjIyLDEyLjIxYy0yNC44MywwLTQzLjQtMTguNzYtNDMuNC00My43NXMxOC41Ny00My42Niw0My40LTQzLjY2YzEyLjI4LDAsMjIuOTEsNC42NCwzMC40OCwxMi40MWwyLTEwLjQyWk0xNjE1LDUwMy4zNGMwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zLDExLjc0LTI3LjMsMjcuMzQsMTEuNTksMjcuMzUsMjcuMywyNy4zNVMxNjE1LDUxOS4wNSwxNjE1LDUwMy4zNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMTQ1Mi40NSIgeT0iMTk2LjA4IiB3aWR0aD0iMTcuMTQiIGhlaWdodD0iMTEzLjIzIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNODIzLjYxLDY0MGMwLTMyLjMzLDIzLjU3LTU2LDU1LjU0LTU2LDI1LjU2LDAsNDYuMDUsMTUuOTMsNTEuNzIsNDAuMjVoLTE4Yy01LjE2LTE0LjM5LTE3Ljc3LTIzLjA5LTMzLjc3LTIzLjA5LTIxLjY0LDAtMzcuNSwxNi4yOC0zNy41LDM4LjgzczE1Ljg2LDM4Ljc0LDM3LjUsMzguNzRjMTYuNTEsMCwyOS4yNy05LjMyLDM0LjE0LTI0LjY0aDE4Yy01LjYxLDI1LjQxLTI2LjEsNDEuOC01Mi4xMyw0MS44LTMyLDAtNTUuNTQtMjMuNjYtNTUuNTQtNTUuOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTk4Ni44Niw2OTZjLTI1LjUsMC00NC41Ny0xOC42Ni00NC41Ny00My43MXMxOS4wNy00My43MSw0NC41Ny00My43MSw0NC41NiwxOC42Miw0NC41Niw0My43MVMxMDEyLjMsNjk2LDk4Ni44Niw2OTZaTTEwMTQsNjUyLjNjMC0xNS45NS0xMS4zNS0yNy4zNS0yNy4xMi0yNy4zNXMtMjcuMTMsMTEuNC0yNy4xMywyNy4zNSwxMS4zNSwyNy4zNSwyNy4xMywyNy4zNVMxMDE0LDY2OC4yNSwxMDE0LDY1Mi4zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTA5My43Nyw2MDguNzNjMTkuNDksMCwzMS42NiwxNC41MywzMS42NiwzNS4wNlY2OTRIMTEwOC4zVjY0Ny4yN2MwLTE1LjEzLTYuNTktMjMuMTgtMTkuMTItMjMuMTgtMTMuMSwwLTIyLjM5LDEwLjU0LTIyLjM5LDI1LjI2VjY5NGgtMTcuMTRWNjEwLjYzaDExLjk1bDMuMzMsMTEuNjNjNi4zLTguNDEsMTYuNi0xMy41MywyOC44NC0xMy41M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMTQyLjQzLDY2Ny41MWgxNi43NGMuNDQsOC44Miw3Ljg0LDEzLjQyLDE3Ljg5LDEzLjQyLDkuMiwwLDE2LjI3LTMuOSwxNi4yNy0xMC44NiwwLTcuOTEtOC45NC05LjcyLTE5LjE1LTExLjQzLTEzLjg4LTIuMzgtMzAuMjUtNS41NC0zMC4yNS0yNC44NiwwLTE0Ljk1LDEyLjkzLTI1LjE4LDMyLjMxLTI1LjE4czMxLjk0LDEwLjU0LDMyLjI3LDI2LjdoLTE2LjIzYy0uMzMtNy45My02LjM3LTEyLjE4LTE2LjQ0LTEyLjE4LTkuNDcsMC0xNS4zMyw0LTE1LjMzLDEwLjExLDAsNy4zNiw4LjUxLDguODEsMTguNTYsMTAuNDcsMTQuMDksMi4zNSwzMS4yLDUuMDcsMzEuMiwyNS42MiwwLDE2LjE5LTEzLjUsMjYuNjktMzMuODEsMjYuNjlzLTMzLjU5LTExLjIxLTM0LTI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMjY3LjEyLDY5NmMtMjUuNSwwLTQ0LjU3LTE4LjY2LTQ0LjU3LTQzLjcxczE5LjA3LTQzLjcxLDQ0LjU3LTQzLjcxLDQ0LjU2LDE4LjYyLDQ0LjU2LDQzLjcxUzEyOTIuNTYsNjk2LDEyNjcuMTIsNjk2Wm0yNy4xMi00My43MWMwLTE1Ljk1LTExLjM1LTI3LjM1LTI3LjEyLTI3LjM1UzEyNDAsNjM2LjM1LDEyNDAsNjUyLjNzMTEuMzUsMjcuMzUsMjcuMTMsMjcuMzUsMjcuMTItMTEuNCwyNy4xMi0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEzNzcuMzMsNjEwLjE2djE2LjE5aC05Yy0xNC4xNywwLTIxLjI0LDguMDgtMjEuMjQsMjMuMThWNjk0aC0xNy4xNFY2MTAuNjNoMTEuNTlsMi45LDExLjM3YzYtNy45LDE0LjE0LTExLjg0LDI1LjUyLTExLjg0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0MzcuNTMsNjc4LjQxVjY5NGgtMTIuNzRjLTE4LjI2LDAtMjkuNTItMTEuMjctMjkuNTItMjkuNjh2LTM5aC0xNC45MVY2MjJsMjktMzAuODJoMi45MnYxOS40NmgyNC44VjYyNS4zSDE0MTIuNHYzNy42NGMwLDkuOTQsNS41MywxNS40NywxNS42MiwxNS40N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xNDUzLjg2LDU4MGgxNy43MXYxNy42N2gtMTcuNzFabS4yOSwzMC41OWgxNy4xM1Y2OTRoLTE3LjEzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0OTQuMzYsNjU4Ljc4VjYxMC42M2gxNy4xNHY0NS43NWMwLDE0LjQ4LDcuOSwyMy4yNywyMC43NywyMy4yN1MxNTUzLDY3MC43LDE1NTMsNjU2LjM4VjYxMC42M2gxNy4xNHY0OC4xNWMwLDIyLjQzLTE0Ljg3LDM3LjIzLTM3Ljg3LDM3LjIzcy0zNy45MS0xNC44LTM3LjkxLTM3LjIzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTY4Ni4zOSw2MDguNzNjMTcuNTcsMCwyOS40MywxMy4zNywyOS40MywzMi4yNHY1M2gtMTcuMTN2LTQ4LjhjMC0xMy40Mi01LjgzLTIxLjA5LTE2LjIxLTIxLjA5LTExLDAtMTkuNTUsMTAuMTItMTkuNTUsMjQuMzFWNjk0SDE2NDYuMnYtNDguOGMwLTEzLjQyLTUuNzktMjEuMDktMTYuMjQtMjEuMDktMTEuMDgsMC0xOS42MywxMC4xMi0xOS42MywyNC4zMVY2OTRIMTU5My4yVjYxMC42M2gxMi4xNGwzLDEwLjc3YTMzLjM4LDMzLjM4LDAsMCwxLDI1Ljg5LTEyLjY3YzExLjMsMCwyMC4yNSw1LjU1LDI1LDE0LjU5YTMzLDMzLDAsMCwxLDI3LjItMTQuNTlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PC9nPjwvZz48L2c+PC9zdmc+" alt="Open Geospatial Consortium" width="" height="" /></span>
+  </div>
+
+  <!--
+  <div class="coverpage-tc-name">
+    <span>Technical</span>
+  </div>
+  -->
+
+  <div class="authors">
+    
+    
+    
+
+    
+    
+    <span>Chris Little <span class="roletag">Editor</span></span>
+    
+    <span>Charles Heazel <span class="roletag">Editor</span></span>
+    
+    
+  </div>
+
+    <div class="coverpage-metadata">
+      <span class="label">Submission Date: </span> <span class="value">2023-05-23</span>
+      <span class="label">Approval Date: </span> <span class="value">2023-05-23</span>
+      <span class="label">Publication Date: </span> <span class="value">2023-08-22</span>
+      <span class="label">External identifier of this OGC&#xAE; document: <span class="docnumber value">http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0</span></span>
+      <span class="label">Internal identifier of this OGC&#xAE; document: <span class="docnumber value">23-049</span></span>
+      
+      
+    </div>
+
+    <div class="coverpage-alt-formats">
+      
+      <span class="label">Version: </span> <span class="value">1.0</span><br />
+      
+    
+    </div>
+
+  </div>
+
+    <div class="wrapper-top-bottom"></div>
+
+  <div class="WordSection11">
+  <div class="coverpage-stage-block">
+    <span class="coverpage-stage" id="abstract-specification-topic">OGC Abstract Specification Topic</span>
+  </div>
+
+  <div class="coverpage-stage-block">
+    <p><span class="coverpage-maturity" id="swg-draft">Candidate SWG Draft</span></p>
+  </div>
+</div>
+
+  <div class="coverpage-warning">
+    <div class="boilerplate-legal">
+
+    <div><h1 class="IntroTitle">Notice</h1>
+
+      <p id="_409f3caa-085c-3105-556f-562cdbed0f09">This document is not an OGC Standard. This document is an OGC Abstract Specification Topic and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+      <p id="_aea9bbd6-6826-dcb2-2afb-a3d33b277304">Further, an OGC Abstract Specification Topic should not be referenced as required or mandatory technology in procurements.</p>
+    </div>
+
+
+  </div>
+ </div>
+
+<div class="docstage-box">
+  <table>
+    <tr><td>Document number:</td><td>23-049</td></tr>
+    <tr><td>Document type:</td><td>OGC Abstract Specification Topic</td></tr>
+    <tr><td align="right">Document subtype:</td><td align="right"></td></tr>
+    <tr><td align="right">Document stage:</td><td align="right">Candidate SWG Draft</td></tr>
+    <tr><td align="right">Document language:</td><td align="right">English</td></tr>
+  </table>
+</div>
+
+<div class="info-section">
+<div class="copyright">
+  <div class="boilerplate-copyright">
+    <div><h1 class="IntroTitle">Copyright notice</h1>
+
+
+      <p id="_4380411b-aa89-cc2d-d393-9800128f1de1" style="text-align:center;">Copyright
+        &#xA9; 2023 Open Geospatial Consortium<br />
+        To obtain additional rights of use, visit
+        <a href="http://www.ogc.org/legal/">http://www.ogc.org/legal/</a></p>
+    </div>
+    <div><h1 class="IntroTitle">Note</h1>
+
+      <p id="_11e88dba-9912-1a89-a82d-7291bf232191" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+      <p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+    </div>
+  </div>
+</div>
+
+<div class="rule"></div>
+</div>
+  </div>
+
+
+</header>
+
+      
+    </div>
+    <br />
+    <div class="prefatory-section"><div class="license">
+  <div class="boilerplate-license">
+    <div><h1 class="IntroTitle">License Agreement</h1>
+
+
+      <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial
+        Consortium, (&#x201C;Licensor&#x201D;), free of charge and subject to the terms set
+        forth below, to any person obtaining a copy of this Intellectual Property and
+        any associated documentation, to deal in the Intellectual Property without
+        restriction (except as set forth below), including without limitation the
+        rights to implement, use, copy, modify, merge, publish, distribute, and/or
+        sublicense copies of the Intellectual Property, and to permit persons to whom
+        the Intellectual Property is furnished to do so, provided that all copyright notices
+        on the intellectual property are retained intact and that each person to whom
+        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
+
+      <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of
+        the modified Intellectual Property must include, in addition to the above
+        copyright notice, a notice that the Intellectual Property includes
+        modifications that have not been approved or adopted by LICENSOR.</p>
+
+      <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
+        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
+        THE INTELLECTUAL PROPERTY IS PROVIDED &#x201C;AS
+        IS&#x201D;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
+        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
+        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
+        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
+        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER&#x2019;S OWN RISK. IN NO
+        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
+        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
+        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
+        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
+        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
+        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
+
+      <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may
+        terminate it at any time by destroying the Intellectual Property together with
+        all copies in any form. The license will also terminate if you fail to comply
+        with any term or condition of this Agreement. Except as provided in the
+        following sentence, no such termination of this license shall require the
+        termination of any third party end-user sublicense to the Intellectual Property
+        which is in force as of the date of notice of such termination. In addition,
+        should the Intellectual Property, or the operation of the Intellectual
+        Property, infringe, or in LICENSOR&#x2019;s sole opinion be
+        likely to infringe, any patent, copyright, trademark or other right of a third
+        party, you agree that LICENSOR, in its sole discretion, may terminate this
+        license without any compensation or liability to you, your licensees or any
+        other party. You agree upon termination of any kind to destroy or cause to be
+        destroyed the Intellectual Property together with all copies in any form,
+        whether held by you or by any third party.</p>
+
+      <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of
+        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
+        Property shall not be used in advertising or otherwise to promote the sale, use
+        or other dealings in this Intellectual Property without prior written
+        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
+        all times be the sole entity that may authorize you or any third party to use
+        certification marks, trademarks or other special designations to indicate
+        compliance with any LICENSOR standards or specifications.
+        This Agreement is
+        governed by the laws of the Commonwealth of Massachusetts. The application to
+        this Agreement of the United Nations Convention on Contracts for the
+        International Sale of Goods is hereby expressly excluded. In the event any
+        provision of this Agreement shall be deemed unenforceable, void or invalid, such
+        provision shall be modified so as to make it valid and enforceable, and as so
+        modified the entire Agreement shall remain in full force and effect. No
+        decision, action or inaction by LICENSOR shall be construed to be a waiver of
+        any rights or remedies available to it.</p>
+
+      <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    </div>
+  </div>
+
+
+
+</div>
+
+<nav>
+  <h1 id="content">Contents</h1>
+  <div id="toc"><ul><li class="h1"><a href="#toc0">      I.&#xA0; Abstract</a></li><li class="h1"><a href="#toc1">      II.&#xA0; Keywords</a></li><li class="h1"><a href="#toc2">      III.&#xA0; Preface</a></li><li class="h1"><a href="#toc3">      IV.&#xA0; Security Considerations</a></li><li class="h1"><a href="#toc4">      V.&#xA0; Submitting Organizations</a></li><li class="h1"><a href="#toc5">      VI.&#xA0; Submitters</a></li><li class="h1"><a href="#toc6">      VII.&#xA0; Introduction</a></li><li class="h1"><a href="#toc7">      1.&#xA0; Scope</a></li><li class="h1"><a href="#toc8">      2.&#xA0; Conformance</a></li><li class="h1"><a href="#toc9">      3.&#xA0; Normative references</a></li><li class="h1"><a href="#toc10">      4.&#xA0; Terms and definitions</a></li><li class="h1"><a href="#toc11">      5.&#xA0; Conventions</a></li><li class="h2"><a href="#toc12">      5.1.&#xA0; Abbreviated terms</a></li><li class="h2"><a href="#toc13">      5.2.&#xA0; Identifiers</a></li><li class="h1"><a href="#toc14">      6.&#xA0; Characteristics of an Abstract Conceptual Model</a></li><li class="h1"><a href="#toc15">      7.&#xA0; Temporal Abstract Conceptual Model</a></li><li class="h1"><a href="#toc16">      8.&#xA0; Temporal regimes</a></li><li class="h2"><a href="#toc17">      8.1.&#xA0; General</a></li><li class="h2"><a href="#toc18">      8.2.&#xA0; Events and Operators</a></li><li class="h2"><a href="#toc19">      8.3.&#xA0; Simple Clocks and Discrete Timescales</a></li><li class="h2"><a href="#toc20">      8.4.&#xA0; CRS and Continuous Timescales</a></li><li class="h2"><a href="#toc21">      8.5.&#xA0; Calendars</a></li><li class="h2"><a href="#toc22">      8.6.&#xA0; Other Regimes</a></li><li class="h1"><a href="#toc23">      9.&#xA0; Notation</a></li><li class="h1"><a href="#toc24">      10.&#xA0; Attributes of the Regimes/Classes</a></li><li class="h2"><a href="#toc25">      10.1.&#xA0; Attributes of Events and Ordinal Temporal Reference Systems</a></li><li class="h2"><a href="#toc26">      10.2.&#xA0; Attributes of simple Clock and Discrete Timescale</a></li><li class="h2"><a href="#toc27">      10.3.&#xA0; Attributes of Clocks</a></li><li class="h2"><a href="#toc28">      10.4.&#xA0; Attributes of Timescales</a></li><li class="h2"><a href="#toc29">      10.5.&#xA0; Attributes of Units of Measure</a></li><li class="h2"><a href="#toc30">      10.6.&#xA0; Attributes of a CRS and Continuous Timescales</a></li><li class="h1"><a href="#toc31">      11.&#xA0; Attributes of Calendars</a></li><li class="h1"><a href="#toc32">      12.&#xA0; Synchronisation of clocks</a></li><li class="h1"><a href="#toc33">      Annex A (informative) Glossary</a></li><li class="h1"><a href="#toc34">      Bibliography</a></li></ul></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+
+      
+    </div>
+    <br />
+    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <div class="authority">
+  
+  
+
+  
+
+
+
+
+  <div class="boilerplate-feedback">
+
+  </div>
+</div>
+      <br />
+      <div id="_abstract">
+        <h1 class="AbstractTitle" id="toc0">I.&#xA0; Abstract</h1>
+        <p id="_805264f4-2895-6682-18b3-3f7c9b2945a6">Traditionally, geospatial communities used 2D coordinates and the vertical and temporal aspects were considered attributes rather than fully fledged coordinate systems. In an increasingly dynamic, speedier and multidimensional world, much confusion and lack of interoperability has occurred because of inconsistent approaches to time. Much effort has been expended by various international bodies to establish the Gregorian Calendar as a consistent timeline. This suffices for low precision, such as to the nearest minute, but not so when second or sub-second accuracy is required. For example, there has been differing practices and no consensus on whether leap seconds should be part of the Gregorian timeline.</p>
+        <p id="_92422dca-5e04-47b2-be97-997e8ea0873e">The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightforward defining document. This document aims to to give clear consistent definitions of the fundamental concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps they can contribute to building better and more interoperable systems using other more detailed documents such as logical and implementation standards that have an agreed common conceptual basis and terminology.</p>
+        <p id="_d4206428-1604-4374-6345-eefc296438a5">This document is consistent with <a href="#iso19111">ISO 19111</a> and <a href="#w3cowltime">W3C Time Ontology</a> in OWL.</p>
+        <p id="_72f0dc4d-fad8-9e3a-f7aa-3c719d44c87a">The aim of this document is to establish clear concepts and terminology.</p>
+      </div>
+      <div class="Section3" id="_a1313432-0df8-47d6-83bd-7ee816877e77">
+        <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
+        <p>The following are keywords to be used by search engines and
+    document catalogues.</p>
+        <p>ogcdoc, OGC document, abstract specification, conceptual model, time, temporal referencing, referencing by coordinates, calendar, clock, timescale</p>
+      </div>
+      <br />
+      <div id="_preface">
+        <h1 class="ForewordTitle" id="toc2">III.&#xA0; Preface</h1>
+        <p id="_8ba0feed-acfd-bc4f-1d13-2e75dab20f9a">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+        <p id="_25f6b7a1-8657-2655-9eff-47df179631e0">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+      </div>
+      <div class="Section3" id="_security_considerations">
+        <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security Considerations</h1>
+        <p id="_e88b1376-d0f4-5147-cf72-d44500f21228">No security considerations have been made for this document.</p>
+      </div>
+      <div class="Section3" id="_8ce7a51f-0bc4-40ce-ae2b-eab752256979">
+        <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
+        <p>The following organizations submitted this Document to the
+   Open Geospatial Consortium (OGC):</p>
+        <ul>
+          <li>U.K. Met Office, HeazelTech</li>
+        </ul>
+      </div>
+      <div class="Section3" id="_submitters">
+        <h1 class="IntroTitle" id="toc5">VI.&#xA0; Submitters</h1>
+        <p id="_1e904d18-1557-51ec-fd57-898a2f834acf">All questions regarding this submission should be directed to the editor or the
+submitters:</p>
+        <table id="_06091d16-639f-5e73-4f99-c258e367304a" class="MsoISOTable" style="border-width:1px;border-spacing:0;">
+          <thead>
+            <tr>
+              <th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th>
+              <th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Affiliation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Chris Little (editor)</td>
+              <td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">U.K. Met Office</td>
+            </tr>
+            <tr>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Chuck Heazel</td>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">HeazelTech</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="Section3" id="_introduction">
+        <h1 class="IntroTitle" id="toc6">VII.&#xA0; Introduction</h1>
+        <p id="_8bca7211-9a3c-63ca-a566-dd965cd1f896">When OGC standards involve time, they generally refer to the ISO documents such as <a href="#iso19108">ISO 19108</a> (now largely superseded), <a href="#iso19111">ISO 19111</a>, <a href="#iso8601">ISO 8601</a>, and their freely available OGC equivalents, such as <a href="#ogc18005">OGC_18-005r4</a> (the equivalent to <a href="#iso19111">ISO 19111</a>).</p>
+        <p id="_f6d0212a-595f-da11-ddf2-d9735beb8ed1">Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the <a href="#iso8601">ISO 8601</a> notation, and many date-time schemas. Because of this effort, many people use calendar based &#x201C;coordinates&#x201D;, with the attendant ambiguities, imprecision and inappropriate scope.</p>
+        <p id="_59f8f5e3-3740-c1a3-2b9e-bf7c35f098b9">The aim of this document is to establish clear concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.</p>
+      </div>
+      <p class="zzSTDTitle1">Topic 24 - Abstract Conceptual Model for Time</p>
+      <div id="_scope">
+        <h1 id="toc7">1.&#xA0; Scope</h1>
+        <p id="_eea87a70-278d-a3d5-826c-b28e93e703ad">This document defines the major underlying concepts regarding time. It does not define any concrete temporal reference systems or give detailed guidance on implementations.</p>
+      </div>
+      <div id="_conformance">
+        <h1 id="toc8">2.&#xA0; Conformance</h1>
+        <p id="_ae2baaa8-5f7d-afe6-dcea-29d092b34548">Clause 6 of this International Standard uses the Unified Modeling Language (UML) to present
+conceptual schemas for describing the higher level classes of time and temporal reference systems. These schemas define conceptual classes that</p>
+        <p id="_c0262e29-9ad9-a765-a8bd-243cd36b013b">a) may be considered to comprise a cross-domain application schema, or</p>
+        <p id="_7a805de1-9b91-0122-f1cc-470efbaa9108">b) may be used in application schemas, profiles and implementation specifications.</p>
+        <p id="_93b946fc-a818-27b7-ee59-b3b916c6e642">This flexibility is controlled by a set of UML types that can be implemented in a variety of manners. Use of
+alternative names that are more familiar in a particular application is acceptable, provided that there is a one-
+to-one mapping to classes and properties in this International Standard.
+The UML model in this International Standard defines conceptual classes; various software systems define
+implementation classes or data structures. All of these reference the same information content. The same
+name may be used in implementations as in the model, so that types defined in the UML model may be used
+directly in application schemas.</p>
+        <p id="_289f6169-e4ff-ce9a-21f3-e0c9572284e8">Annex A defines a set of conformance tests that will support applications whose requirements range from the
+minimum necessary to define data structures to full object implementation.</p>
+      </div>
+      <div><h1 id="toc9">3.&#xA0; Normative references</h1>
+<p id="_307b20e2-9e40-db56-abbf-2822ab2941cc">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+
+<p id="rfc3339" class="NormRef">IETF: RFC 3339 <i>Date and Time on the Internet: Timestamps</i>. <a href="https://www.rfc-editor.org/rfc/rfc3339">https://www.rfc-editor.org/rfc/rfc3339</a></p>
+<p id="iso8601" class="NormRef">ISO/TC 211: 8601:2004 <i>Data elements and interchange formats &#x2014; Information interchange &#x2014; Representation of dates and times</i>, 2004, <a href="https://www.iso.org/standard/40874.html">https://www.iso.org/standard/40874.html</a></p>
+<p id="iso19111" class="NormRef">ISO/TC 211: ISO 19111:2019, <i>Geographic information &#x2013; Referencing by coordinates</i>, 2019, <a href="https://www.iso.org/standard/74039.html">https://www.iso.org/standard/74039.html</a></p>
+<p id="temporal-knowledge" class="NormRef">Allen, J. F. <i>Maintaining Knowledge about Temporal Intervals</i>Communications of the ACM, 1983, vol. 26 pp. 832-843.</p>
+<p id="ogc18005" class="NormRef">OGC: 18-005, <i>OGC Abstract Specification Topic 2: Referencing by coordinates Corrigendum</i>, 2021, <a href="https://docs.ogc.org/as/18-005r5/18-005r5.html">https://docs.ogc.org/as/18-005r5/18-005r5.html</a></p>
+<p id="w3cowltime" class="NormRef">W3C: Time Ontology in OWL, 2017, <a href="https://www.w3.org/TR/2017/REC-owl-time-20171019/">https://www.w3.org/TR/2017/REC-owl-time-20171019/</a></p>
+</div>
+      <div id="_terms_and_definitions"><h1 id="toc10">4.&#xA0; Terms and definitions</h1><p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word &#x201C;shall&#x201D; (not &#x201C;must&#x201D;) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p><p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the &#x2018;ModSpec&#x2019;. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p><p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p><h2 class="TermNum" style="text-align:left;" id="conceptual-model_definition">4.1.&#xA0;<b>conceptual model</b></h2>
+<p id="_a1a9d3e4-3060-4861-fc52-40e11c81ab32">description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain. A conceptual model is explicitly chosen to be independent of design or implementation concerns.</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#cen_env_1613">CEN ENV 1613:1995</a>]</p><h2 class="TermNum" style="text-align:left;" id="coordinate-reference-system_definition">4.2.&#xA0;<b>coordinate reference system</b></h2>
+<p id="_4cecff49-5b0f-a0d8-cbbd-ffdc8e4e6743"><a href="#coordinate-system_definition">coordinate system</a> that is related to an object by a <a href="#datum_definition">datum</a></p>
+
+
+
+
+
+
+ <div id="_51a255f3-db65-d30e-e494-42254695f433" class="Note"><p>Note 1 to entry: Geodetic and vertical datums are referred to as reference frames.</p></div><div id="_9c63b966-deb1-606b-a2e1-c1f6831dab84" class="Note"><p>Note 2 to entry: For geodetic and vertical reference frames, the object will be the Earth. In planetary applications, geodetic and vertical reference frames may be applied to other celestial bodies.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p><h2 class="TermNum" style="text-align:left;" id="coordinate-system_definition">4.3.&#xA0;<b>coordinate system</b></h2>
+<p id="_7fc2cb81-a340-933f-82f5-7602b3589da3">set of mathematical rules for specifying how coordinates are to be assigned to points</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p><h2 class="TermNum" style="text-align:left;" id="datum_definition">4.4.&#xA0;<b>datum</b></h2><p class="AltTerms">reference frame&#xA0;<span class="AdmittedLabel">ADMITTED</span></p>
+
+
+
+<p id="_d27c758e-8645-610c-8b56-57025a1da73a">parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <a href="#coordinate-system_definition">coordinate system</a></p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p><h2 class="TermNum" style="text-align:left;" id="epoch_definition">4.5.&#xA0;<b>epoch</b></h2>
+
+
+<p id="_57e88c72-5a21-3348-1598-e0ca91c17dd3">&lt;geodesy&gt; point in time</p>
+
+
+
+
+
+
+ <div id="_7980e6f3-3992-9b1f-2725-3aa6784c7ae4" class="Note"><p>Note 1 to entry: In this document an epoch is expressed in the Gregorian calendar as a decimal year.</p></div><p class="SourceTitle" style="text-align:center;">Example </p><div id="_f302d968-207b-5fb9-ff29-37d924f44394" class="example"><p id="_ec1ec154-93f1-f1ae-bdde-b2c47f74f8e3">2017-03-25 in the Gregorian calendar is epoch 2017.23.</p>
+</div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p><h2 class="TermNum" style="text-align:left;" id="reference-frame_definition">4.6.&#xA0;<b>reference frame</b></h2><p class="AltTerms">datum&#xA0;<span class="AdmittedLabel">ADMITTED</span></p>
+
+
+
+<p id="_17c9d023-0d8b-246b-4ff0-b66f1c0455e9">parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <a href="#coordinate-system_definition">coordinate system</a></p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p><h2 class="TermNum" style="text-align:left;" id="temporal-coordinate-refrence-system_definition">4.7.&#xA0;<b>temporal coordinate reference system</b></h2>
+<p id="_66d6eac0-6466-37ce-c340-df107a8c0dff"><a href="#coordinate-reference-system_definition">coordinate reference system</a> based on a <a href="#temporal-datum_definition">temporal datum</a></p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p><h2 class="TermNum" style="text-align:left;" id="temporal-coordinate-system_definition">4.8.&#xA0;<b>temporal coordinate system</b></h2>
+
+
+<p id="_e157e368-ac10-8221-808e-a0fec3b708ed">&lt;geodesy&gt; one-dimensional <a href="#coordinate-system_definition">coordinate system</a> where the axis is time</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p><h2 class="TermNum" style="text-align:left;" id="temporal-datum_definition">4.9.&#xA0;<b>temporal datum</b></h2>
+<p id="_6f8432b9-43f6-4f51-3ed7-b2fb2b00f357"><a href="#datum_definition">datum</a> describing the relationship of a <a href="#temporal-coordinate-system_definition">temporal coordinate system</a> to an object</p>
+
+
+
+
+ <div id="_c4553ca8-f123-b2ef-6da3-df16e1f6c435" class="Note"><p>Note 1 to entry: The object is normally time on the Earth.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p></div>
+      <div id="_conventions">
+        <h1 id="toc11">5.&#xA0; Conventions</h1>
+        <div id="_abbreviations"><h2 id="toc12">5.1.&#xA0; Abbreviated terms</h2>
+
+<dl id="_e088b929-8537-28a1-9809-c66165d53510"><dt id="symbol-crs"><p>CRS</p></dt><dd><p id="_6d00f3bc-433f-d91c-1d72-e9c05ab611fa">Coordinate Reference System</p>
+</dd><dt id="symbol-trs"><p>TRS</p></dt><dd><p id="_0f95cf87-0a0a-3d84-f92e-d0e6e57c808f">Temporal Reference System</p>
+</dd><dt id="symbol-uml"><p>UML</p></dt><dd><p id="_01188723-f5b8-8122-b88b-d4c8be720757">Unified Modelling Language</p>
+</dd><dt id="symbol-_2d"><p>2D</p></dt><dd><p id="_00591dc6-4b23-02ca-1d70-cb7fc0d8f2c1">2-dimensional</p>
+</dd><dt id="symbol-_3d"><p>3D</p></dt><dd><p id="_d0850370-e9f2-2dc6-5d60-26061e3d24c1">3-dimensional</p>
+</dd></dl>
+</div>
+        <div id="_identifiers"><h2 id="toc13">5.2.&#xA0; Identifiers</h2>
+
+<p id="_2005254c-9463-cbb5-bf8f-77094eaff6c9">The normative provisions in this standard are denoted by the URI:</p>
+
+<p id="_f0191874-4eeb-2c92-18f2-f1367cf61a60"><tt><a href="http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0">http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0</a></tt></p>
+
+<p id="_52250454-5ac3-4fce-7c83-eb454adf6103">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p>
+</div>
+      </div>
+      <div id="_characteristics_of_an_abstract_conceptual_model">
+        <h1 id="toc14">6.&#xA0; Characteristics of an Abstract Conceptual Model</h1>
+        <p id="_877ab55f-db0f-7610-2f70-3f2a9c5d5156">The terms and definitions clause in this Abstract Specification provides a short definition for &#x201C;conceptual model&#x201D;. This clause provides additional information on the OGC use of &#x201C;conceptual model&#x201D;.</p>
+        <p id="_bdf9daf5-ca0a-696a-88f0-77e30ae40663">A conceptual model organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain. The aim of a conceptual model is to express the meaning of terms and concepts used by domain experts to discuss the problem, and to find the correct relationships between different concepts.</p>
+        <p id="_587dd289-ef66-042d-499d-7114e12ba1bd">A conceptual model:</p>
+        <ol type="1" id="_d700c936-b461-fee0-374e-4ce91fed70d6"><li><p id="_8e02fb28-bd18-76a7-b461-339f72f0f55d">is a representation of a system, made of the composition of concepts which are used to help people know, understand, or simulate a subject the model represents. A documented conceptual model represents &#x2018;concepts&#x2019; (entities), the relationships between them, and a vocabulary;</p>
+</li>
+<li><p id="_7a45c1a6-7c2f-1641-5988-8dc5034c3eb8">is explicitly defined to be independent of design or implementation concerns;</p>
+</li>
+<li><p id="_59354654-4a26-040a-578e-4263135e60b3">organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain;</p>
+</li>
+<li><p id="_6bd61d45-3081-83d6-bcbe-92c39cf1a079">starts with a glossary of terms and definitions. There is a very high premium on high-quality, design-independent definitions, free of data or implementation biases; the model also emphasizes rich vocabulary; and</p>
+</li>
+<li><p id="_5fe452c2-ef4b-508c-e6ab-d69ea797264a">is always about identifying the correct choice of terms to use in communications, including statements of rules and requirements, especially where high precision and subtle distinctions need to be made. The core concepts of a temporal geospatial problem domain are typically quite stable over time.</p>
+</li>
+</ol>
+      </div>
+      <div id="_temporal_abstract_conceptual_model">
+        <h1 id="toc15">7.&#xA0; Temporal Abstract Conceptual Model</h1>
+        <p id="_2ad07633-2fce-1d19-5e66-d98db7e0c6e7">This attempt at a Temporal Abstract Conceptual Model follows <a href="#iso19111">ISO 19111</a>, which is the ISO adoption of <a href="#ogc18005">OGC_18-005r4</a>.</p>
+        <p id="_f60494e3-ec35-ae9a-1b6c-78a7608242a5">The model is also informed by the <a href="#w3cowltime">W3C Time Ontology</a>.<div id="_d5cd9626-5482-156e-ffaa-d6835c12f4dc" class="Note"><p><span class="note_label">NOTE</span>&#xA0; This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
+the Mermaid container with the following.</p></div></p>
+        <p id="_9b55cc4b-2a0c-995d-ff79-7aac45dfc5d4">
+          <tt>[plantuml] @startuml . . @enduml</tt>
+        </p>
+        <pre id="_bd9f266c-1408-651d-d32f-79293bb08e08" class="prettyprint ">classDiagram<br />class ReferenceSystem {<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &lt;&lt;abstract&gt;&gt;<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; dimension = 1..*<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; applicableLocationTimeOrDomain<br />&#xA0;&#xA0;&#xA0; }<br />class SpatialReferenceSystem {<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &lt;&lt;abstract&gt;&gt;<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; dimension = 1..*<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; applicableLocationTimeOrDomain<br />&#xA0;&#xA0;&#xA0; }<br />class TemporalReferenceSystem {<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &lt;&lt;abstract&gt;&gt;<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; dimension = 1<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; applicableLocationTimeOrDomain<br />&#xA0;&#xA0;&#xA0; }<br />note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"<br />ReferenceSystem &lt;|-- SpatialReferenceSystem : is a<br />ReferenceSystem &lt;|-- TemporalReferenceSystem : is a<br />class OrdinalTemporalReferenceSystem {<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; dimension = 1<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; applicableLocationTimeOrDomain<br />&#xA0;&#xA0;&#xA0; }<br />class TemporalCoordinateReferenceSystem {<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; dimension = 1<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; applicableLocationTimeOrDomain<br />&#xA0;&#xA0;&#xA0; }<br />class Calendar {<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; dimension = 1<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; applicableLocationTimeOrDomain<br />&#xA0;&#xA0;&#xA0; }<br />note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"<br />TemporalReferenceSystem &lt;|-- OrdinalTemporalReferenceSystem : is a<br />TemporalReferenceSystem &lt;|-- TemporalCoordinateReferenceSystem : is a<br />TemporalReferenceSystem &lt;|-- Calendar : is a<br /><br />OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of<br />OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an<br />OrdinalTemporalReferenceSystem "1" --&gt; "1..*" Notation : can use<br />TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an<br />TemporalCoordinateReferenceSystem "1" --&gt; "1..*" Notation : can use<br />TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a<br />Calendar "1" o-- "0..1" Epoch : has an<br />Calendar "1" --&gt; "1..*" Notation : can use<br />Calendar "1" o-- "1..*" Timescale : has a<br />Calendar "1" o-- "1..*" Algorithm : has a<br />class Timescale {<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; StartCount<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; EndCount<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; arithmetic<br />&#xA0;&#xA0;&#xA0; }<br />Timescale "1" o-- "1" Clock : has a<br />Timescale "1" o-- "1" UnitOfMeasure : has a<br />class Clock {<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Tick definition<br />&#xA0;&#xA0;&#xA0; }<br />class UnitOfMeasure {<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Direction<br />&#xA0;&#xA0;&#xA0; }</pre>
+        <p class="SourceTitle" style="text-align:center;">Figure 1</p>
+      </div>
+      <div id="_temporal_regimes">
+        <h1 id="toc16">8.&#xA0; Temporal regimes</h1>
+        <div id="_general"><h2 id="toc17">8.1.&#xA0; General</h2>
+
+<p id="_43deda51-9ee4-195f-a234-e807896a57d5">To help us think more clearly about time, this paper adopts the term &#x201C;Regime&#x201D; to describe the fundamentally different types of time and its measurement under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical components.</p>
+
+<p id="_9c2e9cc8-11cd-48f1-c452-5104c6388442">The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, of calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.</p>
+
+<p id="_5e95e7ca-606a-34ef-3bc4-6499e2c430d9">The regimes are applicable to other planets and outer space, but with due consideration.</p>
+</div>
+        <div id="_events_and_operators"><h2 id="toc18">8.2.&#xA0; Events and Operators</h2>
+
+<p id="_77f88e40-d33e-91b5-fd9f-755deb07968a">The simplest way of relating entities in time is by events that can be ordered, that is, established in a sequence, and this sequence is used as an approximate measure of the passage of time.</p>
+
+<p id="_9aee3891-7e3b-83ca-ea37-6acb862bf853">In this regime, no clocks or time measurements are defined, only events, that are ordered in relation to each other. For example, geological layers, sediment or ice core layers, archaeological sequences, sequential entries in computer logs without coordinated time.</p>
+
+<p id="_ffe4727f-afd5-0298-1b74-057a6fb99a10">One set of events may be completely ordered with respect to each other, but another set of similar internally consistent events cannot be cross-referenced until extra information is available. Even then, only partial orderings may be possible.</p>
+
+<p id="_eca69697-c458-3c10-85c4-fd9ac023e074">In this regime, the <a href="#temporal-knowledge">Allen Operators</a> can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform arithmetic operations like (B-A) or (C-A) as we have not defined any timescale or measurements. For example, in geology, &#x2018;subtracting&#x2019; Ordovician from Jurassic is meaningless; or in archeology, &#x2018;subtracting&#x2019; a layer with a certain type of pottery remains from the layer containing burnt wood and bones is again not meaningful. Only the ordering can be deduced.</p>
+
+<p id="_03e2e22e-0e50-ed41-8cf1-599ce108894c">This regime constitutes an Ordinal Temporal Reference System, with discrete enumerated ordered events.</p>
+</div>
+        <div id="_simple_clocks_and_discrete_timescales"><h2 id="toc19">8.3.&#xA0; Simple Clocks and Discrete Timescales</h2>
+
+<p id="_478b1e98-a96b-e3fe-fef4-f86c2d145e23">In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth&#x2019;s rotation about sun, earth&#x2019;s rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each &#x2018;tick&#x2019;. A mechanism for counting, or possibly measuring, the ticks is desirable.</p>
+
+<p id="_e503649e-4d18-3502-693b-15bad9f835fe">It is an assumption that the ticks are regular and homogeneous.</p>
+
+<p id="_f4989ebd-71e1-a6df-08c3-cf3ff1bc27b1">There is no sub-division between two successive clock ticks. Measuring time consists of counting the complete number of repetitions of ticks since the clock started, or since some other event at a given clock count.</p>
+
+<p id="_a3d88829-1b41-2de2-3168-ab2a0a4aad5c">There is no time measurement before the clock started, or after it stops.</p>
+
+<p id="_668cd760-6574-74a9-0fbf-6e9938df1640">It may seem that time can be measured between &#x2018;ticks&#x2019; by interpolation, but this needs another clock, with faster ticks. This process of devising more precise clocks continues down to the atomic scale, and then the deterministic process of physically trying to interpolate between ticks is not possible.</p>
+
+<p id="_410b2c2a-4f5a-b5c7-9dfc-5fe7472ffb78">The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differing altitudes and temperatures.</p>
+
+<p id="_13be9b5d-ee86-fa64-aeb7-dea278c66c5f">In this regime, the <a href="#temporal-knowledge">Allen Operators</a> also can be used. If L occurs before M and M occurs before N, then we can correctly deduce that L occurs before N. The full set of operators also covers pairs of intervals. So if M occurs in the interval (L,N), we can now perform integer arithmetic operations like (M-L) or (N-L) as we have defined an integer timescale or measurement.</p>
+
+<p id="_8ce54d30-561b-05cf-d886-c90fee632ad7">This regime constitutes a Temporal Coordinate Reference System, with discrete integer units of measure which can be subject to integer arithmetic.</p>
+</div>
+        <div id="_crs_and_continuous_timescales"><h2 id="toc20">8.4.&#xA0; CRS and Continuous Timescales</h2>
+
+<p id="_657a393b-a045-d842-a02d-a583e5789e64">This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device. Units of Measure may be defrined that are different from the &#x2018;ticks&#x2019;. For example, a second may be defined as 9,192,631,770 vibrations of the ground-state hyperfine transition of the caesium 133 atom. Alternatively and differently, a second may be defined as 1/86400th of the toataion of the earth on its axis with respect to the sun. The count of rotations are the &#x2018;ticks&#x2019; of an earth-day clock. This latter definition is not precise enough for many uses, as the rotaion of the earth on its axis varies from day to day.</p>
+
+<p id="_5cc8fe7b-ac6f-6af8-5cb9-7b05c09cc7a7">Alternatively, it may be that the ticks are not counted but measured, and the precision of the clock is determined by the precision of the measurements, such as depth in an ice core, or angular position of an astronomical body,such as the sun, moon or a star.</p>
+
+<p id="_81eba1d0-ef0a-9cb1-b35c-d421e8237741">It is also assumed that time can be extrapolated to before the time when the clock started and into the future, possibly past when the clock stops.</p>
+
+<p id="_889702a7-c112-b2e3-f2b1-a6ba83417591">This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (a name for the &#x2018;tick marks&#x2019; on the axis), positive and negative directions and the full range of normal arithmetic. It is a Coordinate Reference System.</p>
+
+<p id="_4d8a5e82-6b72-8e41-6330-779df3b98216">In this regime, the <a href="#temporal-knowledge">Allen Operators</a> also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform real number arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement, and between any two instants, we can always find an infinite number of other instants.</p>
+
+<p id="_2926b475-98d6-1e3f-f525-4f8ba83fdb9c">Some examples are:</p>
+
+<ul id="_5d079a7d-6275-b154-08a1-336d50d305d3"><li><p id="_52e558d8-9ff1-3ce1-fe46-d620bda78d58">Unix milliseconds since 1970-01-01T00:00:00.0Z</p>
+</li>
+<li><p id="_ebc704d4-ec31-7e3e-c1a3-63478d681c03">Julian Days, and fractions of a day, since noon on 1st January, 4713 BCE.</p>
+</li>
+</ul>
+
+<p id="_3c59cc86-684d-d568-25a8-1be06c6bc4db">This regime constitutes a Temporal Coordinate Reference System, with a continuous number line and units of measure, which can be subject to the full range of real or floating point arithmetic.</p>
+</div>
+        <div id="_calendars"><h2 id="toc21">8.5.&#xA0; Calendars</h2>
+
+<p id="_31941900-db58-2362-0d76-4578095231b8">In this regime, counts and measures of time are related to the various combinations of the rotations of the earth, moon and sun or other astronomical bodies. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE &#x2013; Year 12CE is a duration of 2 years, and Year 12BCE&#x2009;&#x2014;&#x2009;Year 14BCE is also two years. However Year 1CE&#x2009;&#x2014;&#x2009;Year 1BCE is one year, not two as there is no year 0CE or 0BCE.</p>
+
+<p id="_f91d6d0d-486d-ba31-017a-d6a372158d11">Calendars are social constructs made by combining several clocks and their associated timescales.</p>
+
+<p id="_47bef48d-903a-cafa-32f3-b9d7e3f330ae">This paper only addresses the internationally agreed Gregorian calendar. <a href="#astro_algo">Astronomical Algorithms</a> by Jean Meeus provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.</p>
+
+<p id="_6ec58f6a-1e02-e223-68bf-0902afbc32f8">A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.</p>
+</div>
+        <div id="_other_regimes"><h2 id="toc22">8.6.&#xA0; Other Regimes</h2>
+
+<p id="_02e07110-55ed-bd46-ecbd-5f7810b2bb62">There are other regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time.</p>
+
+<div id="_local_solar_time"><h3>8.6.1.&#xA0; Local Solar Time</h3>
+
+<p id="_9269713f-6998-e557-fb84-e139cbe2ebc8">Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.</p>
+</div>
+
+<div id="_space_time"><h3>8.6.2.&#xA0; Space-time</h3>
+
+<p id="_3471da32-4c69-e809-301e-0af849830866">When dealing with moving objects, we find that the location of the object in space depends on its location in time. That is to say, that the location is an event in space and time.</p>
+
+<p id="_4263031e-42e1-76ee-ad4c-09f3ed1429da">Originally developed by <a href="#minkowski">Hermann Minkowski</a> to support work in Special Relativity, the concept of Space-time is useful whenever the location of an object in space is dependent on its location in time.</p>
+
+<p id="_e4186145-e0c3-81ea-6ab8-31c77129eba4">Since the speed of light in a vacuum is a measurable constant, Space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axis all with the same units of measure, distance.</p>
+</div>
+
+<div id="_relativistic"><h3>8.6.3.&#xA0; Relativistic</h3>
+
+<p id="_45847b36-4835-d2f9-83e7-c250cbcef856">A regime may be needed for &#x2018;space-time&#x2019;, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects such as gravity may be relevant.</p>
+
+<p id="_1f5a869c-0c66-5b2b-df30-78e86ddbd57f">Once off the planet Earth, distances and velocities can become very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of Space-time events as measured between two moving objects. The core concepts are the <a href="#lorentz_transform">Lorentz Transforms</a>. These transforms allow one to calculate the degree of &#x201C;contraction&#x201D; a measurement undergos due to the relative velocity between the observing and observed object.</p>
+
+<p id="_cf49872e-cd2b-b129-ec03-ba9b1c254e96">The key to this approach is to ensure each moving feature of interest has its own local clock and time, known as its &#x2018;proper time&#x2019;. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.</p>
+
+<p id="_d414c399-f201-0d08-5ec0-0b839f0fb08f">Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth&#x2019;s gravity well.</p>
+
+<p id="_40790ecd-58a9-88bb-8a0e-3e500c84eac8">The presence of gravitational effects requires special relativity to te replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras&#x2019; Theorem does not hold execept locally over small areas. this is somewhat unfamiliar territory for geospatial experts.</p>
+</div>
+
+<div id="_accountancy"><h3>8.6.4.&#xA0; Accountancy</h3>
+
+<p id="_7aaf1ef8-69c4-d498-0323-a489ff433178">The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.</p>
+</div>
+</div>
+      </div>
+      <div id="_notation">
+        <h1 id="toc23">9.&#xA0; Notation</h1>
+        <p id="_a1f8a5ae-f6ed-c1c8-d4fd-91d651504ccf">There are often widely agreed, commonly accepted, notations used for temporal reference systems, but few have been standardised. Any particular notation may be capable of expressing a wider range of times than are valid for the reference system.</p>
+        <p class="SourceTitle" style="text-align:center;">Example </p>
+        <div id="_6e5872bf-58ca-e356-e461-891ffbd08bc2" class="example"><p id="_dfbd8aee-6379-57d1-9bc3-b80d72b016cf">The <a href="#rfc3339">IETF RFC 3339</a> timestamp notation, a restrictive profile of <a href="#iso8601">ISO 8601</a>, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.</p>
+</div>
+      </div>
+      <div id="_attributes_of_the_regimesclasses">
+        <h1 id="toc24">10.&#xA0; Attributes of the Regimes/Classes</h1>
+        <p id="_4369da23-fda5-baf5-1480-5ea739fa1cce">The top level <tt>Reference System</tt> is an abstract super-class and does not have many attributes or properties. So far, only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.</p>
+        <p id="_faeed31e-520b-cd2a-920a-494b9970b011">The &#x2018;ReferenceSystem&#x2019; has two abstract sub-classes: &#x2018;SpatialReferenceSystem&#x2019; , which is defined in <a href="#iso19111">ISO 19111</a>, and &#x2018;TemporalReferenceSystem&#x2019;, each with the attributes of Dimension and Domains of Applicability.</p>
+        <p id="_8c375185-71f1-f4c9-40be-e830b8d5e99e">The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location with orientation.</p>
+        <p id="_174f69a4-09cd-5d6f-d00b-ccecf957031d">Besides the conventional space and time, there may be other reference systems, such as wavelength/frequency, that can be addressed by the Abstract Conceptual Model.</p>
+        <div id="_attributes_of_events_and_ordinal_temporal_reference_systems"><h2 id="toc25">10.1.&#xA0; Attributes of Events and Ordinal Temporal Reference Systems</h2>
+
+<ol type="1" id="_d7bd60af-6c9d-e1d5-e3f1-0155c1dc80bb"><li><p id="_51f08bac-0c81-9c36-6ea1-1f4baca2bdff">An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can b e compared.</p>
+</li>
+<li><p id="_e1777fa1-f4a8-318e-4767-f1a456a21234">Name/Id</p>
+</li>
+<li><p id="_da3cb84d-5c7d-aa8f-daf1-6ce95d385e77">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_7bbfb100-d969-5d41-c942-d1aeb9f3f93a">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_71a0b08c-3cc4-a7da-809c-c2695b6a4284">Listed or enumerated sequence of events with the first and last events</p>
+</li>
+<li><p id="_24054968-1486-57ab-e7eb-19c1ed45ed70">Optional notations</p>
+</li>
+</ol>
+
+<p class="SourceTitle" style="text-align:center;">Example </p><div id="_a7a734ec-d041-a28f-cbff-5d4c21fdc75b" class="example"><p id="_27de2046-4274-0c15-c5fc-0e6561b4a393">Ancient annals of a country may give a sequence of emperors which could be used to &#x2018;date&#x2019; another event such as &#x201C;Emperor Xi built a canal&#x201D;, or may be used to date a particular reign. For example: &#x201C;In the reign of Emperor Yi, a comet was sighted&#x201D; and later research identifies this as an appearance of Hailey&#x2019;s Comet.</p>
+</div>
+
+<p id="_3cf86be9-1bfb-3556-f2ed-1b172111cacb">The events from the list may be instants, such as the change of reign, or intervals, such as the complete reign of each king.</p>
+
+<p id="_e6d5b234-7597-ba3a-441e-da5ee26ac60c">Other documents may enable two such &#x2018;king lists&#x2019; to be related, though not completely.</p>
+</div>
+        <div id="_attributes_of_simple_clock_and_discrete_timescale"><h2 id="toc26">10.2.&#xA0; Attributes of simple Clock and Discrete Timescale</h2>
+
+<p id="_230cdf7c-c92d-67b2-d736-24f20e447db7">A clock is a regular, repeating, physical event, or &#x2018;tick&#x2019;, that can be counted. The sequence of tick counts is a timescale. The ticks may be grouped into a Unit of Meaure for convenience. Other events can be compared to the ticks on the timescale.</p>
+
+<ol type="1" id="_134b4bcc-a92b-2cdb-5480-f957d49fd7fa"><li><p id="_ecf2056f-585b-4c44-fc43-2ad63fd0ba84">Name/Id</p>
+</li>
+<li><p id="_ac60fea3-bd11-2362-2109-ff679aedc35f">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_d4ad1223-6901-ac8f-b79c-7129898a96d0">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_e2002e78-a3ca-f691-5fb1-b58fd93fe2d5">Arithmetic: Integer</p>
+</li>
+<li><p id="_b22a3cb0-8a18-2ffe-2a02-9eaafbf11615">Optional name for each tick</p>
+</li>
+<li><p id="_71247ba6-4b18-52d0-7738-67d2f15b1ee8">Optional Start time or count</p>
+</li>
+<li><p id="_9b399029-db38-5602-1cc4-3e0fa11307bf">Optional End time or count</p>
+</li>
+<li><p id="_b97fea60-327f-b09d-12ca-eb257a7bc5e6">Optional Unit of Measure and number of ticks per Unit</p>
+</li>
+<li><p id="_4208534a-4eef-4589-1b10-de1d31e9238d">Optional notations</p>
+</li>
+</ol>
+
+<p class="SourceTitle" style="text-align:center;">Example  1</p><div id="_6c85c53b-3727-1244-c393-70fc10b39895" class="example"><p id="_a6b3fb2f-ee5b-93be-31c2-26752c4d3354">A well preserved fossilised log is recovered and the tree rings establish an annual &#x2018;tick&#x2019;. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.</p>
+</div>
+
+<p class="SourceTitle" style="text-align:center;">Example  2</p><div id="_8293dd43-c132-44ae-60ee-0369d87c8be5" class="example"><p id="_2edb467b-692c-6d74-d827-744fbb113e0f">A clock is started, but undergoes a calibration process against some standards clock, so the initial, reliable Start Time does not start at Count Zero. The clock is accidentially knocked so that it is no longer correctly caliabrated, but is still working. the End Time is not the last time that the clock ticks.</p>
+</div>
+</div>
+        <div id="_attributes_of_clocks"><h2 id="toc27">10.3.&#xA0; Attributes of Clocks</h2>
+
+<ol type="1" id="_c1bc5f17-8f87-1322-5b14-271032e544a9"><li><p id="_4dd4105b-3ca4-6832-714c-e84bda0ec8c7">Name/Id</p>
+</li>
+<li><p id="_663d0d42-66b7-1441-dfc4-b7681f12c36e">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_794aae8e-9949-7a7c-d5a7-4244f51f18ef">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_3ee24134-a924-9081-333b-106fdb12809e">Tick definition</p>
+</li>
+</ol>
+
+<p class="SourceTitle" style="text-align:center;">Example  1</p><div id="_4d3b2d51-2ac0-6399-07a6-2169c33738a2" class="example"><p id="_b8cba433-532a-d6b5-3225-efab5274a3c7">An atomic clock may be calibrated to be valid only for a given temperature range and altitude.</p>
+</div>
+
+<p class="SourceTitle" style="text-align:center;">Example  2</p><div id="_22890e32-a86d-7530-ac2e-173d0a7916ec" class="example"><p id="_9a6fa6de-7cc8-5581-e001-aec80cc4f3f9">A pendulum clock may have each tick os swing of the pendulum adjusted to be an exace fraction or multiple of a second. The famous London &#x201C;Big Ben&#x201D; clock&#x2019;s pendulum is 4.4m long and ticks every two seconds.</p>
+</div>
+</div>
+        <div id="_attributes_of_timescales"><h2 id="toc28">10.4.&#xA0; Attributes of Timescales</h2>
+
+<ol type="1" id="_f3d000b0-7ffb-5d52-42e8-49a447286fe5"><li><p id="_83ef205f-6f64-c29d-e9d9-e9fb785f3155">Name/Id</p>
+</li>
+<li><p id="_7b8a8306-1b19-2171-74ad-b8c0a331cc94">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_d27fc3ed-d850-85e4-672e-6f696c7b46f9">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_c63a4e7c-c210-f9b4-9400-582752d76aeb">Arithmetic, whether counted integers or measured real/floating point numbers</p>
+</li>
+<li><p id="_90bae73c-b6b8-cf7e-b941-7e172ee277f1">Optional Unit of Measure</p>
+</li>
+</ol>
+
+<p class="SourceTitle" style="text-align:center;">Example  1</p><div id="_6172032e-a879-4898-b313-aee5e8dcdf08" class="example"><p id="_5f8076ea-6018-f4cd-9585-04db95bce4a5">TAI (International Atomic Time, Temps Atomique International) is coordinated by the <a href="#bipm_define">BIPM</a> (International Bureau of Weights and Measures, Bureau International de Poids et Measures) in Paris, France. It is based on the average of hundreds of separate atomic clocks around the world, all corrected to be at mean sea level and standard pressure and temperature. The epoch is defined by Julian Date 2443144.5003725 (1 January 1977 00:00:32.184).</p>
+</div>
+
+<p class="SourceTitle" style="text-align:center;">Example  2</p><div id="_2a0b5766-066e-5650-1766-8aa18ba9135d" class="example"><p id="_04ad8472-e98d-2695-d704-3a2e3e534c54">The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as &#x201C;Period 2&#x201D;. Many computer based timescales, such as <a href="#unix_time">Unix Time</a>, are based on the Julian Day timescale, but with different epochs, to fit the numbers into the limited computer words.</p>
+</div>
+</div>
+        <div id="_attributes_of_units_of_measure"><h2 id="toc29">10.5.&#xA0; Attributes of Units of Measure</h2>
+
+<p id="_0c668b50-1071-3f44-300d-75b13e0ccc96">The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of &#x2018;Timescale&#x2019; of &#x2018;TemporalCoordinateReferenceSystem&#x2019; rather than a separate class &#x2018;UnitOfMeasure&#x2019;, but on balace, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in NPs (HectoPascals) decreasing upwards, and FL (FlightLevel) incresing upwards.</p>
+
+<ol type="1" id="_7c5403cd-b41a-16aa-26f6-1dfdf7f4333d"><li><p id="_26c8cd80-90b0-3047-b49f-98a5fbf0b7bb">Name/Id/Abbreviation</p>
+</li>
+<li><p id="_a408c6c1-1349-6dff-ac17-79897cf95d91">Direction</p>
+</li>
+</ol>
+
+<p class="SourceTitle" style="text-align:center;">Example </p><div id="_760d8fee-0868-979d-1498-deb037179c8b" class="example"><p id="_fb9fe1e1-76fc-b202-2d7e-091915b1d576">The number of years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of years in the Current Era (CE, previously known as AD) increase further into the future. Tis is an example of two timescales, adjacent but with no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.</p>
+</div>
+</div>
+        <div id="_attributes_of_a_crs_and_continuous_timescales"><h2 id="toc30">10.6.&#xA0; Attributes of a CRS and Continuous Timescales</h2>
+
+<p id="_10e80d3a-6bcd-5a8f-0572-2b02564c0ce6">Some clocks allow the measurement or intervals between ticks, such as the movement of the sun across the sky. Alternatively, the ticks may not be completely distinguishable, but are still stable enough over the time of applicability to allow measurements rather than counting to determine the passage of time.</p>
+
+<ol type="1" id="_b85bce34-a1f3-f491-c4c6-641312064d38"><li><p id="_ab876de0-b03c-ae45-71e3-95882fcc5fb1">Name/Id</p>
+</li>
+<li><p id="_2a90a61f-ed7e-b9ca-d0d2-6267c3d418ea">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_1c9a099f-d180-b0cd-d094-283fa0072352">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_3124eeb9-39ec-93ec-8003-20e2430573ac">Arithmetic: Real/Floating point</p>
+</li>
+<li><p id="_36827421-1e10-c4f7-721e-73722cf6cb6c">Optional name for the Unit of Measure</p>
+</li>
+<li><p id="_acbb0f4b-3269-6ce5-eb06-37abeb64bc87">Optional Start time or measure</p>
+</li>
+<li><p id="_bc2507af-b2f5-8137-82f5-a7f12bc878c0">Optional End time of measure</p>
+</li>
+<li><p id="_36ad5875-4255-73c0-748f-e6fd91fa9bf3">Optional notations</p>
+</li>
+</ol>
+
+<p class="SourceTitle" style="text-align:center;">Example  1</p><div id="_ca3d8b07-b484-e6f0-56f4-fc2be0f14570" class="example"><p id="_e58a595e-b3eb-de97-a031-b09100a2fb2d">A long, deep ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.</p>
+</div>
+
+<p class="SourceTitle" style="text-align:center;">Example  2</p><div id="_b0551f1f-47b8-53ef-9b3f-9ef778c76e2a" class="example"><p id="_bc2824c5-57e6-ce3d-5081-46a58ea876b6">A long, deep, sediment core is extracted from the bottom of a lake with a long geological history. Two layers in the core are dated using radiocarbon dating. Assuming steady rates of sediment deposition, a continuous timescale can be interpolated between the dated layers, and extrapolated before and after the dated layers.</p>
+</div>
+</div>
+      </div>
+      <div id="_attributes_of_calendars">
+        <h1 id="toc31">11.&#xA0; Attributes of Calendars</h1>
+        <p id="_759835eb-c9e3-16f5-4254-4bdc4e1207cb">Calendars combine different timescales and their clocks and unito of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timescale are identified and labeled.</p>
+        <ol type="1" id="_a1c4b9ce-8419-e339-156f-61929d1fece9"><li><p id="_f9108a97-8a4f-85a7-29e5-755fe30ad280">Name/id</p>
+</li>
+<li><p id="_5fc3b430-ad4a-6c3d-21eb-b2b6a105d4ec">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_6919d7e6-7407-fc51-2b4b-249cba8a73d4">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_238cce87-03f2-15d3-7e7c-b244d574ba08">Astronomical Type (e.g. solar, sidereal, lunar, luni-solar)</p>
+</li>
+<li><p id="_70c2f03c-458d-63fa-a207-51ded4efa395">Predictive type (e.g. observed or calculated)</p>
+</li>
+<li><p id="_fb9cfdc7-0e29-4397-aea5-d9be90072451">Optional Start time</p>
+</li>
+<li><p id="_30576aa3-b1f9-66bc-55c6-ab0aad904a72">Optional End time</p>
+</li>
+<li><p id="_78998608-dabe-c982-e8bb-09db0af7758b">Constituent units or clocks and counts or timescales</p>
+</li>
+<li><p id="_c86be860-69eb-dac9-4595-ab815bf1b8d5">Algorithms to link constituent timescales</p>
+</li>
+<li><p id="_9fefe9c9-a75c-6246-a5f0-18a89965b7b1">Optional notations</p>
+</li>
+</ol>
+        <p class="SourceTitle" style="text-align:center;">Example  1</p>
+        <div id="_c471117b-d9ea-b01e-b0bb-35d78f653357" class="example"><p id="_06979fb5-0092-3bd0-1f29-3708ffeed95f">The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.</p>
+</div>
+        <p id="_7218e2dd-ba06-aa90-28ec-5e8f862d1cdc">The constituent timescales are days (earth&#x2019;s rotations), months (moon&#x2019;s orbit around the earth), years (earth&#x2019;s orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <a href="#iso8601">ISO 8601</a> and its various restrictive profiles.</p>
+        <p class="SourceTitle" style="text-align:center;">Example  2</p>
+        <div id="_decf7c35-d788-fcbb-c7f4-9dd3405a0e8c" class="example"><p id="_8b390a79-e751-43f5-b6b8-c6cbfadb70b3">The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.</p>
+</div>
+        <p class="SourceTitle" style="text-align:center;">Example  3</p>
+        <div id="_e2331d7e-972d-6c3e-9e20-7a887d8faeb9" class="example"><p id="_5f2a3bfc-fceb-10f9-2ea3-3a4338b16ef8">The modern Jewish calendar is a calculated luni-solar calendar, and discrepancies in the solar year are addressed by adding &#x2018;leap months&#x2019; every few years.</p>
+</div>
+        <p class="SourceTitle" style="text-align:center;">Example  4</p>
+        <div id="_dd334faa-d004-7fa4-0054-075d7a238b79" class="example"><p id="_d5664e53-c908-9964-6336-7235851a1c11">The Ba&#x2019;hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday.</p>
+</div>
+        <p class="SourceTitle" style="text-align:center;">Example  5</p>
+        <div id="_2b77fd3b-e7cb-5008-700d-31fee25bba8c" class="example"><p id="_c1e0e199-3719-b17c-634c-f2fe2097c5ad">The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in the grasslands of north-west Cameroun.</p>
+</div>
+        <p class="SourceTitle" style="text-align:center;">Example  6</p>
+        <div id="_2c7f7d86-c367-6920-0e32-8a51251f2873" class="example"><p id="_70c7fc32-8b46-a1d4-87d6-7daf8720ee04">Teams controlling remote vehicles on Mars use a solar calendar, with Martian years and martian days (called sols). Months are not used because there are two moons, with different, rather short, orbital periods.</p>
+</div>
+      </div>
+      <div id="_synchronisation_of_clocks">
+        <h1 id="toc32">12.&#xA0; Synchronisation of clocks</h1>
+        <p id="_df5cfa6f-8da5-e1e8-f7bb-1beeef27896a">If there are two or more clocks, stationary with respect to each other, and a practical method of communicating their times to each other, the clocks can be perfectly synchronized.</p>
+        <p id="_fb5eaaee-ba1f-8c14-3631-ecf1f9a79ff3">However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.</p>
+        <p id="_2e72aeca-6bcf-19c7-da28-5a5053616ed2">See <a href="#history_timekeeping">A Brief History of Timekeeping</a> page=&#x201D;187-191&#x201D;.</p>
+      </div>
+      <br />
+      <div id="_4127f684-aa60-d7dc-2794-e3fd865cd326" class="Section3">
+        <h1 class="Annex" id="toc33"><b>Annex A</b><br />(informative)<br /><b>Glossary</b></h1>
+        <div id="glossary"><p class="TermNum" style="text-align:left;" id="compound-coordinate-reference-system_definition">A.1.&#xA0;<b>compound coordinate reference system</b></p>
+<p id="_efd47019-c8ef-bc7d-f0ea-0818342acd21">coordinate reference system using at least two independent coordinate reference systems</p>
+
+
+
+
+ <div id="_81e94975-d37b-2f77-5164-ab86d2380b38" class="Note"><p>Note 1 to entry: Coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="coordinate_definition">A.2.&#xA0;<b>coordinate</b></p>
+<p id="_4c803190-19f2-65ca-cecc-d2072bae9c54">one of a sequence of numbers designating the position of a point</p>
+
+
+
+
+ <div id="_e275da9b-d3ea-4c9f-9b86-f9cc5635f3ee" class="Note"><p>Note 1 to entry: In a spatial coordinate reference system, the coordinate numbers are qualified by units.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="coordinate-epoch_definition">A.3.&#xA0;<b>coordinate epoch</b></p>
+<p id="_939017da-0997-2696-6fdb-308e5b6e3cc8">epoch to which coordinates in a dynamic coordinate reference system are referenced</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="derived-coordinate-reference-system_definition">A.4.&#xA0;<b>derived coordinate reference system</b></p>
+<p id="_19dc4a32-43b7-0a1b-4b4d-2816ff3c25e8">coordinate reference system that is defined through the application of a specified coordinate conversion to the coordinates within a previously established coordinate reference system</p>
+
+
+
+
+
+
+
+
+ <div id="_53962dd9-8be9-c198-6aec-ea14c05a9485" class="Note"><p>Note 1 to entry: The previously established coordinate reference system is referred to as the base coordinate reference system.</p></div><div id="_b2229c47-3dc5-f84f-51e8-9f72264a8225" class="Note"><p>Note 2 to entry: A derived coordinate reference system inherits its datum or reference frame from its base coordinate reference system.</p></div><div id="_21e68774-20e0-bf92-3b2d-86a12132718a" class="Note"><p>Note 3 to entry: The coordinate conversion between the base and derived coordinate reference system is implemented using the parameters and formula(s) specified in the definition of the coordinate conversion.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="dynamic-coordinate-reference-system_definition">A.5.&#xA0;<b>dynamic coordinate reference system</b></p>
+<p id="_40ab559c-4001-4043-3e50-aa5651ef30ee">coordinate reference system that has a dynamic reference frame</p>
+
+
+
+
+
+
+ <div id="_fae19e2c-431d-38a0-a448-c2c5a71e1170" class="Note"><p>Note 1 to entry: Coordinates of points on or near the crust of the Earth that are referenced to a dynamic coordinate reference system may change with time, usually due to crustal deformations such as tectonic motion and glacial isostatic adjustment.</p></div><div id="_e21888eb-067a-3446-a358-eefba2a9dbcf" class="Note"><p>Note 2 to entry: Metadata for a dataset referenced to a dynamic coordinate reference system should include coordinate epoch information.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="dynamic-reference-frame_definition">A.6.&#xA0;<b>dynamic reference frame</b></p><p class="AltTerms">dynamic datum&#xA0;<span class="AdmittedLabel">ADMITTED</span></p>
+
+
+
+<p id="_e919e9c5-014f-6200-1240-a07c6815c184">reference frame in which the defining parameters include time evolution</p>
+
+
+
+
+ <div id="_66d82f73-d80b-5549-be5a-bda44f77cf14" class="Note"><p>Note 1 to entry: The defining parameters that have time evolution are usually a coordinate set.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="enginering-coordinate-reference-system_definition">A.7.&#xA0;<b>engineering coordinate reference system</b></p>
+<p id="_a8bb649a-fd9a-f36f-ac7f-3f635f88cd05">coordinate reference system based on an engineering datum</p>
+
+
+
+
+
+
+ <p class="SourceTitle" style="text-align:center;">Example  1</p><div id="_d5f294a6-6c83-28ee-adf3-ae51cc8e39b6" class="example"><p id="_7621abf9-809b-5b85-5c59-d7d33673fa49">System for identifying relative positions within a few kilometres of the reference point, such as a building or construction site.</p>
+</div><p class="SourceTitle" style="text-align:center;">Example  2</p><div id="_87247b22-670c-8d9a-e5c0-c0902b8c437b" class="example"><p id="_02086279-ac76-e3c6-eedc-93da2596b4d6">Coordinate reference system local to a moving object such as a ship or an orbiting spacecraft.</p>
+</div><p class="SourceTitle" style="text-align:center;">Example  3</p><div id="_7180877e-f211-d633-e6d4-765364b0dfe1" class="example"><p id="_34ff6321-6976-339d-ba6d-efb9816554a1">Internal coordinate reference system for an image. This has continuous axes. It may be the foundation for a grid.</p>
+</div>
+
+<p class="TermNum" style="text-align:left;" id="engineering-datum_definition">A.8.&#xA0;<b>engineering datum</b></p><p class="AltTerms">local datum&#xA0;<span class="AdmittedLabel">ADMITTED</span></p>
+
+
+
+<p id="_25b8653b-e90c-d8a8-7287-21d088f9f830">datum describing the relationship of a coordinate system to a local reference</p>
+
+
+
+
+ <div id="_1f37ddef-7264-cfac-f7a7-09c44c7ef4f5" class="Note"><p>Note 1 to entry: Engineering datum excludes both geodetic and vertical reference frames.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="frame-reference-epoch_definition">A.9.&#xA0;<b>frame reference epoch</b></p>
+<p id="_c4d0ebda-ec11-6fd7-5d56-edc03af0174f">epoch of coordinates that define a dynamic reference frame</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="linear-coordinate-system_definition">A.10.&#xA0;<b>linear coordinate system</b></p>
+<p id="_b285bf20-d5d0-51ca-8cfa-12df48a5805d">one-dimensional coordinate system in which a linear feature forms the axis</p>
+
+
+
+
+
+
+ <p class="SourceTitle" style="text-align:center;">Example  1</p><div id="_a1bd1de3-3b7e-a3ec-a287-14c573821176" class="example"><p id="_9f514c55-b23c-070a-ba65-c1cdfcbbb284">Distances along a pipeline.</p>
+</div><p class="SourceTitle" style="text-align:center;">Example  2</p><div id="_7d4a4ff7-8ac1-fcfd-eee6-1e4e7dca219a" class="example"><p id="_61e030f6-53de-afeb-c947-b7f29f184938">Depths down a deviated oil well bore.</p>
+</div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="parameter-reference-epoch_definition">A.11.&#xA0;<b>parameter reference epoch</b></p>
+<p id="_5d2d473b-f82a-f8f8-c74c-dac58c15fa50">epoch at which the parameter values of a time-dependent coordinate transformation are valid</p>
+
+
+
+
+ <div id="_6d4a0782-137d-62a1-728d-f65c133f7775" class="Note"><p>Note 1 to entry: The transformation parameter values first need to be propagated to the epoch of the coordinates before the coordinate transformation can be applied.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="parametric-coordinate-reference-system_definition">A.12.&#xA0;<b>parametric coordinate reference system</b></p>
+<p id="_4ddc0155-cd26-f874-fc3b-74f8b10c1040">coordinate reference system based on a parametric datum</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="parametric-coordinate-system_definition">A.13.&#xA0;<b>parametric coordinate system</b></p>
+<p id="_5b15281f-1383-2f63-4644-2f553607e5de">one-dimensional coordinate system where the axis units are parameter values which are not inherently spatial</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="parametric-datum_definition">A.14.&#xA0;<b>parametric datum</b></p>
+<p id="_bafe606d-319f-4347-801a-d37f159b1165">datum describing the relationship of a parametric coordinate system to an object</p>
+
+
+
+
+ <div id="_a0a5628e-9173-0adc-767d-dfa97f9d5ec0" class="Note"><p>Note 1 to entry: The object is normally the Earth.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="point-motion-operation_definition">A.15.&#xA0;<b>point motion operation</b></p>
+<p id="_9a5b9437-43cb-978f-ffe5-1a609f2c5e52">coordinate operation that changes coordinates within one coordinate reference system due to the motion of the point</p>
+
+
+
+
+
+
+ <div id="_e88e6c16-6fc4-7e63-ab17-3c161828c2ce" class="Note"><p>Note 1 to entry: The change of coordinates is from those at an initial epoch to those at another epoch.</p></div><div id="_e62104ab-27d7-f3d3-715d-dfa0548f5fef" class="Note"><p>Note 2 to entry: In this document the point motion is due to tectonic motion or crustal deformation.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="spatio-parametric-coordinate-reference-system_definition">A.16.&#xA0;<b>spatio-parametric coordinate reference system</b></p>
+<p id="_f8c31f9d-c5c6-5fa5-eccc-5813f54cef73">compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a parametric coordinate reference system</p>
+
+
+
+
+ <div id="_4a96518d-1646-048c-b356-396f6a997dc8" class="Note"><p>Note 1 to entry: Normally the spatial component is &#x201C;horizontal&#x201D; and the parametric component is &#x201C;vertical&#x201D;.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="spatio-parametric-temporal-coordinate-reference-system_definition">A.17.&#xA0;<b>spatio-parametric-temporal coordinate reference system</b></p>
+<p id="_1eefd1f6-09da-6bdd-2874-3d1d8a1a6a9f">compound coordinate reference system comprised of spatial, parametric and temporal coordinate reference systems</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="spatio-temporal-coordinate-reference-system_definition">A.18.&#xA0;<b>spatio-temporal coordinate reference system</b></p>
+<p id="_f1020dfb-e301-14f7-490e-2005ed3ea9ac">compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a temporal coordinate reference system</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="static-coordinate-reference-system_definition">A.19.&#xA0;<b>static coordinate reference system</b></p>
+<p id="_c983853a-7434-9faf-9873-f0dc8379a933">coordinate reference system that has a static reference frame</p>
+
+
+
+
+
+
+ <div id="_a7775ad3-5814-a1fd-bdac-a4941e6d96f4" class="Note"><p>Note 1 to entry: Coordinates of points on or near the crust of the Earth that are referenced to a static coordinate reference system do not change with time.</p></div><div id="_f3d423a2-b2a6-f0b2-c98c-468482ea952e" class="Note"><p>Note 2 to entry: Metadata for a dataset referenced to a static coordinate reference system does not require coordinate epoch information.</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="static-reference-frame_definition">A.20.&#xA0;<b>static reference frame</b></p>
+<p id="_729e1050-f56b-e858-0cb9-2f904c12c422">static datum</p><p id="_19e114ed-b8d8-e1c9-ba0a-d6c1e7324a53">reference frame in which the defining parameters exclude time evolution</p>
+
+
+
+
+ <p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+
+<p class="TermNum" style="text-align:left;" id="terrestrial-reference-system_definition">A.21.&#xA0;<b>terrestrial reference system</b></p><p class="AltTerms">TRS&#xA0;<span class="AdmittedLabel">ADMITTED</span></p>
+
+
+
+<p id="_c1aae8f6-b8d7-bebc-c19d-b686f96f9f48">set of conventions defining the origin, scale, orientation and time evolution of a spatial reference system co-rotating with the Earth in its diurnal motion in space</p>
+
+
+
+
+ <div id="_2b2e13c7-939e-3853-2994-bd2b18c0b588" class="Note"><p>Note 1 to entry: The abstract concept of a TRS is realised through a terrestrial reference frame that usually consists of a set of physical points with precisely determined coordinates and optionally their rates of change. In this document terrestrial reference frame is included within the geodetic reference frame element of the data model</p></div><p>[<b>SOURCE:</b> <a href="#iso19111">ISO 19111</a>]</p>
+</div>
+      </div>
+      <br />
+      <div><h1 class="Section3" id="toc34">Bibliography</h1>
+<p id="astro_algo" class="Biblio">[1]&#xA0; Jean Meeus. <i>Astronomical Algorithms</i>. <a href="https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf">https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf</a></p><p id="bipm_define" class="Biblio">[2]&#xA0; Bureau International des Poids et Mesures (BIPM). <i>Establishment of International Atomic Time and Coordinated Universal Time</i>. <a href="https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc">https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc</a></p><p id="cen_env_1613" class="Biblio">[3]&#xA0; CEN: Env 1613:1995 <i>Medical informatics&#x2009;&#x2014;&#x2009;Messages for exchange of laboratory information</i>, 1995</p><p id="history_timekeeping" class="Biblio">[4]&#xA0; Chad Orzell. <i>A Brief History of Timekeeping</i>. Oneworld Publications. 2022. ISBN-13: 978-0-86154-321-2.</p><p id="iso19108" class="Biblio">[5]&#xA0; ISO/TC 211: ISO 19108:2002 <i>Geographic information &#x2014; Temporal schema</i>, 2021, <a href="https://www.iso.org/standard/26013.html">https://www.iso.org/standard/26013.html</a></p><p id="lorentz_transform" class="Biblio">[6]&#xA0; <i>Lorentz Transform</i>. Wolfram MathWorld. <a href="https://mathworld.wolfram.com/LorentzTransformation.html">https://mathworld.wolfram.com/LorentzTransformation.html</a></p><p id="minkowski" class="Biblio">[7]&#xA0; H. Minkowski. <i>Space and Time, Minkowski&#x2019;s Papers on Relativity</i>Minkowski Institute Press, Montreal 2012. <a href="https://minkowskiinstitute.org/ebookstore/book1/">https://minkowskiinstitute.org/ebookstore</a></p><p id="unix_time" class="Biblio">[8]&#xA0; The Open Group. <i>UNIX Time</i>. <a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16</a> [last accessed 2023-01]</p>
+
+
+
+
+
+
+
+
+</div>
+    </main>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { preferredFont: "STIX" },
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
+ });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+    $("#toc").on('click', 'li', function(e) {
+    $(this).parent().find('li.toc-active').removeClass('toc-active');
+    $(this).addClass('toc-active');
+});
+  </script>
+
+  <script>
+  //TOC toggle animation
+$('#toggle').on('click', function(){
+    if( $('nav').is(':visible') ) {
+        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
+            $('nav').hide();
+        });
+        $('body').animate({ 'margin-left': '0' }, 'slow');
+    }
+    else {
+        $('nav').show();
+        $('nav').animate({ 'left': '0px' }, 'slow');
+        $('body').animate({ 'margin-left': '298px' }, 'slow');
+    }
+});
+</script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div />", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
+  <script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+//
+// AnchorJS - v4.2.2 - 2020-04-20
+// https://www.bryanbraun.com/anchorjs/
+// Copyright (c) 2020 Bryan Braun; Licensed MIT
+//
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+// @license-end
+  </script>
+    <script>
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script>
+
+</body>
+</html>

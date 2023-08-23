@@ -1,0 +1,52 @@
+= OGC Temporal Conceptual Model
+:doctype: abstract-specification-topic
+:language: en
+:status: swg-draft
+:committee: technical
+:edition: 1.0
+:docnumber: 23-050
+:received-date: 2023-05-23
+:issued-date: 2023-05-23
+:published-date: 2023-08-22
+:external-id: http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0
+:referenceURLID: http://docs.opengeospatial.org/as/23-050/23-050.html
+:fullname: Chris Little
+:fullname_2: Charles Heazel
+:role: editor
+:role_2: editor
+:keywords: ogcdoc, OGC document, abstract specification, conceptual model, time, temporal referencing, referencing by coordinates, calendar, clock, timescale
+:submitting-organizations: U.K. Met Office, HeazelTech
+:mn-document-class: ogc
+:mn-output-extensions: html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+// Clauses
+include::sections/00-preface.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-conformance.adoc[]
+
+include::sections/03-references.adoc[]
+
+include::sections/04-terms_and_definitions.adoc[]
+
+include::sections/05-conventions.adoc[]
+
+// Add clause files as needed
+include::sections/06-abstract_model.adoc[]
+
+// include::sections/07-formal_abstract_model.adoc[]
+
+// include::sections/08-data_dictionary.adoc[]
+
+// Annexes (add annex files as needed)
+include::sections/aa-annexA.adoc[]
+
+include::sections/annex-glossary.adoc[]
+
+include::sections/annex-ISO-glossary.adoc[]
+
+// Bibliography should be the last annex
+include::sections/az-bibliography.adoc[]

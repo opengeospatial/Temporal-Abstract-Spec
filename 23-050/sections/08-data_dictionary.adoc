@@ -1,0 +1,899 @@
+== Data Dictionary
+
+=== Reference Systems
+
+[[Algorithm-section]]
+[cols="1a"]
+|===
+|*Algorithm* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Calendar-section]]
+[cols="1a"]
+|===
+|*Calendar* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalReferenceSystem-section,TemporalReferenceSystem>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<Calendar Year-section,Calendar Year>>  [1..*] !
+!{set:cellbgcolor:#FFFFFF}   !  <<Calendar Era-section,Calendar Era>>  [1..*] !
+!{set:cellbgcolor:#FFFFFF}   !  <<TM_Calendar-section,TM_Calendar>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Calendar Day-section]]
+[cols="1a"]
+|===
+|*Calendar Day* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Calendar Era-section]]
+[cols="1a"]
+|===
+|*Calendar Era* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Calendar Era: division of a calendar composed of a sequence of periods of one type counted from a specified date (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TM_CalendarEra-section,TM_CalendarEra>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Calendar Month-section]]
+[cols="1a"]
+|===
+|*Calendar Month* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A month corresponds nominally to the period of a lunar cycle – either the cycle of the phases of the moon, or that of the moon’s revolution around the Earth. (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<Calendar Day-section,Calendar Day>>  [1..*] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Calendar Year-section]]
+[cols="1a"]
+|===
+|*Calendar Year* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! calendar year: period approximately equal in duration to the periodic time of the revolution of the Earth around the sun (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} reference  !  <<Calendar Era-section,Calendar Era>>  [1..*] !
+!{set:cellbgcolor:#FFFFFF}   !  <<Calendar Month-section,Calendar Month>>  [1..*] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Clock-section]]
+[cols="1a"]
+|===
+|*Clock* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TimeScale-section,TimeScale>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Epoch-section]]
+[cols="1a"]
+|===
+|*Epoch* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalOrdinalReferenceSystem-section,TemporalOrdinalReferenceSystem>>  [] !
+!{set:cellbgcolor:#FFFFFF} definition  !  <<Undefined-section,Undefined>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[ReferenceSystem-section]]
+[cols="1a"]
+|===
+|*ReferenceSystem* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} applicableLocationTimeOrDomain   !<<-section,>>  !
+ 
+!{set:cellbgcolor:#FFFFFF} authoritativeOwnerOrDefiningBody   !<<char-section,char>>  !
+ 
+!{set:cellbgcolor:#FFFFFF} dimension   !<<int-section,int>>  [1..*] !
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[SpatialReferenceSystem-section]]
+[cols="1a"]
+|===
+|*SpatialReferenceSystem* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<ReferenceSystem-section,ReferenceSystem>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} dimension   !<<int-section,int>>  [1..3] !
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[SpatialTemporalReferenceSystem-section]]
+[cols="1a"]
+|===
+|*SpatialTemporalReferenceSystem* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<ReferenceSystem-section,ReferenceSystem>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[TemporalCoordinateReferenceSystem-section]]
+[cols="1a"]
+|===
+|*TemporalCoordinateReferenceSystem* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} definition  !  <<Undefined-section,Undefined>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalReferenceSystem-section,TemporalReferenceSystem>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalCRS-section,TemporalCRS>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} uom   !<<char-section,char>>  !
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[TemporalOrdinalReferenceSystem-section]]
+[cols="1a"]
+|===
+|*TemporalOrdinalReferenceSystem* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalReferenceSystem-section,TemporalReferenceSystem>>  [] !
+!{set:cellbgcolor:#FFFFFF} definition  !  <<Undefined-section,Undefined>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} applicableLocationOrRegion   !<<int-section,int>>  [0..1] !
+ 
+!{set:cellbgcolor:#FFFFFF} events   !<<Event-section,Event>>  [1..n] !
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[TemporalReferenceSystem-section]]
+[cols="1a"]
+|===
+|*TemporalReferenceSystem* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} definition  !  <<Temporal reference system-section,Temporal reference system>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<ReferenceSystem-section,ReferenceSystem>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} dimension   !<<int-section,int>>  !
+ 
+!{set:cellbgcolor:#FFFFFF} epoch   !<<Epoch-section,Epoch>>  [0..1] !
+ 
+!{set:cellbgcolor:#FFFFFF} nameOrId   !<<char-section,char>>  !
+ 
+!{set:cellbgcolor:#FFFFFF} notations   !<<-section,>>  [0..n] !
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[TimeScale-section]]
+[cols="1a"]
+|===
+|*TimeScale* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalCoordinateReferenceSystem-section,TemporalCoordinateReferenceSystem>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|===   
+
+=== Temporal Objects
+
+[[Calendar Date-section]]
+[cols="1a"]
+|===
+|*Calendar Date* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A data type that shall be used to identify temporal position within a calendar. (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<Day of week-section,Day of week>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<Day of Month-section,Day of Month>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<Month of year-section,Month of year>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<Entity-section,Entity>>  [] !
+!{set:cellbgcolor:#FFFFFF} referenceSystem  !  <<Calendar-section,Calendar>>  [1] !
+!{set:cellbgcolor:#FFFFFF}   !  <<Year of Era-section,Year of Era>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Coordinate-section]]
+[cols="1a"]
+|===
+|*Coordinate* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<Entity-section,Entity>>  [] !
+!{set:cellbgcolor:#FFFFFF} referenceSystem  !  <<TemporalCoordinateReferenceSystem-section,TemporalCoordinateReferenceSystem>>  [1] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Day of Month-section]]
+[cols="1a"]
+|===
+|*Day of Month* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: !  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Day of week-section]]
+[cols="1a"]
+|===
+|*Day of week* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! The day of week
+day: period having a duration nominally equivalent to the periodic time of the Earth’s rotation around its axis (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<Day of week-section,Day of week>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Entity-section]]
+[cols="1a"]
+|===
+|*Entity* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A temporal interval or instant.  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} hasDefinition  !  <<Temporal entity-section,Temporal entity>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Event-section]]
+[cols="1a"]
+|===
+|*Event* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! Event: action which occurs at an instant (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalOrdinalReferenceSystem-section,TemporalOrdinalReferenceSystem>>  [] !
+!{set:cellbgcolor:#FFFFFF} definition  !  <<Undefined-section,Undefined>>  [] !
+!{set:cellbgcolor:#FFFFFF} isA  !  <<Temporal entity-section,Temporal entity>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} Name   !<<char-section,char>>  !
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Instant-section]]
+[cols="1a"]
+|===
+|*Instant* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A temporal entity with zero extent or duration
+instant: point representing position in time (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} hasDefinition  !  <<Time instant-section,Time instant>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<GM_Point-section,GM_Point>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<Coordinate-section,Coordinate>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Interval-section]]
+[cols="1a"]
+|===
+|*Interval* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! A temporal entity with an extent or duration 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} hasDefinition  !  <<Time interval-section,Time interval>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<Coordinate-section,Coordinate>>  [] !
+!{set:cellbgcolor:#FFFFFF}   !  <<GM_Curve-section,GM_Curve>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Month of year-section]]
+[cols="1a"]
+|===
+|*Month of year* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! The month of the year
+Month: period approximately equal in duration to the periodic time of a lunar cycle (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<Month of year-section,Month of year>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Time of day-section]]
+[cols="1a"]
+|===
+|*Time of day* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! time of day: designation of the temporal position of a particular instant within a calendar day (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Year of Era-section]]
+[cols="1a"]
+|===
+|*Year of Era* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! calendar year: period approximately equal in duration to the periodic time of the revolution of the Earth around the sun (ISO 19108) 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|===   
+
+=== ISO 19107
+
+[[GM_Curve-section]]
+[cols="1a"]
+|===
+|*GM_Curve*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GM_Curve (Figure 11) is a descendent subtype of GM_Primitive through GM_OrientablePrimitive. It is the basis for 1-dimensional geometry. A curve is a continuous image of an open interval and so could be written as a parameterized function such as c(t):(a, b)®En where "t" is a real parameter and En is Euclidean space of dimension n (usually 2 or 3, as determined by the coordinate reference system). Any other parameterization that results in the same image curve, traced in the same direction, such as any linear shifts and positive scales such as e(t) = c(a + t(b-a)):(0,1) ®En, is an equivalent representation of the same curve. For the sake of simplicity, GM_Curves should be parameterized by arc length, so that the parameterization operation inherited from GM_GenericCurve (see 6.4.7) will be valid for parameters between 0 and the length of the curve. 
+Curves are continuous, connected, and have a measurable length in terms of the coordinate system. The orientation of the curve is determined by this parameterization, and is consistent with the tangent function, which approximates the derivative function of the parameterization and shall always point in the "forward" direction. The parameterization of the reversal of the curve defined by c(t):(a, b)®En would be defined by a function of the form s(t) = c(a + b - t):(a, b)®En.
+A curve is composed of one or more curve segments. Each curve segment within a curve may be defined using a different interpolation method. The curve segments are connected to one another, with the end point of each segment except the last being the start point of the next segment in the segment list. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «type»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[GM_Point-section]]
+[cols="1a"]
+|===
+|*GM_Point*
+[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! GM_Point (Figure 9) is the basic data type for a geometric object consisting of one and only one point.  
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «type»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} position   !<<DirectPosition-section,DirectPosition>>  !The attribute "position" shall be the DirectPosition of this GM_Point.
+GM_Point::position [1] : DirectPosition
+NOTE In most cases, the state of a GM_Point is fully determined by its position attribute.  The only exception to this is if the GM_Point has been subclassed to provide additional non-geometric information such as symbology.
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|===   
+
+=== ISO 19108
+
+
+=== ISO 19111
+
+[[CRS-section]]
+[cols="1a"]
+|===
+|*CRS* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! coordinate reference system which is usually single but may be compound 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[SingleCRS-section]]
+[cols="1a"]
+|===
+|*SingleCRS* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! coordinate reference system consisting of one coordinate system and either one datum or one datum ensemble 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! count(datum)+count(datumEnsemble)=1 (OCL):     
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<CRS-section,CRS>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[TemporalCRS-section]]
+[cols="1a"]
+|===
+|*TemporalCRS* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! coordinate reference system associated with a temporal datum and a one-dimensional temporal coordinate system 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<SingleCRS-section,SingleCRS>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[CoordinateSystem-section]]
+[cols="1a"]
+|===
+|*CoordinateSystem* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! non-repeating sequence of coordinate system axes that spans a given coordinate space
+Note: A coordinate system is derived from a set of mathematical rules for specifying how coordinates in a given space are to be assigned to points. The coordinate values in a coordinate tuple shall be recorded in the order in which the coordinate system axes associations are recorded. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! axis->forAll(count(axisUnitID)=1) (Invariant): axis.axisUnitID is mandatory for all axis    
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} referenceSystem  !  <<SingleCRS-section,SingleCRS>>  [0..*] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[Datum-section]]
+[cols="1a"]
+|===
+|*Datum* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! specification of the relationship of a coordinate system to an object, thus creating a coordinate reference system
+Note: For geodetic and vertical coordinate reference systems, it relates a coordinate system to the Earth. With other types of coordinate reference systems, the datum may relate the coordinate system to another physical or virtual object. A datum uses a parameter or set of parameters that determine the location of the origin of the coordinate reference system. Each datum subtype can be associated with only specific types of coordinate reference systems. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} referenceSystem  !  <<SingleCRS-section,SingleCRS>>  [0..*] !
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalCoordinateReferenceSystem-section,TemporalCoordinateReferenceSystem>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} anchorDefinition   !<<CharacterString-section,CharacterString>>  [0..1] !description, possibly including coordinates of an identified point or points, of the relationship used to anchor a coordinate system to the Earth or alternate object 
+Note: For modern geodetic reference frames the anchor may be a set of station coordinates; if the reference frame is dynamic it will also include coordinate velocities. For a traditional geodetic datum, the anchor may be a point known as the fundamental point, which is traditionally the point where the relationship between geoid and ellipsoid is defined, together with a direction from that point.
+- For a vertical reference frame the anchor may be the zero level at one or more defined locations or a conventionally defined surface. 
+- For an engineering datum, the anchor may be an identified physical point with the orientation defined relative to the object.
+ 
+!{set:cellbgcolor:#FFFFFF} conventionalRS   !<<IdentifiedObject-section,IdentifiedObject>>  [0..1] !name, identifier, alias and remarks for the terrestrial reference system or vertical reference system realized by this reference frame
+Examples: "ITRS" for ITRF88 through ITRF2008 and ITRF2014, or "EVRS" for EVRF2000 and EVRF2007.
+ 
+!{set:cellbgcolor:#FFFFFF} publicationDate   !<<Date-section,Date>>  [0..1] !date on which the datum definition was published
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[DateTimeTemporalCS-section]]
+[cols="1a"]
+|===
+|*DateTimeTemporalCS* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! one-dimensional coordinate system used to record time in dateTime representation as defined in ISO 8601.
+Note: A DateTimeTemporalCS shall have one axis association. It does not use axisUnitID; the temporal quantities are defined through the ISO 8601 representation. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! coordinateType=dateTime (Invariant):     
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! axis->forAll(count(axisUnitID)=0) (Invariant): axis.axisUnitID shall not be used    
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalCS-section,TemporalCS>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[TemporalCountCS-section]]
+[cols="1a"]
+|===
+|*TemporalCountCS* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! one-dimensional coordinate system used to record time as an integer count
+Note: A TemporalCountCS shall have one axis association. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! coordinateType=integer (Invariant):     
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalCS-section,TemporalCS>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[TemporalCS-section]]
+[cols="1a"]
+|===
+|*TemporalCS* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! one-dimensional coordinate system used to record time 
+Note: A TemporalCS shall have one axis association. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! axis->size()=1 (Invariant): a Temporal CS shall have exactly one axis    
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF} referenceSystem  !  <<TemporalCRS-section,TemporalCRS>>  [0..*] !
+!{set:cellbgcolor:#FFFFFF}   !  <<CoordinateSystem-section,CoordinateSystem>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+ 
+!{set:cellbgcolor:#FFFFFF} coordinateType   !<<CoordinateDataType-section,CoordinateDataType>>  !datatype of coordinate values
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|=== 
+
+[[TemporalMeasureCS-section]]
+[cols="1a"]
+|===
+|*TemporalMeasureCS* 
+|[cols="1,4",frame=none,grid=none]
+!===
+!{nbsp}{nbsp}{nbsp}{nbsp}Definition: ! one-dimensional coordinate system used to record a time as a real number
+Note: A TemporalMeasureCS shall have one axis association. 
+!{nbsp}{nbsp}{nbsp}{nbsp}Subclass of: ! <<-section,>> 
+!{nbsp}{nbsp}{nbsp}{nbsp}Stereotype: !  «interface»
+!{nbsp}{nbsp}{nbsp}{nbsp}Constraint: ! coordinateType=real (Invariant):     
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Role name* !*Target class and multiplicity*  !*Definition*
+!{set:cellbgcolor:#FFFFFF}   !  <<TemporalCS-section,TemporalCS>>  [] !
+!===
+|[cols="15,20,60",frame=none,grid=none,options="header"]
+!===
+!{set:cellbgcolor:#DDDDDD} *Attribute* !*Value type and multiplicity* !*Definition*
+!===
+|{set:cellbgcolor:#FFFFFF} Note: Unless otherwise specified, all attributes and role names have the stereotype «Property».
+|===   
+

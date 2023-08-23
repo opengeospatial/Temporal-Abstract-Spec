@@ -1,0 +1,91 @@
+
+== Terms and definitions
+
+[[conceptual-model_definition]]
+=== conceptual model
+
+description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain. A conceptual model is explicitly chosen to be independent of design or implementation concerns.
+
+[.source]
+<<cen_env_1613,CEN ENV 1613:1995>>
+
+[[coordinate-reference-system_definition]]
+=== coordinate reference system
+
+<<coordinate-system_definition,coordinate system>> that is related to an object by a <<datum_definition,datum>>
+
+[.source]
+<<iso19111,ISO 19111>>
+
+NOTE: Geodetic and vertical datums are referred to as reference frames.
+
+NOTE: For geodetic and vertical reference frames, the object will be the Earth. In planetary applications, geodetic and vertical reference frames may be applied to other celestial bodies.
+
+[[coordinate-system_definition]]
+=== coordinate system
+
+set of mathematical rules for specifying how coordinates are to be assigned to points
+
+[.source]
+<<iso19111,ISO 19111>>
+
+[[datum_definition]]
+=== datum
+admitted:[reference frame]
+
+parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <<coordinate-system_definition,coordinate system>>
+
+[.source]
+<<iso19111,ISO 19111>>
+
+[[epoch_definition]]
+=== epoch
+domain:[geodesy]
+
+point in time
+
+[.source]
+<<iso19111,ISO 19111>>
+
+NOTE: In this document an epoch is expressed in the Gregorian calendar as a decimal year.
+
+[example]
+2017-03-25 in the Gregorian calendar is epoch 2017.23.
+
+[[reference-frame_definition]]
+=== reference frame
+admitted:[datum]
+
+parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <<coordinate-system_definition,coordinate system>>
+
+[.source]
+<<iso19111,ISO 19111>>
+
+[[temporal-coordinate-refrence-system_definition]]
+=== temporal coordinate reference system
+
+<<coordinate-reference-system_definition,coordinate reference system>> based on a <<temporal-datum_definition,temporal datum>>
+
+[.source]
+<<iso19111,ISO 19111>>
+
+[[temporal-coordinate-system_definition]]
+=== temporal coordinate system
+domain:[geodesy]
+
+one-dimensional <<coordinate-system_definition,coordinate system>> where the axis is time
+
+[.source]
+<<iso19111,ISO 19111>>
+
+[[temporal-datum_definition]]
+=== temporal datum
+
+<<datum_definition,datum>> describing the relationship of a <<temporal-coordinate-system_definition,temporal coordinate system>> to an object
+
+[.source]
+<<iso19111,ISO 19111>>
+
+NOTE: The object is normally time on the Earth.
+
+

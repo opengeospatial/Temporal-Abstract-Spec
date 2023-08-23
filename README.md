@@ -11,7 +11,7 @@ The aim of the document is to establish a clear terminology, so that people are 
 The current draft documents available from the following locations:
 
 * Charter (draft) in [HTML](https://htmlpreview.github.io/?https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/Charter/document.html), [PDF](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/Charter/document.pdf), and [Word](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/Charter/document.doc) formats.
-* Abstract Specification (draft) in [HTML](https://htmlpreview.github.io/?https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/abstract-specification/document.html), [PDF](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/abstract-specification/document.pdf), and [Word](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/abstract-specification/document.doc) formats.
+* Abstract Specification (draft) in [HTML](https://htmlpreview.github.io/?https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/23-049/23-049.html), [PDF](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/23-049/23-049.pdf), and [Word](https://github.com/opengeospatial/Temporal-Abstract-Spec/blob/master/23-049/23-049.doc) formats.
 
 ## About this document
 

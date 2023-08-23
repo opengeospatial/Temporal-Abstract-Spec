@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="presentation" version="2.0.6">
+<bibdata type="standard">
+<title language="en" format="text/plain">Topic 24 - Abstract Conceptual Model for Time</title>
+<docidentifier type="ogc-external">http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0</docidentifier><docidentifier type="ogc-external">http://docs.opengeospatial.org/as/23-049/23-049.html</docidentifier><docidentifier type="ogc-internal">23-049</docidentifier><docnumber>23-049</docnumber><date type="published"><on>2023-08-22</on></date><date type="issued"><on>2023-05-23</on></date><date type="received"><on>2023-05-23</on></date><contributor><role type="author"/><organization>
+<name>U.K. Met Office, HeazelTech</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Chris Little</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Charles Heazel</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+</organization></contributor><edition>1.0</edition><language current="true">en</language><script current="true">Latn</script><abstract><p>Traditionally, geospatial communities used 2D coordinates and the vertical and temporal aspects were considered attributes rather than fully fledged coordinate systems. In an increasingly dynamic, speedier and multidimensional world, much confusion and lack of interoperability has occurred because of inconsistent approaches to time. Much effort has been expended by various international bodies to establish the Gregorian Calendar as a consistent timeline. This suffices for low precision, such as to the nearest minute, but not so when second or sub-second accuracy is required. For example, there has been differing practices and no consensus on whether leap seconds should be part of the Gregorian timeline.</p>
+
+<p>The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightforward defining document. This document aims to to give clear consistent definitions of the fundamental concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps they can contribute to building better and more interoperable systems using other more detailed documents such as logical and implementation standards that have an agreed common conceptual basis and terminology.</p>
+
+<p>This document is consistent with <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref> and <eref type="inline" bibitemid="w3cowltime" citeas="W3C REC-owl-time-20171019">W3C Time Ontology</eref> in OWL.</p>
+
+<p>The aim of this document is to establish clear concepts and terminology.</p>
+</abstract><status><stage language="">swg-draft</stage><stage language="en">Candidate SWG Draft</stage></status><copyright><from>2023</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+</organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>abstract specification</keyword><keyword>conceptual model</keyword><keyword>time</keyword><keyword>temporal referencing</keyword><keyword>referencing by coordinates</keyword><keyword>calendar</keyword><keyword>clock</keyword><keyword>timescale</keyword><ext><doctype language="">abstract-specification-topic</doctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Table of contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Preface</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Annex</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
+</localized-string><localized-string key="internal_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the following additional terms and definitions apply.</p>
+</localized-string><localized-string key="norm_with_refs_pref" language="en">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the terms and definitions given in % additionally apply.</p>
+</localized-string><localized-string key="internal_external_terms_boilerplate" language="en"><p>This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p>This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p>For the purposes of this document, the terms and definitions given in % and the following additionally apply.</p>
+</localized-string><localized-string key="term_defined_in" language="en">(%)</localized-string><localized-string key="binary_and" language="en">%1 and %2</localized-string><localized-string key="multiple_and" language="en">%1, and %2</localized-string><localized-string key="binary_or" language="en">%1 or %2</localized-string><localized-string key="multiple_or" language="en">%1, or %2</localized-string><localized-string key="chain_and" language="en">%1 and %2</localized-string><localized-string key="chain_or" language="en">%1 or %2</localized-string><localized-string key="chain_from" language="en">%1 from %2</localized-string><localized-string key="chain_to" language="en">%1 to %2</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="formula" language="en">Formula</localized-string><localized-string key="inequality" language="en">Formula</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">Example</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">SOURCE</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="toc_figures" language="en">List of figures</localized-string><localized-string key="toc_tables" language="en">List of tables</localized-string><localized-string key="toc_recommendations" language="en">List of recommendations</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="subject" language="en">Subject</localized-string><localized-string key="inherits" language="en">Inherits</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="admitted" language="en">ADMITTED</localized-string><localized-string key="submitters" language="en">Submitters</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="security_empty" language="en">No security considerations have been made for this document.</localized-string><localized-string key="stage_dict.draft" language="en">Draft</localized-string><localized-string key="stage_dict.work-item-draft" language="en">Work Item Draft</localized-string><localized-string key="stage_dict.swg-draft" language="en">Candidate SWG Draft</localized-string><localized-string key="stage_dict.oab-review" language="en">Candidate OAB Review Draft</localized-string><localized-string key="stage_dict.public-rfc" language="en">Candidate Public RFC Draft</localized-string><localized-string key="stage_dict.tc-vote" language="en">Candidate TC Vote Draft</localized-string><localized-string key="stage_dict.approved" language="en">Approved</localized-string><localized-string key="stage_dict.published" language="en">Published</localized-string><localized-string key="stage_dict.deprecated" language="en">Deprecated</localized-string><localized-string key="stage_dict.rescinded" language="en">Rescinded</localized-string><localized-string key="stage_dict.retired" language="en">Retired</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <title depth="1">Copyright notice</title>
+
+      <p align="center" id="_4380411b-aa89-cc2d-d393-9800128f1de1">Copyright
+        © 2023 Open Geospatial Consortium<br/>
+        To obtain additional rights of use, visit
+        <link target="http://www.ogc.org/legal/">http://www.ogc.org/legal/</link></p>
+    </clause>
+    <clause>
+      <title depth="1">Note</title>
+      <p align="left" id="_11e88dba-9912-1a89-a82d-7291bf232191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+      <p align="left" id="_15067213-c07b-cba0-7e18-395ab2e00ab3">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+    </clause>
+  </copyright-statement>
+  <license-statement>
+    <clause>
+      <title depth="1">License Agreement</title>
+
+      <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial
+        Consortium, (“Licensor”), free of charge and subject to the terms set
+        forth below, to any person obtaining a copy of this Intellectual Property and
+        any associated documentation, to deal in the Intellectual Property without
+        restriction (except as set forth below), including without limitation the
+        rights to implement, use, copy, modify, merge, publish, distribute, and/or
+        sublicense copies of the Intellectual Property, and to permit persons to whom
+        the Intellectual Property is furnished to do so, provided that all copyright notices
+        on the intellectual property are retained intact and that each person to whom
+        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
+
+      <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of
+        the modified Intellectual Property must include, in addition to the above
+        copyright notice, a notice that the Intellectual Property includes
+        modifications that have not been approved or adopted by LICENSOR.</p>
+
+      <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
+        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
+        THE INTELLECTUAL PROPERTY IS PROVIDED “AS
+        IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
+        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
+        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
+        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
+        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER’S OWN RISK. IN NO
+        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
+        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
+        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
+        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
+        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
+        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
+
+      <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may
+        terminate it at any time by destroying the Intellectual Property together with
+        all copies in any form. The license will also terminate if you fail to comply
+        with any term or condition of this Agreement. Except as provided in the
+        following sentence, no such termination of this license shall require the
+        termination of any third party end-user sublicense to the Intellectual Property
+        which is in force as of the date of notice of such termination. In addition,
+        should the Intellectual Property, or the operation of the Intellectual
+        Property, infringe, or in LICENSOR’s sole opinion be
+        likely to infringe, any patent, copyright, trademark or other right of a third
+        party, you agree that LICENSOR, in its sole discretion, may terminate this
+        license without any compensation or liability to you, your licensees or any
+        other party. You agree upon termination of any kind to destroy or cause to be
+        destroyed the Intellectual Property together with all copies in any form,
+        whether held by you or by any third party.</p>
+
+      <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of
+        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
+        Property shall not be used in advertising or otherwise to promote the sale, use
+        or other dealings in this Intellectual Property without prior written
+        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
+        all times be the sole entity that may authorize you or any third party to use
+        certification marks, trademarks or other special designations to indicate
+        compliance with any LICENSOR standards or specifications.
+        This Agreement is
+        governed by the laws of the Commonwealth of Massachusetts. The application to
+        this Agreement of the United Nations Convention on Contracts for the
+        International Sale of Goods is hereby expressly excluded. In the event any
+        provision of this Agreement shall be deemed unenforceable, void or invalid, such
+        provision shall be modified so as to make it valid and enforceable, and as so
+        modified the entire Agreement shall remain in full force and effect. No
+        decision, action or inaction by LICENSOR shall be construed to be a waiver of
+        any rights or remedies available to it.</p>
+
+      <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    </clause>
+  </license-statement>
+
+  <legal-statement>
+    
+    <clause>
+      <title depth="1">Notice</title>
+      <p id="_409f3caa-085c-3105-556f-562cdbed0f09">This document is not an OGC Standard. This document is an OGC Abstract Specification Topic and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+      <p id="_aea9bbd6-6826-dcb2-2afb-a3d33b277304">Further, an OGC Abstract Specification Topic should not be referenced as required or mandatory technology in procurements.</p>
+    </clause>
+    
+
+  </legal-statement>
+
+
+
+
+  <feedback-statement>
+    
+  </feedback-statement>
+</boilerplate>
+<preface><abstract id="_abstract" displayorder="1"><title depth="1">I.<tab/>Abstract</title><p id="_805264f4-2895-6682-18b3-3f7c9b2945a6">Traditionally, geospatial communities used 2D coordinates and the vertical and temporal aspects were considered attributes rather than fully fledged coordinate systems. In an increasingly dynamic, speedier and multidimensional world, much confusion and lack of interoperability has occurred because of inconsistent approaches to time. Much effort has been expended by various international bodies to establish the Gregorian Calendar as a consistent timeline. This suffices for low precision, such as to the nearest minute, but not so when second or sub-second accuracy is required. For example, there has been differing practices and no consensus on whether leap seconds should be part of the Gregorian timeline.</p>
+
+<p id="_92422dca-5e04-47b2-be97-997e8ea0873e">The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightforward defining document. This document aims to to give clear consistent definitions of the fundamental concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps they can contribute to building better and more interoperable systems using other more detailed documents such as logical and implementation standards that have an agreed common conceptual basis and terminology.</p>
+
+<p id="_d4206428-1604-4374-6345-eefc296438a5">This document is consistent with <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref> and <eref type="inline" bibitemid="w3cowltime" citeas="W3C REC-owl-time-20171019">W3C Time Ontology</eref> in OWL.</p>
+
+<p id="_72f0dc4d-fad8-9e3a-f7aa-3c719d44c87a">The aim of this document is to establish clear concepts and terminology.</p>
+</abstract><clause id="_a1313432-0df8-47d6-83bd-7ee816877e77" type="keywords" displayorder="2">
+<title depth="1">II.<tab/>Keywords</title>
+<p>The following are keywords to be used by search engines and
+    document catalogues.</p>
+<p>ogcdoc, OGC document, abstract specification, conceptual model, time, temporal referencing, referencing by coordinates, calendar, clock, timescale</p></clause>
+<foreword id="_preface" obligation="informative" displayorder="3">
+<title depth="1">III.<tab/>Preface</title>
+<p id="_8ba0feed-acfd-bc4f-1d13-2e75dab20f9a">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_25f6b7a1-8657-2655-9eff-47df179631e0">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</foreword><clause id="_security_considerations" type="security" obligation="informative" displayorder="4">
+<title depth="1">IV.<tab/>Security Considerations</title>
+<p id="_e88b1376-d0f4-5147-cf72-d44500f21228">No security considerations have been made for this document.</p>
+</clause><clause id="_8ce7a51f-0bc4-40ce-ae2b-eab752256979" type="submitting_orgs" displayorder="5">
+<title depth="1">V.<tab/>Submitting Organizations</title>
+<p>The following organizations submitted this Document to the
+   Open Geospatial Consortium (OGC):</p>
+ <ul><li>U.K. Met Office, HeazelTech</li></ul>
+ </clause>
+<submitters id="_submitters" displayorder="6">
+<title depth="1">VI.<tab/>Submitters</title>
+<p id="_1e904d18-1557-51ec-fd57-898a2f834acf">All questions regarding this submission should be directed to the editor or the
+submitters:</p>
+
+<table id="_06091d16-639f-5e73-4f99-c258e367304a" unnumbered="true"><thead><tr><th valign="middle" align="left">Name</th>
+<th valign="middle" align="left">Affiliation</th>
+</tr></thead>
+<tbody><tr><td valign="middle" align="left">Chris Little (editor)</td>
+<td valign="middle" align="left">U.K. Met Office</td>
+</tr><tr><td valign="middle" align="left">Chuck Heazel</td>
+<td valign="middle" align="left">HeazelTech</td>
+</tr></tbody>
+</table>
+</submitters><clause id="_introduction" obligation="informative" displayorder="7">
+<title depth="1">VII.<tab/>Introduction</title>
+<p id="_8bca7211-9a3c-63ca-a566-dd965cd1f896">When OGC standards involve time, they generally refer to the ISO documents such as <eref type="inline" bibitemid="iso19108" citeas="ISO 19108">ISO 19108</eref> (now largely superseded), <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>, <eref type="inline" bibitemid="iso8601" citeas="ISO 8601">ISO 8601</eref>, and their freely available OGC equivalents, such as <eref type="inline" bibitemid="ogc18005" citeas="OGC 18-005r4">OGC_18-005r4</eref> (the equivalent to <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>).</p>
+
+<p id="_f6d0212a-595f-da11-ddf2-d9735beb8ed1">Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the <eref type="inline" bibitemid="iso8601" citeas="ISO 8601">ISO 8601</eref> notation, and many date-time schemas. Because of this effort, many people use calendar based “coordinates”, with the attendant ambiguities, imprecision and inappropriate scope.</p>
+
+<p id="_59f8f5e3-3740-c1a3-2b9e-bf7c35f098b9">The aim of this document is to establish clear concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.</p>
+</clause></preface><sections>
+
+
+
+
+
+
+<clause id="_scope" type="scope" obligation="normative" displayorder="8">
+<title depth="1">1.<tab/>Scope</title>
+<p id="_eea87a70-278d-a3d5-826c-b28e93e703ad">This document defines the major underlying concepts regarding time. It does not define any concrete temporal reference systems or give detailed guidance on implementations.</p>
+</clause>
+
+<clause id="_conformance" type="conformance" obligation="normative">
+<title depth="1">2.<tab/>Conformance</title>
+<p id="_ae2baaa8-5f7d-afe6-dcea-29d092b34548">Clause 6 of this International Standard uses the Unified Modeling Language (UML) to present
+conceptual schemas for describing the higher level classes of time and temporal reference systems. These schemas define conceptual classes that</p>
+
+<p id="_c0262e29-9ad9-a765-a8bd-243cd36b013b">a) may be considered to comprise a cross-domain application schema, or</p>
+
+<p id="_7a805de1-9b91-0122-f1cc-470efbaa9108">b) may be used in application schemas, profiles and implementation specifications.</p>
+
+<p id="_93b946fc-a818-27b7-ee59-b3b916c6e642">This flexibility is controlled by a set of UML types that can be implemented in a variety of manners. Use of
+alternative names that are more familiar in a particular application is acceptable, provided that there is a one-
+to-one mapping to classes and properties in this International Standard.
+The UML model in this International Standard defines conceptual classes; various software systems define
+implementation classes or data structures. All of these reference the same information content. The same
+name may be used in implementations as in the model, so that types defined in the UML model may be used
+directly in application schemas.</p>
+
+<p id="_289f6169-e4ff-ce9a-21f3-e0c9572284e8">Annex A defines a set of conformance tests that will support applications whose requirements range from the
+minimum necessary to define data structures to full object implementation.</p>
+</clause>
+
+
+
+<terms id="_terms_and_definitions" obligation="normative" displayorder="10">
+<title depth="1">4.<tab/>Terms and definitions</title><p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p>
+
+<term id="conceptual-model_definition"><name>4.1.</name><preferred><strong>conceptual model</strong></preferred>
+<definition><p id="_a1a9d3e4-3060-4861-fc52-40e11c81ab32">description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain. A conceptual model is explicitly chosen to be independent of design or implementation concerns.</p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="cen_env_1613" type="inline" citeas="CEN ENV 1613">CEN ENV 1613:1995</origin>]</termsource></term>
+
+<term id="coordinate-reference-system_definition"><name>4.2.</name><preferred><strong>coordinate reference system</strong></preferred>
+<definition><p id="_4cecff49-5b0f-a0d8-cbbd-ffdc8e4e6743"><xref target="coordinate-system_definition">coordinate system</xref> that is related to an object by a <xref target="datum_definition">datum</xref></p></definition>
+
+
+
+
+
+
+ <termnote id="_51a255f3-db65-d30e-e494-42254695f433"><name>Note 1 to entry</name><p id="_69c52292-a75f-0347-6b55-0ae608ec2481">Geodetic and vertical datums are referred to as reference frames.</p>
+</termnote><termnote id="_9c63b966-deb1-606b-a2e1-c1f6831dab84"><name>Note 2 to entry</name><p id="_ec4849b6-0edb-54e8-2473-f977b13efefe">For geodetic and vertical reference frames, the object will be the Earth. In planetary applications, geodetic and vertical reference frames may be applied to other celestial bodies.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="coordinate-system_definition"><name>4.3.</name><preferred><strong>coordinate system</strong></preferred>
+<definition><p id="_7fc2cb81-a340-933f-82f5-7602b3589da3">set of mathematical rules for specifying how coordinates are to be assigned to points</p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="datum_definition"><name>4.4.</name><preferred><strong>datum</strong></preferred><admitted>reference frame</admitted>
+
+
+
+<definition><p id="_d27c758e-8645-610c-8b56-57025a1da73a">parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <xref target="coordinate-system_definition">coordinate system</xref></p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="epoch_definition"><name>4.5.</name><preferred><strong>epoch</strong></preferred>
+
+
+<domain>geodesy</domain><definition><p id="_57e88c72-5a21-3348-1598-e0ca91c17dd3">point in time</p></definition>
+
+
+
+
+
+
+ <termnote id="_7980e6f3-3992-9b1f-2725-3aa6784c7ae4"><name>Note 1 to entry</name><p id="_d562b9d8-3085-7842-bdd2-164acc91ce92">In this document an epoch is expressed in the Gregorian calendar as a decimal year.</p>
+</termnote><termexample id="_f302d968-207b-5fb9-ff29-37d924f44394"><name>Example </name><p id="_ec1ec154-93f1-f1ae-bdde-b2c47f74f8e3">2017-03-25 in the Gregorian calendar is epoch 2017.23.</p>
+</termexample><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="reference-frame_definition"><name>4.6.</name><preferred><strong>reference frame</strong></preferred><admitted>datum</admitted>
+
+
+
+<definition><p id="_17c9d023-0d8b-246b-4ff0-b66f1c0455e9">parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <xref target="coordinate-system_definition">coordinate system</xref></p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="temporal-coordinate-refrence-system_definition"><name>4.7.</name><preferred><strong>temporal coordinate reference system</strong></preferred>
+<definition><p id="_66d6eac0-6466-37ce-c340-df107a8c0dff"><xref target="coordinate-reference-system_definition">coordinate reference system</xref> based on a <xref target="temporal-datum_definition">temporal datum</xref></p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="temporal-coordinate-system_definition"><name>4.8.</name><preferred><strong>temporal coordinate system</strong></preferred>
+
+
+<domain>geodesy</domain><definition><p id="_e157e368-ac10-8221-808e-a0fec3b708ed">one-dimensional <xref target="coordinate-system_definition">coordinate system</xref> where the axis is time</p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="temporal-datum_definition"><name>4.9.</name><preferred><strong>temporal datum</strong></preferred>
+<definition><p id="_6f8432b9-43f6-4f51-3ed7-b2fb2b00f357"><xref target="datum_definition">datum</xref> describing the relationship of a <xref target="temporal-coordinate-system_definition">temporal coordinate system</xref> to an object</p></definition>
+
+
+
+
+ <termnote id="_c4553ca8-f123-b2ef-6da3-df16e1f6c435"><name>Note 1 to entry</name><p id="_d9b37a18-4c55-c3b1-d79a-69cd575845f8">The object is normally time on the Earth.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+</terms>
+
+<clause id="_conventions" obligation="normative" displayorder="11">
+<title depth="1">5.<tab/>Conventions</title>
+<definitions id="_abbreviations" type="abbreviated_terms" obligation="normative">
+<title depth="2">5.1.<tab/>Abbreviated terms</title>
+<dl id="_e088b929-8537-28a1-9809-c66165d53510"><dt id="symbol-crs">CRS</dt><dd><p id="_6d00f3bc-433f-d91c-1d72-e9c05ab611fa">Coordinate Reference System</p>
+</dd>
+<dt id="symbol-trs">TRS</dt><dd><p id="_0f95cf87-0a0a-3d84-f92e-d0e6e57c808f">Temporal Reference System</p>
+</dd>
+<dt id="symbol-uml">UML</dt><dd><p id="_01188723-f5b8-8122-b88b-d4c8be720757">Unified Modelling Language</p>
+</dd>
+<dt id="symbol-_2d">2D</dt><dd><p id="_00591dc6-4b23-02ca-1d70-cb7fc0d8f2c1">2-dimensional</p>
+</dd>
+<dt id="symbol-_3d">3D</dt><dd><p id="_d0850370-e9f2-2dc6-5d60-26061e3d24c1">3-dimensional</p>
+</dd></dl>
+</definitions>
+<clause id="_identifiers" obligation="normative">
+<title depth="2">5.2.<tab/>Identifiers</title>
+<p id="_2005254c-9463-cbb5-bf8f-77094eaff6c9">The normative provisions in this standard are denoted by the URI:</p>
+
+<p id="_f0191874-4eeb-2c92-18f2-f1367cf61a60"><tt><link target="http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0"/></tt></p>
+
+<p id="_52250454-5ac3-4fce-7c83-eb454adf6103">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p>
+</clause>
+</clause>
+
+<clause id="_characteristics_of_an_abstract_conceptual_model" obligation="normative" displayorder="12">
+<title depth="1">6.<tab/>Characteristics of an Abstract Conceptual Model</title>
+<p id="_877ab55f-db0f-7610-2f70-3f2a9c5d5156">The terms and definitions clause in this Abstract Specification provides a short definition for “conceptual model”. This clause provides additional information on the OGC use of “conceptual model”.</p>
+
+<p id="_bdf9daf5-ca0a-696a-88f0-77e30ae40663">A conceptual model organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain. The aim of a conceptual model is to express the meaning of terms and concepts used by domain experts to discuss the problem, and to find the correct relationships between different concepts.</p>
+
+<p id="_587dd289-ef66-042d-499d-7114e12ba1bd">A conceptual model:</p>
+
+<ol id="_d700c936-b461-fee0-374e-4ce91fed70d6" type="arabic"><li><p id="_8e02fb28-bd18-76a7-b461-339f72f0f55d">is a representation of a system, made of the composition of concepts which are used to help people know, understand, or simulate a subject the model represents. A documented conceptual model represents ‘concepts’ (entities), the relationships between them, and a vocabulary;</p>
+</li>
+<li><p id="_7a45c1a6-7c2f-1641-5988-8dc5034c3eb8">is explicitly defined to be independent of design or implementation concerns;</p>
+</li>
+<li><p id="_59354654-4a26-040a-578e-4263135e60b3">organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain;</p>
+</li>
+<li><p id="_6bd61d45-3081-83d6-bcbe-92c39cf1a079">starts with a glossary of terms and definitions. There is a very high premium on high-quality, design-independent definitions, free of data or implementation biases; the model also emphasizes rich vocabulary; and</p>
+</li>
+<li><p id="_5fe452c2-ef4b-508c-e6ab-d69ea797264a">is always about identifying the correct choice of terms to use in communications, including statements of rules and requirements, especially where high precision and subtle distinctions need to be made. The core concepts of a temporal geospatial problem domain are typically quite stable over time.</p>
+</li>
+</ol>
+</clause>
+
+<clause id="_temporal_abstract_conceptual_model" obligation="normative" displayorder="13">
+<title depth="1">7.<tab/>Temporal Abstract Conceptual Model</title>
+<p id="_2ad07633-2fce-1d19-5e66-d98db7e0c6e7">This attempt at a Temporal Abstract Conceptual Model follows <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>, which is the ISO adoption of <eref type="inline" bibitemid="ogc18005" citeas="OGC 18-005r4">OGC_18-005r4</eref>.</p>
+
+<p id="_f60494e3-ec35-ae9a-1b6c-78a7608242a5">The model is also informed by the <eref type="inline" bibitemid="w3cowltime" citeas="W3C REC-owl-time-20171019">W3C Time Ontology</eref>.<note id="_d5cd9626-5482-156e-ffaa-d6835c12f4dc"><name>NOTE</name><p id="_35e1d44b-e51d-1b47-db88-850534bf64e4">This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
+the Mermaid container with the following.</p>
+</note></p>
+
+
+
+<p id="_9b55cc4b-2a0c-995d-ff79-7aac45dfc5d4"><tt>[plantuml] @startuml . . @enduml</tt></p>
+
+<sourcecode id="_bd9f266c-1408-651d-d32f-79293bb08e08" lang="mermaid"><name>Figure 1</name>classDiagram
+class ReferenceSystem {
+        &#x3c;&#x3c;abstract&#x3e;&#x3e;
+        dimension = 1..*
+        applicableLocationTimeOrDomain
+    }
+class SpatialReferenceSystem {
+        &#x3c;&#x3c;abstract&#x3e;&#x3e;
+        dimension = 1..*
+        applicableLocationTimeOrDomain
+    }
+class TemporalReferenceSystem {
+        &#x3c;&#x3c;abstract&#x3e;&#x3e;
+        dimension = 1
+        applicableLocationTimeOrDomain
+    }
+note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
+ReferenceSystem &#x3c;|-- SpatialReferenceSystem : is a
+ReferenceSystem &#x3c;|-- TemporalReferenceSystem : is a
+class OrdinalTemporalReferenceSystem {
+        dimension = 1
+        applicableLocationTimeOrDomain
+    }
+class TemporalCoordinateReferenceSystem {
+        dimension = 1
+        applicableLocationTimeOrDomain
+    }
+class Calendar {
+        dimension = 1
+        applicableLocationTimeOrDomain
+    }
+note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
+TemporalReferenceSystem &#x3c;|-- OrdinalTemporalReferenceSystem : is a
+TemporalReferenceSystem &#x3c;|-- TemporalCoordinateReferenceSystem : is a
+TemporalReferenceSystem &#x3c;|-- Calendar : is a
+
+OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
+OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
+OrdinalTemporalReferenceSystem "1" --&#x3e; "1..*" Notation : can use
+TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
+TemporalCoordinateReferenceSystem "1" --&#x3e; "1..*" Notation : can use
+TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
+Calendar "1" o-- "0..1" Epoch : has an
+Calendar "1" --&#x3e; "1..*" Notation : can use
+Calendar "1" o-- "1..*" Timescale : has a
+Calendar "1" o-- "1..*" Algorithm : has a
+class Timescale {
+        StartCount
+        EndCount
+        arithmetic
+    }
+Timescale "1" o-- "1" Clock : has a
+Timescale "1" o-- "1" UnitOfMeasure : has a
+class Clock {
+        Tick definition
+    }
+class UnitOfMeasure {
+        Direction
+    }</sourcecode>
+
+</clause>
+
+<clause id="_temporal_regimes" obligation="normative" displayorder="14">
+<title depth="1">8.<tab/>Temporal regimes</title>
+<clause id="_general" obligation="normative">
+<title depth="2">8.1.<tab/>General</title>
+<p id="_43deda51-9ee4-195f-a234-e807896a57d5">To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time and its measurement under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical components.</p>
+
+<p id="_9c2e9cc8-11cd-48f1-c452-5104c6388442">The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, of calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.</p>
+
+<p id="_5e95e7ca-606a-34ef-3bc4-6499e2c430d9">The regimes are applicable to other planets and outer space, but with due consideration.</p>
+</clause>
+
+<clause id="_events_and_operators" obligation="normative">
+<title depth="2">8.2.<tab/>Events and Operators</title>
+<p id="_77f88e40-d33e-91b5-fd9f-755deb07968a">The simplest way of relating entities in time is by events that can be ordered, that is, established in a sequence, and this sequence is used as an approximate measure of the passage of time.</p>
+
+<p id="_9aee3891-7e3b-83ca-ea37-6acb862bf853">In this regime, no clocks or time measurements are defined, only events, that are ordered in relation to each other. For example, geological layers, sediment or ice core layers, archaeological sequences, sequential entries in computer logs without coordinated time.</p>
+
+<p id="_ffe4727f-afd5-0298-1b74-057a6fb99a10">One set of events may be completely ordered with respect to each other, but another set of similar internally consistent events cannot be cross-referenced until extra information is available. Even then, only partial orderings may be possible.</p>
+
+<p id="_eca69697-c458-3c10-85c4-fd9ac023e074">In this regime, the <eref type="inline" bibitemid="temporal-knowledge" citeas="Maintaining Knowledge about Temporal Intervals">Allen Operators</eref> can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform arithmetic operations like (B-A) or (C-A) as we have not defined any timescale or measurements. For example, in geology, ‘subtracting’ Ordovician from Jurassic is meaningless; or in archeology, ‘subtracting’ a layer with a certain type of pottery remains from the layer containing burnt wood and bones is again not meaningful. Only the ordering can be deduced.</p>
+
+<p id="_03e2e22e-0e50-ed41-8cf1-599ce108894c">This regime constitutes an Ordinal Temporal Reference System, with discrete enumerated ordered events.</p>
+</clause>
+
+<clause id="_simple_clocks_and_discrete_timescales" obligation="normative">
+<title depth="2">8.3.<tab/>Simple Clocks and Discrete Timescales</title>
+<p id="_478b1e98-a96b-e3fe-fef4-f86c2d145e23">In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth’s rotation about sun, earth’s rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each ‘tick’. A mechanism for counting, or possibly measuring, the ticks is desirable.</p>
+
+<p id="_e503649e-4d18-3502-693b-15bad9f835fe">It is an assumption that the ticks are regular and homogeneous.</p>
+
+<p id="_f4989ebd-71e1-a6df-08c3-cf3ff1bc27b1">There is no sub-division between two successive clock ticks. Measuring time consists of counting the complete number of repetitions of ticks since the clock started, or since some other event at a given clock count.</p>
+
+<p id="_a3d88829-1b41-2de2-3168-ab2a0a4aad5c">There is no time measurement before the clock started, or after it stops.</p>
+
+<p id="_668cd760-6574-74a9-0fbf-6e9938df1640">It may seem that time can be measured between ‘ticks’ by interpolation, but this needs another clock, with faster ticks. This process of devising more precise clocks continues down to the atomic scale, and then the deterministic process of physically trying to interpolate between ticks is not possible.</p>
+
+<p id="_410b2c2a-4f5a-b5c7-9dfc-5fe7472ffb78">The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differing altitudes and temperatures.</p>
+
+<p id="_13be9b5d-ee86-fa64-aeb7-dea278c66c5f">In this regime, the <eref type="inline" bibitemid="temporal-knowledge" citeas="Maintaining Knowledge about Temporal Intervals">Allen Operators</eref> also can be used. If L occurs before M and M occurs before N, then we can correctly deduce that L occurs before N. The full set of operators also covers pairs of intervals. So if M occurs in the interval (L,N), we can now perform integer arithmetic operations like (M-L) or (N-L) as we have defined an integer timescale or measurement.</p>
+
+<p id="_8ce54d30-561b-05cf-d886-c90fee632ad7">This regime constitutes a Temporal Coordinate Reference System, with discrete integer units of measure which can be subject to integer arithmetic.</p>
+</clause>
+
+<clause id="_crs_and_continuous_timescales" obligation="normative">
+<title depth="2">8.4.<tab/>CRS and Continuous Timescales</title>
+<p id="_657a393b-a045-d842-a02d-a583e5789e64">This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device. Units of Measure may be defrined that are different from the ‘ticks’. For example, a second may be defined as 9,192,631,770 vibrations of the ground-state hyperfine transition of the caesium 133 atom. Alternatively and differently, a second may be defined as 1/86400th of the toataion of the earth on its axis with respect to the sun. The count of rotations are the ‘ticks’ of an earth-day clock. This latter definition is not precise enough for many uses, as the rotaion of the earth on its axis varies from day to day.</p>
+
+<p id="_5cc8fe7b-ac6f-6af8-5cb9-7b05c09cc7a7">Alternatively, it may be that the ticks are not counted but measured, and the precision of the clock is determined by the precision of the measurements, such as depth in an ice core, or angular position of an astronomical body,such as the sun, moon or a star.</p>
+
+<p id="_81eba1d0-ef0a-9cb1-b35c-d421e8237741">It is also assumed that time can be extrapolated to before the time when the clock started and into the future, possibly past when the clock stops.</p>
+
+<p id="_889702a7-c112-b2e3-f2b1-a6ba83417591">This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (a name for the ‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic. It is a Coordinate Reference System.</p>
+
+<p id="_4d8a5e82-6b72-8e41-6330-779df3b98216">In this regime, the <eref type="inline" bibitemid="temporal-knowledge" citeas="Maintaining Knowledge about Temporal Intervals">Allen Operators</eref> also can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), we can now perform real number arithmetic operations like (B-A) or (C-A) as we have defined a timescale or measurement, and between any two instants, we can always find an infinite number of other instants.</p>
+
+<p id="_2926b475-98d6-1e3f-f525-4f8ba83fdb9c">Some examples are:</p>
+
+<ul id="_5d079a7d-6275-b154-08a1-336d50d305d3"><li><p id="_52e558d8-9ff1-3ce1-fe46-d620bda78d58">Unix milliseconds since 1970-01-01T00:00:00.0Z</p>
+</li>
+<li><p id="_ebc704d4-ec31-7e3e-c1a3-63478d681c03">Julian Days, and fractions of a day, since noon on 1st January, 4713 BCE.</p>
+</li>
+</ul>
+
+<p id="_3c59cc86-684d-d568-25a8-1be06c6bc4db">This regime constitutes a Temporal Coordinate Reference System, with a continuous number line and units of measure, which can be subject to the full range of real or floating point arithmetic.</p>
+</clause>
+
+<clause id="_calendars" obligation="normative">
+<title depth="2">8.5.<tab/>Calendars</title>
+<p id="_31941900-db58-2362-0d76-4578095231b8">In this regime, counts and measures of time are related to the various combinations of the rotations of the earth, moon and sun or other astronomical bodies. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE — Year 14BCE is also two years. However Year 1CE — Year 1BCE is one year, not two as there is no year 0CE or 0BCE.</p>
+
+<p id="_f91d6d0d-486d-ba31-017a-d6a372158d11">Calendars are social constructs made by combining several clocks and their associated timescales.</p>
+
+<p id="_47bef48d-903a-cafa-32f3-b9d7e3f330ae">This paper only addresses the internationally agreed Gregorian calendar. <eref type="inline" bibitemid="astro_algo" citeas="Astronomical Algorithms">Astronomical Algorithms</eref> by Jean Meeus provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.</p>
+
+<p id="_6ec58f6a-1e02-e223-68bf-0902afbc32f8">A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.</p>
+</clause>
+
+<clause id="_other_regimes" obligation="normative">
+<title depth="2">8.6.<tab/>Other Regimes</title>
+<p id="_02e07110-55ed-bd46-ecbd-5f7810b2bb62">There are other regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time.</p>
+
+<clause id="_local_solar_time" obligation="normative">
+<title depth="3">8.6.1.<tab/>Local Solar Time</title>
+<p id="_9269713f-6998-e557-fb84-e139cbe2ebc8">Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.</p>
+</clause>
+
+<clause id="_space_time" obligation="normative">
+<title depth="3">8.6.2.<tab/>Space-time</title>
+<p id="_3471da32-4c69-e809-301e-0af849830866">When dealing with moving objects, we find that the location of the object in space depends on its location in time. That is to say, that the location is an event in space and time.</p>
+
+<p id="_4263031e-42e1-76ee-ad4c-09f3ed1429da">Originally developed by <eref type="inline" bibitemid="minkowski" citeas="Minkowski Space and Time">Hermann Minkowski</eref> to support work in Special Relativity, the concept of Space-time is useful whenever the location of an object in space is dependent on its location in time.</p>
+
+<p id="_e4186145-e0c3-81ea-6ab8-31c77129eba4">Since the speed of light in a vacuum is a measurable constant, Space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axis all with the same units of measure, distance.</p>
+</clause>
+
+<clause id="_relativistic" obligation="normative">
+<title depth="3">8.6.3.<tab/>Relativistic</title>
+<p id="_45847b36-4835-d2f9-83e7-c250cbcef856">A regime may be needed for ‘space-time’, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects such as gravity may be relevant.</p>
+
+<p id="_1f5a869c-0c66-5b2b-df30-78e86ddbd57f">Once off the planet Earth, distances and velocities can become very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of Space-time events as measured between two moving objects. The core concepts are the <eref type="inline" bibitemid="lorentz_transform" citeas="Lorentz Transforms">Lorentz Transforms</eref>. These transforms allow one to calculate the degree of “contraction” a measurement undergos due to the relative velocity between the observing and observed object.</p>
+
+<p id="_cf49872e-cd2b-b129-ec03-ba9b1c254e96">The key to this approach is to ensure each moving feature of interest has its own local clock and time, known as its ‘proper time’. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.</p>
+
+<p id="_d414c399-f201-0d08-5ec0-0b839f0fb08f">Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth’s gravity well.</p>
+
+<p id="_40790ecd-58a9-88bb-8a0e-3e500c84eac8">The presence of gravitational effects requires special relativity to te replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras’ Theorem does not hold execept locally over small areas. this is somewhat unfamiliar territory for geospatial experts.</p>
+</clause>
+
+<clause id="_accountancy" obligation="normative">
+<title depth="3">8.6.4.<tab/>Accountancy</title>
+<p id="_7aaf1ef8-69c4-d498-0323-a489ff433178">The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.</p>
+</clause>
+</clause>
+</clause>
+
+<clause id="_notation" obligation="normative" displayorder="15">
+<title depth="1">9.<tab/>Notation</title>
+<p id="_a1f8a5ae-f6ed-c1c8-d4fd-91d651504ccf">There are often widely agreed, commonly accepted, notations used for temporal reference systems, but few have been standardised. Any particular notation may be capable of expressing a wider range of times than are valid for the reference system.</p>
+
+<example id="_6e5872bf-58ca-e356-e461-891ffbd08bc2"><name>Example </name><p id="_dfbd8aee-6379-57d1-9bc3-b80d72b016cf">The <eref type="inline" bibitemid="rfc3339" citeas="IETF RFC 3339">IETF RFC 3339</eref> timestamp notation, a restrictive profile of <eref type="inline" bibitemid="iso8601" citeas="ISO 8601">ISO 8601</eref>, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.</p>
+</example>
+</clause>
+
+<clause id="_attributes_of_the_regimesclasses" obligation="normative" displayorder="16">
+<title depth="1">10.<tab/>Attributes of the Regimes/Classes</title>
+<p id="_4369da23-fda5-baf5-1480-5ea739fa1cce">The top level <tt>Reference System</tt> is an abstract super-class and does not have many attributes or properties. So far, only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.</p>
+
+<p id="_faeed31e-520b-cd2a-920a-494b9970b011">The ‘ReferenceSystem’ has two abstract sub-classes: ‘SpatialReferenceSystem’ , which is defined in <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref>, and ‘TemporalReferenceSystem’, each with the attributes of Dimension and Domains of Applicability.</p>
+
+<p id="_8c375185-71f1-f4c9-40be-e830b8d5e99e">The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location with orientation.</p>
+
+<p id="_174f69a4-09cd-5d6f-d00b-ccecf957031d">Besides the conventional space and time, there may be other reference systems, such as wavelength/frequency, that can be addressed by the Abstract Conceptual Model.</p>
+
+<clause id="_attributes_of_events_and_ordinal_temporal_reference_systems" obligation="normative">
+<title depth="2">10.1.<tab/>Attributes of Events and Ordinal Temporal Reference Systems</title>
+<ol id="_d7bd60af-6c9d-e1d5-e3f1-0155c1dc80bb" type="arabic"><li><p id="_51f08bac-0c81-9c36-6ea1-1f4baca2bdff">An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can b e compared.</p>
+</li>
+<li><p id="_e1777fa1-f4a8-318e-4767-f1a456a21234">Name/Id</p>
+</li>
+<li><p id="_da3cb84d-5c7d-aa8f-daf1-6ce95d385e77">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_7bbfb100-d969-5d41-c942-d1aeb9f3f93a">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_71a0b08c-3cc4-a7da-809c-c2695b6a4284">Listed or enumerated sequence of events with the first and last events</p>
+</li>
+<li><p id="_24054968-1486-57ab-e7eb-19c1ed45ed70">Optional notations</p>
+</li>
+</ol>
+
+<example id="_a7a734ec-d041-a28f-cbff-5d4c21fdc75b"><name>Example </name><p id="_27de2046-4274-0c15-c5fc-0e6561b4a393">Ancient annals of a country may give a sequence of emperors which could be used to ‘date’ another event such as “Emperor Xi built a canal”, or may be used to date a particular reign. For example: “In the reign of Emperor Yi, a comet was sighted” and later research identifies this as an appearance of Hailey’s Comet.</p>
+</example>
+
+<p id="_3cf86be9-1bfb-3556-f2ed-1b172111cacb">The events from the list may be instants, such as the change of reign, or intervals, such as the complete reign of each king.</p>
+
+<p id="_e6d5b234-7597-ba3a-441e-da5ee26ac60c">Other documents may enable two such ‘king lists’ to be related, though not completely.</p>
+</clause>
+
+<clause id="_attributes_of_simple_clock_and_discrete_timescale" obligation="normative">
+<title depth="2">10.2.<tab/>Attributes of simple Clock and Discrete Timescale</title>
+<p id="_230cdf7c-c92d-67b2-d736-24f20e447db7">A clock is a regular, repeating, physical event, or ‘tick’, that can be counted. The sequence of tick counts is a timescale. The ticks may be grouped into a Unit of Meaure for convenience. Other events can be compared to the ticks on the timescale.</p>
+
+<ol id="_134b4bcc-a92b-2cdb-5480-f957d49fd7fa" type="arabic"><li><p id="_ecf2056f-585b-4c44-fc43-2ad63fd0ba84">Name/Id</p>
+</li>
+<li><p id="_ac60fea3-bd11-2362-2109-ff679aedc35f">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_d4ad1223-6901-ac8f-b79c-7129898a96d0">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_e2002e78-a3ca-f691-5fb1-b58fd93fe2d5">Arithmetic: Integer</p>
+</li>
+<li><p id="_b22a3cb0-8a18-2ffe-2a02-9eaafbf11615">Optional name for each tick</p>
+</li>
+<li><p id="_71247ba6-4b18-52d0-7738-67d2f15b1ee8">Optional Start time or count</p>
+</li>
+<li><p id="_9b399029-db38-5602-1cc4-3e0fa11307bf">Optional End time or count</p>
+</li>
+<li><p id="_b97fea60-327f-b09d-12ca-eb257a7bc5e6">Optional Unit of Measure and number of ticks per Unit</p>
+</li>
+<li><p id="_4208534a-4eef-4589-1b10-de1d31e9238d">Optional notations</p>
+</li>
+</ol>
+
+<example id="_6c85c53b-3727-1244-c393-70fc10b39895"><name>Example  1</name><p id="_a6b3fb2f-ee5b-93be-31c2-26752c4d3354">A well preserved fossilised log is recovered and the tree rings establish an annual ‘tick’. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.</p>
+</example>
+
+<example id="_8293dd43-c132-44ae-60ee-0369d87c8be5"><name>Example  2</name><p id="_2edb467b-692c-6d74-d827-744fbb113e0f">A clock is started, but undergoes a calibration process against some standards clock, so the initial, reliable Start Time does not start at Count Zero. The clock is accidentially knocked so that it is no longer correctly caliabrated, but is still working. the End Time is not the last time that the clock ticks.</p>
+</example>
+</clause>
+
+<clause id="_attributes_of_clocks" obligation="normative">
+<title depth="2">10.3.<tab/>Attributes of Clocks</title>
+<ol id="_c1bc5f17-8f87-1322-5b14-271032e544a9" type="arabic"><li><p id="_4dd4105b-3ca4-6832-714c-e84bda0ec8c7">Name/Id</p>
+</li>
+<li><p id="_663d0d42-66b7-1441-dfc4-b7681f12c36e">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_794aae8e-9949-7a7c-d5a7-4244f51f18ef">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_3ee24134-a924-9081-333b-106fdb12809e">Tick definition</p>
+</li>
+</ol>
+
+<example id="_4d3b2d51-2ac0-6399-07a6-2169c33738a2"><name>Example  1</name><p id="_b8cba433-532a-d6b5-3225-efab5274a3c7">An atomic clock may be calibrated to be valid only for a given temperature range and altitude.</p>
+</example>
+
+<example id="_22890e32-a86d-7530-ac2e-173d0a7916ec"><name>Example  2</name><p id="_9a6fa6de-7cc8-5581-e001-aec80cc4f3f9">A pendulum clock may have each tick os swing of the pendulum adjusted to be an exace fraction or multiple of a second. The famous London “Big Ben” clock’s pendulum is 4.4m long and ticks every two seconds.</p>
+</example>
+</clause>
+
+<clause id="_attributes_of_timescales" obligation="normative">
+<title depth="2">10.4.<tab/>Attributes of Timescales</title>
+<ol id="_f3d000b0-7ffb-5d52-42e8-49a447286fe5" type="arabic"><li><p id="_83ef205f-6f64-c29d-e9d9-e9fb785f3155">Name/Id</p>
+</li>
+<li><p id="_7b8a8306-1b19-2171-74ad-b8c0a331cc94">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_d27fc3ed-d850-85e4-672e-6f696c7b46f9">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_c63a4e7c-c210-f9b4-9400-582752d76aeb">Arithmetic, whether counted integers or measured real/floating point numbers</p>
+</li>
+<li><p id="_90bae73c-b6b8-cf7e-b941-7e172ee277f1">Optional Unit of Measure</p>
+</li>
+</ol>
+
+<example id="_6172032e-a879-4898-b313-aee5e8dcdf08"><name>Example  1</name><p id="_5f8076ea-6018-f4cd-9585-04db95bce4a5">TAI (International Atomic Time, Temps Atomique International) is coordinated by the <eref type="inline" bibitemid="bipm_define" citeas="Establishment of International Atomic Time and Coordinated Universal Time">BIPM</eref> (International Bureau of Weights and Measures, Bureau International de Poids et Measures) in Paris, France. It is based on the average of hundreds of separate atomic clocks around the world, all corrected to be at mean sea level and standard pressure and temperature. The epoch is defined by Julian Date 2443144.5003725 (1 January 1977 00:00:32.184).</p>
+</example>
+
+<example id="_2a0b5766-066e-5650-1766-8aa18ba9135d"><name>Example  2</name><p id="_04ad8472-e98d-2695-d704-3a2e3e534c54">The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as “Period 2”. Many computer based timescales, such as <eref type="inline" bibitemid="unix_time" citeas="UN UNIX Time">Unix Time</eref>, are based on the Julian Day timescale, but with different epochs, to fit the numbers into the limited computer words.</p>
+</example>
+</clause>
+
+<clause id="_attributes_of_units_of_measure" obligation="normative">
+<title depth="2">10.5.<tab/>Attributes of Units of Measure</title>
+<p id="_0c668b50-1071-3f44-300d-75b13e0ccc96">The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of ‘Timescale’ of ‘TemporalCoordinateReferenceSystem’ rather than a separate class ‘UnitOfMeasure’, but on balace, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in NPs (HectoPascals) decreasing upwards, and FL (FlightLevel) incresing upwards.</p>
+
+<ol id="_7c5403cd-b41a-16aa-26f6-1dfdf7f4333d" type="arabic"><li><p id="_26c8cd80-90b0-3047-b49f-98a5fbf0b7bb">Name/Id/Abbreviation</p>
+</li>
+<li><p id="_a408c6c1-1349-6dff-ac17-79897cf95d91">Direction</p>
+</li>
+</ol>
+
+<example id="_760d8fee-0868-979d-1498-deb037179c8b"><name>Example </name><p id="_fb9fe1e1-76fc-b202-2d7e-091915b1d576">The number of years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of years in the Current Era (CE, previously known as AD) increase further into the future. Tis is an example of two timescales, adjacent but with no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.</p>
+</example>
+</clause>
+
+<clause id="_attributes_of_a_crs_and_continuous_timescales" obligation="normative">
+<title depth="2">10.6.<tab/>Attributes of a CRS and Continuous Timescales</title>
+<p id="_10e80d3a-6bcd-5a8f-0572-2b02564c0ce6">Some clocks allow the measurement or intervals between ticks, such as the movement of the sun across the sky. Alternatively, the ticks may not be completely distinguishable, but are still stable enough over the time of applicability to allow measurements rather than counting to determine the passage of time.</p>
+
+<ol id="_b85bce34-a1f3-f491-c4c6-641312064d38" type="arabic"><li><p id="_ab876de0-b03c-ae45-71e3-95882fcc5fb1">Name/Id</p>
+</li>
+<li><p id="_2a90a61f-ed7e-b9ca-d0d2-6267c3d418ea">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_1c9a099f-d180-b0cd-d094-283fa0072352">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_3124eeb9-39ec-93ec-8003-20e2430573ac">Arithmetic: Real/Floating point</p>
+</li>
+<li><p id="_36827421-1e10-c4f7-721e-73722cf6cb6c">Optional name for the Unit of Measure</p>
+</li>
+<li><p id="_acbb0f4b-3269-6ce5-eb06-37abeb64bc87">Optional Start time or measure</p>
+</li>
+<li><p id="_bc2507af-b2f5-8137-82f5-a7f12bc878c0">Optional End time of measure</p>
+</li>
+<li><p id="_36ad5875-4255-73c0-748f-e6fd91fa9bf3">Optional notations</p>
+</li>
+</ol>
+
+<example id="_ca3d8b07-b484-e6f0-56f4-fc2be0f14570"><name>Example  1</name><p id="_e58a595e-b3eb-de97-a031-b09100a2fb2d">A long, deep ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.</p>
+</example>
+
+<example id="_b0551f1f-47b8-53ef-9b3f-9ef778c76e2a"><name>Example  2</name><p id="_bc2824c5-57e6-ce3d-5081-46a58ea876b6">A long, deep, sediment core is extracted from the bottom of a lake with a long geological history. Two layers in the core are dated using radiocarbon dating. Assuming steady rates of sediment deposition, a continuous timescale can be interpolated between the dated layers, and extrapolated before and after the dated layers.</p>
+</example>
+</clause>
+</clause>
+
+<clause id="_attributes_of_calendars" obligation="normative" displayorder="17">
+<title depth="1">11.<tab/>Attributes of Calendars</title>
+<p id="_759835eb-c9e3-16f5-4254-4bdc4e1207cb">Calendars combine different timescales and their clocks and unito of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timescale are identified and labeled.</p>
+
+<ol id="_a1c4b9ce-8419-e339-156f-61929d1fece9" type="arabic"><li><p id="_f9108a97-8a4f-85a7-29e5-755fe30ad280">Name/id</p>
+</li>
+<li><p id="_5fc3b430-ad4a-6c3d-21eb-b2b6a105d4ec">Optional location, time or domain of applicability</p>
+</li>
+<li><p id="_6919d7e6-7407-fc51-2b4b-249cba8a73d4">Optional Epoch, defined in some temporal reference system</p>
+</li>
+<li><p id="_238cce87-03f2-15d3-7e7c-b244d574ba08">Astronomical Type (e.g. solar, sidereal, lunar, luni-solar)</p>
+</li>
+<li><p id="_70c2f03c-458d-63fa-a207-51ded4efa395">Predictive type (e.g. observed or calculated)</p>
+</li>
+<li><p id="_fb9cfdc7-0e29-4397-aea5-d9be90072451">Optional Start time</p>
+</li>
+<li><p id="_30576aa3-b1f9-66bc-55c6-ab0aad904a72">Optional End time</p>
+</li>
+<li><p id="_78998608-dabe-c982-e8bb-09db0af7758b">Constituent units or clocks and counts or timescales</p>
+</li>
+<li><p id="_c86be860-69eb-dac9-4595-ab815bf1b8d5">Algorithms to link constituent timescales</p>
+</li>
+<li><p id="_9fefe9c9-a75c-6246-a5f0-18a89965b7b1">Optional notations</p>
+</li>
+</ol>
+
+<example id="_c471117b-d9ea-b01e-b0bb-35d78f653357"><name>Example  1</name><p id="_06979fb5-0092-3bd0-1f29-3708ffeed95f">The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.</p>
+</example>
+
+<p id="_7218e2dd-ba06-aa90-28ec-5e8f862d1cdc">The constituent timescales are days (earth’s rotations), months (moon’s orbit around the earth), years (earth’s orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <eref type="inline" bibitemid="iso8601" citeas="ISO 8601">ISO 8601</eref> and its various restrictive profiles.</p>
+
+<example id="_decf7c35-d788-fcbb-c7f4-9dd3405a0e8c"><name>Example  2</name><p id="_8b390a79-e751-43f5-b6b8-c6cbfadb70b3">The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.</p>
+</example>
+
+<example id="_e2331d7e-972d-6c3e-9e20-7a887d8faeb9"><name>Example  3</name><p id="_5f2a3bfc-fceb-10f9-2ea3-3a4338b16ef8">The modern Jewish calendar is a calculated luni-solar calendar, and discrepancies in the solar year are addressed by adding ‘leap months’ every few years.</p>
+</example>
+
+<example id="_dd334faa-d004-7fa4-0054-075d7a238b79"><name>Example  4</name><p id="_d5664e53-c908-9964-6336-7235851a1c11">The Ba’hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday.</p>
+</example>
+
+<example id="_2b77fd3b-e7cb-5008-700d-31fee25bba8c"><name>Example  5</name><p id="_c1e0e199-3719-b17c-634c-f2fe2097c5ad">The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in the grasslands of north-west Cameroun.</p>
+</example>
+
+<example id="_2c7f7d86-c367-6920-0e32-8a51251f2873"><name>Example  6</name><p id="_70c7fc32-8b46-a1d4-87d6-7daf8720ee04">Teams controlling remote vehicles on Mars use a solar calendar, with Martian years and martian days (called sols). Months are not used because there are two moons, with different, rather short, orbital periods.</p>
+</example>
+</clause>
+
+<clause id="_synchronisation_of_clocks" obligation="normative" displayorder="18">
+<title depth="1">12.<tab/>Synchronisation of clocks</title>
+<p id="_df5cfa6f-8da5-e1e8-f7bb-1beeef27896a">If there are two or more clocks, stationary with respect to each other, and a practical method of communicating their times to each other, the clocks can be perfectly synchronized.</p>
+
+<p id="_fb5eaaee-ba1f-8c14-3631-ecf1f9a79ff3">However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.</p>
+
+<p id="_2e72aeca-6bcf-19c7-da28-5a5053616ed2">See <eref type="inline" bibitemid="history_timekeeping" citeas="A Brief History of Timekeeping">A Brief History of Timekeeping</eref> page=”187-191”.</p>
+</clause>
+
+
+
+
+</sections><annex id="_4127f684-aa60-d7dc-2794-e3fd865cd326" obligation="informative" displayorder="19">
+<title><strong>Annex A</strong><br/>(informative)<br/><strong>Glossary</strong></title>
+<terms id="glossary" obligation="normative"><term id="compound-coordinate-reference-system_definition"><name>A.1.</name><preferred><strong>compound coordinate reference system</strong></preferred>
+<definition><p id="_efd47019-c8ef-bc7d-f0ea-0818342acd21">coordinate reference system using at least two independent coordinate reference systems</p></definition>
+
+
+
+
+ <termnote id="_81e94975-d37b-2f77-5164-ab86d2380b38"><name>Note 1 to entry</name><p id="_2e4f01a9-8b2b-73df-130c-91ba9d5ceb9c">Coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="coordinate_definition"><name>A.2.</name><preferred><strong>coordinate</strong></preferred>
+<definition><p id="_4c803190-19f2-65ca-cecc-d2072bae9c54">one of a sequence of numbers designating the position of a point</p></definition>
+
+
+
+
+ <termnote id="_e275da9b-d3ea-4c9f-9b86-f9cc5635f3ee"><name>Note 1 to entry</name><p id="_e375c10c-dfb1-9ecd-a646-2925a836fdba">In a spatial coordinate reference system, the coordinate numbers are qualified by units.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="coordinate-epoch_definition"><name>A.3.</name><preferred><strong>coordinate epoch</strong></preferred>
+<definition><p id="_939017da-0997-2696-6fdb-308e5b6e3cc8">epoch to which coordinates in a dynamic coordinate reference system are referenced</p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="derived-coordinate-reference-system_definition"><name>A.4.</name><preferred><strong>derived coordinate reference system</strong></preferred>
+<definition><p id="_19dc4a32-43b7-0a1b-4b4d-2816ff3c25e8">coordinate reference system that is defined through the application of a specified coordinate conversion to the coordinates within a previously established coordinate reference system</p></definition>
+
+
+
+
+
+
+
+
+ <termnote id="_53962dd9-8be9-c198-6aec-ea14c05a9485"><name>Note 1 to entry</name><p id="_e1afb502-50a4-a9de-322b-7d01deb1415c">The previously established coordinate reference system is referred to as the base coordinate reference system.</p>
+</termnote><termnote id="_b2229c47-3dc5-f84f-51e8-9f72264a8225"><name>Note 2 to entry</name><p id="_cf5500aa-34a5-f4c3-1145-ca3636e493d0">A derived coordinate reference system inherits its datum or reference frame from its base coordinate reference system.</p>
+</termnote><termnote id="_21e68774-20e0-bf92-3b2d-86a12132718a"><name>Note 3 to entry</name><p id="_f2f35c8e-8702-ce22-955f-87f5bbc2e017">The coordinate conversion between the base and derived coordinate reference system is implemented using the parameters and formula(s) specified in the definition of the coordinate conversion.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="dynamic-coordinate-reference-system_definition"><name>A.5.</name><preferred><strong>dynamic coordinate reference system</strong></preferred>
+<definition><p id="_40ab559c-4001-4043-3e50-aa5651ef30ee">coordinate reference system that has a dynamic reference frame</p></definition>
+
+
+
+
+
+
+ <termnote id="_fae19e2c-431d-38a0-a448-c2c5a71e1170"><name>Note 1 to entry</name><p id="_d59f7d80-5ead-4dbc-4b0b-13bfc61807f3">Coordinates of points on or near the crust of the Earth that are referenced to a dynamic coordinate reference system may change with time, usually due to crustal deformations such as tectonic motion and glacial isostatic adjustment.</p>
+</termnote><termnote id="_e21888eb-067a-3446-a358-eefba2a9dbcf"><name>Note 2 to entry</name><p id="_b44a0d72-2869-7676-ce58-c0e6b39d7dcc">Metadata for a dataset referenced to a dynamic coordinate reference system should include coordinate epoch information.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="dynamic-reference-frame_definition"><name>A.6.</name><preferred><strong>dynamic reference frame</strong></preferred><admitted>dynamic datum</admitted>
+
+
+
+<definition><p id="_e919e9c5-014f-6200-1240-a07c6815c184">reference frame in which the defining parameters include time evolution</p></definition>
+
+
+
+
+ <termnote id="_66d82f73-d80b-5549-be5a-bda44f77cf14"><name>Note 1 to entry</name><p id="_87163565-6e1f-7a00-b80b-f83b3669db27">The defining parameters that have time evolution are usually a coordinate set.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="enginering-coordinate-reference-system_definition"><name>A.7.</name><preferred><strong>engineering coordinate reference system</strong></preferred>
+<definition><p id="_a8bb649a-fd9a-f36f-ac7f-3f635f88cd05">coordinate reference system based on an engineering datum</p></definition>
+
+
+
+
+
+
+ <termexample id="_d5f294a6-6c83-28ee-adf3-ae51cc8e39b6"><name>Example  1</name><p id="_7621abf9-809b-5b85-5c59-d7d33673fa49">System for identifying relative positions within a few kilometres of the reference point, such as a building or construction site.</p>
+</termexample><termexample id="_87247b22-670c-8d9a-e5c0-c0902b8c437b"><name>Example  2</name><p id="_02086279-ac76-e3c6-eedc-93da2596b4d6">Coordinate reference system local to a moving object such as a ship or an orbiting spacecraft.</p>
+</termexample><termexample id="_7180877e-f211-d633-e6d4-765364b0dfe1"><name>Example  3</name><p id="_34ff6321-6976-339d-ba6d-efb9816554a1">Internal coordinate reference system for an image. This has continuous axes. It may be the foundation for a grid.</p>
+</termexample></term>
+
+<term id="engineering-datum_definition"><name>A.8.</name><preferred><strong>engineering datum</strong></preferred><admitted>local datum</admitted>
+
+
+
+<definition><p id="_25b8653b-e90c-d8a8-7287-21d088f9f830">datum describing the relationship of a coordinate system to a local reference</p></definition>
+
+
+
+
+ <termnote id="_1f37ddef-7264-cfac-f7a7-09c44c7ef4f5"><name>Note 1 to entry</name><p id="_7fd201a7-a658-c4be-330f-79298dce6f0c">Engineering datum excludes both geodetic and vertical reference frames.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="frame-reference-epoch_definition"><name>A.9.</name><preferred><strong>frame reference epoch</strong></preferred>
+<definition><p id="_c4d0ebda-ec11-6fd7-5d56-edc03af0174f">epoch of coordinates that define a dynamic reference frame</p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="linear-coordinate-system_definition"><name>A.10.</name><preferred><strong>linear coordinate system</strong></preferred>
+<definition><p id="_b285bf20-d5d0-51ca-8cfa-12df48a5805d">one-dimensional coordinate system in which a linear feature forms the axis</p></definition>
+
+
+
+
+
+
+ <termexample id="_a1bd1de3-3b7e-a3ec-a287-14c573821176"><name>Example  1</name><p id="_9f514c55-b23c-070a-ba65-c1cdfcbbb284">Distances along a pipeline.</p>
+</termexample><termexample id="_7d4a4ff7-8ac1-fcfd-eee6-1e4e7dca219a"><name>Example  2</name><p id="_61e030f6-53de-afeb-c947-b7f29f184938">Depths down a deviated oil well bore.</p>
+</termexample><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="parameter-reference-epoch_definition"><name>A.11.</name><preferred><strong>parameter reference epoch</strong></preferred>
+<definition><p id="_5d2d473b-f82a-f8f8-c74c-dac58c15fa50">epoch at which the parameter values of a time-dependent coordinate transformation are valid</p></definition>
+
+
+
+
+ <termnote id="_6d4a0782-137d-62a1-728d-f65c133f7775"><name>Note 1 to entry</name><p id="_d0d2f14b-6a2a-d0ce-5178-88599bcdb64a">The transformation parameter values first need to be propagated to the epoch of the coordinates before the coordinate transformation can be applied.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="parametric-coordinate-reference-system_definition"><name>A.12.</name><preferred><strong>parametric coordinate reference system</strong></preferred>
+<definition><p id="_4ddc0155-cd26-f874-fc3b-74f8b10c1040">coordinate reference system based on a parametric datum</p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="parametric-coordinate-system_definition"><name>A.13.</name><preferred><strong>parametric coordinate system</strong></preferred>
+<definition><p id="_5b15281f-1383-2f63-4644-2f553607e5de">one-dimensional coordinate system where the axis units are parameter values which are not inherently spatial</p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="parametric-datum_definition"><name>A.14.</name><preferred><strong>parametric datum</strong></preferred>
+<definition><p id="_bafe606d-319f-4347-801a-d37f159b1165">datum describing the relationship of a parametric coordinate system to an object</p></definition>
+
+
+
+
+ <termnote id="_a0a5628e-9173-0adc-767d-dfa97f9d5ec0"><name>Note 1 to entry</name><p id="_d5173499-b84e-aaaa-5daf-7d974ef74f66">The object is normally the Earth.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="point-motion-operation_definition"><name>A.15.</name><preferred><strong>point motion operation</strong></preferred>
+<definition><p id="_9a5b9437-43cb-978f-ffe5-1a609f2c5e52">coordinate operation that changes coordinates within one coordinate reference system due to the motion of the point</p></definition>
+
+
+
+
+
+
+ <termnote id="_e88e6c16-6fc4-7e63-ab17-3c161828c2ce"><name>Note 1 to entry</name><p id="_61a915dd-5a5d-beb5-0d2a-d9b539a995fc">The change of coordinates is from those at an initial epoch to those at another epoch.</p>
+</termnote><termnote id="_e62104ab-27d7-f3d3-715d-dfa0548f5fef"><name>Note 2 to entry</name><p id="_abeacb65-63a2-b3ca-90a0-911023b23fa1">In this document the point motion is due to tectonic motion or crustal deformation.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="spatio-parametric-coordinate-reference-system_definition"><name>A.16.</name><preferred><strong>spatio-parametric coordinate reference system</strong></preferred>
+<definition><p id="_f8c31f9d-c5c6-5fa5-eccc-5813f54cef73">compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a parametric coordinate reference system</p></definition>
+
+
+
+
+ <termnote id="_4a96518d-1646-048c-b356-396f6a997dc8"><name>Note 1 to entry</name><p id="_b9935a80-f807-0361-fd0e-0790faf54692">Normally the spatial component is “horizontal” and the parametric component is “vertical”.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="spatio-parametric-temporal-coordinate-reference-system_definition"><name>A.17.</name><preferred><strong>spatio-parametric-temporal coordinate reference system</strong></preferred>
+<definition><p id="_1eefd1f6-09da-6bdd-2874-3d1d8a1a6a9f">compound coordinate reference system comprised of spatial, parametric and temporal coordinate reference systems</p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="spatio-temporal-coordinate-reference-system_definition"><name>A.18.</name><preferred><strong>spatio-temporal coordinate reference system</strong></preferred>
+<definition><p id="_f1020dfb-e301-14f7-490e-2005ed3ea9ac">compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a temporal coordinate reference system</p></definition>
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="static-coordinate-reference-system_definition"><name>A.19.</name><preferred><strong>static coordinate reference system</strong></preferred>
+<definition><p id="_c983853a-7434-9faf-9873-f0dc8379a933">coordinate reference system that has a static reference frame</p></definition>
+
+
+
+
+
+
+ <termnote id="_a7775ad3-5814-a1fd-bdac-a4941e6d96f4"><name>Note 1 to entry</name><p id="_d01b81cd-1226-78d3-33cf-af35fa257b43">Coordinates of points on or near the crust of the Earth that are referenced to a static coordinate reference system do not change with time.</p>
+</termnote><termnote id="_f3d423a2-b2a6-f0b2-c98c-468482ea952e"><name>Note 2 to entry</name><p id="_0a01d5c1-6e9e-123f-44cf-773765c3b1cd">Metadata for a dataset referenced to a static coordinate reference system does not require coordinate epoch information.</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="static-reference-frame_definition"><name>A.20.</name><preferred><strong>static reference frame</strong></preferred>
+<definition><p id="_729e1050-f56b-e858-0cb9-2f904c12c422">static datum</p><p id="_19e114ed-b8d8-e1c9-ba0a-d6c1e7324a53">reference frame in which the defining parameters exclude time evolution</p></definition>
+
+
+
+
+ <termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+
+<term id="terrestrial-reference-system_definition"><name>A.21.</name><preferred><strong>terrestrial reference system</strong></preferred><admitted>TRS</admitted>
+
+
+
+<definition><p id="_c1aae8f6-b8d7-bebc-c19d-b686f96f9f48">set of conventions defining the origin, scale, orientation and time evolution of a spatial reference system co-rotating with the Earth in its diurnal motion in space</p></definition>
+
+
+
+
+ <termnote id="_2b2e13c7-939e-3853-2994-bd2b18c0b588"><name>Note 1 to entry</name><p id="_fe6a123c-27a9-4cc2-cb30-6d57f8be5209">The abstract concept of a TRS is realised through a terrestrial reference frame that usually consists of a set of physical points with precisely determined coordinates and optionally their rates of change. In this document terrestrial reference frame is included within the geodetic reference frame element of the data model</p>
+</termnote><termsource status="identical" type="authoritative">[<strong>SOURCE:</strong> <origin bibitemid="iso19111" type="inline" citeas="ISO 19111">ISO 19111</origin>]</termsource></term>
+</terms>
+</annex><bibliography><references id="_references" normative="true" obligation="informative" displayorder="9">
+<title depth="1">3.<tab/>Normative references</title><p id="_307b20e2-9e40-db56-abbf-2822ab2941cc">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+
+<bibitem id="rfc3339"><formattedref format="application/x-isodoc+xml">IETF: RFC 3339 <em>Date and Time on the Internet: Timestamps</em>. <link target="https://www.rfc-editor.org/rfc/rfc3339"/></formattedref><docidentifier type="IETF">IETF RFC 3339</docidentifier><docnumber>3339</docnumber></bibitem>
+<bibitem id="iso8601"><formattedref format="application/x-isodoc+xml">ISO/TC 211: 8601:2004 <em>Data elements and interchange formats — Information interchange — Representation of dates and times</em>, 2004, <link target="https://www.iso.org/standard/40874.html"/></formattedref><docidentifier type="ISO">ISO 8601</docidentifier><docnumber>8601</docnumber><date type="published"><on>2004</on></date></bibitem>
+<bibitem id="iso19111"><formattedref format="application/x-isodoc+xml">ISO/TC 211: ISO 19111:2019, <em>Geographic information – Referencing by coordinates</em>, 2019, <link target="https://www.iso.org/standard/74039.html"/></formattedref><docidentifier type="ISO">ISO 19111</docidentifier><docnumber>19111</docnumber></bibitem>
+<bibitem id="temporal-knowledge"><formattedref format="application/x-isodoc+xml">Allen, J. F. <em>Maintaining Knowledge about Temporal Intervals</em>Communications of the ACM, 1983, vol. 26 pp. 832-843.</formattedref><docidentifier>Maintaining Knowledge about Temporal Intervals</docidentifier></bibitem>
+<bibitem id="ogc18005"><formattedref format="application/x-isodoc+xml">OGC: 18-005, <em>OGC Abstract Specification Topic 2: Referencing by coordinates Corrigendum</em>, 2021, <link target="https://docs.ogc.org/as/18-005r5/18-005r5.html"/></formattedref><docidentifier type="OGC">OGC 18-005r4</docidentifier><docnumber>18-005r4</docnumber></bibitem>
+<bibitem id="w3cowltime"><formattedref format="application/x-isodoc+xml">W3C: Time Ontology in OWL, 2017, <link target="https://www.w3.org/TR/2017/REC-owl-time-20171019/"/></formattedref><docidentifier type="W3C">W3C REC-owl-time-20171019</docidentifier><docnumber>3C REC-owl-time-20171019</docnumber></bibitem>
+</references><references id="_bibliography" normative="false" obligation="informative" displayorder="20">
+<title depth="1">Bibliography</title><bibitem id="astro_algo">
+  <formattedref format="application/x-isodoc+xml">Jean Meeus. <em>Astronomical Algorithms</em>. <link target="https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf"/></formattedref>
+  <docidentifier type="metanorma-ordinal">[1]</docidentifier><docidentifier>Astronomical Algorithms</docidentifier>
+  
+</bibitem><bibitem id="bipm_define">
+  <formattedref format="application/x-isodoc+xml">Bureau International des Poids et Mesures (BIPM). <em>Establishment of International Atomic Time and Coordinated Universal Time</em>. <link target="https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc"/></formattedref>
+  <docidentifier type="metanorma-ordinal">[2]</docidentifier><docidentifier>Establishment of International Atomic Time and Coordinated Universal Time</docidentifier>
+  
+</bibitem><bibitem id="cen_env_1613">
+  <formattedref format="application/x-isodoc+xml">CEN: Env 1613:1995 <em>Medical informatics — Messages for exchange of laboratory information</em>, 1995</formattedref>
+  <docidentifier type="metanorma-ordinal">[3]</docidentifier><docidentifier type="CEN">CEN ENV 1613</docidentifier>
+  <docnumber>1613</docnumber>
+  <date type="published">
+    <on>1995</on>
+  </date>
+</bibitem><bibitem id="history_timekeeping">
+  <formattedref format="application/x-isodoc+xml">Chad Orzell. <em>A Brief History of Timekeeping</em>. Oneworld Publications. 2022. ISBN-13: 978-0-86154-321-2.</formattedref>
+  <docidentifier type="metanorma-ordinal">[4]</docidentifier><docidentifier>A Brief History of Timekeeping</docidentifier>
+  
+</bibitem><bibitem id="iso19108">
+  <formattedref format="application/x-isodoc+xml">ISO/TC 211: ISO 19108:2002 <em>Geographic information — Temporal schema</em>, 2021, <link target="https://www.iso.org/standard/26013.html"/></formattedref>
+  <docidentifier type="metanorma-ordinal">[5]</docidentifier><docidentifier type="ISO">ISO 19108</docidentifier>
+  <docnumber>19108</docnumber>
+</bibitem><bibitem id="lorentz_transform">
+  <formattedref format="application/x-isodoc+xml"><em>Lorentz Transform</em>. Wolfram MathWorld. <link target="https://mathworld.wolfram.com/LorentzTransformation.html"/></formattedref>
+  <docidentifier type="metanorma-ordinal">[6]</docidentifier><docidentifier>Lorentz Transforms</docidentifier>
+  
+</bibitem><bibitem id="minkowski">
+  <formattedref format="application/x-isodoc+xml">H. Minkowski. <em>Space and Time, Minkowski’s Papers on Relativity</em>Minkowski Institute Press, Montreal 2012. <link target="https://minkowskiinstitute.org/ebookstore/book1/">https://minkowskiinstitute.org/ebookstore</link></formattedref>
+  <docidentifier type="metanorma-ordinal">[7]</docidentifier><docidentifier>Minkowski Space and Time</docidentifier>
+  
+</bibitem><bibitem id="unix_time">
+  <formattedref format="application/x-isodoc+xml">The Open Group. <em>UNIX Time</em>. <link target="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16"/> [last accessed 2023-01]</formattedref>
+  <docidentifier type="metanorma-ordinal">[8]</docidentifier><docidentifier type="UN">UN UNIX Time</docidentifier>
+  
+</bibitem>
+
+
+
+
+
+
+
+
+</references></bibliography>
+</ogc-standard>

@@ -1,0 +1,4 @@
+
+== Scope
+
+This document defines the major underlying concepts regarding time. It does not define any concrete temporal reference systems or give detailed guidance on implementations.

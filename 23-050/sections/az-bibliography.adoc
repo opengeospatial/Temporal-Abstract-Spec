@@ -1,0 +1,106 @@
+[bibliography]
+== Bibliography
+
+* [[[iso8601,nofetch(ISO 8601:2004)]]] ISO: 8601
+
+* [[[iso19107,nofetch(ISO 19107)]]] ISO: 19107
+
+* [[[iso19108,nofetch(ISO 19108)]]] ISO: 19108
+
+* [[[iso19108_Cor1,nofetch(ISO 19108:2002/Cor 1:2006)]]] ISO: 19108/cor 1
+
+* [[[ogc22036,nofetch(OGC 22-036)]]] OGC: 22-036
+
+* [[[ogc22038,nofetch(OGC 22-038r2)]]] OGC: 22-038
+
+* [[[OGCgeopose,nofetch(OGC 21-056r10)]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
+
+* [[[iso19101-1,nofetch(ISO 19101-1:2014)]]] ISO: 19101-1
+
+* [[[iso19112,nofetch(ISO 19112:2019)]]] ISO: 19112
+
+* [[[iso19162,nofetch(ISO 19162:2019)]]] ISO: 19162
+
+* [[[iso19136,nofetch(ISO 19136:2007)]]] ISO: 19136
+
+* [[[ogc09083,nofetch(OGC 09-083r4)]]] OGC: 09-083
+
+* [[[ogc18005r4,nofetch(OGC 18-005r4)]]] OGC: 18-005
+
+* [[[rfc3339,nofetch(IETF RFC 3339)]]] IETF: RFC 3339
+
+* [[[CEN_ENV_1613,nofetch(CEN ENV 1613:1995)]]] CEN: Cen Env 1613
+
+* [[[astro_algo,nofetch(Astronomical Algorithms)]]], Jean Meeus. _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
+
+* [[[CCSDS_500x0g4,nofetch(CCDSS 500x0g4)]]], Consultative Committee for Space Data Systems. _Navigation Data — Definitions and Conventions_. 2019. https://public.ccsds.org/Pubs/500x0g4.pdf
+
+* [[[Springer_GNSS,nofetch(Springer Handbook of Global Navigation Satellite Systems)]]],
+Peter J.G. Teunissen, Oliver Montenbruck.
+_Springer Handbook of Global Navigation Satellite Systems_.
+https://doi.org/10.1007/978-3-319-42928-1
+
+* [[[IERS,nofetch(International Earth Rotation and Reference Systems Service)]]],
+IERS.
+https://www.iers.org/IERS/EN/DataProducts/EarthOrientationData/eop.html
+
+* [[[SPICE,nofetch(SPICE Documentation)]]]
+NASA NAIF.
+_SPICE Documentation_.
+https://naif.jpl.nasa.gov/naif/tutorials.html [last accessed 2023-01]
+
+* [[[unix_time,nofetch(UNIX Time)]]]
+The Open Group.
+_UNIX Time_.
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16 [last accessed 2023-01]
+
+* [[[calendrical,nofetch(Calendrical Calculations)]]]
+Nachum Dershowitz, Edward M. Reingold.
+_Calendrical Calculations - The Ultimate Edition_.
+Cambridge University Press. 2018.
+ISBN-13: 978-1107683167.
+http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
+
+* [[[history_timekeeping,nofetch(A Brief History of Timekeeping)]]]
+Chad Orzell.
+_A Brief History of Timekeeping_.
+Oneworld Publications. 2022.
+ISBN-13: 978-0-86154-321-2.
+
+* [[[lorentz,nofetch(Lorentz Paper)]]] 
+H. Lorentz.
+_Electromagnetic phenomena in a system moving with any velocity smaller than that of light_
+Proceedings of the Royal Netherlands Academy of Arts and Sciences, 1904
+https://en.wikisource.org/wiki/Electromagnetic_phenomena[https://en.wikisource.org/wiki/Electromagnetic_phenomena]
+
+* [[lorentz_transform,nofetch(Lorentz Transforms)]]]
+_Lorentz Transform_.
+Wolfram MathWorld.
+https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfram.com/LorentzTransformation.html]
+
+* [[[minkowski,nofetch(Minkowski Space and Time)]]] H. Minkowski. 
+_Space and Time, Minkowski's Papers on Relativity_ 
+Minkowski Institute Press, Montreal 2012. 
+https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
+
+* [[[treatise,nofetch(A Treatise on Time and Space)]]]
+J. R. Lucas.
+_A Treatise on Time and Space_
+Methuen and Co. Ltd. 1973.
+ISBN 0-416-84190-2.
+
+* [[[temporal_knowledge,nofetch(Maintaining Knowledge about Temporal Intervals)]]]
+Allen, J. F.
+_Maintaining Knowledge about Temporal Intervals_
+Communications of the ACM, 1983, vol. 26 pp. 832-843.
+
+* [[[theory,nofetch(Theory of Modelling and Simulation)]]]
+B. P. Zeigler, H. Praehofer, T. G. Kim.
+_Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems_
+Edition 2. San Diego: Academic Press. 2000.
+
+* [[[bipm_define,nofetch(Establishment of International Atomic Time and Coordinated Universal Time)]]]
+Bureau International des Poids et Mesures (BIPM).
+_Establishment of International Atomic Time and Coordinated Universal Time_.
+https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
+
