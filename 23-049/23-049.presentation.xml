@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="presentation" version="2.0.6">
 <bibdata type="standard">
-<title language="en" format="text/plain">Topic 24 - Temporal Abstract Conceptual Model</title>
+<title language="en" format="text/plain">Topic 24 - Abstract Conceptual Model for Time</title>
 <docidentifier type="ogc-external">http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0</docidentifier><docidentifier type="ogc-external">http://docs.opengeospatial.org/as/23-049/23-049.html</docidentifier><docidentifier type="ogc-internal">23-049</docidentifier><docnumber>23-049</docnumber><date type="published"><on>2023-08-22</on></date><date type="issued"><on>2023-05-23</on></date><date type="received"><on>2023-05-23</on></date><contributor><role type="author"/><organization>
 <name>U.K. Met Office, HeazelTech</name>
 </organization></contributor><contributor><role type="editor"/><person>
@@ -148,7 +148,7 @@
 <p id="_d4206428-1604-4374-6345-eefc296438a5">This document is consistent with <eref type="inline" bibitemid="iso19111" citeas="ISO 19111">ISO 19111</eref> and <eref type="inline" bibitemid="w3cowltime" citeas="W3C REC-owl-time-20171019">W3C Time Ontology</eref> in OWL.</p>
 
 <p id="_72f0dc4d-fad8-9e3a-f7aa-3c719d44c87a">The aim of this document is to establish clear concepts and terminology.</p>
-</abstract><clause id="_f88f73ae-9604-4481-b9a6-969e07ac6e11" type="keywords" displayorder="2">
+</abstract><clause id="_a1313432-0df8-47d6-83bd-7ee816877e77" type="keywords" displayorder="2">
 <title depth="1">II.<tab/>Keywords</title>
 <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -161,7 +161,7 @@
 </foreword><clause id="_security_considerations" type="security" obligation="informative" displayorder="4">
 <title depth="1">IV.<tab/>Security Considerations</title>
 <p id="_e88b1376-d0f4-5147-cf72-d44500f21228">No security considerations have been made for this document.</p>
-</clause><clause id="_63ccd51f-cb5b-4b45-b74e-b86cc43ed0b3" type="submitting_orgs" displayorder="5">
+</clause><clause id="_8ce7a51f-0bc4-40ce-ae2b-eab752256979" type="submitting_orgs" displayorder="5">
 <title depth="1">V.<tab/>Submitting Organizations</title>
 <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>

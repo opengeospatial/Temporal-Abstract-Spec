@@ -2,7 +2,7 @@
 metanorma:
   source:
     files:
-      - abstract-specification/document.adoc
+      - 23-049/23-049.adoc
 
   collection:
     organization: "OGC"

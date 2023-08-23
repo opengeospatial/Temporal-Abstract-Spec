@@ -1,4 +1,4 @@
-= Topic 24 - Temporal Abstract Conceptual Model
+= Topic 24 - Abstract Conceptual Model for Time
 :doctype: abstract-specification-topic
 :language: en
 :status: swg-draft

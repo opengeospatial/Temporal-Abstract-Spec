@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.0.6">
 <bibdata type="standard">
-<title language="en" format="text/plain">Topic 24 - Temporal Abstract Conceptual Model</title>
+<title language="en" format="text/plain">Topic 24 - Abstract Conceptual Model for Time</title>
 <docidentifier type="ogc-external">http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0</docidentifier><docidentifier type="ogc-external">http://docs.opengeospatial.org/as/23-049/23-049.html</docidentifier><docidentifier type="ogc-internal">23-049</docidentifier><docnumber>23-049</docnumber><date type="published"><on>2023-08-22</on></date><date type="issued"><on>2023-05-23</on></date><date type="received"><on>2023-05-23</on></date><contributor><role type="author"/><organization>
 <name>U.K. Met Office, HeazelTech</name>
 </organization></contributor><contributor><role type="editor"/><person>
