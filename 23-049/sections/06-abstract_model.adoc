@@ -66,6 +66,7 @@ class TemporalCoordinateReferenceSystem {
 class Calendar {
         dimension = 1
         applicableLocationTimeOrDomain 
+        timeline
     }
 note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
 TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
