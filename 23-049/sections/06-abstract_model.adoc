@@ -99,7 +99,7 @@ class UnitOfMeasure {
 class Timeline {
     }
 Timeline "1" o-- "2..*" Timescale : has a
-Timescale "1" o-- "1..*" Algorithm : has a
+Timeline "1" o-- "1..*" Algorithm : has a
 ```
 == Temporal regimes
 
