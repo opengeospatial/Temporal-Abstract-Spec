@@ -80,7 +80,7 @@ TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
 Calendar "1" o-- "0..1" Epoch : has an
 Calendar "1" --> "1..*" Notation : can use
-Calendar "1" o-- "1..*" Timescale : has a
+Calendar "1" o-- "2..*" Timescale : has a
 Calendar "1" o-- "1..*" Algorithm : has a
 Calendar "1" o-- "1" Timeline : has a
 class Timescale {
@@ -96,6 +96,10 @@ class Clock {
 class UnitOfMeasure {
         Direction
     }
+class Timeline {
+    }
+Timeline "1" o-- "2..*" Timescale : has a
+Timescale "1" o-- "1..*" Algorithm : has a
 ```
 == Temporal regimes
 
