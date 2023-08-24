@@ -339,6 +339,8 @@ A long, deep, sediment core is extracted from the bottom of a lake with a long g
 
 Calendars combine different timescales and their clocks and unito of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timescale are identified and labeled.
 
+The timeline is usually a set of instants from the past to the future and is compounded from multiple timescales, with multiple units of measures, and complicated arithmetic determined by the Calendar algorithm(s). The timeline is usually not even continuous, having gaps or even multiple simultaneous representations.
+
 . Name/id
 
 . Optional location, time or domain of applicability
@@ -348,6 +350,8 @@ Calendars combine different timescales and their clocks and unito of measure, an
 . Astronomical Type (e.g. solar, sidereal, lunar, luni-solar)
 
 . Predictive type (e.g. observed or calculated)
+
+. Timeline
 
 . Optional Start time
 
@@ -363,6 +367,9 @@ Calendars combine different timescales and their clocks and unito of measure, an
 The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.
 
 The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601,ISO 8601>> and its various restrictive profiles.
+
+[example]
+The timeline in a country may have gaps when clocks 'spring forward' for enacting daylight saving time. There may not be any time corresponding to the times between 01:00 and 02:00. When the daylight saving time is revoked, and clocks 'fall back', the times between 01:00 and 02:00 occur twice.
 
 [example]
 The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
