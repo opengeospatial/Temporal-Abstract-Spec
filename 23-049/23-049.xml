@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.0.6">
 <bibdata type="standard">
-<title language="en" format="text/plain">Topic 24 - Abstract Conceptual Model for Time</title>
-<docidentifier type="ogc-external">http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0</docidentifier><docidentifier type="ogc-external">http://docs.opengeospatial.org/as/23-049/23-049.html</docidentifier><docidentifier type="ogc-internal">23-049</docidentifier><docnumber>23-049</docnumber><date type="published"><on>2023-08-23</on></date><date type="issued"><on>2023-05-23</on></date><date type="received"><on>2023-05-23</on></date><contributor><role type="author"/><organization>
+<title language="en" format="text/plain">Topic 25 - Abstract Conceptual Model for Time</title>
+<docidentifier type="ogc-external">http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0</docidentifier><docidentifier type="ogc-external">http://docs.opengeospatial.org/as/23-049/23-049.html</docidentifier><docidentifier type="ogc-internal">23-049</docidentifier><docnumber>23-049</docnumber><date type="published"><on>2023-08-26</on></date><date type="issued"><on>2023-05-23</on></date><date type="received"><on>2023-05-23</on></date><contributor><role type="author"/><organization>
 <name>U.K. Met Office, HeazelTech</name>
 </organization></contributor><contributor><role type="editor"/><person>
 <name><completename>Chris Little</completename></name>
@@ -584,7 +584,7 @@ class UnitOfMeasure {
 
 <clause id="_attributes_of_events_and_ordinal_temporal_reference_systems" obligation="normative">
 <title>Attributes of Events and Ordinal Temporal Reference Systems</title>
-<p id="_c5887431-4362-271c-07ff-c7844fc7d7c9">An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can b e compared.</p>
+<p id="_791cc1e7-bdf4-98ce-0b90-10d7a8a73b02">An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can be compared.</p>
 
 <ol id="_3b0cce2c-90c0-a32f-d95a-e7d79dd1459b" type="arabic"><li><p id="_43d852a8-3356-6dca-b77a-b26f726b6158">Name/Id</p>
 </li>
