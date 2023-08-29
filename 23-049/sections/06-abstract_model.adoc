@@ -139,9 +139,9 @@ This regime constitutes a Temporal Coordinate Reference System, with discrete in
 
 === CRS and Continuous Timescales
 
-This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device. Units of Measure may be defrined that are different from the 'ticks'. For example, a second may be defined as 9,192,631,770 vibrations of the ground-state hyperfine transition of the caesium 133 atom. Alternatively and differently, a second may be defined as 1/86400th of the toataion of the earth on its axis with respect to the sun. The count of rotations are the 'ticks' of an earth-day clock. This latter definition is not precise enough for many uses, as the rotaion of the earth on its axis varies from day to day. 
+This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device. Units of Measure may be defrined that are different from the 'ticks'. For example, a second may be defined as 9,192,631,770 vibrations of the ground-state hyperfine transition of the caesium 133 atom. Alternatively and differently, a second may be defined as 1/86400th of the rotation of the earth on its axis with respect to the sun. The count of rotations are the 'ticks' of an earth-day clock. This latter definition is not precise enough for many uses, as the rotaion of the earth on its axis varies from day to day. 
 
-Alternatively, it may be that the ticks are not counted but measured, and the precision of the clock is determined by the precision of the measurements, such as depth in an ice core, or angular position of an astronomical body,such as the sun, moon or a star.
+Alternatively, it may be that the ticks are not counted but measured, and the precision of the clock is determined by the precision of the measurements, such as depth in an ice core, or angular position of an astronomical body, such as the sun, moon or a star.
 
 It is also assumed that time can be extrapolated to before the time when the clock started and into the future, possibly past when the clock stops.
 
@@ -186,7 +186,7 @@ Since the speed of light in a vacuum is a measurable constant, Space-time uses t
 
 A regime may be needed for 'space-time', off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects such as gravity may be relevant.
 
-Once off the planet Earth, distances and velocities can become very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of Space-time events as measured between two moving objects. The core concepts are the <<lorentz_transform,Lorentz Transforms>>. These transforms allow one to calculate the degree of "contraction" a measurement undergos due to the relative velocity between the observing and observed object.
+Once off the planet Earth, distances and velocities can become very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of space-time events as measured between two moving objects. The core concepts are the <<lorentz_transform,Lorentz Transforms>>. These transforms allow one to calculate the degree of "contraction" a measurement undergos due to the relative velocity between the observing and observed object.
 
 The key to this approach is to ensure each moving feature of interest has its own local clock and time, known as its 'proper time'. This example can be construed as a fitting into the clock and timescale regime. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.
 
@@ -207,9 +207,9 @@ The <<rfc3339,IETF RFC 3339>> timestamp notation, a restrictive profile of <<iso
 
 == Attributes of the Regimes/Classes
 
-The top level `Reference System` is an abstract super-class and does not have many attributes or properties. So far, only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
+The top level `ReferenceSystem` is an abstract super-class and does not have many attributes or properties. So far, only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
 
-The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem' , which is defined in <<iso19111,ISO 19111>>, and 'TemporalReferenceSystem', each with the attributes of Dimension and Domains of Applicability.
+The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem', which is defined in <<iso19111,ISO 19111>>, and 'TemporalReferenceSystem', each with the attributes of Dimension and Domains of Applicability.
 
 The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location with orientation.
 
@@ -217,7 +217,7 @@ Besides the conventional space and time, there may be other reference systems, s
 
 === Attributes of Events and Ordinal Temporal Reference Systems
 
-. An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can b e compared.
+An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can be compared.
 
 . Name/Id
 
@@ -262,11 +262,11 @@ A clock is a regular, repeating, physical event, or 'tick', that can be counted.
 A well preserved fossilised log is recovered and the tree rings establish an annual 'tick'. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.
 
 [example]
-A clock is started, but undergoes a calibration process against some standards clock, so the initial, reliable Start Time does not start at Count Zero. The clock is accidentially knocked so that it is no longer correctly caliabrated, but is still working. the End Time is not the last time that the clock ticks.
+A clock is started, but undergoes a calibration process against some standard clock, so the initial, reliable Start Time does not start at Count Zero. The clock is accidentially knocked so that it is no longer correctly caliabrated, but is still working. the End Time is not the last time that the clock ticks.
 
 === Attributes of Clocks
 
-. Name/Id
+. Name/id
 
 . Optional location, time or domain of applicability
 
@@ -278,11 +278,11 @@ A clock is started, but undergoes a calibration process against some standards c
 An atomic clock may be calibrated to be valid only for a given temperature range and altitude.
 
 [example]
-A pendulum clock may have each tick os swing of the pendulum adjusted to be an exace fraction or multiple of a second. The famous London "Big Ben" clock's pendulum is 4.4m long and ticks every two seconds.
+A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multiple of a second. The famous London "Big Ben" clock's pendulum is 4.4m long and ticks every two seconds.
 
 === Attributes of Timescales
 
-. Name/Id
+. Name/id
 
 . Optional location, time or domain of applicability
 
@@ -300,18 +300,18 @@ The Julian Day is the continuous count of days (rotations of the Earth with resp
 
 === Attributes of Units of Measure
 
-The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of 'Timescale' of 'TemporalCoordinateReferenceSystem' rather than a separate class 'UnitOfMeasure', but on balace, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in NPs (HectoPascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
+The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of 'Timescale' or 'TemporalCoordinateReferenceSystem' rather than a separate class 'UnitOfMeasure', but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in HPs (HectoPascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
 
 . Name/Id/Abbreviation
 
 . Direction
 
 [example]
-The number of years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of years in the Current Era (CE, previously known as AD) increase further into the future. Tis is an example of two timescales, adjacent but with no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.
+The number of the years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of the years in the Current Era (CE, previously known as AD) increase further into the future. Tis is an example of two timescales, adjacent but with no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.
 
 === Attributes of a CRS and Continuous Timescales
 
-Some clocks allow the measurement or intervals between ticks, such as the movement of the sun across the sky. Alternatively, the ticks may not be completely distinguishable, but are still stable enough over the time of applicability to allow measurements rather than counting to determine the passage of time.
+Some clocks allow the measurement of intervals between ticks, such as the movement of the sun across the sky. Alternatively, the ticks may not be completely distinguishable, but are still stable enough over the time of applicability to allow measurements rather than counting to determine the passage of time.
 
 . Name/Id
 
@@ -319,23 +319,23 @@ Some clocks allow the measurement or intervals between ticks, such as the moveme
 
 . Optional Epoch, defined in some temporal reference system
 
-. Arithmetic: Real/Floating point
+. Arithmetic: Real/floating point
 
 . Optional name for the Unit of Measure
 
 . Optional Start time or measure
 
-. Optional End time of measure
+. Optional End time or measure
 
 . Optional notations
 
 [example]
-A long, deep ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enable the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests increase the confidence in the timing accuracy.
+A long, deep, ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enables the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests detected in the ice core increase the confidence in the timing accuracy.
 
 [example]
 A long, deep, sediment core is extracted from the bottom of a lake with a long geological history. Two layers in the core are dated using radiocarbon dating. Assuming steady rates of sediment deposition, a continuous timescale can be interpolated between the dated layers, and extrapolated before and after the dated layers.
 
-== Attributes of Calendars
+=== Attributes of Calendars
 
 Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants or intervals on the compound timeline are identified and labeled.
 
@@ -381,10 +381,10 @@ The modern Jewish calendar is a calculated luni-solar calendar, and discrepancie
 The Ba'hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday.
 
 [example]
-The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in the grasslands of north-west Cameroun.
+The West African Yoruba traditional calendar is a solar calendar with months, but rather than subdividing a nominal month of 28 days into 4 weeks, 7 weeks of 4 days are used. This perhaps gave rise to the fortnightly (every 8 days) markets in many villages in the grasslands of north-west Cameroon.
 
 [example]
-Teams controlling remote vehicles on Mars use a solar calendar, with Martian years and martian days (called sols). Months are not used because there are two moons, with different, rather short, orbital periods.
+Teams controlling remote vehicles on Mars use a solar calendar, with Martian years and Martian days (called sols). Months are not used because there are two moons, with different, rather short, orbital periods.
 
 == Synchronisation of clocks
 

@@ -13,16 +13,6 @@ coordinate reference system using at least two independent coordinate reference 
 
 NOTE: Coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.
 
-[[coordinate_definition]]
-=== coordinate
-
-one of a sequence of numbers designating the position of a point
-
-[.source]
-<<iso19111,ISO 19111>>
-
-NOTE: In a spatial coordinate reference system, the coordinate numbers are qualified by units.
-
 [[coordinate-epoch_definition]]
 === coordinate epoch
 
