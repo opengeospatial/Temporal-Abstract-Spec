@@ -1,4 +1,4 @@
-= Topic 24 - Abstract Conceptual Model for Time
+= Topic 25 - Abstract Conceptual Model for Time
 :doctype: abstract-specification-topic
 :language: en
 :status: swg-draft
@@ -7,7 +7,7 @@
 :docnumber: 23-049
 :received-date: 2023-05-23
 :issued-date: 2023-05-23
-:published-date: 2023-08-22
+:published-date: 2023-08-29
 :external-id: http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0
 :referenceURLID: http://docs.opengeospatial.org/as/23-049/23-049.html
 :fullname: Chris Little
