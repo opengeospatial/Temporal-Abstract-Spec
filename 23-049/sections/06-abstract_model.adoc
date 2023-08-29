@@ -216,7 +216,7 @@ Besides the conventional space and time, there may be other reference systems, s
 
 === Attributes of Events and Ordinal Temporal Reference Systems
 
-An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can b e compared.
+An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can be compared.
 
 . Name/Id
 
