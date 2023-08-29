@@ -9,6 +9,16 @@ description of common concepts and their relationships, particularly in order to
 [.source]
 <<cen_env_1613,CEN ENV 1613:1995>>
 
+[[coordinate_definition]]
+=== coordinate
+
+one of a sequence of numbers designating the position of a point
+
+[.source]
+<<iso19111,ISO 19111>>
+
+NOTE: In many coordinate reference systems, the coordinate numbers are qualified by units.
+
 [[coordinate-reference-system_definition]]
 === coordinate reference system
 
