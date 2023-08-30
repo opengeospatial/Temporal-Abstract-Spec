@@ -341,7 +341,7 @@ A long, deep, sediment core is extracted from the bottom of a lake with a long g
 
 === Attributes of Calendars
 
-Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timescale are identified and labeled.
+Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timeline are identified and labeled.
 
 . Name/id
 
