@@ -175,7 +175,7 @@ Local solar time may or may not correspond to the local statutory or legal time 
 
 ==== Astronomical Time
 
-Astronomers have traditionally measured the apparent locations of stars, planets and other heavenly bodies by measuring angular separations from reference points or lines and the timing of transits across a meridian. Generally they use time determined by earth motion realtive to the distant stars rather than the sun. This is called sidereal time. Times are usually measured from an epoch in daylight, such as local midday, rather than midnight. Accurate measurements of positions of stars, planets and moons were and are essential for navigation on Earth. See <<astro_algo,Astronomical Algorithms>> by Jean Meeus for examples of the calculations involved.  
+Astronomers have traditionally measured the apparent locations of stars, planets and other heavenly bodies by measuring angular separations from reference points or lines and the timing of transits across a meridian. Generally they use time determined by earth's motion relative to the distant stars rather than the sun. This is called sidereal time. Times are usually measured from an epoch in daylight, such as local midday, rather than midnight. Accurate measurements of positions of stars, planets and moons were and are essential for navigation on Earth. See <<astro_algo,Astronomical Algorithms>> by Jean Meeus for examples of the calculations involved.  
 
 ==== Space-time
 
