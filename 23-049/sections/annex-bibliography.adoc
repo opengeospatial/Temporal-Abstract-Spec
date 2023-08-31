@@ -34,6 +34,12 @@ _Space and Time, Minkowski's Papers on Relativity_
 Minkowski Institute Press, Montreal 2012. 
 https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
 
+* [[[treatise,nofetch(A Treatise on Time and Space)]]]
+J. R. Lucas.
+_A Treatise on Time and Space_
+Methuen and Co. Ltd. 1973.
+ISBN 0-416-84190-2.
+
 * [[[unix_time,nofetch(UNIX Time)]]]
 The Open Group.
 _UNIX Time_.
