@@ -9,8 +9,6 @@ Bureau International des Poids et Mesures (BIPM).
 _Establishment of International Atomic Time and Coordinated Universal Time_.
 https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
 
-* [[[cen_env_1613,nofetch(CEN ENV 1613:1995)]]] CEN: Env 1613:1995 _Medical informatics - Messages for exchange of laboratory information_, 1995
-
 * [[[calendrical,nofetch(Calendrical Calculations)]]]
 Nachum Dershowitz, Edward M. Reingold.
 _Calendrical Calculations - The Ultimate Edition_.
