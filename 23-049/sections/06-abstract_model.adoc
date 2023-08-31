@@ -179,7 +179,7 @@ When dealing with moving objects, we find that the location of the object in spa
 
 Originally developed by <<minkowski,Hermann Minkowski>> to support work in Special Relativity, the concept of space-time is useful whenever the location of an object in space is dependent on its location in time.
 
-Since the speed of light in a vacuum is a measurable constant, Space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axis all with the same units of measure, distance.
+Since the speed of light in a vacuum is a measurable constant, space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axis all with the same units of measure, distance.
 
 ==== Relativistic
 
@@ -191,7 +191,7 @@ The key to this approach is to ensure each moving feature of interest has its ow
 
 Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth's gravity well.
 
-The presence of gravitational effects requires special relativity to te replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras' Theorem does not hold execept locally over small areas. this is somewhat unfamiliar territory for geospatial experts.
+The presence of gravitational effects requires special relativity to be replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras' Theorem does not hold execept locally over small areas. This is somewhat familiar territory for geospatial experts.
 
 ==== Accountancy
 
