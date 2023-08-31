@@ -9,7 +9,12 @@ Bureau International des Poids et Mesures (BIPM).
 _Establishment of International Atomic Time and Coordinated Universal Time_.
 https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
 
-* [[[cen_env_1613,nofetch(CEN ENV 1613:1995)]]] CEN: Env 1613:1995 _Medical informatics - Messages for exchange of laboratory information_, 1995
+* [[[calendrical,nofetch(Calendrical Calculations)]]]
+Nachum Dershowitz, Edward M. Reingold.
+_Calendrical Calculations - The Ultimate Edition_.
+Cambridge University Press. 2018.
+ISBN-13: 978-1107683167.
+http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
 
 * [[[history_timekeeping,nofetch(A Brief History of Timekeeping)]]]
 Chad Orzell.
@@ -18,6 +23,8 @@ Oneworld Publications. 2022.
 ISBN-13: 978-0-86154-321-2.
 
 * [[[iso19108,nofetch(ISO 19108)]]] ISO/TC 211: ISO 19108:2002 _Geographic information — Temporal schema_, 2021, https://www.iso.org/standard/26013.html[https://www.iso.org/standard/26013.html]
+
+* [[[OGCgeopose,nofetch(OGC 21-056r10)]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
 
 * [[[lorentz_transform,nofetch(Lorentz Transforms)]]]
 _Lorentz Transform_.
@@ -28,6 +35,12 @@ https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfr
 _Space and Time, Minkowski's Papers on Relativity_ 
 Minkowski Institute Press, Montreal 2012. 
 https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
+
+* [[[treatise,nofetch(A Treatise on Time and Space)]]]
+J R Lucas.
+_A Treatise on Time and Space_.
+Methuen and Co. Ltd. 1973.
+ISBN 0-416-84190-2.
 
 * [[[unix_time,nofetch(UNIX Time)]]]
 The Open Group.
