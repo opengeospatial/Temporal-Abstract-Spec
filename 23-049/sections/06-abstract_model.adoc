@@ -177,7 +177,7 @@ Local solar time may or may not correspond to the local statutory or legal time 
 
 When dealing with moving objects, we find that the location of the object in space depends on its location in time. That is to say, that the location is an event in space and time.  
 
-Originally developed by <<minkowski,Hermann Minkowski>> to support work in Special Relativity, the concept of Space-time is useful whenever the location of an object in space is dependent on its location in time.
+Originally developed by <<minkowski,Hermann Minkowski>> to support work in Special Relativity, the concept of space-time is useful whenever the location of an object in space is dependent on its location in time.
 
 Since the speed of light in a vacuum is a measurable constant, Space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axis all with the same units of measure, distance.
 
