@@ -413,5 +413,5 @@ The geospatial community has often used analogies between space and time to cons
 
 These are not symmetrical in space and time.
 
-Temporal constructs such as instants, durations or intervals, multi-instants (a set of instants), and multi-intervals are not included in this conceptual model. They are well described in <<temporal_knowledge,Maintaining Knowledge about Temporal Intervals by J. F. Allen>>  so do not need to be in this Abstract Conceptual Model.
+Temporal constructs such as instants, durations or intervals, multi-instants (a set of instants), and multi-intervals are not included in this conceptual model. They are well described in <<temporal_knowledge,Maintaining Knowledge about Temporal Intervals by J. F. Allen>> and apply across all of the regimes, so do not need to be in this Abstract Conceptual Model.
 
