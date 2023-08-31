@@ -161,7 +161,7 @@ In this regime, counts and measures of time are related to the various combinati
 
 Calendars are social constructs made by combining several clocks and their associated timescales.
 
-This paper only addresses the internationally agreed Gregorian calendar. <<astro_algo,Astronomical Algorithms>> by Jean Meeus, and <<calendrical,Calendrical Calculations>> by Nachum Dershowitz and Edward M. Reingold provide overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The references are comprehensive but not exhaustive, as there are calendars that have been omitted.
+This paper only addresses the internationally agreed Gregorian calendar. <<calendrical,Calendrical Calculations>> by Nachum Dershowitz and Edward M. Reingold provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
 
 A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.
 
@@ -172,6 +172,10 @@ There are other regimes, which are out of scope of this document. This could inc
 ==== Local Solar Time
 
 Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.
+
+==== Astronomical Time
+
+Astronomers have traditionally measured the apparent locations of stars, planets and other heavenly bodies by measuring angular separations from reference points or lines and the timing of transits across a meridian. Generally they use time determined by earth motion realtive to the distant stars rather than the sun. This is called sidereal time. Times are usually measured from an epoch in daylight, such as local midday, rather than midnight. Accurate measurements of positions of stars, planets and moons were and are essential for navigation on Earth. See <<astro_algo,Astronomical Algorithms>> by Jean Meeus for examples of the calculations involved.  
 
 ==== Space-time
 
