@@ -392,9 +392,13 @@ See <<history_timekeeping,A Brief History of Timekeeping>> pages"187-191".
 
 == Temporal Geometry
 
-The geospatial community has often used analogies of space and time to construct 'temporal-geometry'. This analogy is useful but can be misleading and must not be taken too far. E.g.
+The geospatial community has often used analogies of space and time to construct 'temporal-geometry'. This analogy is useful but can be misleading and must not be taken too far. For example, taken from <<treatise,A Treatise on Time and Space by J R Lucas>>:
+
 1.1 A thing cannot be in two places at one time;
+
 1.2 A thing can be in one place at two times;
+
 2.1 Two things cannot be in the same place at the same time;
+
 2.2 Two things can be in the same place at different times.
-I might add a short section about the lure of 'temporal-geometry'
+
