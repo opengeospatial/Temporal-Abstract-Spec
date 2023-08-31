@@ -11,6 +11,13 @@ https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648
 
 * [[[cen_env_1613,nofetch(CEN ENV 1613:1995)]]] CEN: Env 1613:1995 _Medical informatics - Messages for exchange of laboratory information_, 1995
 
+* [[[calendrical,nofetch(Calendrical Calculations)]]]
+Nachum Dershowitz, Edward M. Reingold.
+_Calendrical Calculations - The Ultimate Edition_.
+Cambridge University Press. 2018.
+ISBN-13: 978-1107683167.
+http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
+
 * [[[history_timekeeping,nofetch(A Brief History of Timekeeping)]]]
 Chad Orzell.
 _A Brief History of Timekeeping_.
