@@ -19,7 +19,7 @@ A conceptual model:
 
 == Temporal Abstract Conceptual Model
 
-This attempt at a Temporal Abstract Conceptual Model follows <<iso19111,ISO 19111>>, which is the ISO adoption of <<ogc18005,OGC_18-005r4>>.
+This Temporal Abstract Conceptual Model follows <<iso19111,ISO 19111>>, which is the ISO adoption of <<ogc18005,OGC_18-005r4>>.
 
 The model is also informed by the <<w3cowltime,W3C Time Ontology>>.
 
@@ -27,13 +27,12 @@ The model is also informed by the <<w3cowltime,W3C Time Ontology>>.
 ====
 This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
 the Mermaid container with the following.
-====
-
 `[plantuml]
 @startuml
 .
 .
 @enduml`
+====
 
 ```mermaid
 classDiagram
@@ -80,7 +79,8 @@ TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
 Calendar "1" o-- "0..1" Epoch : has an
 Calendar "1" --> "1..*" Notation : can use
-Calendar "1" o-- "1..*" Timescale : has a
+Calendar "1" o-- "2..*" Timescale : has a
+Calendar "1" o-- "1" Timeline : has a
 Calendar "1" o-- "1..*" Algorithm : has a
 class Timescale {
         StartCount 
@@ -95,6 +95,10 @@ class Clock {
 class UnitOfMeasure {
         Direction
     }
+class Timeline {
+    }
+Timeline "1" o-- "2..*" Timescale : has a
+Timeline "1" o-- "1..*" Algorithm : has a
 ```
 == Temporal regimes
 
@@ -114,7 +118,7 @@ In this regime, no clocks or time measurements are defined, only events, that ar
 
 One set of events may be completely ordered with respect to each other, but another set of similar internally consistent events cannot be cross-referenced until extra information is available. Even then, only partial orderings may be possible.
 
-In this regime, the <<temporal-knowledge,Allen Operators>> can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform arithmetic operations like (B-A) or (C-A) as we have not defined any timescale or measurements. For example, in geology, 'subtracting' Ordovician from Jurassic is meaningless; or in archeology, 'subtracting' a layer with a certain type of pottery remains from the layer containing burnt wood and bones is again not meaningful. Only the ordering can be deduced.
+In this regime, the <<temporal_knowledge,Allen Operators>> can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform arithmetic operations like (B-A) or (C-A) as we have not defined any timescale or measurements. For example, in geology, 'subtracting' Ordovician from Jurassic is meaningless; or in archeology, 'subtracting' a layer with a certain type of pottery remains from the layer containing burnt wood and bones is again not meaningful. Only the ordering can be deduced.
 
 This regime constitutes an Ordinal Temporal Reference System, with discrete enumerated ordered events.
 
@@ -132,7 +136,7 @@ It may seem that time can be measured between 'ticks' by interpolation, but this
 
 The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time, though in practice it is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differing altitudes and temperatures.
 
-In this regime, the <<temporal-knowledge,Allen Operators>> also can be used. If L occurs before M and M occurs before N, then we can correctly deduce that L occurs before N. The full set of operators also covers pairs of intervals. So if M occurs in the interval (L,N), we can now perform integer arithmetic operations like (M-L) or (N-L) as we have defined an integer timescale or measurement.
+In this regime, the <<temporal_knowledge,Allen Operators>> also can be used. If L occurs before M and M occurs before N, then we can correctly deduce that L occurs before N. The full set of operators also covers pairs of intervals. So if M occurs in the interval (L,N), we can now perform integer arithmetic operations like (M-L) or (N-L) as we have defined an integer timescale or measurement.
 
 This regime constitutes a Temporal Coordinate Reference System, with discrete integer units of measure which can be subject to integer arithmetic.
 
@@ -183,7 +187,7 @@ When dealing with moving objects, we find that the location of the object in spa
 
 Originally developed by <<minkowski,Hermann Minkowski>> to support work in Special Relativity, the concept of space-time is useful whenever the location of an object in space is dependent on its location in time.
 
-Since the speed of light in a vacuum is a measurable constant, space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axis all with the same units of measure, distance. However, the meaure of distance in this 4D space is not the usual Pythagorean "d2 = x2 + y2 + z2 +(ct)2" but "d2 = x2 + y2 + z2 -(ct)2", so reality is constrained to iying within a double cone subset of the full space.
+Since the speed of light, `c`, in a vacuum is a measurable constant, space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axes all with the same units of measure, distance. However, the measure of distance in this 4D space is not the usual Pythagorean d^2^ = x^2^ + y^2^ + z^2^ +(ct)^2^ but d^2^ = x^2^ + y^2^ + z^2^ -(ct)^2^, so reality is constrained to lying within a double cone subset around the `ct` axis of the full space.
 
 ==== Relativistic
 
@@ -214,7 +218,7 @@ The top level `ReferenceSystem` is an abstract super-class and does not have man
 
 The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem', which is defined in <<iso19111,ISO 19111>>, and 'TemporalReferenceSystem', each with the attributes of Dimension and Domains of Applicability.
 
-The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location with orientation.
+The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location with orientation as in the <<OGCgeopose,GeoPose Draft Specification>>.
 
 Besides the conventional space and time, there may be other reference systems, such as wavelength/frequency, that can be addressed by the Abstract Conceptual Model.
 
@@ -340,7 +344,7 @@ A long, deep, sediment core is extracted from the bottom of a lake with a long g
 
 === Attributes of Calendars
 
-Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timescale are identified and labeled.
+Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants or intervals on the compound timescale are identified and labeled.
 
 . Name/id
 
@@ -388,11 +392,11 @@ If there are two or more clocks, stationary with respect to each other, and a pr
 
 However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.
 
-See <<history_timekeeping,A Brief History of Timekeeping>> pages"187-191".
+See <<history_timekeeping,A Brief History of Timekeeping>>, pages 187-191.
 
 == Temporal Geometry
 
-The geospatial community has often used analogies of space and time to construct 'temporal-geometry'. This analogy is useful but can be misleading and must not be taken too far. For example, taken from <<treatise,A Treatise on Time and Space by J R Lucas>>:
+The geospatial community has often used analogies between space and time to construct 'temporal-geometry'. This analogy is useful but can be misleading and must not be taken too far. For example, taken from <<treatise,A Treatise on Time and Space by J R Lucas>>:
 
 1.1 A thing cannot be in two places at one time;
 
@@ -401,4 +405,8 @@ The geospatial community has often used analogies of space and time to construct
 2.1 Two things cannot be in the same place at the same time;
 
 2.2 Two things can be in the same place at different times.
+
+These are not symmetrical in space and time.
+
+Temporal constructs such as instants, durations or intervals, multi-instants (a set of instants), and multi-intervals are not included in this conceptual model. They are well described in <<temporal_knowledge,Maintaining Knowledge about Temporal Intervals by J. F. Allen>>  so do not need to be in this Abstract Conceptual Model.
 
