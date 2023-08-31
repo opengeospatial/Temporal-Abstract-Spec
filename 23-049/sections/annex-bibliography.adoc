@@ -24,6 +24,8 @@ ISBN-13: 978-0-86154-321-2.
 
 * [[[iso19108,nofetch(ISO 19108)]]] ISO/TC 211: ISO 19108:2002 _Geographic information — Temporal schema_, 2021, https://www.iso.org/standard/26013.html[https://www.iso.org/standard/26013.html]
 
+* [[[OGCgeopose,nofetch(OGC 21-056r10)]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
+
 * [[[lorentz_transform,nofetch(Lorentz Transforms)]]]
 _Lorentz Transform_.
 Wolfram MathWorld.
