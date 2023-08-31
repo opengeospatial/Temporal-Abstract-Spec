@@ -300,7 +300,7 @@ The Julian Day is the continuous count of days (rotations of the Earth with resp
 
 === Attributes of Units of Measure
 
-The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of 'Timescale' or 'TemporalCoordinateReferenceSystem' rather than a separate class 'UnitOfMeasure', but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in HPs (HectoPascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
+The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of 'Timescale' or 'TemporalCoordinateReferenceSystem' rather than a separate class 'UnitOfMeasure', but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in hPa (Hectopascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
 
 . Name/Id/Abbreviation
 
