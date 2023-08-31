@@ -183,7 +183,7 @@ When dealing with moving objects, we find that the location of the object in spa
 
 Originally developed by <<minkowski,Hermann Minkowski>> to support work in Special Relativity, the concept of space-time is useful whenever the location of an object in space is dependent on its location in time.
 
-Since the speed of light in a vacuum is a measurable constant, space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axis all with the same units of measure, distance.
+Since the speed of light in a vacuum is a measurable constant, space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axis all with the same units of measure, distance. However, the meaure of distance in this 4D space is not the usual Pythagorean "d2 = x2 + y2 + z2 +(ct)2" but "d2 = x2 + y2 + z2 -(ct)2", so reality is constrained to iying within a double cone subset of the full space.
 
 ==== Relativistic
 
@@ -388,4 +388,13 @@ If there are two or more clocks, stationary with respect to each other, and a pr
 
 However, if the clocks are moving with respect to each other, they cannot be precisely coordinated (unless the communication is instantaneous). As communication speed is limited by the finite constant speed of light, perfect synchronisation is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.
 
-See <<history_timekeeping,A Brief History of Timekeeping>> page="187-191".
+See <<history_timekeeping,A Brief History of Timekeeping>> pages"187-191".
+
+== Temporal Geometry
+
+The geospatial community has often used analogies of space and time to construct 'temporal-geometry'. This analogy is useful but can be misleading and must not be taken too far. E.g.
+1.1 A thing cannot be in two places at one time;
+1.2 A thing can be in one place at two times;
+2.1 Two things cannot be in the same place at the same time;
+2.2 Two things can be in the same place at different times.
+I might add a short section about the lure of 'temporal-geometry'
