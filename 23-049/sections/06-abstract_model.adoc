@@ -80,7 +80,8 @@ TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
 Calendar "1" o-- "0..1" Epoch : has an
 Calendar "1" --> "1..*" Notation : can use
-Calendar "1" o-- "1..*" Timescale : has a
+Calendar "1" o-- "2..*" Timescale : has a
+Calendar "1" o-- "1" Timeline : has a
 Calendar "1" o-- "1..*" Algorithm : has a
 class Timescale {
         StartCount 
@@ -95,6 +96,10 @@ class Clock {
 class UnitOfMeasure {
         Direction
     }
+class Timeline {
+    }
+Timeline "1" o-- "2..*" Timescale : has a
+Timeline "1" o-- "1..*" Algorithm : has a
 ```
 == Temporal regimes
 
@@ -218,7 +223,7 @@ Besides the conventional space and time, there may be other reference systems, s
 
 An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can be compared.
 
-. Name/Id
+. Name/id
 
 . Optional location, time or domain of applicability
 
@@ -239,7 +244,7 @@ Other documents may enable two such 'king lists' to be related, though not compl
 
 A clock is a regular, repeating, physical event, or 'tick', that can be counted. The sequence of tick counts is a timescale. The ticks may be grouped into a Unit of Meaure for convenience. Other events can be compared to the ticks on the timescale.
 
-. Name/Id
+. Name/id
 
 . Optional location, time or domain of applicability
 
@@ -299,14 +304,14 @@ The Julian Day is the continuous count of days (rotations of the Earth with resp
 
 === Attributes of Units of Measure
 
-The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of 'Timescale' or 'TemporalCoordinateReferenceSystem' rather than a separate class 'UnitOfMeasure', but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in HPs (HectoPascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
+The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of 'Timescale' or 'TemporalCoordinateReferenceSystem' rather than a separate class 'UnitOfMeasure', but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in hPa (Hectopascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
 
-. Name/Id/Abbreviation
+. Name/id/abbreviation
 
 . Direction
 
 [example]
-The number of the years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of the years in the Current Era (CE, previously known as AD) increase further into the future. Tis is an example of two timescales, adjacent but with no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.
+The number of the years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of the years in the Current Era (CE, previously known as AD) increase further into the future. This is an example of two timescales, adjacent but with no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.
 
 === Attributes of a CRS and Continuous Timescales
 
@@ -329,14 +334,16 @@ Some clocks allow the measurement of intervals between ticks, such as the moveme
 . Optional notations
 
 [example]
-A long, deep, ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enables the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests detected in the ice core increase the confidence in the timing accuracy.
+A long, deep ice core is retrieved from a stable ice-sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enables the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests detected in the ice core increase the confidence in the timing accuracy.
 
 [example]
 A long, deep, sediment core is extracted from the bottom of a lake with a long geological history. Two layers in the core are dated using radiocarbon dating. Assuming steady rates of sediment deposition, a continuous timescale can be interpolated between the dated layers, and extrapolated before and after the dated layers.
 
 === Attributes of Calendars
 
-Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timescale are identified and labeled.
+Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timeline are identified and labeled.
+
+The timeline is usually a set of instants from the past to the future and is compounded from multiple timescales, with multiple units of measures, and complicated arithmetic determined by the calendar algorithm(s). The timeline is usually not even continuous, having gaps or even multiple simultaneous representations.
 
 . Name/id
 
@@ -362,6 +369,9 @@ Calendars combine different timescales and their clocks and units of measure, an
 The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.
 
 The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601,ISO 8601>> and its various restrictive profiles.
+
+[example]
+The timeline in a country may have gaps when clocks 'spring forward' for enacting daylight saving time. There may not be any time corresponding to the times between 01:00 and 02:00. When the daylight saving time is revoked, and clocks 'fall back', the times between 01:00 and 02:00 occur twice.
 
 [example]
 The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
