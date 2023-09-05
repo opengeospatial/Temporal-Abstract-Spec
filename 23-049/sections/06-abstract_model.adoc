@@ -163,6 +163,8 @@ This regime constitutes a Temporal Coordinate Reference System, with a continuou
 
 In this regime, counts and measures of time are related to the various combinations of the rotations of the earth, moon and sun or other astronomical bodies. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a calendar, albeit a very simple one, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE - Year 1BCE is one year, not two as there is no year 0CE or 0BCE.
 
+In this regime, the use of the Allen Operators is not straightforward. If A occurs before B and B occurs before C, then we cannot always easily and correctly deduce that A occurs before C. The full set of Allen Operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot usually perform simple arithmetic operations like (B-A) or (C-A) as we are dependent on the vagaries of the calendar algorithms, multiple timescales and multiple Units of Measure.
+
 Calendars are social constructs made by combining several clocks and their associated timescales.
 
 This paper only addresses the internationally agreed Gregorian calendar. <<calendrical,Calendrical Calculations>> by Nachum Dershowitz and Edward M. Reingold provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
