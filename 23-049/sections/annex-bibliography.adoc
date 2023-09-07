@@ -1,48 +1,48 @@
-
+[appendix]
 [bibliography]
 == Bibliography
 
-* [[[astro_algo,nofetch(Astronomical Algorithms)]]], Jean Meeus. _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
+* [[[astro_algo,Astronomical Algorithms]]], Jean Meeus. _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
 
-* [[[bipm_define,nofetch(Establishment of International Atomic Time and Coordinated Universal Time)]]]
+* [[[bipm_define,Establishment of International Atomic Time and Coordinated Universal Time]]]
 Bureau International des Poids et Mesures (BIPM).
 _Establishment of International Atomic Time and Coordinated Universal Time_.
 https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
 
-* [[[calendrical,nofetch(Calendrical Calculations)]]]
+* [[[calendrical,Calendrical Calculations]]]
 Nachum Dershowitz, Edward M. Reingold.
 _Calendrical Calculations - The Ultimate Edition_.
 Cambridge University Press. 2018.
 ISBN-13: 978-1107683167.
 http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
 
-* [[[history_timekeeping,nofetch(A Brief History of Timekeeping)]]]
+* [[[history_timekeeping,A Brief History of Timekeeping]]]
 Chad Orzell.
 _A Brief History of Timekeeping_.
 Oneworld Publications. 2022.
 ISBN-13: 978-0-86154-321-2.
 
-* [[[iso19108,nofetch(ISO 19108)]]] ISO/TC 211: ISO 19108:2002 _Geographic information — Temporal schema_, 2021, https://www.iso.org/standard/26013.html[https://www.iso.org/standard/26013.html]
+* [[[iso19108,ISO 19108]]] ISO/TC 211: ISO 19108:2002 _Geographic information — Temporal schema_, 2021, https://www.iso.org/standard/26013.html[https://www.iso.org/standard/26013.html]
 
-* [[[OGCgeopose,nofetch(OGC 21-056r10)]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
+* [[[OGCgeopose,OGC 21-056r10]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
 
-* [[[lorentz_transform,nofetch(Lorentz Transforms)]]]
+* [[[lorentz_transform,Lorentz Transforms]]]
 _Lorentz Transform_.
 Wolfram MathWorld.
 https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfram.com/LorentzTransformation.html]
 
-* [[[minkowski,nofetch(Minkowski Space and Time)]]] H. Minkowski. 
+* [[[minkowski,Minkowski Space and Time]]] H. Minkowski. 
 _Space and Time, Minkowski's Papers on Relativity_ 
 Minkowski Institute Press, Montreal 2012. 
 https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
 
-* [[[treatise,nofetch(A Treatise on Time and Space)]]]
+* [[[treatise,Treatise on Time and Space]]]
 J R Lucas.
 _A Treatise on Time and Space_.
 Methuen and Co. Ltd. 1973.
 ISBN 0-416-84190-2.
 
-* [[[unix_time,nofetch(UNIX Time)]]]
+* [[[unix_time,UNIX Time]]]
 The Open Group.
 _UNIX Time_.
 https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16 [last accessed 2023-01]
