@@ -23,10 +23,10 @@ This Temporal Abstract Conceptual Model follows <<iso19111,ISO 19111>>, which is
 
 The model is also informed by the <<w3cowltime,W3C Time Ontology>>.
 
+
 [plantuml]
 ....
 @startuml
-classDiagram
 class ReferenceSystem {
         <<abstract>>
         dimension = 1..*
@@ -67,6 +67,7 @@ class Calendar {
         dimension = 1
         applicableLocationTimeOrDomain 
     }
+
 TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
 TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
 TemporalReferenceSystem <|-- Calendar : is a
@@ -101,6 +102,7 @@ Timeline "1" o-- "2..*" Timescale : has a
 Timeline "1" o-- "1..*" Algorithm : has a
 @enduml
 ....
+
 
 == Temporal regimes
 
