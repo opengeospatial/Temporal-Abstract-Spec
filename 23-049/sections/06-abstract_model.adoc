@@ -23,18 +23,8 @@ This Temporal Abstract Conceptual Model follows <<iso19111,ISO 19111>>, which is
 
 The model is also informed by the <<w3cowltime,W3C Time Ontology>>.
 
-[NOTE]
-====
-This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
-the Mermaid container with the following.
-`[plantuml]
+[plantuml]
 @startuml
-.
-.
-@enduml`
-====
-
-```mermaid
 classDiagram
 class ReferenceSystem {
         <<abstract>>
@@ -99,7 +89,8 @@ class Timeline {
     }
 Timeline "1" o-- "2..*" Timescale : has a
 Timeline "1" o-- "1..*" Algorithm : has a
-```
+@enduml
+
 == Temporal regimes
 
 === General
