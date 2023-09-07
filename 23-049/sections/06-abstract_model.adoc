@@ -24,6 +24,7 @@ This Temporal Abstract Conceptual Model follows <<iso19111,ISO 19111>>, which is
 The model is also informed by the <<w3cowltime,W3C Time Ontology>>.
 
 [plantuml]
+....
 @startuml
 classDiagram
 class ReferenceSystem {
@@ -31,17 +32,27 @@ class ReferenceSystem {
         dimension = 1..*
         applicableLocationTimeOrDomain 
     }
+note right of ReferenceSystem
+	Note: Has at least one of:
+    	SpatialReferenceSystem, or 
+        TemporalReferenceSystem
+end note  
 class SpatialReferenceSystem {
         <<abstract>>
         dimension = 1..*
         applicableLocationTimeOrDomain 
     }
+note left of TemporalReferenceSystem 
+	Note: Consists of one only of:
+    	TemporalCoordinateReferenceSystem,
+        Calendar, or 
+        OrdinalTemporalReferenceSystem
+end note  
 class TemporalReferenceSystem {
         <<abstract>>
         dimension = 1
         applicableLocationTimeOrDomain 
     }
-note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
 ReferenceSystem <|-- SpatialReferenceSystem : is a
 ReferenceSystem <|-- TemporalReferenceSystem : is a
 class OrdinalTemporalReferenceSystem {
@@ -56,7 +67,6 @@ class Calendar {
         dimension = 1
         applicableLocationTimeOrDomain 
     }
-note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
 TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
 TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
 TemporalReferenceSystem <|-- Calendar : is a
@@ -90,6 +100,7 @@ class Timeline {
 Timeline "1" o-- "2..*" Timescale : has a
 Timeline "1" o-- "1..*" Algorithm : has a
 @enduml
+....
 
 == Temporal regimes
 
