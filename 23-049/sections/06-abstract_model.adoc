@@ -128,7 +128,7 @@ This regime constitutes an Ordinal Temporal Reference System, with discrete enum
 
 === Simple Clocks and Discrete Timescales
 
-In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about sun, earth's rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each 'tick'. A mechanism for counting, or possibly measuring, the ticks is desirable.
+In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about the sun, earth's rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the caesium-133 atom. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each 'tick'. A mechanism for counting, or possibly measuring, the ticks is desirable.
 
 It is an assumption that the ticks are regular and homogeneous.
 
@@ -182,7 +182,7 @@ There are other regimes, which are out of scope of this document. This could inc
 
 ==== Local Solar Time
 
-Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.
+Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle. But the sun does not appear to progress evenly along the ecliptic throughout the days and year. There may be variations of up to 15 minutes compared to an even angular speed
 
 ==== Astronomical Time
 
@@ -250,7 +250,7 @@ The events from the list may be instants, such as the change of reign, or interv
 
 Other documents may enable two such 'king lists' to be related, though not completely.
 
-=== Attributes of simple Clock and Discrete Timescale
+=== Attributes of Simple Clock and Discrete Timescale
 
 A clock is a regular, repeating, physical event, or 'tick', that can be counted. The sequence of tick counts is a timescale. The ticks may be grouped into a Unit of Meaure for convenience. Other events can be compared to the ticks on the timescale.
 
@@ -351,7 +351,7 @@ A long, deep, sediment core is extracted from the bottom of a lake with a long g
 
 === Attributes of Calendars
 
-Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timeline are identified and labeled.
+Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants or intervals on the compound timeline are identified and labeled.
 
 The timeline is usually a set of instants from the past to the future and is compounded from multiple timescales, with multiple units of measures, and complicated arithmetic determined by the calendar algorithm(s). The timeline is usually not even continuous, having gaps or even multiple simultaneous representations.
 
@@ -376,9 +376,9 @@ The timeline is usually a set of instants from the past to the future and is com
 . Optional notations
 
 [example]
-The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.
+The modern Gregorian calendar is a calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.
 
-The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601,ISO 8601>> and its various restrictive profiles.
+The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601,ISO 8601>> and its various restrictive profiles from other authoritative bodies such as IETF and W3C.
 
 [example]
 The timeline in a country may have gaps when clocks 'spring forward' for enacting daylight saving time. There may not be any time corresponding to the times between 01:00 and 02:00. When the daylight saving time is revoked, and clocks 'fall back', the times between 01:00 and 02:00 occur twice.
