@@ -303,7 +303,7 @@ A Timeline does not have any attributes of its own. Nor does it inherit any attr
 [[algorithm_section]]
 ==== Algorithm
 
-An Algorithm specifies the logic used to construct a Timeline from its constituent <<timescale_section,Timescales>>. A Timeline does not have any attributes of its own. Nor does it make use of any other classes from this Temporal model.
+An Algorithm specifies the logic used to construct a Timeline from its constituent <<timescale_section,Timescales>>. An Algorithm does not have any attributes of its own. Nor does it make use of any other classes from this Temporal model.
 
 ==== Calendar Examples
 
