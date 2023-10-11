@@ -341,13 +341,13 @@ The duration of a tick is a constant. The length of a tick is specified using a 
 [[timescale_section]]
 ==== Timescale
 
-A Timescale is a linear measurement (one dimension) used to measure or count monotonic events. 
+A Timescale is a linear measurement (one dimension) used to measure or count monotonic events. Timescale has three attributes:
 
 . Arithmetic: an indicator of whether this Timescale contains counted integers or measured real/floating point numbers.
-. StartCount: the lowest value in a Timescale. The data type of this attribues is specified by the 'arithmetic' attribute.
-. EndCount: the greatest value in a Timescale. The data type of this attribues is specified by the 'arithmetic' attribute.
+. StartCount: the lowest value in a Timescale. The data type of this attribute is specified by the 'arithmetic' attribute.
+. EndCount: the greatest value in a Timescale. The data type of this attribute is specified by the 'arithmetic' attribute.
 
-In addition to the attributes, the Timescale class matains associations with two other classes to complete its definition.
+In addition to the attributes, the Timescale class maintains associations with two other classes to complete its definition.
 
 . Clock: A Timescale 'has a' one <<clock_section,clock>>. This is the process which generates the 'tick' which is counted or measured for the Timescale.
 . UnitOfMeasure: A timescale 'has a' one <<unitsOfMeasure_section,UnitOfMeasure>>. This class specifies the units of the clock measurement as well as the direction of increase of that measurement.
