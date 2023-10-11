@@ -357,7 +357,7 @@ In addition to the attributes, the Timescale class maintains associations with t
 
 A Clock represents the process which generates the 'tick' which is counted or measured for a Timescale. Clock has one attribute:
 
-. Tick definition: a description of the process which is being used to generate nonotonic events.
+. Tick definition: a description of the process which is being used to generate monotonic events.
 
 [example]
 An atomic clock may be calibrated to be valid only for a given temperature range and altitude.
