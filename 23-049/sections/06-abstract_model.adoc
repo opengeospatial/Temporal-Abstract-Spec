@@ -206,7 +206,7 @@ The key to this approach is to ensure each moving feature of interest has its ow
 
 Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth's gravity well.
 
-The presence of gravitational effects requires special relativity to be replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras' Theorem does not hold execept locally over small areas. This is somewhat familiar territory for geospatial experts.
+The presence of gravitational effects requires special relativity to be replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras' Theorem does not hold except locally over small areas. This is somewhat familiar territory for geospatial experts.
 
 ==== Accountancy
 
