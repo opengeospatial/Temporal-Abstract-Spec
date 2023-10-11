@@ -57,7 +57,7 @@ point in time
 NOTE: In the ISO 19111 document an epoch is expressed in the Gregorian calendar as a decimal year.
 
 [example]
-2017-03-25 in the Gregorian calendar is epoch 2017.23.
+2017-03-25 in the Gregorian calendar is epoch 2017.23. Other notations or reference systems are options.
 
 [[reference-frame_definition]]
 === reference frame
