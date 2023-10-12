@@ -17,11 +17,11 @@ A conceptual model:
 
 . is always about identifying the correct choice of terms to use in communications, including statements of rules and requirements, especially where high precision and subtle distinctions need to be made. The core concepts of a temporal geospatial problem domain are typically quite stable over time.
 
-== Temporal Abstract Conceptual Model
+== Abstract Conceptual Model for Time
 
-This Temporal Abstract Conceptual Model follows <<iso19111,ISO 19111>>, which is the ISO adoption of <<ogc18005,OGC_18-005r4>>.
+This Abstract Conceptual Model for Time follows <<iso19111,ISO 19111:2019 - Geographical information - Referencing by coordinates>>, which is the ISO adoption of <<ogc18005,OGC_18-005r4>>.
 
-The model is also informed by the <<w3cowltime,W3C Time Ontology>>.
+The model is also informed by the <<w3cowltime,W3C Time Ontology in OWL>>.
 
 
 [plantuml]
