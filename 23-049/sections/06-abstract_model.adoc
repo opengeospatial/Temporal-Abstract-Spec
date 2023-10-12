@@ -228,9 +228,9 @@ The top level `ReferenceSystem` is an abstract super-class and does not have man
 
 The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem', which is defined in <<iso19111,ISO 19111>>, and 'TemporalReferenceSystem'. Each sub-class has the attributes of Dimension and Domains of Applicability.
 
-The value for Dimension is one for time, or a vertical reference system, but may be as high as 6 for spatial location with orientation as in the <<OGCgeopose,GeoPose Draft Specification>>.
+The value for Dimension is one for time, or a vertical reference system, but may be as high as 6 for spatial location with orientation as in the <<OGCgeopose,GeoPose Implementation Stadnard>>.
 
-Besides the conventional space and time, there may be other reference systems, such as wavelength/frequency, that can be addressed by the Abstract Conceptual Model.
+Besides the conventional space and time, there may be other reference systems, such as wavelength or frequency, that could be addressed by future additions to this Abstract Conceptual Model.
 
 [[ordinal_rs_section]]
 === Ordinal Temporal Reference Systems
@@ -417,7 +417,7 @@ See <<history_timekeeping,A Brief History of Timekeeping>>, pages 187-191.
 
 == Temporal Geometry
 
-The geospatial community has often used analogies between space and time to construct 'temporal-geometry'. This analogy is useful but can be misleading and must not be taken too far. For example, taken from <<treatise,A Treatise on Time and Space by J R Lucas>>:
+The geospatial community has often used analogies between space and time to construct 'temporal-geometry'. This analogy is useful but can be misleading and must not be taken too far. For example, taken from <<treatise,A Treatise on Time and Space by J R Lucas>>, and assuming a `thing` has classical rather than quantum properties:
 
 1.1 A thing cannot be in two places at one time;
 
