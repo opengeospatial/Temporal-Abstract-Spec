@@ -128,7 +128,7 @@ This regime constitutes an Ordinal Temporal Reference System, with discrete enum
 
 === Simple Clocks and Discrete Timescales
 
-In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about sun, earth's rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each 'tick'. A mechanism for counting, or possibly measuring, the ticks is desirable.
+In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about the sun, earth's rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the caesium-133 atom. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each 'tick'. A mechanism for counting, or possibly measuring, the ticks is desirable.
 
 It is an assumption that the ticks are regular and homogeneous.
 
@@ -146,7 +146,7 @@ This regime constitutes a Temporal Coordinate Reference System, with discrete in
 
 === CRS and Continuous Timescales
 
-This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device. Units of Measure may be defrined that are different from the 'ticks'. For example, a second may be defined as 9,192,631,770 vibrations of the ground-state hyperfine transition of the caesium 133 atom. Alternatively and differently, a second may be defined as 1/86400th of the rotation of the earth on its axis with respect to the sun. The count of rotations are the 'ticks' of an earth-day clock. This latter definition is not precise enough for many uses, as the rotaion of the earth on its axis varies from day to day. 
+This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device. Units of Measure may be defined that are different from the 'ticks'. For example, a second may be defined as 9,192,631,770 vibrations of the ground-state hyperfine transition of the caesium 133 atom. Alternatively and differently, a second may be defined as 1/86400th of the rotation of the earth on its axis with respect to the sun. The count of rotations are the 'ticks' of an earth-day clock. This latter definition is not precise enough for many uses, as the rotation of the earth on its axis varies from day to day. 
 
 Alternatively, it may be that the ticks are not counted but measured, and the precision of the clock is determined by the precision of the measurements, such as depth in an ice core, or angular position of an astronomical body, such as the sun, moon or a star.
 
@@ -182,7 +182,7 @@ There are other regimes, which are out of scope of this document. This could inc
 
 ==== Local Solar Time
 
-Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle.
+Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle. But the sun does not appear to progress evenly along the ecliptic throughout the days and year. There may be variations of up to 15 minutes compared to an even angular speed
 
 ==== Astronomical Time
 
@@ -206,7 +206,7 @@ The key to this approach is to ensure each moving feature of interest has its ow
 
 Relativistic effects may need to be taken into account for satellites and other space craft because of their relative speed and position in Earth's gravity well.
 
-The presence of gravitational effects requires special relativity to be replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras' Theorem does not hold execept locally over small areas. This is somewhat familiar territory for geospatial experts.
+The presence of gravitational effects requires special relativity to be replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras' Theorem does not hold except locally over small areas. This is somewhat familiar territory for geospatial experts.
 
 ==== Accountancy
 
@@ -259,7 +259,7 @@ The Events class is an ordered list of temporal events. The events can be instan
 Other documents may enable two such 'king lists' to be related, though not completely.
 
 [[temporal_crs_section]]
-=== Temporal Coordinate Reference System
+=== Temporal Coordinate Reference Systems
 
 A Temporal Coordinate Reference System is a type of temporal reference system. Therefore, it inherits the following attributes from the TemporalReferenceSystem class:
 
