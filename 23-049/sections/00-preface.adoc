@@ -19,8 +19,7 @@ The primary goal of the Abstract Conceptual Model for Time is to establish clear
 [.preface]
 == Security Considerations
 
-No security considerations have been made for this document.
-
+This Abstract Specification does not place any constraints on application, platform, operating system level, or network security. 
 
 [submitters]
 == Submitters
@@ -31,10 +30,9 @@ submitters:
 [%unnumbered]
 |===
 h| Name h| Affiliation
-
 | Chris Little (editor) | U.K. Met Office
 | Chuck Heazel | HeazelTech
-
+| Ron Tse | Ribose Inc.
 |===
 
 [.preface]
