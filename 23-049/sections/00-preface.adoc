@@ -12,7 +12,7 @@ Traditionally, geospatial communities used 2D coordinates and the vertical (thir
 
 The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightforward defining document. This Abstract Specification provides clear consistent definitions of the fundamental concepts and terminology.The conceptual model enables advantages and disadvantages of adopting a particular technological approach to be identified so that the community can contribute to building better and more interoperable systems by defining more detailed documents such as logical and implementation standards that have an agreed common conceptual basis and terminology.
 
-This document is consistent with <<iso19111,ISO 19111>> and <<w3cowltime,W3C Time Ontology>> in OWL.
+This document is consistent with <<iso19111,ISO 19111:2019 Geographic information — Referencing by coordinates>> and <<w3cowltime,W3C Time Ontology in OWL>>.
 
 The primary goal of the Abstract Conceptual Model for Time is to establish clear concepts and terminology.
 
