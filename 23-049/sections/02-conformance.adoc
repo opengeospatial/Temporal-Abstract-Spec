@@ -3,9 +3,9 @@
 Clause 7 of this International Standard uses the Unified Modeling Language (UML) to present
 conceptual schemas for describing the higher level classes of time and temporal reference systems. These schemas define conceptual classes that
 
-a) may be considered to comprise a cross-domain application schema, or
+. may be considered to comprise a cross-domain application schema, or
 
-b) may be used in application schemas, profiles and implementation specifications.
+. may be used in application schemas, profiles and implementation specifications.
 
 This flexibility is controlled by a set of UML types that can be implemented in a variety of manners. Use of
 alternative names that are more familiar in a particular application is acceptable, provided that there is a one-
