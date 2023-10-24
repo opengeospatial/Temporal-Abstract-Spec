@@ -34,7 +34,7 @@ h| Name h| Affiliation
 
 | Chris Little (editor) | U.K. Met Office
 | Chuck Heazel | HeazelTech
-| Ron Tse | Ribose Inc.
+| Ronald Tse | Ribose Inc.
 
 |===
 
