@@ -12,7 +12,7 @@ Traditionally, geospatial communities used 2D coordinates and the vertical and t
 
 The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightforward defining document. This document aims to to give clear consistent definitions of the fundamental concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps they can contribute to building better and more interoperable systems using other more detailed documents such as logical and implementation standards that have an agreed common conceptual basis and terminology.
 
-This document is consistent with <<iso19111,ISO 19111>> and <<w3cowltime,W3C Time Ontology>> in OWL.
+This document is consistent with <<iso19111>> and <<w3cowltime,W3C Time Ontology>> in OWL.
 
 The aim of this document is to establish clear concepts and terminology.
 
@@ -40,8 +40,8 @@ h| Name h| Affiliation
 [.preface]
 == Introduction
 
-When OGC standards involve time, they generally refer to the ISO documents such as <<iso19108,ISO 19108>> (now largely superseded), <<iso19111,ISO 19111>>, <<iso8601,ISO 8601>>, and their freely available OGC equivalents, such as <<ogc18005,OGC_18-005r4>> (the equivalent to <<iso19111,ISO 19111>>).
+When OGC standards involve time, they generally refer to the ISO documents such as <<iso19108>> (now largely superseded), <<iso19111>>, <<iso8601>>, and their freely available OGC equivalents, such as <<ogc18005>> (the equivalent to <<iso19111>>).
 
-Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the <<iso8601,ISO 8601>> notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the attendant ambiguities, imprecision and inappropriate scope.
+Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the <<iso8601>> notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the attendant ambiguities, imprecision and inappropriate scope.
 
 The aim of this document is to establish clear concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.
