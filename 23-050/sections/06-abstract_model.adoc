@@ -19,7 +19,7 @@ A conceptual model:
 
 == Temporal Abstract Conceptual Model
 
-This attempt at a Temporal Abstract Conceptual Model follows <<iso19111,ISO 19111>>, which is the ISO adoption of <<OGC_18-005r4>>.
+This attempt at a Temporal Abstract Conceptual Model follows <<iso19111>>, which is the ISO adoption of <<OGC_18-005r4>>.
 
 The model is also informed by <<W3COWLTime>>.
 
@@ -209,7 +209,7 @@ The <<IETF_RFC_3999>> timestamp notation, a restrictive profile of <<ISO_8601>>,
 
 The top level `Reference System` is an abstract super-class and does not have many attributes or properties. So far, only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
 
-The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem' , which is defined in <<iso19111,ISO 19111>>, and 'TemporalReferenceSystem', each with the attributes of Dimension and Domains of Applicability.
+The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem' , which is defined in <<iso19111>>, and 'TemporalReferenceSystem', each with the attributes of Dimension and Domains of Applicability.
 
 The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location with orientation.
 
@@ -362,7 +362,7 @@ Calendars combine different timescales and their clocks and unito of measure, an
 [example]
 The modern Gregorian calendar is calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.
 
-The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601,ISO 8601>> and its various restrictive profiles.
+The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601>> and its various restrictive profiles.
 
 [example]
 The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
