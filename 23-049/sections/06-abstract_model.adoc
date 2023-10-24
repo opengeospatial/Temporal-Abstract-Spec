@@ -19,7 +19,7 @@ A conceptual model:
 
 == Temporal Abstract Conceptual Model
 
-This Temporal Abstract Conceptual Model follows <<iso19111,ISO 19111>>, which is the ISO adoption of <<ogc18005,OGC_18-005r4>>.
+This Temporal Abstract Conceptual Model follows <<iso19111>>, which is the ISO adoption of <<ogc18005>>.
 
 The model is also informed by the <<w3cowltime,W3C Time Ontology>>.
 
@@ -217,7 +217,7 @@ The financial and administrative domains often use weeks, quarters, and other ca
 There are often widely agreed, commonly accepted, notations used for temporal reference systems, but few have been standardised. Any particular notation may be capable of expressing a wider range of times than are valid for the reference system.
 
 [example]
-The <<rfc3339,IETF RFC 3339>> timestamp notation, a restrictive profile of <<iso8601,ISO 8601>>, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.
+The <<rfc3339,IETF RFC 3339>> timestamp notation, a restrictive profile of <<iso8601>>, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.
 
 == Attributes of the Classes
 
@@ -226,7 +226,7 @@ The <<rfc3339,IETF RFC 3339>> timestamp notation, a restrictive profile of <<iso
 
 The top level `ReferenceSystem` is an abstract super-class and does not have many attributes or properties. So far, only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
 
-The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem', which is defined in <<iso19111,ISO 19111>>, and 'TemporalReferenceSystem', each with the attributes of Dimension and Domains of Applicability.
+The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem', which is defined in <<iso19111>>, and 'TemporalReferenceSystem', each with the attributes of Dimension and Domains of Applicability.
 
 The Dimension is one for time, or a vertical reference system, but may be as much as 6 for spatial location with orientation as in the <<OGCgeopose,GeoPose Draft Specification>>.
 
