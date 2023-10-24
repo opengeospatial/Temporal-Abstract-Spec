@@ -12,10 +12,12 @@
 :referenceURLID: http://docs.opengeospatial.org/as/23-049/23-049.html
 :fullname: Chris Little
 :fullname_2: Charles Heazel
+:fullname_3: Ronald Tse
 :role: editor
 :role_2: editor
+:role_3: editor
 :keywords: ogcdoc, OGC document, abstract specification, conceptual model, time, temporal referencing, referencing by coordinates, calendar, clock, timescale
-:submitting-organizations: U.K. Met Office, HeazelTech
+:submitting-organizations: U.K. Met Office; HeazelTech; Ribose Inc.
 :mn-document-class: ogc
 :mn-output-extensions: html,pdf,rxl
 :local-cache-only:

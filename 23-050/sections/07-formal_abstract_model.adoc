@@ -4,7 +4,7 @@ The Temporal Abstract Conceptual Model has been built using a UML model. This pr
 
 === Context
 
-When OGC standards involve time, they generally refer to the ISO documents such as <<iso19108,ISO 19108>>, <<iso19111,ISO 19111>>, <<iso8601,ISO 8601>>, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates (equivalent to <<iso19111,ISO 19111>).
+When OGC standards involve time, they generally refer to the ISO documents such as <<iso19108>>, <<iso19111>>, <<iso8601>>, and their freely available OGC equivalents, such as Abstract Specification Topic 2 Referencing by Coordinates (equivalent to <<iso19111>).
 
 When dealing with temporal reference systems, it is necessary to understand all of these standards and how they interact. ISO Technical Committee 211 (ISO/TC211) provides a useful tool for integrating their standards. The https://github.com/ISO-TC211/HMMG[ISO/TC 211 Harmonized Model Management Group] provides a single integrated model for most of the ISO/TC 211 standards. That model will provide the foundation for the Abstract Temporal Reference Model.
 
