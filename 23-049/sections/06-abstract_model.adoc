@@ -125,6 +125,8 @@ In this regime, the <<temporal_knowledge,Allen Operators>> (see Figure 2) can be
 
 This regime constitutes an Ordinal Temporal Reference System, with discrete enumerated ordered events.
 
+image:/23-049/images/IntervalRelations(CTL).jpg[]
+
 === Simple Clocks and Discrete Timescales
 
 In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about the sun, earth's rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the cesium-133 atom. In terms of the number of repetitions possible, some phenomena make better clocks than others, because of the consistency of each repetition and the precision of each 'tick'. A mechanism for counting, or possibly measuring, the ticks is desirable.
