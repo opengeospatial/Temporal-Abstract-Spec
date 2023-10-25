@@ -19,7 +19,7 @@ A conceptual model:
 
 == Abstract Conceptual Model for Time
 
-This Abstract Conceptual Model for Time follows <<iso19111>>, which is the ISO adoption of <<ogc18005>>.
+This Temporal Abstract Conceptual Model follows <<iso19111>>, which is the ISO adoption of <<ogc18005>>.
 
 The model is also informed by the <<w3cowltime,W3C Time Ontology in OWL>>.
 
