@@ -125,7 +125,7 @@ In this regime, the <<temporal_knowledge,Allen Operators>> (see Figure 2) can be
 
 This regime constitutes an Ordinal Temporal Reference System, with discrete enumerated ordered events.
 
-image:/23-049/images/IntervalRelations(CTL).jpg[]
+image::./images/IntervalRelations.jpg[align="center
 
 === Simple Clocks and Discrete Timescales
 
