@@ -1,13 +1,15 @@
 
-== Terms and definitions
+== Terms, definitions and abbreviated terms
 
-[[conceptual-model_definition]]
-=== conceptual model
+=== Terms and definitions
 
-description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain. A conceptual model is explicitly chosen to be independent of design or implementation concerns.
+==== conceptual model
 
-[[coordinate_definition]]
-=== coordinate
+description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain
+
+NOTE: A conceptual model is explicitly chosen to be independent of design or implementation concerns.
+
+==== coordinate
 
 one of a sequence of numbers designating the position of a point
 
@@ -16,10 +18,10 @@ one of a sequence of numbers designating the position of a point
 
 NOTE: In many coordinate reference systems, the coordinate numbers are qualified by units.
 
-[[coordinate-reference-system_definition]]
-=== coordinate reference system
+==== coordinate reference system
+preferred:[CRS]
 
-<<coordinate-system_definition,coordinate system>> that is related to an object by a <<datum_definition,datum>>
+{{coordinate system}} that is related to an object by a {{datum}}
 
 [.source]
 <<iso19111>>
@@ -28,25 +30,24 @@ NOTE: Geodetic and vertical datums are referred to as reference frames.
 
 NOTE: For geodetic and vertical reference frames, the object will be the Earth. In planetary applications, geodetic and vertical reference frames may be applied to other celestial bodies.
 
-[[coordinate-system_definition]]
-=== coordinate system
+==== coordinate system
 
 set of mathematical rules for specifying how coordinates are to be assigned to points
 
 [.source]
 <<iso19111>>
 
-[[datum_definition]]
-=== datum
+
+==== datum
 admitted:[reference frame]
 
-parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <<coordinate-system_definition,coordinate system>>
+parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a {{coordinate system}}
 
 [.source]
 <<iso19111>>
 
-[[epoch_definition]]
-=== epoch
+
+==== epoch
 domain:[geodesy]
 
 point in time
@@ -54,41 +55,38 @@ point in time
 [.source]
 <<iso19111>>
 
-NOTE: In the ISO 19111 document an epoch is expressed in the Gregorian calendar as a decimal year.
+NOTE: In <<iso19111>>, an epoch is expressed in the Gregorian calendar as a decimal year.
 
 [example]
 2017-03-25 in the Gregorian calendar is epoch 2017.23. Other notations or reference systems are options.
 
-[[reference-frame_definition]]
-=== reference frame
+==== reference frame
 admitted:[datum]
 
-parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a <<coordinate-system_definition,coordinate system>>
+parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a {{coordinate system}}
 
 [.source]
 <<iso19111>>
 
-[[temporal-coordinate-refrence-system_definition]]
-=== temporal coordinate reference system
+==== temporal coordinate reference system
+preferred:[TRS]
 
-<<coordinate-reference-system_definition,coordinate reference system>> based on a <<temporal-datum_definition,temporal datum>>
+{{coordinate reference system}} based on a {{temporal datum}}
 
 [.source]
 <<iso19111>>
 
-[[temporal-coordinate-system_definition]]
-=== temporal coordinate system
+==== temporal coordinate system
 domain:[geodesy]
 
-one-dimensional <<coordinate-system_definition,coordinate system>> where the axis is time
+one-dimensional {{coordinate system}} where the axis is time
 
 [.source]
 <<iso19111>>
 
-[[temporal-datum_definition]]
-=== temporal datum
+==== temporal datum
 
-<<datum_definition,datum>> describing the relationship of a <<temporal-coordinate-system_definition,temporal coordinate system>> to an object
+{{datum}} describing the relationship of a {{temporal coordinate system}} to an object
 
 [.source]
 <<iso19111>>
@@ -96,3 +94,10 @@ one-dimensional <<coordinate-system_definition,coordinate system>> where the axi
 NOTE: The object is normally time on the Earth.
 
 
+=== Abbreviations
+
+2D:: 2-dimensional
+
+3D:: 3-dimensional
+
+UML:: Unified Modelling Language

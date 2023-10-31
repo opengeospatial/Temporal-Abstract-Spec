@@ -31,10 +31,15 @@ _Lorentz Transform_.
 Wolfram MathWorld.
 https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfram.com/LorentzTransformation.html]
 
-* [[[minkowski,nofetch(Minkowski Space and Time)]]] H. Minkowski. 
-_Space and Time, Minkowski's Papers on Relativity_ 
-Minkowski Institute Press, Montreal 2012. 
+* [[[minkowski,nofetch(Minkowski Space and Time)]]] H. Minkowski.
+_Space and Time, Minkowski's Papers on Relativity_
+Minkowski Institute Press, Montreal 2012.
 https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
+
+* [[[temporal_knowledge,nofetch(Maintaining Knowledge about Temporal Intervals)]]]
+Allen, J. F.
+_Maintaining Knowledge about Temporal Intervals_
+Communications of the ACM, 1983, vol. 26 pp. 832-843.
 
 * [[[treatise,nofetch(Treatise on Time and Space)]]]
 J R Lucas.

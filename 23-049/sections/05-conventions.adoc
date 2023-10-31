@@ -1,19 +1,5 @@
 == Conventions
 
-=== Abbreviations
-
-2D:: 2-dimensional
-
-3D:: 3-dimensional
-
-CRS:: Coordinate Reference System
-
-TRS:: Temporal Reference System
-
-UML:: Unified Modelling Language
-
-=== Identifiers
-
 The normative provisions in this standard are denoted by the URI:
 
 `http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0`
