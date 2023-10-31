@@ -37,7 +37,21 @@ include::sections/04-terms_and_definitions.adoc[]
 include::sections/05-conventions.adoc[]
 
 // Add clause files as needed
-include::sections/06-abstract_model.adoc[]
+include::sections/06-cm-characteristics.adoc[]
+
+include::sections/07-cm.adoc[]
+
+include::sections/08-temporal-regimes.adoc[]
+
+include::sections/09-attributes.adoc[]
+
+include::sections/10-notation.adoc[]
+
+include::sections/11-sync-clocks.adoc[]
+
+include::sections/12-temporal-geometry.adoc[]
+
+include::sections/annex-tests.adoc[]
 
 include::sections/annex-glossary.adoc[]
 

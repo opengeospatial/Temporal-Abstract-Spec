@@ -1,5 +1,4 @@
 [appendix,obligation="informative"]
-:appendix-caption: Annex
 [[glossary]]
 == Glossary
 

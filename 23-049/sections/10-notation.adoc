@@ -1,0 +1,8 @@
+== Notation
+
+There are often widely agreed, commonly accepted, notations used for temporal reference systems, but few have been standardized. Any particular notation may be capable of expressing a wider range of times than are valid for the reference system.
+
+[example]
+The <<rfc3339,IETF RFC 3339>> timestamp notation, a restrictive profile of <<iso8601>>, can express times before 1588CE, when the Gregorian calendar was first introduced in some parts of the world.
+
+

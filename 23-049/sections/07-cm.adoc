@@ -1,0 +1,98 @@
+[[abstract-model]]
+== Abstract Conceptual Model for Time
+
+This Temporal Abstract Conceptual Model follows <<iso19111>>, which is the ISO adoption of <<ogc18005>>.
+
+The model is also informed by the <<w3cowltime,W3C Time Ontology in OWL>>.
+
+[plantuml]
+....
+@startuml
+abstract class ReferenceSystem {
+  dimension = 1..*
+  applicableLocationTimeOrDomain
+}
+
+note right of ReferenceSystem
+Note: Has at least one of:
+* SpatialReferenceSystem, or
+* TemporalReferenceSystem
+end note
+
+abstract class SpatialReferenceSystem {
+  dimension = 1..*
+  applicableLocationTimeOrDomain
+}
+
+abstract class TemporalReferenceSystem {
+  dimension = 1
+  applicableLocationTimeOrDomain
+}
+
+note left of TemporalReferenceSystem
+Note: Consists of one only of:
+* TemporalCoordinateReferenceSystem,
+* Calendar, or
+* OrdinalTemporalReferenceSystem
+end note
+
+ReferenceSystem <|-- SpatialReferenceSystem : is a
+ReferenceSystem <|-- TemporalReferenceSystem : is a
+
+class OrdinalTemporalReferenceSystem {
+  dimension = 1
+  applicableLocationTimeOrDomain
+}
+
+class TemporalCoordinateReferenceSystem {
+  dimension = 1
+  applicableLocationTimeOrDomain
+}
+
+class Calendar {
+  dimension = 1
+  applicableLocationTimeOrDomain
+}
+
+TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
+TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
+TemporalReferenceSystem <|-- Calendar : is a
+
+OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
+OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
+OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
+TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
+TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
+TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
+
+Calendar "1" o-- "0..1" Epoch : has an
+Calendar "1" --> "1..*" Notation : can use
+Calendar "1" o-- "2..*" Timescale : has a
+Calendar "1" o-- "1" Timeline : has a
+Calendar "1" o-- "1..*" Algorithm : has a
+
+class Timescale {
+  StartCount
+  EndCount
+  arithmetic
+}
+
+Timescale "1" o-- "1" Clock : has a
+Timescale "1" o-- "1" UnitOfMeasure : has a
+
+class Clock {
+  Tick definition
+}
+
+class UnitOfMeasure {
+  Direction
+}
+
+class Timeline {
+}
+
+Timeline "1" o-- "2..*" Timescale : has a
+Timeline "1" o-- "1..*" Algorithm : has a
+@enduml
+
+....

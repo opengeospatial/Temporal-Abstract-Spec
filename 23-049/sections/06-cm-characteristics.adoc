@@ -1,0 +1,18 @@
+
+== Characteristics of an Abstract Conceptual Model
+
+The terms and definitions clause in this Abstract Specification provides a short definition for "conceptual model". This clause provides additional information on the OGC use of "conceptual model".
+
+A conceptual model organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain. The aim of a conceptual model is to express the meaning of terms and concepts used by domain experts to discuss the problem, and to find the correct relationships between different concepts.
+
+A conceptual model:
+
+. is a representation of a system, made of the composition of concepts which are used to help people know, understand, or simulate a subject the model represents. A documented conceptual model represents 'concepts' (entities), the relationships between them, and a vocabulary;
+
+. is explicitly defined to be independent of design or implementation concerns;
+
+. organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain;
+
+. starts with a glossary of terms and definitions. There is a very high premium on high-quality, design-independent definitions, free of data or implementation biases; the model also emphasizes rich vocabulary; and
+
+. is always about identifying the correct choice of terms to use in communications, including statements of rules and requirements, especially where high precision and subtle distinctions need to be made. The core concepts of a temporal geospatial problem domain are typically quite stable over time.
