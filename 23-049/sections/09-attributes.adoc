@@ -89,7 +89,7 @@ An Algorithm specifies the logic used to construct a Timeline from its constitue
 [example]
 The modern Gregorian calendar is a calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.
 
-The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601,ISO 8601>> and its various restrictive profiles.
+The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601>> and its various restrictive profiles.
 
 [example]
 The timeline in a country may have gaps when clocks 'spring forward' for enacting daylight-saving time. There may not be any time corresponding to the times between 01:00 and 02:00. When the daylight-saving time is revoked, and clocks 'fall back', the times between 01:00 and 02:00 occur twice.
