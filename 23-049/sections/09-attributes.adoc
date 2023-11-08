@@ -3,7 +3,7 @@
 [[reference_system_section]]
 === Reference Systems
 
-The top level `ReferenceSystem` is an abstract super-class and does not have many attributes or properties. Only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
+The top level 'ReferenceSystem' is an abstract super-class and does not have many attributes or properties. Only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
 
 The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem', which is defined in <<iso19111>>, and 'TemporalReferenceSystem', each with the attributes of Dimension and Domains of Applicability.
 
@@ -24,7 +24,9 @@ An Ordinal Temporal Reference System is a type of temporal reference system. The
 An Ordinal Temporal Reference System does not have any attributes of its own. However, it does use associations with other classes to fully describe itself.
 
 . Epoch: An Ordinal Temporal Reference System 'has a' one optional <<epoch_section,Epoch>>
+
 . Notation: An Ordinal Temporal Reference System 'can use' one or more <<notation_section,Notations>> to represent itself.
+
 . Event: An Ordinal Temporal Reference System 'consists of' an ordered set of <<events_section,Events>>. These events are identifiable temporal instances.
 
 [example]
@@ -48,7 +50,9 @@ A Temporal Coordinate Reference System is a type of temporal reference system. T
 A Temporal Coordinate Reference System does not have any attributes of its own. However, it does use associations with other classes to fully describe itself.
 
 . Epoch: A Temporal CRS 'has a' one optional <<epoch_section,Epochs>>
+
 . Notation: A Temporal CRS 'can use' one or more <<notation_section,Notations>> to represent itself.
+
 . Timescale: A Temporal CRS 'has a' one <<timescale_section,Timescale>> which is used to represent the values along its single axis. This Timescale can be either discrete or continuous.
 
 [[calendar_section]]
@@ -89,7 +93,7 @@ An Algorithm specifies the logic used to construct a Timeline from its constitue
 [example]
 The modern Gregorian calendar is a calculated solar calendar, with various epochs from 1588 CE through to 1922 CE depending on location or country.
 
-The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601,ISO 8601>> and its various restrictive profiles.
+The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601>> and its various restrictive profiles.
 
 [example]
 The timeline in a country may have gaps when clocks 'spring forward' for enacting daylight-saving time. There may not be any time corresponding to the times between 01:00 and 02:00. When the daylight-saving time is revoked, and clocks 'fall back', the times between 01:00 and 02:00 occur twice.
@@ -98,7 +102,7 @@ The timeline in a country may have gaps when clocks 'spring forward' for enactin
 The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
 
 [example]
-The modern Jewish calendar is a calculated luni-solar calendar, and discrepancies in the solar year are addressed by adding 'leap months' every few years.
+The modern Jewish calendar is a calculated lunisolar calendar, and discrepancies in the solar year are addressed by adding 'leap months' every few years.
 
 [example]
 The Ba'hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday.
