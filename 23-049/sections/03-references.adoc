@@ -4,13 +4,13 @@
 
 * [[[rfc3339,IETF RFC 3339]]]
 
-* [[[iso8601,ISO 8601:2004]]]
+* [[[iso8601,nofetch(ISO 8601:2004)]]], ISO: ISO 8601:2004, _Information interchange Representation of dates and times_. International Organization for Standardization, Geneva (2004). https://www.iso.org/standard/40874.html[https://www.iso.org/standard/40874.html].
 
-* [[[iso19111,ISO 19111:2019]]]
+* [[[iso19111,nofetch(ISO 19111:2019)]]], ISO: ISO 19111:2019, _Geographic information - Referencing by coordinates_. International Organization for Standardization, Geneva (2019). https://www.iso.org/standard/74039.html[https://www.iso.org/standard/74039.html].
 
-* [[[temporal-knowledge,nofetch(Maintaining Knowledge about Temporal Intervals)]]]
+* [[[temporal-knowledge,Maintaining Knowledge about Temporal Intervals]]]
 Allen, J. F. _Maintaining Knowledge about Temporal Intervals_ Communications of the ACM, 1983, vol. 26 pp. 832-843.
 
 * [[[ogc18005,OGC 18-005r4]]]
 
-* [[[w3cowltime,W3C REC-owl-time-20171019]]]
+* [[[w3cowltime,W3C TR owl-time]]] W3C Time Ontology in OWL, https://www.w3.org/TR/owl-time/[https://www.w3.org/TR/owl-time/]
