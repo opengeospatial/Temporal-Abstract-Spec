@@ -4,9 +4,9 @@
 
 * [[[rfc3339,IETF RFC 3339]]]
 
-* [[[iso8601,nofetch(ISO 8601:2004)]]], ISO: ISO 8601:2004, _Information interchange Representation of dates and times_. International Organization for Standardization, Geneva (2004). https://www.iso.org/standard/40874.html[https://www.iso.org/standard/40874.html].
+* [[[iso8601,ISO 8601:2004]]], ISO: ISO 8601:2004, _Information interchange Representation of dates and times_. International Organization for Standardization, Geneva (2004. https://www.iso.org/standard/40874.html[https://www.iso.org/standard/40874.html].
 
-* [[[iso19111,nofetch(ISO 19111:2019)]]], ISO: ISO 19111:2019, _Geographic information - Referencing by coordinates_. International Organization for Standardization, Geneva (2019). https://www.iso.org/standard/74039.html[https://www.iso.org/standard/74039.html].
+* [[[iso19111,ISO 19111:2019]]], ISO: ISO 19111:2019, _Geographic information - Referencing by coordinates_. International Organization for Standardization, Geneva (2019. https://www.iso.org/standard/74039.html[https://www.iso.org/standard/74039.html].
 
 * [[[temporal-knowledge,Maintaining Knowledge about Temporal Intervals]]]
 Allen, J. F. _Maintaining Knowledge about Temporal Intervals_ Communications of the ACM, 1983, vol. 26 pp. 832-843.

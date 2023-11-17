@@ -1,33 +1,33 @@
 [bibliography]
 == Bibliography
 
-* [[[iso8601,nofetch(ISO 8601:2004)]]] ISO: 8601
+* [[[iso8601,ISO 8601:2004]]] ISO: 8601
 
-* [[[iso19107,nofetch(ISO 19107)]]] ISO: 19107
+* [[[iso19107,ISO 19107]]] ISO: 19107
 
-* [[[iso19108,nofetch(ISO 19108)]]] ISO: 19108
+* [[[iso19108,ISO 19108]]] ISO: 19108
 
-* [[[iso19108_Cor1,nofetch(ISO 19108:2002/Cor 1:2006)]]] ISO: 19108/cor 1
+* [[[iso19108_Cor1,ISO 19108:2002/Cor 1:2006]]] ISO: 19108/cor 1
 
-* [[[ogc22036,nofetch(OGC 22-036)]]] OGC: 22-036
+* [[[ogc22036,OGC 22-036]]] OGC: 22-036
 
-* [[[ogc22038,nofetch(OGC 22-038r2)]]] OGC: 22-038
+* [[[ogc22038,OGC 22-038r2]]] OGC: 22-038
 
-* [[[OGCgeopose,nofetch(OGC 21-056r10)]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
+* [[[OGCgeopose,OGC 21-056r10]]] OGC: _GeoPose Specification draft_, 2021, https://github.com/opengeospatial/GeoPose/
 
-* [[[iso19101-1,nofetch(ISO 19101-1:2014)]]] ISO: 19101-1
+* [[[iso19101-1,ISO 19101-1:2014]]] ISO: 19101-1
 
-* [[[iso19112,nofetch(ISO 19112:2019)]]] ISO: 19112
+* [[[iso19112,ISO 19112:2019]]] ISO: 19112
 
-* [[[iso19162,nofetch(ISO 19162:2019)]]] ISO: 19162
+* [[[iso19162,ISO 19162:2019]]] ISO: 19162
 
-* [[[iso19136,nofetch(ISO 19136:2007)]]] ISO: 19136
+* [[[iso19136,ISO 19136:2007]]] ISO: 19136
 
-* [[[ogc09083,nofetch(OGC 09-083r4)]]] OGC: 09-083
+* [[[ogc09083,OGC 09-083r4]]] OGC: 09-083
 
-* [[[ogc18005r4,nofetch(OGC 18-005r4)]]] OGC: 18-005
+* [[[ogc18005r4,OGC 18-005r4]]] OGC: 18-005
 
-* [[[rfc3339,nofetch(IETF RFC 3339)]]] IETF: RFC 3339
+* [[[rfc3339,IETF RFC 3339]]] IETF: RFC 3339
 
 * [[[CEN_ENV_1613,nofetch(CEN ENV 1613:1995)]]] CEN: Cen Env 1613
 

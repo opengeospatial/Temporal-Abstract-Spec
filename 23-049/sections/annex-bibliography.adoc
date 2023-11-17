@@ -24,9 +24,9 @@ _A Brief History of Timekeeping_.
 Oneworld Publications. 2022.
 ISBN-13: 978-0-86154-321-2.
 
-* [[[iso19108,nofetch(ISO 19108:2002)]]] ISO/TC 211: ISO 19108:2002 _Geographic information — Temporal schema_, 2021, https://www.iso.org/standard/26013.html
+* [[[iso19108,ISO 19108:2002]]] ISO/TC 211: ISO 19108:2002 _Geographic information — Temporal schema_, 2021, https://www.iso.org/standard/26013.html
 
-* [[[OGCgeopose,OGC 21-056r10]]] 
+* [[[OGCgeopose,OGC 21-056r10]]]
 
 * [[[lorentz_transform,Lorentz Transforms]]]
 _Lorentz Transform_.
