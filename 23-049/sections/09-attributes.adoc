@@ -146,7 +146,7 @@ A Clock represents the process which generates the 'tick' which is counted or me
 An atomic clock may be calibrated to be valid only for a given temperature range and altitude.
 
 [example]
-A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multiple of a second. The famous London "Big Ben" clock's pendulum is 4.4m long and ticks every two seconds.
+A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multiple of a second. The famous London "Big Ben" clock's pendulum is 4.4 m long and ticks every two seconds.
 
 [[unitsOfMeasure_section]]
 ==== UnitOfMeasure
