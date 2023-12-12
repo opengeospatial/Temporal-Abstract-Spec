@@ -4,5 +4,5 @@ If there are two or more clocks, stationary with respect to each other, and a pr
 
 However, if the clocks are moving with respect to each other, perfect synchronization would require communication to be instantaneous. As communication speed is limited by the finite constant speed of light, perfect synchronization is not possible, though repetitive protocols can be used to reduce the synchronization error to any practical desired level.
 
-See <<history_timekeeping,A Brief History of Timekeeping>>, pages 187-191.
+See the book <<history_timekeeping,A Brief History of Timekeeping>>, pages 187-191.
 
