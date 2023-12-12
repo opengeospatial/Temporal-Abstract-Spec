@@ -161,7 +161,7 @@ The number of the years before the Current Era (BCE, previously known as BC) inc
 ==== Time Scale Examples
 
 [example]
-A long, deep ice core is retrieved from a stable ice sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enables the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests detected in the ice core increases confidence in the timing accuracy.
+A long, deep ice core is retrieved from an ice sheet. From chemical identification of layers representing known large scale volcanic eruptions, the connection between depth and time is known, so length can be converted to time. This enables the dates of some previously unknown large scale volcanic eruptions to be identified and timed.
 
 [example]
 A long, deep, sediment core is extracted from the bottom of a lake with a long geological history. Two layers in the core are dated using radiocarbon dating. Assuming steady rates of sediment deposition, a continuous timescale can be interpolated between the dated layers, and extrapolated before and after the dated layers.
