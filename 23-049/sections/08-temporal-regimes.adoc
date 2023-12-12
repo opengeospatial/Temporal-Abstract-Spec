@@ -72,7 +72,7 @@ In this regime, the use of the <<temporal_knowledge,Allen Operators>> (see <<fig
 
 Calendars are social constructs made by combining several clocks and their associated timescales.
 
-This Abstract Specification only addresses the internationally agreed Gregorian calendar. <<calendrical,Calendrical Calculations>> by Nachum Dershowitz and Edward M. Reingold provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
+This Abstract Specification only addresses the internationally agreed Gregorian calendar. The book <<calendrical,Calendrical Calculations>> by Nachum Dershowitz and Edward M. Reingold provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
 
 A Calendar is a Temporal Reference System, but it is not a Temporal Coordinate Reference System nor an Ordinal Temporal Reference System.
 
