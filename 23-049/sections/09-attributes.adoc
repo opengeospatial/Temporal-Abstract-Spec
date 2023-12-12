@@ -102,7 +102,7 @@ The timeline in a country may have gaps when clocks 'spring forward' for enactin
 The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
 
 [example]
-The modern Jewish calendar is a calculated lunisolar calendar, and discrepancies in the solar year are addressed by adding 'leap months' every few years.
+The modern Jewish calendar is a calculated lunisolar calendar, and discrepancies from the solar year are addressed by adding 'leap months' every few years.
 
 [example]
 The Ba'hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday.
