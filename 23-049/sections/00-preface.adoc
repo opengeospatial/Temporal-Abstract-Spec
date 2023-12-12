@@ -3,7 +3,7 @@
 
 When OGC standards involve time, they generally refer to the ISO documents such as <<iso19108>> (now largely superseded), <<iso19111>>, <<iso8601>>, and their freely available OGC equivalents, such as <<ogc18005>> (the equivalent to <<iso19111>>).
 
-Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the <<iso8601>> notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the associated ambiguities about algorithms, imprecision and inappropriate scope.
+Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the <<iso8601>> notation, and many date-time schemas. A consequence of this effort is that many end-users and developers of software use calendar based "coordinates", with the associated ambiguities about underlying algorithms, imprecision and inappropriate scope.
 
 The aim of this Abstract Specification is to establish clear concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach and then perhaps contribute to building better interoperable systems.
 
