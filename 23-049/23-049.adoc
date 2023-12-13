@@ -51,9 +51,5 @@ include::sections/11-sync-clocks.adoc[]
 
 include::sections/12-temporal-geometry.adoc[]
 
-include::sections/annex-tests.adoc[]
-
-include::sections/annex-glossary.adoc[]
-
 // Bibliography should be the last annex
 include::sections/annex-bibliography.adoc[]
