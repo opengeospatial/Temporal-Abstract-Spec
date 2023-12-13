@@ -94,7 +94,7 @@ When dealing with moving objects, the location of the object in space depends on
 
 Originally developed by <<minkowski,Hermann Minkowski>> to support work in Special Relativity, the concept of space-time is useful whenever the location of an object in space is dependent on its location in time.
 
-Since the speed of light, stem:[c], in a vacuum is a measurable constant, space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axes all with the same units of measure, that is, distance. However, the measure of distance in this 4D space is not the usual Pythagorean stem:[d^2 = x^2 + y^2 + z^2 +(ct)^2] but stem:[d^2 = x^2 + y^2 + z^2 -(ct)^2], so reality is constrained to lying within a double cone subset around the stem:[ct] axis of the full space.
+Since the speed of light, stem:[c], in a vacuum is a observed constant, space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axes all with the same units of measure, that is, distance. However, the measure of distance in this 4D space is not the usual Pythagorean stem:[d^2 = x^2 + y^2 + z^2 +(ct)^2] but stem:[d^2 = x^2 + y^2 + z^2 -(ct)^2], so reality is constrained to lying within a double cone subset around the stem:[ct] axis of the full space.
 
 ==== Relativistic
 
