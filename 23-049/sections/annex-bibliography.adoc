@@ -4,27 +4,29 @@
 [bibliography]
 == Bibliography
 
-* [[[astro_algo,Astronomical Algorithms]]], Jean Meeus. _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
+* [[[astro_algo,Astronomical Algorithms]]], Meeus, J.: _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
 
 * [[[bipm_define,Establishment of International Atomic Time and Coordinated Universal Time]]]
-Bureau International des Poids et Mesures (BIPM).
+Bureau International des Poids et Mesures (BIPM):
 _Establishment of International Atomic Time and Coordinated Universal Time_.
 https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
 
 * [[[calendrical,Calendrical Calculations]]]
-Nachum Dershowitz, Edward M. Reingold.
+Dershowitz, N., Reingold, N.M.:
 _Calendrical Calculations - The Ultimate Edition_.
-Cambridge University Press. 2018.
-ISBN-13: 978-1107683167.
+Cambridge University Press (2018).
+ISBN-13:978-1107683167.
 http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
 
-* [[[history_timekeeping,A Brief History of Timekeeping]]]
-Chad Orzell.
-_A Brief History of Timekeeping_.
-Oneworld Publications. 2022.
-ISBN-13: 978-0-86154-321-2.
+* [[[scientificamerican,A Chronicle Of Timekeeping]]] Andrewes, W.H.J.: _A Chronicle Of Timekeeping_. Scientific American (2006). https://www.scientificamerican.com/article/a-chronicle-of-timekeeping-2006-02
 
-* [[[iso19108,ISO 19108:2002]]] ISO/TC 211: ISO 19108:2002 _Geographic information — Temporal schema_, 2021, https://www.iso.org/standard/26013.html
+* [[[history_timekeeping,A Brief History of Timekeeping]]]
+Orzell, C.:
+_A Brief History of Timekeeping_.
+Oneworld Publications (2022).
+ISBN-13:978-0-86154-321-2.
+
+* [[[iso19108,ISO 19108:2002]]] ISO/TC 211: _ISO 19108:2002 Geographic information — Temporal schema_. (2021) https://www.iso.org/standard/26013.html
 
 * [[[OGCgeopose,OGC 21-056r10]]]
 
@@ -33,23 +35,23 @@ _Lorentz Transform_.
 Wolfram MathWorld.
 https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfram.com/LorentzTransformation.html]
 
-* [[[minkowski,Minkowski Space and Time]]] H. Minkowski.
-_Space and Time, Minkowski's Papers on Relativity_
-Minkowski Institute Press, Montreal 2012.
+* [[[minkowski,Minkowski Space and Time]]] Minkowski, H.:
+_Space and Time, Minkowski's Papers on Relativity_.
+Minkowski Institute Press, Montreal (2012)
 https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
 
 * [[[temporal_knowledge,Maintaining Knowledge about Temporal Intervals]]]
-Allen, J. F.
-_Maintaining Knowledge about Temporal Intervals_
-Communications of the ACM, 1983, vol. 26 pp. 832-843.
+Allen, J.F.:
+_Maintaining Knowledge about Temporal Intervals_.
+Communications of the ACM, vol. 26 pp832-843 (1983).
 
 * [[[treatise,Treatise on Time and Space]]]
-J R Lucas.
+Lucas, J.R.:
 _A Treatise on Time and Space_.
-Methuen and Co. Ltd. 1973.
+Methuen and Co. Ltd (1973)
 ISBN 0-416-84190-2.
 
-* [[[unix_time,nofetch(UNIX Time)]]]
-The Open Group.
+* [[[unix_time,UNIX Time]]]
+The Open Group:
 _UNIX Time_.
 https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16 [last accessed 2023-01]
