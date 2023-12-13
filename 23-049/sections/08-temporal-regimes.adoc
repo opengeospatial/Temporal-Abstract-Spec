@@ -66,7 +66,7 @@ This regime constitutes a Temporal Coordinate Reference System, with a continuou
 === Calendars
 
 In this regime, counts and measures of time are related to the various combinations of the rotations of the earth, moon and sun or other astronomical bodies. 
-Typically there is no simple arithmetical connection between calendar systems and timescales. For example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a very simple calendar, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE - Year 1BCE is one year, not two as there is no year 0CE or 0BCE.
+Typically there is no simple arithmetic connecting calendar systems and timescales. For example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) is a very simple calendar, as there is no year zero. That is, Year 14CE – Year 12CE is a duration of 2 years, and Year 12BCE - Year 14BCE is also two years. However Year 1CE - Year 1BCE is one year, not two as there is no year 0CE or 0BCE.
 
 In this regime, the use of the <<temporal_knowledge,Allen Operators>> (see <<fig-interval-relations>>) is not straightforward. If A occurs before B and B occurs before C, then correctly deducing that A occurs before C is not always easy. The full set of Allen Operators also covers pairs of intervals. So in the example, B occurs in the interval (A,C). However, simple arithmetic operations like (B-A) or (C-A) cannot usually be done simply because of the vagaries of the calendar algorithms, multiple timescales, and multiple Units of Measure.
 
