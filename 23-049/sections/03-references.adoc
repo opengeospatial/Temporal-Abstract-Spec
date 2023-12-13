@@ -4,13 +4,13 @@
 
 * [[[rfc3339,IETF RFC 3339]]]
 
-* [[[iso8601,ISO 8601:2004]]], ISO: ISO 8601:2004, _Information interchange Representation of dates and times_. International Organization for Standardization, Geneva (2004. https://www.iso.org/standard/40874.html[https://www.iso.org/standard/40874.html].
+* [[[iso8601,ISO 8601:2004]]] ISO: _ISO 8601:2004, Information interchange Representation of dates and times_. International Organization for Standardization, Geneva (2004). https://www.iso.org/standard/40874.html[https://www.iso.org/standard/40874.html].
 
-* [[[iso19111,ISO 19111:2019]]], ISO: ISO 19111:2019, _Geographic information - Referencing by coordinates_. International Organization for Standardization, Geneva (2019. https://www.iso.org/standard/74039.html[https://www.iso.org/standard/74039.html].
+* [[[iso19111,ISO 19111:2019]]] ISO: _ISO 19111:2019, Geographic information - Referencing by coordinates_. International Organization for Standardization, Geneva (2019). https://www.iso.org/standard/74039.html[https://www.iso.org/standard/74039.html].
 
 * [[[temporal-knowledge,Maintaining Knowledge about Temporal Intervals]]]
-Allen, J. F. _Maintaining Knowledge about Temporal Intervals_ Communications of the ACM, 1983, vol. 26 pp. 832-843.
+Allen, J. F.: _Maintaining Knowledge about Temporal Intervals_. Communications of the ACM, vol. 26, pp832-843 (1983).
 
 * [[[ogc18005,OGC 18-005r4]]]
 
-* [[[w3cowltime,W3C TR owl-time]]] W3C Time Ontology in OWL, https://www.w3.org/TR/owl-time/[https://www.w3.org/TR/owl-time/]
+* [[[w3cowltime,W3C TR owl-time]]] Cox, S., Little, C.: _W3C Time Ontology in OWL_. World Wide Web Consortium (2022) https://www.w3.org/TR/owl-time/[https://www.w3.org/TR/owl-time/]
