@@ -30,14 +30,14 @@ An Ordinal Temporal Reference System does not have any attributes of its own. Ho
 . Event: An Ordinal Temporal Reference System 'consists of' an ordered set of <<events_section,Events>>. These events are identifiable temporal instances.
 
 [example]
-Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Xi built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Yi, a comet was sighted" and later research identifies this as an appearance of Halley's Comet.
+Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Xi built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Hui, a comet was sighted" and later research identifies this as an appearance of Halley's Comet.
 
 [[events_section]]
 ==== Events
 
 The Events class is an ordered list of temporal events. The events can be instances, such as the ascension of a King to a throne, or intervals, such as the complete reign of each king.
 
-Other documents may enable two such 'king lists' to be related, though not completely.
+Other documents may enable two such 'king lists' to be related, though usually not completely.
 
 [[temporal_crs_section]]
 === Temporal Coordinate Reference Systems
