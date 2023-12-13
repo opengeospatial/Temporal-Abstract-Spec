@@ -4,7 +4,7 @@
 
 To enable more clear reasoning about time, this Abstract Specification uses the term “Regime” to describe the fundamentally different types of time and its measurement. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical components.
 
-The first three regimes, described below, have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, the calendar regime has historically driven advances in mathematics and physics.
+The first three regimes, described below, have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, calendars, uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, the calendar regime has historically driven advances in mathematics and physics. See the article <<scientificamerican,A Chronicle Of Timekeeping>>.
 
 With due consideration, the regimes are applicable to other planets and outer space.
 
