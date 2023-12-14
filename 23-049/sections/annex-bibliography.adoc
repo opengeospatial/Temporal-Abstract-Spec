@@ -22,6 +22,10 @@ http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2
 Wikipedia.
 _List of Calendars_. https://en.wikipedia.org/wiki/List_of_calendars [last accessed 2023-12]
 
+* [[[ifc,International Fixed Calendar]]]
+Wikipedia.
+_International Fixed Calendar_. https://en.wikipedia.org/wiki/International_Fixed_Calendar [last accessed 2023-12]
+
 * [[[history_timekeeping,A Brief History of Timekeeping]]]
 Chad Orzell.
 _A Brief History of Timekeeping_.
