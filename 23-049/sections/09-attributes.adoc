@@ -113,6 +113,9 @@ The West African Yoruba traditional calendar is a solar calendar with months, bu
 [example]
 Teams controlling remote vehicles on Mars use a solar calendar, with Martian years and Martian days (called sols). Months are not used because there are two moons, with different, rather short, orbital periods.
 
+[example]
+The <<ifc,International Fixed Calendar>> was a solar calendar with 13 months of 28 days, with an extra day at the year's end after the thirteenth month and leap days inserted at the end of the sixth month. Months all started on the same day of the week, Sunday, and ended on a Saturday. The year-end day and leap days are not part of any week. The IFC was considered for global introduction by the League of Nations but finally rejected in 1937, though it formed the basis for some financial accounting systems for many years. 
+
 === Discrete and Continuous Time Scales
 
 A <<clock_section,clock>> may be a regular, repeating, physical event, or 'tick', that can be counted. The sequence of tick counts form a discrete (counted) <<timescale_section,timescale>>.
