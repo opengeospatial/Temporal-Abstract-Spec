@@ -30,14 +30,14 @@ An Ordinal Temporal Reference System does not have any attributes of its own. Ho
 . Event: An Ordinal Temporal Reference System 'consists of' an ordered set of <<events_section,Events>>. These events are identifiable temporal instances.
 
 [example]
-Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Xi built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Yi, a comet was sighted" and later research identifies this as an appearance of Halley's Comet.
+Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Gaozu (Chinese: 漢高祖) built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Qin Shi Huang (Chinese: 秦始皇), a comet was sighted" and later research identifies this as an appearance of Halley's Comet.
 
 [[events_section]]
 ==== Events
 
 The Events class is an ordered list of temporal events. The events can be instances, such as the ascension of a King to a throne, or intervals, such as the complete reign of each king.
 
-Other documents may enable two such 'king lists' to be related, though not completely.
+Other documents may enable two such 'king lists' to be related, though usually not completely.
 
 [[temporal_crs_section]]
 === Temporal Coordinate Reference Systems
@@ -102,7 +102,7 @@ The timeline in a country may have gaps when clocks 'spring forward' for enactin
 The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
 
 [example]
-The modern Jewish calendar is a calculated lunisolar calendar, and discrepancies in the solar year are addressed by adding 'leap months' every few years.
+The modern Jewish calendar is a calculated lunisolar calendar, and discrepancies from the solar year are addressed by adding 'leap months' every few years.
 
 [example]
 The Ba'hai calendar is a calculated solar calendar, but without any other astronomical aspects. The year consists of 19 months of 19 days each, with 4 or 5 intercalated days for a new year holiday.
@@ -149,7 +149,7 @@ A Clock represents the process which generates the 'tick' which is counted or me
 An atomic clock may be calibrated to be valid only for a given temperature range and altitude.
 
 [example]
-A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multiple of a second. The famous London "Big Ben" clock's pendulum is 4.4m long and ticks every two seconds.
+A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multiple of a second. The famous London "Big Ben" clock's pendulum is 4.4 m long and ticks every two seconds.
 
 [[unitsOfMeasure_section]]
 ==== UnitOfMeasure
@@ -164,7 +164,7 @@ The number of the years before the Current Era (BCE, previously known as BC) inc
 ==== Time Scale Examples
 
 [example]
-A long, deep ice core is retrieved from a stable ice sheet. From long term meteorological observations, the rate of accumulation of ice is known, so linear length can be equated to time (assuming a stable climate too). This enables the dates of some previously unknown large scale volcanic eruptions to be identified and timed. Identifiable nuclear fallout from specific atmospheric atomic bomb tests detected in the ice core increases confidence in the timing accuracy.
+A long, deep ice core is retrieved from an ice sheet. From chemical identification of layers representing known large scale volcanic eruptions, the connection between depth and time is known, so length can be converted to time. This enables the dates of some previously unknown large scale volcanic eruptions to be identified and timed.
 
 [example]
 A long, deep, sediment core is extracted from the bottom of a lake with a long geological history. Two layers in the core are dated using radiocarbon dating. Assuming steady rates of sediment deposition, a continuous timescale can be interpolated between the dated layers, and extrapolated before and after the dated layers.
