@@ -82,7 +82,7 @@ There are other regimes, which are out of scope of this Abstract Specification. 
 
 ==== Local Solar Time
 
-Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle. But the sun does not appear to progress evenly along the ecliptic throughout the days and year. There may be variations of up to 15 minutes compared to an even angular speed
+Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle. But the sun does not appear to progress evenly along the ecliptic throughout the days and year. There may be variations of up to 15 minutes compared to an even angular speed.
 
 ==== Astronomical Time
 

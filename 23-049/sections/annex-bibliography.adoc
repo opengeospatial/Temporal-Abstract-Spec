@@ -18,6 +18,14 @@ Cambridge University Press (2018).
 ISBN-13:978-1107683167.
 http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
 
+* [[[calendarlist,List of Calendars]]]
+Wikipedia.
+_List of Calendars_. https://en.wikipedia.org/wiki/List_of_calendars [last accessed 2023-12]
+
+* [[[ifc,International Fixed Calendar]]]
+Wikipedia.
+_International Fixed Calendar_. https://en.wikipedia.org/wiki/International_Fixed_Calendar [last accessed 2023-12]
+
 * [[[scientificamerican,A Chronicle Of Timekeeping]]] Andrewes, W.H.J.: _A Chronicle Of Timekeeping_. Scientific American (2006). https://www.scientificamerican.com/article/a-chronicle-of-timekeeping-2006-02
 
 * [[[history_timekeeping,A Brief History of Timekeeping]]]
