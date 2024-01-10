@@ -16,7 +16,7 @@ In this regime, no clocks or time measurements are defined, only events, that ar
 
 One set of events may be completely ordered with respect to each other, but another set of similar internally consistent ordered events cannot be cross-referenced to each other unless extra information is available. Even then, only partial orderings may be possible.
 
-In this regime, the <<temporal_knowledge,Allen Operators>> (see <<fig-interval-relations>>) can be used. If A occurs before B and B occurs before C, then that A occurs before C can be correctly deduced. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, arithmetic operations like (B-A) or (C-A) cannot be performed as any timescale or measurements are not defined. For example, in geology, 'subtracting' Ordovician from Jurassic is meaningless. In archeology, 'subtracting' a layer with a certain type of pottery remains from the layer containing burnt wood and bones is again not meaningful. Only the ordering can be deduced.
+In this regime, the <<temporal_knowledge,Allen Operators>> (see <<fig-interval-relations>>) can be used. If A occurs before B and B occurs before C, then it can be correctly deduced that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, arithmetic operations like (B-A) or (C-A) cannot be performed as any timescale or measurements are not defined. For example, in geology, 'subtracting' Ordovician from Jurassic is meaningless. In archeology, 'subtracting' a layer with a certain type of pottery remains from the layer containing burnt wood and bones is again not meaningful. Only the ordering can be deduced.
 
 This regime constitutes an Ordinal Temporal Reference System, with discrete enumerated ordered events.
 
@@ -37,7 +37,7 @@ It may seem that time can be measured between 'ticks' by interpolation, but this
 
 The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time. However in practice, TAI is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differing altitudes and temperatures.
 
-In this regime, <<temporal_knowledge,Allen Operators>> (see <<fig-interval-relations>>) also can be used. If L occurs before M and M occurs before N, that L occurs before N can be correctly deduced. The full set of operators also covers pairs of intervals. So if M occurs in the interval (L,N),  integer arithmetic operations such as (M-L) or (N-L) can be performed. This is because an integer timescale or measurement is defined.
+In this regime, <<temporal_knowledge,Allen Operators>> (see <<fig-interval-relations>>) also can be used. If L occurs before M and M occurs before N, it can be correctly deduced that L occurs before N. The full set of operators also covers pairs of intervals. So if M occurs in the interval (L,N),  integer arithmetic operations such as (M-L) or (N-L) can be performed. This is because an integer timescale or measurement is defined.
 
 This regime constitutes a Temporal Coordinate Reference System, with discrete integer units of measure which can be subject to integer arithmetic.
 
@@ -51,7 +51,7 @@ It is also assumed that time can be extrapolated to before the time when the clo
 
 This gives us a continuous number line to perform theoretical measurements. This is a coordinate system. With a datum/origin/epoch, a unit of measure (a name for the 'tick marks' on the axis), positive and negative directions and the full range of normal arithmetic. This is a Coordinate Reference System (CRS).
 
-In this regime, the <<temporal-knowledge,Allen Operators>> (see <<fig-interval-relations>>) also can be used. If A occurs before B and B occurs before C, that A occurs before C can be correctly deduced. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), real number arithmetic operations like (B-A) or (C-A) can be performed. This is because a timescale or measurement has been defined, and between any two instants, an infinite number of other instants can be found.
+In this regime, the <<temporal-knowledge,Allen Operators>> (see <<fig-interval-relations>>) also can be used. If A occurs before B and B occurs before C, it can be correctly deduced that A occurs before C. The full set of operators also covers pairs of intervals. So if B occurs in the interval (A,C), real number arithmetic operations like (B-A) or (C-A) can be performed. This is because a timescale or measurement has been defined, and between any two instants, an infinite number of other instants can be found.
 
 [example]
 ====
