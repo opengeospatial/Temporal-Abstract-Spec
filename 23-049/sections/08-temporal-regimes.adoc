@@ -110,5 +110,5 @@ The presence of gravitational effects requires special relativity to be replaced
 
 ==== Accountancy
 
-The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient (though often not!) for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
+The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
 
