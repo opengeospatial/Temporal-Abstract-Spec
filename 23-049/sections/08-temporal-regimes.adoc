@@ -81,11 +81,11 @@ There are other regimes, which are out of scope of this Abstract Specification. 
 
 ==== Local Solar Time
 
-Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle. But the sun does not appear to progress evenly along the ecliptic throughout the days and year. There may be variations of up to 15 minutes compared to an even angular speed
+Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle. But the sun does not appear to progress evenly along the ecliptic throughout the days and year. There may be variations of up to 15 minutes compared to an even angular speed.
 
 ==== Astronomical Time
 
-Astronomers have traditionally measured the apparent locations of stars, planets and other heavenly bodies by measuring angular separations from reference points or lines and the timing of transits across a meridian. Generally astronomers use time determined by earth's motion relative to the distant stars rather than the sun. This is called sidereal time. Times are usually measured from an epoch in daylight, such as local midday, rather than midnight. Accurate measurements of positions of stars, planets and moons were and are essential for navigation on Earth. See <<astro_algo,Astronomical Algorithms>> by Jean Meeus for examples of the calculations involved.
+Astronomers have traditionally measured the apparent locations of stars, planets and other heavenly bodies by measuring angular separations from reference points or lines and the timing of transits across a meridian. Generally, astronomers use time determined by earth's motion relative to the distant stars rather than the sun. This is called sidereal time. Times are usually measured from an epoch in daylight, such as local midday, rather than midnight. Accurate measurements of positions of stars, planets and moons were and are essential for navigation on Earth. See <<astro_algo,Astronomical Algorithms>> by Jean Meeus for examples of the calculations involved.
 
 ==== Space-time
 
@@ -93,7 +93,7 @@ When dealing with moving objects, the location of the object in space depends on
 
 Originally developed by <<minkowski,Hermann Minkowski>> to support work in Special Relativity, the concept of space-time is useful whenever the location of an object in space is dependent on its location in time.
 
-Since the speed of light, stem:[c], in a vacuum is a measurable constant, space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is coordinate reference system with four orthogonal axes all with the same units of measure, that is, distance. However, the measure of distance in this 4D space is not the usual Pythagorean stem:[d^2 = x^2 + y^2 + z^2 +(ct)^2] but stem:[d^2 = x^2 + y^2 + z^2 -(ct)^2], so reality is constrained to lying within a double cone subset around the stem:[ct] axis of the full space.
+Since the speed of light, stem:[c], in a vacuum is a measurable constant, space-time uses that constant to create a coordinate axis with spatial units of measure (meters per second * seconds = meters). The result is a coordinate reference system with four orthogonal axes all with the same units of measure, that is, distance. However, the measure of distance in this 4D space is not the usual Pythagorean stem:[d^2 = x^2 + y^2 + z^2 +(ct)^2] but stem:[d^2 = x^2 + y^2 + z^2 -(ct)^2], so reality is constrained to lying within a double cone subset around the stem:[ct] axis of the full space.
 
 ==== Relativistic
 

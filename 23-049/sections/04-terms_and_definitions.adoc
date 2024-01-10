@@ -100,4 +100,8 @@ NOTE: The object is normally time on the Earth.
 
 3D:: 3-dimensional
 
-UML:: Unified Modelling Language
+BIPM:: International Bureau of Weights and Measures
+
+TAI:: International Atomic Time
+
+UML:: Unified Modeling Language
