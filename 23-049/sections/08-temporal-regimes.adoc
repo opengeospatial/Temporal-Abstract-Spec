@@ -84,6 +84,18 @@ There are other regimes, which are out of scope of this Abstract Specification. 
 
 The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient for the requisite tasks, but are usually inappropriate for scientific or technical purposes.
 
+==== Agents and Agency
+
+Agents require a different concept of time from regimes where time is a coordinate axis or measured by clocks. An agent is an entity that senses, responds, and maintains a model of its environment, while performing actions to achieve its goals. See https://www.iso.org/standard/74296.html[ISO/IEC 22989:2022, Artificial intelligence concepts and terminology]. For an agent, the conceptual model of time is about flow and continuity including a sense of now, a memory of past events, and a speculation about future events. This regime addresses how the agent has awareness of the flow of events:
+
+• Temporal awareness integrates https://academic.oup.com/nc/article/2023/1/niad004/7079899?login=false&s=09[impression, retention, and protention], representing the continuous movement of time;
+
+• Agents continuously revise their models of the environment by integrating new observations with existing models;
+
+• Observations are used to update an agent's model, leading to a more accurate understanding of the environment and enabling effective goal-directed behavior.
+
+This Agent regime of time is relevant to any feature which has agency.
+
 ==== Astronomical Time
 
 Astronomers have traditionally measured the apparent locations of stars, planets and other heavenly bodies by measuring angular separations from reference points or lines and the timing of transits across a meridian. Generally astronomers use time determined by earth's motion relative to the distant stars rather than the sun. This is called sidereal time. Times are usually measured from an epoch in daylight, such as local midday, rather than midnight. Accurate measurements of positions of stars, planets and moons were and are essential for navigation on Earth. See the book <<astro_algo,Astronomical Algorithms>> by Jean Meeus for examples of the calculations involved.
