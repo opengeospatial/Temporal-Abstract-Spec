@@ -26,6 +26,10 @@ _List of Calendars_. https://en.wikipedia.org/wiki/List_of_calendars [last acces
 Wikipedia.
 _International Fixed Calendar_. https://en.wikipedia.org/wiki/International_Fixed_Calendar [last accessed 2023-12]
 
+* [[[timezones,Working with Time Zones]]]
+W3C.
+_Working with Time Zones, W3C Working Group Note 5 July 2011_. https://www.w3.org/TR/timezone 
+
 * [[[scientificamerican,A Chronicle Of Timekeeping]]] Andrewes, W.H.J.: _A Chronicle Of Timekeeping_. Scientific American (2006). https://www.scientificamerican.com/article/a-chronicle-of-timekeeping-2006-02
 
 * [[[history_timekeeping,A Brief History of Timekeeping]]]
