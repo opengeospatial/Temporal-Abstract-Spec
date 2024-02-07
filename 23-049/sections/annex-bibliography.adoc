@@ -55,14 +55,14 @@ https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/
 * [[[temporal_knowledge,Maintaining Knowledge about Temporal Intervals]]]
 Allen, J.F.:
 _Maintaining Knowledge about Temporal Intervals_.
-Communications of the ACM, vol. 26, no. 11 p. p832-843 (1983).
+Communications of the ACM, vol. 26, no. 11, pp 832-843 (1983).
 https://doi.org/10.1145/182.358434
 
 * [[[agent_time,Time-consciousness in computational phenomenology]]]
 Juan Diego Bogotá, Zakaria Djebbara: 
 _Time-consciousness in computational phenomenology: a temporal analysis of active inference_.
 Neuroscience of Consciousness, Volume 2023, Issue 1 (2023).  
-https://doi.org/10.1093/nc/niad004
+https://doi.org/10.1093/nc/
 
 * [[[treatise,Treatise on Time and Space]]]
 Lucas, J.R.:
