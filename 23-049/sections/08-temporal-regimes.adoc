@@ -14,7 +14,7 @@ The simplest way of relating entities in time is by events that can be ordered a
 
 In this regime, no clocks or time measurements are defined, only events, that are ordered in relation to each other. Examples are geological layers, sediment or ice core layers, archaeological sequences, sequential entries in computer logs without coordinated time.
 
-One set of events may be completely ordered with respect to each other, but another set of similar internally consistent ordered events cannot be cross-referenced to each other unless extra information is available. Even then, only partial orderings may be possible.
+One set of events may be completely ordered with respect to each other, but another set of similar internally consistent ordered events cannot be cross-referenced to the first set unless extra information is available. Even then, only partial orderings may be possible.
 
 In this regime, the <<temporal_knowledge,Allen Operators>> (see <<fig-interval-relations>>) can be used. If A occurs before B and B occurs before C, then it can be correctly deduced that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, arithmetic operations like (B-A) or (C-A) cannot be performed as any timescale or measurements are not defined. For example, in geology, 'subtracting' Ordovician from Jurassic is meaningless. In archeology, 'subtracting' a layer with a certain type of pottery remains from the layer containing burnt wood and bones is again not meaningful. Only the ordering can be deduced.
 
