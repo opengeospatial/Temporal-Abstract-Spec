@@ -35,7 +35,7 @@ Ancient annals of a country may give a sequence of emperors which could be used 
 [[events_section]]
 ==== Events
 
-The events class is an ordered list of temporal events. The events can be instances, such as the ascension of a king to a throne, or intervals, such as the complete reign of each king.
+The events class is an ordered list of temporal events. The events can be instants, such as the ascension of a king to a throne, or intervals, such as the complete reign of each king.
 
 Other documents may enable two such 'king lists' to be related, though usually not completely.
 
