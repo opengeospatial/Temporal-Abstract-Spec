@@ -1,4 +1,4 @@
-== Attributes of the Classes
+== Classes and their Attributes and Properties
 
 [[reference_system_section]]
 === Reference Systems
