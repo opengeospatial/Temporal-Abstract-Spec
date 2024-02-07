@@ -10,6 +10,6 @@ The geospatial community has often used analogies between space and time to cons
 
 2.2 Two things can be in the same place at different times.
 
-These are not symmetrical in space and time.
+These statements are not symmetrical between space and time.
 
 Temporal constructs such as instants, durations or intervals, multi-instants (a set of instants), and multi-intervals are not included in this conceptual model. These do have strongly analogous equivalents in space, such as points and multi-points, especially in a single dimension, such as vertical. The temporal constructs are well described in <<temporal_knowledge,Maintaining Knowledge about Temporal Intervals by J. F. Allen>> (see <<fig-interval-relations>>) and apply across all of the regimes, so do not need to be in this Abstract Conceptual Model.
