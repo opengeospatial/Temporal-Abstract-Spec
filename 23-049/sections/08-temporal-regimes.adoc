@@ -74,6 +74,9 @@ In this regime, the use of the <<temporal_knowledge,Allen Operators>> (see <<fig
 
 The full set of Allen Operators also covers pairs of intervals. So in the example, B occurs in the interval (A,C). However, simple arithmetic operations like (B-A) or (C-A) cannot usually be done simply because of the vagaries of the calendar algorithms, multiple timescales, and multiple Units of Measure.
 
+[example]
+For example, in the Gregorian calendar, calculating the number of days between the 1st February and the 30th March depends on whether the year is a leap year or not, which also depends on the century and millenium also. Calculating the precise number of seconds between two dates in the Gregorian calendar depends on whether leap seconds have been declared between the dates. There have been 27 leap seconds added between 1972 and 2022.
+
 Calendars are social constructs made by combining several clocks and their associated timescales. Calendars may also have local or regional variations at different times of the year or season, such as for 'day-light saving' in mid-latitudes. Again, this makes calculations more complicated.
 
 This Abstract Specification only addresses the internationally agreed Gregorian calendar. The book <<calendrical,Calendrical Calculations>> by Nachum Dershowitz and Edward M. Reingold provides overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia and to meet the various social needs of communities, whether agricultural, religious or other. The reference is comprehensive but not exhaustive, as there are calendars that have been omitted.
