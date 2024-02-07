@@ -13,6 +13,6 @@ A conceptual model:
 
 . organizes the vocabulary needed to communicate consistently and thoroughly about the know-how of a problem domain;
 
-. starts with a glossary of terms and definitions. There is a very high premium on high-quality, design-independent definitions, free of data or implementation biases; the model also emphasizes rich vocabulary; and
+. contains the definitions of the concepts that it organizes. There is a high premium on high-quality, design-independent definitions, free of data or implementation biases; the model also emphasizes rich vocabulary; and
 
 . is always about identifying the correct choice of terms to use in communications, including statements of rules and requirements, especially where high precision and subtle distinctions need to be made. The core concepts of a temporal geospatial problem domain are typically quite stable over time.
