@@ -25,11 +25,13 @@ image::images/IntervalRelations(CTL).jpg[]
 
 === Simple Clocks and Discrete Timescales
 
-In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth's rotation about the sun, earth's rotation about its axis, heart beats, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the cesium-133 atom. In terms of the number of repetitions possible, some phenomena make better clocks than others, because of the consistency of each repetition and the precision of each 'tick'. A mechanism for counting, or possibly measuring, the ticks is desirable.
+In this regime, a clock is defined as any regularly repeating physical phenomenon, such as a pendulum swing, earth's rotation about the sun, earth's rotation about its axis, heart beat, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the cesium-133 atom. Each occurrence of the repeating phenomenon is, of course, an event, but as there are usually very many that can only be distinguished by counting, they are classed as 'ticks'.
+
+In terms of the number of repetitions possible, some phenomena make better clocks than others, because of the consistency of each repetition and the precision of each 'tick'. A mechanism for counting, or possibly measuring, the ticks is desirable.
 
 An assumption is that the ticks are regular and homogeneous.
 
-There is no sub-division between two successive clock ticks. Measuring time consists of counting the complete number of repetitions of ticks since the clock started, or since some other event at a given clock count.
+There is no sub-division between two successive clock ticks. Measuring time consists of counting the complete number of repetitions of ticks since the clock started, or since some other event at a given clock tick count.
 
 There is no time measurement before the clock starts, or after it stops.
 
