@@ -3,31 +3,31 @@
 [[reference_system_section]]
 === Reference Systems
 
-The top level 'ReferenceSystem' is an abstract super-class and does not have many attributes or properties. Only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
+The top level `Reference System` class is an abstract super-class and does not have many attributes or properties. Only the total dimension of the reference system and the location, time or domain of applicability have been identified as essential.
 
-The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem', which is defined in <<iso19111>>, and 'TemporalReferenceSystem', each with the inherited attributes of Dimension and Domains of Applicability.
+The reference system class has two abstract sub-classes: `Spatial Reference System`, which is defined in <<iso19111>>, and `Temporal Reference System`, each with the inherited attributes of dimension and domains of applicability.
 
-The value for Dimension is one for time, or a vertical reference system, but may be as high as 6 for spatial location with orientation as in the <<OGCgeopose,GeoPose Implementation Standard>>.
+The value for dimension is one for time, or a vertical reference system, but may be as high as six for spatial location with orientation as in the <<OGCgeopose,GeoPose Implementation Standard>>.
 
 Besides the conventional space and time, there may be other reference systems, such as wavelength or frequency, that could be addressed by future additions to this Abstract Conceptual Model.
 
 [[ordinal_rs_section]]
 === Ordinal Temporal Reference Systems
 
-An OrdinalTemporal Reference System has a well-ordered finite sequence of events against which other events can be compared.
+An ordinal temporal reference system has a well-ordered finite sequence of events against which other events can be compared.
 
-An Ordinal Temporal Reference System is a type of temporal reference system. Therefore, it inherits the following attributes from the TemporalReferenceSystem class:
+An ordinal temporal reference system is a type of temporal reference system. Therefore, it inherits the following attributes from the temporal reference system class:
 
-. applicableLocationTimeOrDomain: the location, time or domain of applicability;
-. dimension: the number of dimensions in this reference system. For Ordinal Temporal Reference Systems this value is fixed at 1.
+. applicable location time or domain: the location, time or domain of applicability;
+. dimension: the number of dimensions in this reference system. For ordinal temporal reference systems this value is fixed at 1.
 
-An Ordinal Temporal Reference System does not have any attributes of its own. However, it does use associations with other classes to fully describe itself.
+An ordinal temporal reference system does not have any attributes of its own. However, it does use associations with other classes to fully describe itself.
 
-. Epoch: An Ordinal Temporal Reference System 'has a' one optional <<epoch_section,Epoch>>
+. Epoch: An ordinal temporal reference system 'has a' one optional <<epoch_section,Epoch>>
 
-. Notation: An Ordinal Temporal Reference System 'can use' one or more <<notation_section,Notations>> to represent itself.
+. Notation: An ordinal temporal reference system 'can use' one or more <<notation_section,Notations>> to represent itself.
 
-. Event: An Ordinal Temporal Reference System 'consists of' an ordered set of <<events_section,Events>>. These events are identifiable temporal instances.
+. Event: An ordinal temporal reference system 'consists of' an ordered set of <<events_section,Events>>. These events are identifiable temporal instances.
 
 [example]
 Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Gaozu (Chinese: 漢高祖) built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Qin Shi Huang (Chinese: 秦始皇), a comet was sighted" and later research identifies this as an appearance of Halley's Comet.
@@ -35,58 +35,58 @@ Ancient annals of a country may give a sequence of emperors which could be used 
 [[events_section]]
 ==== Events
 
-The Events class is an ordered list of temporal events. The events can be instances, such as the ascension of a King to a throne, or intervals, such as the complete reign of each king.
+The events class is an ordered list of temporal events. The events can be instances, such as the ascension of a king to a throne, or intervals, such as the complete reign of each king.
 
 Other documents may enable two such 'king lists' to be related, though usually not completely.
 
 [[temporal_crs_section]]
 === Temporal Coordinate Reference Systems
 
-A Temporal Coordinate Reference System is a type of temporal reference system. Therefore, it inherits the following attributes from the TemporalReferenceSystem class:
+A temporal coordinate reference system is a type of temporal reference system. Therefore, it inherits the following attributes from the temporal reference system class:
 
-. applicableLocationTimeOrDomain: the location, time or domain of applicability;
-. dimension: the number of dimensions in this reference system. For Temporal Coordinate Reference Systems this value is fixed at 1.
+. applicable location time or domain: the location, time or domain of applicability;
+. dimension: the number of dimensions in this reference system. For temporal coordinate reference systems this value is fixed at 1.
 
-A Temporal Coordinate Reference System does not have any attributes of its own. However, it does use associations with other classes to fully describe itself.
+A temporal coordinate reference system does not have any attributes of its own. However, it does use associations with other classes to fully describe itself.
 
-. Epoch: A Temporal CRS 'has a' one optional <<epoch_section,Epochs>>
+. Epoch: A temporal coordinate reference system 'has a' one optional <<epoch_section,Epochs>>
 
-. Notation: A Temporal CRS 'can use' one or more <<notation_section,Notations>> to represent itself.
+. Notation: A temporal coordinate reference system 'can use' one or more <<notation_section,Notations>> to represent itself.
 
-. Timescale: A Temporal CRS 'has a' one <<timescale_section,Timescale>> which is used to represent the values along its single axis. This Timescale can be either discrete or continuous.
+. Timescale: A temporal coordinate reference system 'has a' one <<timescale_section,Timescale>> which is used to represent the values along its single axis. This timescale can be either discrete or continuous.
 
 [[calendar_section]]
 === Calendar Reference Systems
 
-Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants of intervals on the compound timeline are identified and labeled.
+Calendars combine different timescales and their clocks and units of measure, and other events, to make a complex timeline against which events can be compared. Calculated algorithms are used to determine which instants or intervals on the compound timeline are identified and labeled.
 
-A Calendar is a type of temporal reference system. Therefore, it inherits the following attributes from the TemporalReferenceSystem class:
+A calendar is a type of temporal reference system. Therefore, it inherits the following attributes from the temporal reference system class:
 
-. applicableLocationTimeOrDomain: the location, time or domain of applicability
-. dimension: the number of dimensions in this reference system. For Calendars this value is fixed at 1.
+. applicable location time or domain: the location, time or domain of applicability
+. dimension: the number of dimensions in this reference system. For calendars this value is fixed at 1.
 
-A Calendar does not have any attributes of its own. However, it does use associations with other classes to fully describe itself.
+A calendar does not have any attributes of its own. However, it does use associations with other classes to fully describe itself.
 
-. Algorithm: A Calendar 'has a' one or more <<algorithm_section,Algorithms>>. These Algorithms specify how the multiple Time Scales are aggregated into a single <<timeline_section,Timeline>>.
+. Algorithm: A calendar 'has a' one or more <<algorithm_section,Algorithms>>. These algorithms specify how the multiple timescales are aggregated into a single <<timeline_section,Timeline>>.
 . Epoch: A calendar 'has a' one optional <<epoch_section,Epoch>>
 . Notation: A calendar 'can use' one or more <<notation_section,Notations>> to represent itself.
-. Timeline: A Calendar 'has a' one <<timeline_section,Timeline>> which serves to aggregate a number of <<timescale_section,Timescales>> into a single coherent measure of date and time.
-. Timescale: A Calendar 'has a' two or more <<timescale_section,Timescales>> which are used to construct a <<timeline_section,Timeline>>.
+. Timeline: A calendar 'has a' one <<timeline_section,Timeline>> which serves to aggregate a number of <<timescale_section,Timescales>> into a single coherent measure of date and time.
+. Timescale: A calendar 'has a' two or more <<timescale_section,Timescales>> which are used to construct a <<timeline_section,Timeline>>.
 
 [[timeline_section]]
 ==== Timeline
 
 The timeline is usually a set of instants from the past to the future and is compounded from multiple timescales, with multiple units of measures, and complicated arithmetic determined by the calendar algorithm(s). The timeline is usually not even continuous, having gaps or even multiple simultaneous representations.
 
-A Timeline does not have any attributes of its own. Nor does it inherit any attributes from a parent class. However, it does use associations with other classes to fully describe itself.
+A timeline does not have any attributes of its own. Nor does it inherit any attributes from a parent class. However, it does use associations with other classes to fully describe itself.
 
-. Algorithm: A Timeline 'has a' one or more <<algorithm_section,Algorithms>>. These Algorithms specify how the multiple Time Scales are aggregated into a single Timeline.
-. Timescale: A Timeline 'has a' two or more <<timescale_section,Timescales>> which are used to construct the Timeline.
+. Algorithm: A timeline 'has a' one or more <<algorithm_section,Algorithms>>. These algorithms specify how the multiple timescales are aggregated into a single timeline.
+. Timescale: A timeline 'has a' two or more <<timescale_section,Timescales>> which are used to construct the timeline.
 
 [[algorithm_section]]
 ==== Algorithm
 
-An Algorithm specifies the logic used to construct a Timeline from its constituent <<timescale_section,Timescales>>. An Algorithm does not have any attributes of its own. Nor does it make use of any other classes from this Temporal model.
+An algorithm specifies the logic used to construct a timeline from its constituent <<timescale_section,Timescales>>. An algorithm does not have any attributes of its own. Nor does it make use of any other classes from this temporal abstract conceptual model.
 
 ==== Calendar Examples
 
@@ -118,30 +118,30 @@ The <<ifc,International Fixed Calendar>> was a solar calendar with 13 months of 
 
 === Discrete and Continuous Time Scales
 
-A <<clock_section,clock>> may be a regular, repeating, physical event, or 'tick', that can be counted. The sequence of tick counts form a discrete (counted) <<timescale_section,timescale>>.
+A <<clock_section,clock>> may be a regular, repeating, physical event, or tick, that can be counted. The sequence of tick counts form a discrete (counted) <<timescale_section,timescale>>.
 
 Some <<clock_section,clocks>>  allow the measurement of intervals between ticks, such as the movement of the sun across the sky. Alternatively, the ticks may not be completely distinguishable, but are still stable enough over the time of applicability to allow measurements rather than counting to determine the passage of time. These clocks generate a continuous (measured) <<timescale_section,timescale>>.
 
-The duration of a tick is a constant. The length of a tick is specified using a <<unitsOfMeasure_section,Unit Of Measure>>.
+The duration of a tick is a constant. The duration of a tick is specified using a <<unitsOfMeasure_section,Unit Of Measure>>.
 
 [[timescale_section]]
 ==== Timescale
 
-A Timescale is a linear measurement (one dimension) used to measure or count monotonic events. Timescale has three attributes:
+A timescale is a linear measurement (one dimension) used to measure or count monotonic events. Timescale has three attributes:
 
-. Arithmetic: an indicator of whether this Timescale contains counted integers or measured real/floating point numbers.
-. StartCount: the lowest value in a Timescale. The data type of this attribute is specified by the 'arithmetic' attribute.
-. EndCount: the greatest value in a Timescale. The data type of this attribute is specified by the 'arithmetic' attribute.
+. Arithmetic: an indicator of whether this timescale contains counted integers or measured real/floating point numbers.
+. StartCount: the lowest value in a timescale. The data type of this attribute is specified by the 'arithmetic' attribute.
+. EndCount: the greatest value in a timescale. The data type of this attribute is specified by the 'arithmetic' attribute.
 
-In addition to the attributes, the Timescale class maintains associations with two other classes to complete its definition.
+In addition to the attributes, the timescale class maintains associations with two other classes to complete its definition.
 
-. Clock: A Timescale 'has a' one <<clock_section,clock>>. This is the process which generates the 'tick' which is counted or measured for the Timescale.
+. Clock: A timescale 'has a' one <<clock_section,clock>>. This is the process which generates the tick which is counted or measured for the timescale.
 . UnitOfMeasure: A timescale 'has a' one <<unitsOfMeasure_section,UnitOfMeasure>>. This class specifies the units of the clock measurement as well as the direction of increase of that measurement.
 
 [[clock_section]]
 ==== Clock
 
-A Clock represents the process which generates the 'tick' which is counted or measured for a Timescale. Clock has one attribute:
+A clock represents the process which generates the tick which is counted or measured for a timescale. Clock has one attribute:
 
 . Tick definition: a description of the process which is being used to generate monotonic events.
 
@@ -152,11 +152,11 @@ An atomic clock may be calibrated to be valid only for a given temperature range
 A pendulum clock may have each tick or swing of the pendulum adjusted to be an exact fraction or multiple of a second. The famous London "Big Ben" clock's pendulum is 4.4 m long and ticks every two seconds.
 
 [[unitsOfMeasure_section]]
-==== UnitOfMeasure
+==== Unit of Measure
 
-The Direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of 'Timescale' or 'TemporalCoordinateReferenceSystem' rather than a separate class 'UnitOfMeasure', but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, Atmospheric Pressure in hPa (Hectopascals) decreasing upwards, and FL (FlightLevel) increasing upwards.
+The direction attribute indicates whether counts or measures increase in the positive (future) or negative (past) direction. The attribute could be part of timescale or temporal coordinate reference system rather than a separate class of measure, but on balance, it seems better here, as the names often imply directionality, such as fathoms increasing downwards, MYA (Millions of Years Ago) increasing earlier, atmospheric pressure in hPa (hectopascals) decreasing upwards, and FL (flight level) increasing upwards.
 
-. Direction: indicates the direction in which a timescale progresses as new 'ticks' are counted or measured.
+. Direction: indicates the direction in which a timescale progresses as new ticks are counted or measured.
 
 [example]
 The number of the years before the Current Era (BCE, previously known as BC) increase further back in time, whereas the number of the years in the Current Era (CE, previously known as AD) increase further into the future. This is an example of two timescales, adjacent but with no overlap. If there was a year zero defined, they could be replaced with one continuous timescale.
@@ -173,22 +173,22 @@ A long, deep, sediment core is extracted from the bottom of a lake with a long g
 A well preserved fossilized log is recovered and the tree rings establish an annual 'tick'. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.
 
 [example]
-A clock is started, but undergoes a calibration process against some standard clock, so the initial, reliable Start Time does not start at Count Zero. The clock is accidentally knocked so that it is no longer correctly calibrated, but is still working. The End Time is not the last time that the clock ticks.
+A clock is started, but undergoes a calibration process against some standard clock, so the initial, reliable start time does not start at a count of zero. The clock is accidentally knocked so that it is no longer correctly calibrated, but is still working. The end time is not the last time that the clock ticks.
 
 [example]
 TAI (International Atomic Time, Temps Atomique International) is coordinated by the <<bipm_define,BIPM>> (International Bureau of Weights and Measures, Bureau International de Poids et Measures) in Paris, France. TAI is based on the average of hundreds of separate atomic clocks around the world, all corrected to be at mean sea level and standard pressure and temperature. The epoch is defined by Julian Date 2443144.5003725 (1 January 1977 00:00:32.184).
 
 [example]
-The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as "Period 2". Many computer based timescales, such as <<unix_time,Unix Time>>, are based on the Julian Day timescale, but with different epochs, to fit the numbers into the limited computer words.
+The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as "Period 2". Many computer based timescales, such as <<unix_time,Unix Time>>, are based on the Julian Day timescale, but with different epochs, to fit the numbers into the computer words of limited size.
 
 === Supporting Classes
 
 [[epoch_section]]
 ==== Epoch
 
-The Epoch class provides a origin or datum for a Temporal Reference System.
+The epoch class provides a origin or datum for a temporal reference system.
 
 [[notation_section]]
 ==== Notation
 
-The Notation class identifies a widely agreed, commonly accepted, notation for representing values in accordance with a temporal reference system.
+The notation class identifies a widely agreed, commonly accepted, notation for representing values in accordance with a temporal reference system.
