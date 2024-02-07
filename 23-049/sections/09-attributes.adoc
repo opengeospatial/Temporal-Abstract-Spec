@@ -5,7 +5,7 @@
 
 The top level 'ReferenceSystem' is an abstract super-class and does not have many attributes or properties. Only the total dimension of the reference system and the Location, Time or Domain of Applicability have been identified as essential.
 
-The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem', which is defined in <<iso19111>>, and 'TemporalReferenceSystem', each with the attributes of Dimension and Domains of Applicability.
+The 'ReferenceSystem' has two abstract sub-classes: 'SpatialReferenceSystem', which is defined in <<iso19111>>, and 'TemporalReferenceSystem', each with the inherited attributes of Dimension and Domains of Applicability.
 
 The value for Dimension is one for time, or a vertical reference system, but may be as high as 6 for spatial location with orientation as in the <<OGCgeopose,GeoPose Implementation Standard>>.
 
