@@ -35,9 +35,12 @@ Ancient annals of a country may give a sequence of emperors which could be used 
 [[events_section]]
 ==== Events
 
-The events class is an ordered list of temporal events. The events can be instants, such as the ascension of a king to a throne, or intervals, such as the complete reign of each king.
+An event is an identifiable happening or occurence of something. The events can be instants, such as the ascension of a king to a throne, or intervals, such as the complete reign of each king.
 
 Other documents may enable two such 'king lists' to be related, though usually not completely.
+
+[example]
+Several archeological layers may be identified as containing broken pottery, overlaid with a layer of burnt wood and brick, then followed by another layer with a different style of pottery and including a coin embossed with a king's name. Thus the pottery styles can be classified as 'early' and 'late' and the late pottery associated with the named king, who may be identified from a separate inscribed 'king list'.
 
 [[temporal_crs_section]]
 === Temporal Coordinate Reference Systems
