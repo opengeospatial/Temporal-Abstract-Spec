@@ -3,6 +3,8 @@
 
 === Terms and definitions
 
+==== clock
+
 ==== conceptual model
 
 description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain
@@ -93,6 +95,9 @@ one-dimensional {{coordinate system}} where the axis is time
 
 NOTE: The object is normally time on the Earth.
 
+==== tick
+
+event which is a single occurrence of the repeating physical phenomenon of a clock
 
 === Abbreviations
 
