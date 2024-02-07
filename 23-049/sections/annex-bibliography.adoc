@@ -49,13 +49,14 @@ https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfr
 
 * [[[minkowski,Minkowski Space and Time]]] Minkowski, H.:
 _Space and Time, Minkowski's Papers on Relativity_.
-Minkowski Institute Press, Montreal (2012)
+Minkowski Institute Press, Montreal (2012).
 https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
 
 * [[[temporal_knowledge,Maintaining Knowledge about Temporal Intervals]]]
 Allen, J.F.:
 _Maintaining Knowledge about Temporal Intervals_.
-Communications of the ACM, vol. 26 pp832-843 (1983).
+Communications of the ACM, vol. 26, no. 11 p. p832-843 (1983).
+https://doi.org/10.1145/182.358434
 
 * [[[agent_time,Time-consciousness in computational phenomenology]]]
 Juan Diego Bogotá, Zakaria Djebbara: 
