@@ -36,7 +36,6 @@ include::sections/04-terms_and_definitions.adoc[]
 
 include::sections/05-conventions.adoc[]
 
-// Add clause files as needed
 include::sections/06-cm-characteristics.adoc[]
 
 include::sections/07-cm.adoc[]
