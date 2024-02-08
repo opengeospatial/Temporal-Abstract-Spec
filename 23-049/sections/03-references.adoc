@@ -17,4 +17,4 @@ Allen, J. F.: _Maintaining Knowledge about Temporal Intervals_. Communications o
 * [[[ogc18005,OGC 18-005r8]]] OGC: _OGC Abstract Specification Topic 2: Referencing by coordinates (Including Corrigendum 1 and Corrigendum 2)_. Open Geospatial Consortium (2003). 
 https://docs.ogc.org/as/18-005r8/18-005r8.pdf[https://docs.ogc.org/as/18-005r8/18-005r8.pdf].
 
-* [[[w3cowltime,W3C TR Owl-Time]]] Cox, S., Little, C.: _W3C Time Ontology in OWL_. World Wide Web Consortium (2022) https://www.w3.org/TR/owl-time/[https://www.w3.org/TR/owl-time/].
+* [[[w3cowltime,W3C Time Ontology in OWL]]] Cox, S., Little, C.: _W3C Time Ontology in OWL_. World Wide Web Consortium (2022) https://www.w3.org/TR/owl-time/[https://www.w3.org/TR/owl-time/].
