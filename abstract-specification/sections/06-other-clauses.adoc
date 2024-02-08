@@ -14,9 +14,9 @@ classDiagram
 class ReferenceSystem {
         <<abstract>>
         dimension = 1..*
-        locationOfApplicability
-        timeOfApplicability
-        domainOfApplicability
+        locationOfApplicability = 0..1
+        timeOfApplicability = 0..1
+        domainOfApplicability = 0..1
     }
 class SpatialReferenceSystem {
         <<abstract>>
