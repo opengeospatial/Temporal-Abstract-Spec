@@ -47,7 +47,7 @@ TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : must have
 Calendar "1" o-- "0..1" Epoch : anchored by
 Calendar "1" --> "1..*" Notation : represented by
 Calendar "1" o-- "1" Timeline : has a
-Timeline "1" o-- "1..*" Algorithm : constructed by
+Timeline "1" o-- "1..*" Algorithm : defined by
 class Timescale {
         StartCount 
         EndCount 
