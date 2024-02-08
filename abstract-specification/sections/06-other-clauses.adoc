@@ -40,12 +40,12 @@ TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
 TemporalReferenceSystem <|-- Calendar : is a
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
-OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : is represented be
+OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : represented be
 TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
-TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : is represented by
+TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : represented by
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
 Calendar "1" o-- "0..1" Epoch : has an
-Calendar "1" --> "1..*" Notation : is represented by
+Calendar "1" --> "1..*" Notation : represented by
 Calendar "1" o-- "1" Timeline : has a
 Calendar "1" o-- "1..*" Algorithm : has a
 class Timescale {
