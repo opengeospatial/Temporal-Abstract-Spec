@@ -9,7 +9,7 @@ The model is also informed by the <<w3cowltime,W3C Time Ontology in OWL>>.
 ....
 @startuml
 abstract class ReferenceSystem {
-  dimension = 1..*
+  dimension {dimension >= 1}
         locationOfApplicability = 0..1
         timeOfApplicability = 0..1
         domainOfApplicability = 0..1
