@@ -34,6 +34,8 @@ class TemporalCoordinateReferenceSystem {
     }
 class Calendar { 
     }
+class Timeline {
+    }
 note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
 TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
 TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
@@ -48,8 +50,6 @@ TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : must have
 Calendar "1" o-- "0..1" Epoch : anchored by
 Calendar "1" --> "1..*" Notation : represented by
 Calendar "1" o-- "1" Timeline : has a
-class Timeline {
-    }
 Timeline "1" o-- "1..*" Algorithm : defined by
 
 class Timescale {
