@@ -8,6 +8,8 @@
 
 * [[[iso19111,ISO 19111:2019]]] ISO: _ISO 19111:2019, Geographic information - Referencing by coordinates_. International Organization for Standardization, Geneva (2019). https://www.iso.org/standard/74039.html[https://www.iso.org/standard/74039.html].
 
+* [[[iso22989,ISO/IEC 22989:2022]]] ISO: _ISO/IEC 22989:2022, Artificial intelligence concepts and terminology_. International Organization for Standardization, Geneva (2022). https://www.iso.org/standard/74296.html[https://www.iso.org/standard/74296.html].
+
 * [[[temporal-knowledge,Maintaining Knowledge about Temporal Intervals]]]
 Allen, J. F.: _Maintaining Knowledge about Temporal Intervals_. Communications of the ACM, vol. 26, pp832-843 (1983).
 
