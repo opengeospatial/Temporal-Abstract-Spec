@@ -9,6 +9,8 @@ The reference system class has two abstract sub-classes: `Spatial Reference Syst
 
 The value for dimension is one for time, or a vertical reference system, but may be as high as six for spatial location with orientation as in the <<OGCgeopose,GeoPose Implementation Standard>>.
 
+For example, a reference system may be applicable to Mars, rather than Earth, or perhaps to a specific building site with local coordinates, or a specific time range while coordinate errors are within acceptable bounds.
+
 Besides the conventional space and time, there may be other reference systems, such as wavelength or frequency, that could be addressed by future additions to this Abstract Conceptual Model.
 
 [[ordinal_rs_section]]
