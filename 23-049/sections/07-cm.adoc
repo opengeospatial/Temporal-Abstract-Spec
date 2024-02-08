@@ -72,7 +72,6 @@ class Timescale {
 Timescale "1" o-- "1" Clock : has a
 Timescale "1" o-- "1" UnitOfMeasure : has a
 
-
 class Clock {
 }
 Clock "1" o-- "1..*" Tick : has a
@@ -83,9 +82,12 @@ class UnitOfMeasure {
   Direction
 }
 
+class Algorithm {
+} 
+Algorithm "1" o-- "2..*" Timescale : has a
+
 class Timeline {
 }
-
 Timeline "1" o-- "2..*" Timescale : has a
 @enduml
 
