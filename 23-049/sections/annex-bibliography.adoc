@@ -8,6 +8,11 @@
 Meeus, J.: _Astronomical Algorithms_. 
 https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf[https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf].
 
+* [[[tai,International Atomic Time]]]
+Wikipedia.
+_International Atomic Time_.
+https://en.wikipedia.org/wiki/International_Atomic_Time[https://en.wikipedia.org/wiki/International_Atomic_Time]. [Last accessed 2024-02]
+
 * [[[bipm_define,Establishment of International Atomic Time and Coordinated Universal Time]]]
 Bureau International des Poids et Mesures (BIPM):
 _Establishment of International Atomic Time and Coordinated Universal Time_.
