@@ -13,7 +13,7 @@ This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
 classDiagram
 class ReferenceSystem {
         <<abstract>>
-        dimension = 1..*
+        dimension dimension >= 1
         locationOfApplicability = 0..1
         timeOfApplicability = 0..1
         domainOfApplicability = 0..1
