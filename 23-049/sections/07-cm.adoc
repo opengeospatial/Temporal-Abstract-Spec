@@ -87,7 +87,6 @@ class Timeline {
 }
 
 Timeline "1" o-- "2..*" Timescale : has a
-Timeline "1" o-- "1..*" Algorithm : has a
 @enduml
 
 ....
