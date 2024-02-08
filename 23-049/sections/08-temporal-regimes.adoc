@@ -85,11 +85,11 @@ A calendar is a temporal reference system, but it is not a temporal coordinate r
 
 === Other Regimes
 
-There are other regimes, which are out of scope of this Abstract Specification. This could include local solar time, which is useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time for very fast moving features.
+There are other regimes, whose detailed description are out of scope of this Abstract Specification. This could include local solar time, which is useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography, or relativistic time for very fast moving features.
 
 ==== Accountancy
 
-The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient for the requisite tasks, but are usually inappropriate for scientific or technical purposes. This Abstract Specification can address this regime.
+The financial and administrative domains often use weeks, quarters, and other calendrical measures. These may be convenient for the requisite tasks, but are usually inappropriate for scientific or technical purposes. This Abstract Conceptual Model for Time can support this regime.
 
 ==== Agents and Agency
 
@@ -101,15 +101,15 @@ Agents require a different concept of time from regimes where time is a coordina
 
 • Observations are used to update an agent's model, leading to a more accurate understanding of the environment and enabling effective goal-directed behavior.
 
-This regime of time is relevant to any feature which has agency. This Abstract Specification can address this regime.
+This regime of time is relevant to any feature which has agency. This Abstract Conceptual Model for Time can support this regime.
 
 ==== Astronomical Time
 
-Astronomers have traditionally measured the apparent locations of stars, planets and other heavenly bodies by measuring angular separations from reference points or lines and the timing of transits across a meridian. Generally astronomers use time determined by earth's motion relative to the distant stars rather than the sun. This is called sidereal time. Times are usually measured from an epoch in daylight, such as local midday, rather than midnight. Accurate measurements of positions of stars, planets and moons were and are essential for navigation on Earth. See the book <<astro_algo,Astronomical Algorithms>> by Jean Meeus for examples of the calculations involved. This Abstract Specification can address this regime.
+Astronomers have traditionally measured the apparent locations of stars, planets and other heavenly bodies by measuring angular separations from reference points or lines and the timing of transits across a meridian. Generally astronomers use time determined by earth's motion relative to the distant stars rather than the sun. This is called sidereal time. Times are usually measured from an epoch in daylight, such as local midday, rather than midnight. Accurate measurements of positions of stars, planets and moons were and are essential for navigation on Earth. See the book <<astro_algo,Astronomical Algorithms>> by Jean Meeus for examples of the calculations involved. This Abstract Conceptual Model for Time can support this regime.
 
 ==== Local Solar Time
 
-Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle. But the sun does not appear to progress evenly along the ecliptic throughout the days and year. There may be variations of up to 15 minutes compared to an even angular speed. This Abstract Specification can address this regime.
+Local solar time may or may not correspond to the local statutory or legal time in a country. Local solar time can be construed as a clock and timescale, with an angular measure of the apparent position of the sun along the ecliptic (path through the sky) as the basic physical principle. But the sun does not appear to progress evenly along the ecliptic throughout the days and year. There may be variations of up to 15 minutes compared to an even angular speed. This Abstract Conceptual Model for Time can support this regime.
 
 ==== Space-time
 
@@ -129,6 +129,6 @@ The key to this approach is to ensure each moving feature of interest has its ow
 
 Relativistic effects may need to be considered for satellites and other spacecraft because of their relative speed and position in Earth's gravity well.
 
-The presence of gravitational effects requires special relativity to be replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras' Theorem does not hold except locally over small areas, or that the circumference of a circle is not precisely stem:[2 :pi r]. This is somewhat familiar territory for geospatial experts. This Abstract Specification can address this regime providing each feature has its own clock.
+The presence of gravitational effects requires special relativity to be replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras' Theorem does not hold except locally over small areas, or that the circumference of a circle is not precisely stem:[2 :pi r]. This is somewhat familiar territory for geospatial experts. This Abstract Conceptual Model for Time can support this regime, providing each feature has its own clock.
 
 
