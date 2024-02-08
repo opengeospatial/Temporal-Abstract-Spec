@@ -72,3 +72,4 @@ class Algorithm {
 Algorithm "1" o-- "2..*" Timescale : uses
 
 ```
+
