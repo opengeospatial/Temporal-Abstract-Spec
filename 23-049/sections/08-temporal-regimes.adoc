@@ -37,7 +37,7 @@ There is no time measurement before the clock starts, or after it stops.
 
 It may seem that time can be measured between ticks by interpolation, but this needs another clock, with faster ticks. This process of devising more precise clocks continues down to the atomic scale. At that scale the deterministic process of physically trying to interpolate between ticks is not possible.
 
-The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time. However in practice, TAI is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differing altitudes and temperatures.
+The internationally agreed atomic time, <<tai,TAI International Atomic Time>> is an example of a timescale with an integer count as the measure of time. However in practice, TAI is an arithmetic compromise across about two hundred separate atomic clocks, corrected for differing altitudes and temperatures.
 
 In this regime, <<temporal_knowledge,Allen Operators>> (see <<fig-interval-relations>>) also can be used. If L occurs before M and M occurs before N, it can be correctly deduced that L occurs before N. The full set of operators also covers pairs of intervals. So if M occurs in the interval (L,N),  integer arithmetic operations such as (M-L) or (N-L) can be performed. This is because an integer timescale or measurement is defined by the count of ticks.
 
@@ -130,6 +130,5 @@ The key to this approach is to ensure each moving feature of interest has its ow
 Relativistic effects may need to be considered for satellites and other spacecraft because of their relative speed and position in Earth's gravity well.
 
 The presence of gravitational effects requires special relativity to be replaced by general relativity, and it can no longer be assumed that space (or space-time) is Euclidean. That is, Pythagoras' Theorem does not hold except locally over small areas, or that the circumference of a circle is not precisely stem:[2 :pi r]. This is somewhat familiar territory for geospatial experts. This Abstract Specification can address this regime providing each feature has its own clock.
-
 
 
