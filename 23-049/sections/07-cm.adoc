@@ -10,7 +10,9 @@ The model is also informed by the <<w3cowltime,W3C Time Ontology in OWL>>.
 @startuml
 abstract class ReferenceSystem {
   dimension = 1..*
-  applicableLocationTimeOrDomain
+        locationOfApplicability = 0..1
+        timeOfApplicability = 0..1
+        domainOfApplicability = 0..1
 }
 
 note right of ReferenceSystem
@@ -20,13 +22,10 @@ Note: Has at least one of:
 end note
 
 abstract class SpatialReferenceSystem {
-  dimension = 1..*
-  applicableLocationTimeOrDomain
 }
 
 abstract class TemporalReferenceSystem {
   dimension = 1
-  applicableLocationTimeOrDomain
 }
 
 note left of TemporalReferenceSystem
@@ -40,18 +39,12 @@ ReferenceSystem <|-- SpatialReferenceSystem : is a
 ReferenceSystem <|-- TemporalReferenceSystem : is a
 
 class OrdinalTemporalReferenceSystem {
-  dimension = 1
-  applicableLocationTimeOrDomain
 }
 
 class TemporalCoordinateReferenceSystem {
-  dimension = 1
-  applicableLocationTimeOrDomain
 }
 
 class Calendar {
-  dimension = 1
-  applicableLocationTimeOrDomain
 }
 
 TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
@@ -81,8 +74,10 @@ Timescale "1" o-- "1" Clock : has a
 Timescale "1" o-- "1" UnitOfMeasure : has a
 
 class Clock {
-  Tick definition
 }
+Clock "1" o-- "1..*" Tick : has a
+class Tick {
+    }
 
 class UnitOfMeasure {
   Direction
