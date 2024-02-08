@@ -41,9 +41,9 @@ TemporalReferenceSystem <|-- Calendar : is a
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : anchored by
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : represented be
-TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : anchored by
+TemporalCoordinateReferenceSystem "1" o-- "0..1" Epoch : anchored by
 TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : represented by
-TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
+TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : must have
 Calendar "1" o-- "0..1" Epoch : anchored by
 Calendar "1" --> "1..*" Notation : represented by
 Calendar "1" o-- "1" Timeline : has a
@@ -53,20 +53,20 @@ class Timescale {
         EndCount 
         arithmetic 
     }
-Timescale "1" o-- "1" Clock : has a
+Timescale "1" o-- "1" Clock : defined by a
 Timescale "1" o-- "1" UnitOfMeasure : has a
 class Clock {
     }
-Clock "1" o-- "1..*" Tick : has a
-class Tick {
+Clock "1" o-- "1..*" Ticks : counts
+class Ticks {
     }
 class UnitOfMeasure {
         Direction
     }
 class Algorithm {
     }
-Algorithm "1" o-- "2..*" Timescale : has a
+Algorithm "1" o-- "2..*" Timescale : uses
 class Timeline {
     }
-Timeline "1" o-- "2..*" Timescale : has a
+Timeline "1" o-- "2..*" Timescale : constructed from
 ```
