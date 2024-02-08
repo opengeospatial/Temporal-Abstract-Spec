@@ -19,27 +19,19 @@ class ReferenceSystem {
 class SpatialReferenceSystem {
         <<abstract>>
         dimension = 1..*
-        applicableLocationTimeOrDomain 
     }
 class TemporalReferenceSystem {
         <<abstract>>
         dimension = 1
-        applicableLocationTimeOrDomain 
     }
 note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
 ReferenceSystem <|-- SpatialReferenceSystem : is a
 ReferenceSystem <|-- TemporalReferenceSystem : is a
 class OrdinalTemporalReferenceSystem {
-        dimension = 1
-        applicableLocationTimeOrDomain 
     }
 class TemporalCoordinateReferenceSystem {
-        dimension = 1
-        applicableLocationTimeOrDomain 
     }
-class Calendar {
-        dimension = 1
-        applicableLocationTimeOrDomain 
+class Calendar { 
     }
 note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
 TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
@@ -64,7 +56,9 @@ class Timescale {
 Timescale "1" o-- "1" Clock : has a
 Timescale "1" o-- "1" UnitOfMeasure : has a
 class Clock {
-        Tick definition
+    }
+Clock "1" o-- "1..*" Tick : has a
+class Tick {
     }
 class UnitOfMeasure {
         Direction
