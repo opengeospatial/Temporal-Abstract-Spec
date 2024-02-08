@@ -53,7 +53,7 @@ class Timescale {
         EndCount 
         arithmetic 
     }
-Timescale "1" o-- "1" Clock : defined by a
+Timescale "1" o-- "1" Clock : determined by a
 Timescale "1" o-- "1" UnitOfMeasure : has a
 class Clock {
     }
