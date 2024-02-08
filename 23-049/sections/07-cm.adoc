@@ -9,7 +9,7 @@ The model is also informed by the <<w3cowltime,W3C Time Ontology in OWL>>.
 ....
 @startuml
 abstract class ReferenceSystem {
-        dimension dimension >= 1
+        dimension "dimension >= 1"
         locationOfApplicability = 0..1
         timeOfApplicability = 0..1
         domainOfApplicability = 0..1
@@ -40,28 +40,27 @@ ReferenceSystem <|-- TemporalReferenceSystem : is a
 
 class OrdinalTemporalReferenceSystem {
 }
-
 class TemporalCoordinateReferenceSystem {
 }
-
 class Calendar {
 }
-
+class Timeline {
+}
 TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
 TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
 TemporalReferenceSystem <|-- Calendar : is a
 
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
-OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
+OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : anchored by
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : is represented by
-TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
+TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : anchored by
 TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : is represented by
-TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
+TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : must have
 
-Calendar "1" o-- "0..1" Epoch : has an
+Calendar "1" o-- "0..1" Epoch : anchored by
 Calendar "1" --> "1..*" Notation : is represented by
 Calendar "1" o-- "1" Timeline : has a
-Calendar "1" o-- "1..*" Algorithm : has a
+Calendar "1" o-- "1..*" Algorithm : defined by
 
 class Timescale {
   StartCount
@@ -69,13 +68,13 @@ class Timescale {
   arithmetic
 }
 
-Timescale "1" o-- "1" Clock : has a
+Timescale "1" o-- "1" Clock : determined by
 Timescale "1" o-- "1" UnitOfMeasure : has a
 
 class Clock {
 }
-Clock "1" o-- "1..*" Tick : has a
-class Tick {
+Clock "1" o-- "1..*" Ticks : counts
+class Ticks {
     }
 
 class UnitOfMeasure {
@@ -84,11 +83,8 @@ class UnitOfMeasure {
 
 class Algorithm {
 } 
-Algorithm "1" o-- "2..*" Timescale : has a
+Algorithm "1" o-- "2..*" Timescale : uses
 
-class Timeline {
-}
-Timeline "1" o-- "2..*" Timescale : has a
 @enduml
 
 ....
