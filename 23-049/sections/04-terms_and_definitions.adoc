@@ -5,6 +5,8 @@
 
 ==== clock
 
+regularly repeating physical phenomenon that can be counted
+
 ==== conceptual model
 
 description of common concepts and their relationships, particularly in order to facilitate exchange of information between parties within a specific domain
@@ -97,7 +99,7 @@ NOTE: The object is normally time on the Earth.
 
 ==== tick
 
-event which is a single occurrence of the repeating physical phenomenon of a clock
+event which is a single occurrence of the regularly repeating physical phenomenon of a clock
 
 === Abbreviations
 
