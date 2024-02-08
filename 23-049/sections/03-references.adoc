@@ -4,7 +4,7 @@
 
 * [[[rfc3339,IETF RFC 3339]]]
 
-* [[[iso8601,ISO 8601:2004]]] ISO: _ISO 8601:2004, Information interchange Representation of dates and times_. International Organization for Standardization, Geneva (2004). https://www.iso.org/standard/40874.html[https://www.iso.org/standard/40874.html].
+* [[[iso8601,ISO 8601]]] ISO: _ISO 8601, Information interchange Representation of dates and times_. International Organization for Standardization, Geneva. https://www.iso.org/standard/40874.html[https://www.iso.org/standard/40874.html].
 
 * [[[iso19111,ISO 19111:2019]]] ISO: _ISO 19111:2019, Geographic information - Referencing by coordinates_. International Organization for Standardization, Geneva (2019). https://www.iso.org/standard/74039.html[https://www.iso.org/standard/74039.html].
 
