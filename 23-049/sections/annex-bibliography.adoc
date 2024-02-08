@@ -74,3 +74,13 @@ ISBN 0-416-84190-2.
 The Open Group:
 _UNIX Time_.
 https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16 [last accessed 2023-01]
+
+* [[[sedate, Serialising Extended Data About Times and Events]]]
+IETF: 
+Date and Time on the Internet: Timestamps with additional information, Oct 2023.
+https://datatracker.ietf.org/doc/draft-ietf-sedate-datetime-extended [last accessed 2024-02-08]
+
+* [[[edtf,Extended Date Time Format]]]
+The Library of Congress: 
+_Extended Date/Time Format (EDTF) Specification_. 2019-02-04.
+https://www.loc.gov/standards/datetime [last accessed 2024-02-08]
