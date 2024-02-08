@@ -38,6 +38,7 @@ note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordi
 TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
 TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
 TemporalReferenceSystem <|-- Calendar : is a
+
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : anchored by
 OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : represented be
@@ -47,7 +48,10 @@ TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : must have
 Calendar "1" o-- "0..1" Epoch : anchored by
 Calendar "1" --> "1..*" Notation : represented by
 Calendar "1" o-- "1" Timeline : has a
+class Timeline {
+    }
 Timeline "1" o-- "1..*" Algorithm : defined by
+
 class Timescale {
         StartCount 
         EndCount 
@@ -66,6 +70,5 @@ class UnitOfMeasure {
 class Algorithm {
     }
 Algorithm "1" o-- "2..*" Timescale : uses
-class Timeline {
-    }
+
 ```
