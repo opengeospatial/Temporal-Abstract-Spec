@@ -43,7 +43,7 @@ TemporalReferenceSystem <|-- Calendar : is a
 
 OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
 OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : anchored by
-OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : represented be
+OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : represented by
 TemporalCoordinateReferenceSystem "1" o-- "0..1" Epoch : anchored by
 TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : represented by
 TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : must have
