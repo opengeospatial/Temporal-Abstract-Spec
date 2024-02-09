@@ -1,8 +1,13 @@
 
 == Conformance
 
-<<abstract-model>> of this Abstract Specification uses the Unified Modeling Language (UML) to present
-conceptual schemas for describing the higher level classes of time and temporal reference systems. These schemas define conceptual classes that:
+According to https://portal.ogc.org/files/?artifact_id=102806&version=6[OGC Policy] "The detail of the Abstract Specification shall be sufficient to provide normative references, including models, and technical guidelines as a foundation for Standards. Each Topic, to the extent possible, provides unambiguous normative and informative information that allows for implementation of Standards in software.
+
+The level of detail of the Abstract Specification is at the discretion of the TC as reflected by the actual content that is approved for inclusion in the document itself.”
+
+This Abstract Specification does not include any specific requirements or conformance classes. However, it does include normative references and a normative Unified Modeling Language (UML) model. Conformance is demonstrated through inclusion of the normative references in any derivative specification and by basing any derived conceptual model on the abstract model provided in this Standard. 
+
+The <<abstract-model>> of this Abstract Specification uses UML to present conceptual schemas for describing the higher level classes of time and temporal reference systems. These schemas define conceptual classes that:
 
 . may be considered to comprise a cross-domain application schema, or
 
@@ -16,6 +21,3 @@ The UML model in this Abstract Specification defines conceptual classes. Various
 implementations or data structures. All of these reference the same information content. The same
 name may be used in implementation classes as in the model, so that types defined in the UML model may be used
 directly in application schemas.
-
-<<conformance-tests>> defines a set of conformance tests that will support applications whose requirements range from the
-minimum necessary to define data structures to full object implementation.
