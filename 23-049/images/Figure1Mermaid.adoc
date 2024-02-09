@@ -1,0 +1,75 @@
+Figure 1, but using Mermaid markup rather than lantUML that is supported by Metanorma
+[NOTE]
+====
+This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing the Mermaid container with the following.
+====
+
+`[plantuml]
+@startuml
+.
+.
+@enduml`
+
+```mermaid
+classDiagram
+class ReferenceSystem {
+        <<abstract>>
+        dimension "dimension >= 1"
+        locationOfApplicability = 0..1
+        timeOfApplicability = 0..1
+        domainOfApplicability = 0..1
+    }
+class SpatialReferenceSystem {
+        <<abstract>>
+    }
+class TemporalReferenceSystem {
+        <<abstract>>
+        dimension = 1
+    }
+note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
+ReferenceSystem <|-- SpatialReferenceSystem : is a
+ReferenceSystem <|-- TemporalReferenceSystem : is a
+class OrdinalTemporalReferenceSystem {
+    }
+class TemporalCoordinateReferenceSystem {
+    }
+class Calendar { 
+    }
+class Timeline {
+    }
+note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
+TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
+TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
+TemporalReferenceSystem <|-- Calendar : is a
+
+OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
+OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : anchored by
+OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : represented by
+TemporalCoordinateReferenceSystem "1" o-- "0..1" Epoch : anchored by
+TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : represented by
+TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : must have
+Calendar "1" o-- "0..1" Epoch : anchored by
+Calendar "1" --> "1..*" Notation : represented by
+Calendar "1" o-- "1" Timeline : has a
+Timeline "1" o-- "1..*" Algorithm : defined by
+
+class Timescale {
+        StartCount 
+        EndCount 
+        arithmetic 
+    }
+Timescale "1" o-- "1" Clock : determined by a
+Timescale "1" o-- "1" UnitOfMeasure : has a
+class Clock {
+    }
+Clock "1" o-- "1..*" Ticks : counts
+class Ticks {
+    }
+class UnitOfMeasure {
+        Direction
+    }
+class Algorithm {
+    }
+Algorithm "1" o-- "2..*" Timescale : uses
+
+```
