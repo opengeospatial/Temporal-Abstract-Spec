@@ -1,0 +1,191 @@
+[appendix,obligation="informative"]
+== Glossary
+
+=== compound coordinate reference system
+
+coordinate reference system using at least two independent coordinate reference systems
+
+[.source]
+<<iso19111>>
+
+NOTE: Coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.
+
+=== coordinate epoch
+
+epoch to which coordinates in a dynamic coordinate reference system are referenced
+
+[.source]
+<<iso19111>>
+
+=== derived coordinate reference system
+
+coordinate reference system that is defined through the application of a specified coordinate conversion to the coordinates within a previously established coordinate reference system
+
+[.source]
+<<iso19111>>
+
+NOTE: The previously established coordinate reference system is referred to as the base coordinate reference system.
+
+NOTE: A derived coordinate reference system inherits its datum or reference frame from its base coordinate reference system.
+
+NOTE: The coordinate conversion between the base and derived coordinate reference system is implemented using the parameters and formula(s) specified in the definition of the coordinate conversion.
+
+=== dynamic coordinate reference system
+
+coordinate reference system that has a dynamic reference frame
+
+[.source]
+<<iso19111>>
+
+NOTE: Coordinates of points on or near the crust of the Earth that are referenced to a dynamic coordinate reference system may change with time, usually due to crustal deformations such as tectonic motion and glacial isostatic adjustment.
+
+NOTE: Metadata for a dataset referenced to a dynamic coordinate reference system should include coordinate epoch information.
+
+=== dynamic reference frame
+admitted:[dynamic datum]
+
+reference frame in which the defining parameters include time evolution
+
+[.source]
+<<iso19111>>
+
+NOTE: The defining parameters that have time evolution are usually a coordinate set.
+
+=== engineering coordinate reference system
+
+coordinate reference system based on an engineering datum
+
+[example]
+System for identifying relative positions within a few kilometres of the reference point, such as a building or construction site.
+
+[example]
+Coordinate reference system local to a moving object such as a ship or an orbiting spacecraft.
+
+[example]
+Internal coordinate reference system for an image. This has continuous axes. It may be the foundation for a grid.
+
+=== engineering datum
+admitted:[local datum]
+
+datum describing the relationship of a coordinate system to a local reference
+
+[.source]
+<<iso19111>>
+
+NOTE: Engineering datum excludes both geodetic and vertical reference frames.
+
+=== frame reference epoch
+
+epoch of coordinates that define a dynamic reference frame
+
+[.source]
+<<iso19111>>
+
+=== linear coordinate system
+
+one-dimensional coordinate system in which a linear feature forms the axis
+
+[.source]
+<<iso19111>>
+
+[example]
+Distances along a pipeline.
+
+[example]
+Depths down a deviated oil well bore.
+
+=== parameter reference epoch
+
+epoch at which the parameter values of a time-dependent coordinate transformation are valid
+
+[.source]
+<<iso19111>>
+
+NOTE: The transformation parameter values first need to be propagated to the epoch of the coordinates before the coordinate transformation can be applied.
+
+=== parametric coordinate reference system
+
+coordinate reference system based on a parametric datum
+
+[.source]
+<<iso19111>>
+
+=== parametric coordinate system
+
+one-dimensional coordinate system where the axis units are parameter values which are not inherently spatial
+
+[.source]
+<<iso19111>>
+
+=== parametric datum
+
+datum describing the relationship of a parametric coordinate system to an object
+
+[.source]
+<<iso19111>>
+
+NOTE: The object is normally the Earth.
+
+=== point motion operation
+
+coordinate operation that changes coordinates within one coordinate reference system due to the motion of the point
+
+[.source]
+<<iso19111>>
+
+NOTE: The change of coordinates is from those at an initial epoch to those at another epoch.
+
+NOTE: In this document the point motion is due to tectonic motion or crustal deformation.
+
+=== spatio-parametric coordinate reference system
+
+compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a parametric coordinate reference system
+
+[.source]
+<<iso19111>>
+
+NOTE: Normally the spatial component is “horizontal” and the parametric component is “vertical”.
+
+=== spatio-parametric-temporal coordinate reference system
+
+compound coordinate reference system comprised of spatial, parametric and temporal coordinate reference systems
+
+[.source]
+<<iso19111>>
+
+=== spatio-temporal coordinate reference system
+
+compound coordinate reference system in which one constituent coordinate reference system is a spatial coordinate reference system and one is a temporal coordinate reference system
+
+[.source]
+<<iso19111>>
+
+=== static coordinate reference system
+
+coordinate reference system that has a static reference frame
+
+[.source]
+<<iso19111>>
+
+NOTE: Coordinates of points on or near the crust of the Earth that are referenced to a static coordinate reference system do not change with time.
+
+NOTE: Metadata for a dataset referenced to a static coordinate reference system does not require coordinate epoch information.
+
+=== static reference frame
+
+static datum
+
+reference frame in which the defining parameters exclude time evolution
+
+[.source]
+<<iso19111>>
+
+=== terrestrial reference system
+admitted:[TRS]
+
+set of conventions defining the origin, scale, orientation and time evolution of a spatial reference system co-rotating with the Earth in its diurnal motion in space
+
+[.source]
+<<iso19111>>
+
+NOTE: The abstract concept of a TRS is realised through a terrestrial reference frame that usually consists of a set of physical points with precisely determined coordinates and optionally their rates of change. In this document terrestrial reference frame is included within the geodetic reference frame element of the data model
