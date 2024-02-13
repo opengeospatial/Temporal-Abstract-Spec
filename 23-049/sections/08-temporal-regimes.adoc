@@ -21,7 +21,7 @@ In this regime, the <<temporal_knowledge,Allen Operators>> (see <<fig-interval-r
 This regime constitutes an ordinal temporal reference system, with discrete enumerated ordered events.
 
 [[fig-interval-relations]]
-image::images/IntervalRelations(CTL).jpg[]
+image::images/IntervalRelations.jpg[]
 
 === Simple Clocks and Discrete Timescales
 
