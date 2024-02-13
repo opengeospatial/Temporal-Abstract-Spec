@@ -1,3 +1,0 @@
-[appendix]
-[[conformance-tests]]
-== Conformance tests
