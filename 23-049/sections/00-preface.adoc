@@ -1,11 +1,11 @@
 
 == Preface
 
-When OGC standards involve time, they generally refer to the ISO documents such as <<iso19108>> (now largely superseded), <<iso19111>>, <<iso8601>>, and their freely available OGC equivalents, such as <<ogc18005>> (the equivalent to <<iso19111>>).
+When OGC Standards involve time, they generally refer to the ISO documents such as Geographic information Temporal schema <<iso19108>> (now largely superseded), Geographic information Referencing by coordinates <<iso19111>>, Date and Time Format <<iso8601>>, and their freely available OGC equivalents, such as OGC Abstract Specification Topic 2: Referencing by coordinates  <<ogc18005>> (the equivalent to <<iso19111>>).
 
-Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the <<iso8601>> notation, and many date-time schemas. A consequence of this effort is that many end-users and developers of software use calendar based "coordinates", with the associated ambiguities about underlying algorithms, imprecision and inappropriate scope.
+Over decades, much effort has gone into establishing complex structures to represent calendar based time, such as the <<iso8601>> notation, and many date-time schemas. A consequence of this effort is that many end-users and developers of software use calendar based "coordinates", with the associated ambiguities about underlying algorithms, imprecision and inappropriate scope.
 
-The aim of this Abstract Specification is to establish clear concepts and terminology, so that people are well aware of the advantages and disadvantages of adopting a particular technological approach to time and then perhaps build better, more appropriate, interoperable systems for their use cases.
+The aim of this OGC Temporal Abstract Specification is to establish clear concepts and terminology. This is necessary so that people are aware of the advantages and disadvantages of specifying or adopting a particular technological approach to time and then perhaps build better, more appropriate, interoperable systems for their use cases.
 
 [abstract]
 == Abstract
