@@ -4,29 +4,47 @@
 [bibliography]
 == Bibliography
 
-* [[[astro_algo,Astronomical Algorithms]]], Meeus, J.: _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
+* [[[astro_algo,Astronomical Algorithms]]]
+Meeus, J.: _Astronomical Algorithms_. 
+https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf[https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf].
+
+* [[[tai,International Atomic Time]]]
+Wikipedia.
+_International Atomic Time_.
+https://en.wikipedia.org/wiki/International_Atomic_Time[https://en.wikipedia.org/wiki/International_Atomic_Time]. [Last accessed 2024-02]
 
 * [[[bipm_define,Establishment of International Atomic Time and Coordinated Universal Time]]]
 Bureau International des Poids et Mesures (BIPM):
 _Establishment of International Atomic Time and Coordinated Universal Time_.
-https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc
+https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc[https://www.bipm.org/documents/20126/59466374/6_establishment_TAR20.pdf/5b18b648-0d5a-ee02-643d-a60ed6c148fc].
 
 * [[[calendrical,Calendrical Calculations]]]
 Dershowitz, N., Reingold, N.M.:
 _Calendrical Calculations - The Ultimate Edition_.
 Cambridge University Press (2018).
 ISBN-13:978-1107683167.
-http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
+http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition[http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition]. [last accessed 2023-01]
 
 * [[[calendarlist,List of Calendars]]]
 Wikipedia.
-_List of Calendars_. https://en.wikipedia.org/wiki/List_of_calendars [last accessed 2023-12]
+_List of Calendars_. 
+https://en.wikipedia.org/wiki/List_of_calendars[https://en.wikipedia.org/wiki/List_of_calendars]. [last accessed 2023-12]
 
 * [[[ifc,International Fixed Calendar]]]
 Wikipedia.
-_International Fixed Calendar_. https://en.wikipedia.org/wiki/International_Fixed_Calendar [last accessed 2023-12]
+_International Fixed Calendar_. 
+https://en.wikipedia.org/wiki/International_Fixed_Calendar[https://en.wikipedia.org/wiki/International_Fixed_Calendar]. [last accessed 2023-12]
 
-* [[[scientificamerican,A Chronicle Of Timekeeping]]] Andrewes, W.H.J.: _A Chronicle Of Timekeeping_. Scientific American (2006). https://www.scientificamerican.com/article/a-chronicle-of-timekeeping-2006-02
+* [[[timezones,Working with Time Zones]]]
+W3C.
+_Working with Time Zones, W3C Working Group Note 5 July 2011_. 
+https://www.w3.org/TR/timezone[https://www.w3.org/TR/timezone]. 
+
+* [[[scientificamerican,A Chronicle Of Timekeeping]]] 
+Andrewes, W.H.J.:
+_A Chronicle Of Timekeeping_. 
+Scientific American (2006). 
+https://www.scientificamerican.com/article/a-chronicle-of-timekeeping-2006-02[https://www.scientificamerican.com/article/a-chronicle-of-timekeeping-2006-02].
 
 * [[[history_timekeeping,A Brief History of Timekeeping]]]
 Orzell, C.:
@@ -34,30 +52,36 @@ _A Brief History of Timekeeping_.
 Oneworld Publications (2022).
 ISBN-13:978-0-86154-321-2.
 
-* [[[iso19108,ISO 19108:2002]]] ISO/TC 211: _ISO 19108:2002 Geographic information — Temporal schema_. (2021) https://www.iso.org/standard/26013.html
+* [[[iso19108,ISO 19108:2002]]] 
+ISO/TC 211: _ISO 19108:2002 Geographic information — Temporal schema_. (2021) 
+https://www.iso.org/standard/26013.html[https://www.iso.org/standard/26013.html].
 
-* [[[OGCgeopose,OGC 21-056r10]]]
+* [[[OGCgeopose,OGC 21-056r11]]]
+OGC: _OGC GeoPose 1.0 Data Exchange Standard_.
+Open Geospatial Consortium (2023).
+https://docs.ogc.org/is/21-056r11/21-056r11.html[https://docs.ogc.org/is/21-056r11/21-056r11.html].
 
 * [[[lorentz_transform,Lorentz Transforms]]]
 _Lorentz Transform_.
 Wolfram MathWorld.
-https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfram.com/LorentzTransformation.html]
+https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfram.com/LorentzTransformation.html].
 
 * [[[minkowski,Minkowski Space and Time]]] Minkowski, H.:
 _Space and Time, Minkowski's Papers on Relativity_.
-Minkowski Institute Press, Montreal (2012)
-https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
+Minkowski Institute Press, Montreal (2012).
+https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore].
 
 * [[[temporal_knowledge,Maintaining Knowledge about Temporal Intervals]]]
 Allen, J.F.:
 _Maintaining Knowledge about Temporal Intervals_.
-Communications of the ACM, vol. 26 pp832-843 (1983).
+Communications of the ACM, vol. 26, no. 11, pp 832-843 (1983).
+https://doi.org/10.1145/182.358434[https://doi.org/10.1145/182.358434].
 
 * [[[agent_time,Time-consciousness in computational phenomenology]]]
 Juan Diego Bogotá, Zakaria Djebbara: 
 _Time-consciousness in computational phenomenology: a temporal analysis of active inference_.
 Neuroscience of Consciousness, Volume 2023, Issue 1 (2023).  
-https://doi.org/10.1093/nc/niad004
+https://doi.org/10.1093/nc/[https://doi.org/10.1093/nc/].
 
 * [[[treatise,Treatise on Time and Space]]]
 Lucas, J.R.:
@@ -68,4 +92,15 @@ ISBN 0-416-84190-2.
 * [[[unix_time,UNIX Time]]]
 The Open Group:
 _UNIX Time_.
-https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16 [last accessed 2023-01]
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16[https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16]. [last accessed 2023-01]
+
+* [[[sedate, Serialising Extended Data About Times and Events]]]
+IETF: 
+_Date and Time on the Internet: Timestamps with additional information_.
+Internet Engineering Task Force (2023).
+https://datatracker.ietf.org/doc/draft-ietf-sedate-datetime-extended[https://datatracker.ietf.org/doc/draft-ietf-sedate-datetime-extended]. [last accessed 2024-02]
+
+* [[[edtf,Extended Date Time Format]]]
+The Library of Congress: 
+_Extended Date/Time Format (EDTF) Specification_. (2019).
+https://www.loc.gov/standards/datetime[https://www.loc.gov/standards/datetime]. [last accessed 2024-02]

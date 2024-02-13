@@ -2,7 +2,8 @@
 [bibliography]
 == References
 
-* [[[rfc3339,IETF RFC 3339]]]
+* [[[rfc3339,IETF RFC 3339]]] IETF: _IETF RFC 3339, Date and Time on the Internet: Timestamps_. Internet Engineering Task Force (2002).
+https://datatracker.ietf.org/doc/html/rfc3339[https://datatracker.ietf.org/doc/html/rfc3339].
 
 * [[[iso8601,ISO 8601]]] ISO: _ISO 8601, Information interchange Representation of dates and times_. International Organization for Standardization, Geneva. https://www.iso.org/standard/40874.html[https://www.iso.org/standard/40874.html].
 
@@ -13,6 +14,7 @@
 * [[[temporal-knowledge,Maintaining Knowledge about Temporal Intervals]]]
 Allen, J. F.: _Maintaining Knowledge about Temporal Intervals_. Communications of the ACM, vol. 26, pp832-843 (1983).
 
-* [[[ogc18005,OGC 18-005r4]]]
+* [[[ogc18005,OGC 18-005r8]]] OGC: _OGC Abstract Specification Topic 2: Referencing by coordinates (Including Corrigendum 1 and Corrigendum 2)_. Open Geospatial Consortium (2003). 
+https://docs.ogc.org/as/18-005r8/18-005r8.pdf[https://docs.ogc.org/as/18-005r8/18-005r8.pdf].
 
-* [[[w3cowltime,W3C TR owl-time]]] Cox, S., Little, C.: _W3C Time Ontology in OWL_. World Wide Web Consortium (2022) https://www.w3.org/TR/owl-time/[https://www.w3.org/TR/owl-time/]
+* [[[w3cowltime,W3C Time Ontology in OWL]]] Cox, S., Little, C.: _W3C Time Ontology in OWL_. World Wide Web Consortium (2022) https://www.w3.org/TR/owl-time/[https://www.w3.org/TR/owl-time/].
