@@ -2,15 +2,18 @@
 [[annex-examples]]
 [examples]
 == Examples
-These show how 
+These show how the concepts of the Abstract Cocenptual Model for Time can be applied to realistic use cases. Of course, the logical and implementation details are outside the scope of this standard.
 
-===Ordinal Temporal Reference System
+=== Ordinal Temporal Reference System
 
-Geological periods are a form of compound ordinal reference systems. A consistent sequence of rock strata in a region form an ordinal temporal reference system with the events being formed by changes from one rock stratum to another immediately above it, or by the appearance of distinctly different embedded fossils in the layers.
+Geological eras and periods are forms of compound ordinal reference systems. A consistent sequence of rock strata in a region form an ordinal temporal reference system with the events being ordered by changes from one type of rock stratum to another immediately above it, or by the appearance of distinctly different embedded fossils in the rock layers.
 
-Another consistent sequence of strata from another region can also form another ordinal temporal reference system. It may be possible to relate the two systems to each other because of layers that may share specific varieties of fossils, or a specific distinctive stratum.
+Another consistent sequence of strata from another region can also form another ordinal temporal reference system. It may be possible to relate the two systems to each other because of layers that may share specific varieties of fossils, or a specific distinctive stratumock type.
 
-Figure 2? shows how the different geological ordinal temporal reference systems of sequences of rocks and fossils, called Periods, from Devon (Devonian), south Wales (Silurian), and coal-bearing rocks (Carboniferous) have been combined to define a longer geological ordinal temporal reference system called an Era.
+Figure 2 shows how the four different geological ordinal temporal reference systems of sequences of rocks and fossils, called Periods, from west Wales (Ordovician), south Wales (Silurian), Devon (Devonian), and coal-bearing rocks (Carboniferous) have been combined to define a longer geological ordinal temporal reference system called the Paleozoic Era.
+
+[[fig-geological-ordinal-example]]
+image::images/GeologicalOrdinalExample.jpg[]
 
 === Temporal Coordinate Reference System
 1. A remote autonomous underwater drone, known as a 'glider' is making regular measurements of temperature and salinity deep in the Atlantic Ocean. The measurements are time-stamped by an on-board computer clock. The clock had been synchronized to the satellite's atomic clock when the drone was launched. When the drone surfaces to report its findings to a satellite, or to be picked up by a research vessel, it is found that the computer clock as 'drifted' compared to time from the satellite. The drone's clock is assumed to have 'drifted' in a consistent, linear, fashion, and the error correction is distributed proportionately along the time series of measurements.
