@@ -18,17 +18,18 @@ image::images/GeologicalOrdinalExample.jpg[]
 === Temporal Coordinate Reference System
 1. A remote autonomous underwater drone, known as a 'glider' is making regular measurements of temperature and salinity deep in the Atlantic Ocean. The measurements are time-stamped by an on-board computer clock. The clock had been synchronized to the satellite's atomic clock when the drone was launched. When the drone surfaces to report its findings to a satellite, or to be picked up by a research vessel, it is found that the computer clock as 'drifted' compared to time from the satellite. The drone's clock is assumed to have 'drifted' in a consistent, linear, fashion, and the error correction is distributed proportionately along the time series of measurements.
 
-2. Several timescales have been defined using the same atomic clocks, but for various reasons, such as the year of starting, or the need to store smaller numbers in computers, different Epochs have been chosen. This is illustrated in Figure 3?. 
+2. Several timescales have been defined using the same atomic clocks, but for various reasons, such as the year of starting, or the need to store numbers in limited length computer words, different epochs have been chosen. This is illustrated in Figure 3. The figure also illustrates how UTC is not a timescale, but a timeline, as it has been adjusted with leap seconds to correspond to the Gregorian calendar and not deviate more than 0.6 seconds from Earth's actual day length. This is because UTC is based on the atomic definition of a second, the SI second, whereas the Gregorian calendar assumes that a day, based on Earth's rotation with respect to the sun, is 86,400 seconds, but this daily rotation varies in duration every day throughout the year for a variety of reasons. 
 
-The figure also illustrates how UTC is not a timescale, but a timeline, as it has been adjusted with leap seconds to correspond to the Gregorian calendar and not deviate more than 0.6 seconds from Earth's actual day length. 
+[[fig-differing-timecales]]
+image::images/MISB_Figure_36.png[]
 
-does not have a consist
 === Calendar
-A remote and partially autonomous 'rover' is on Mars. To manage activities, a Mars calendar is needed. The year is determined by Mars' orbit around the Sun with respect to a distant fixed point (usually in the consteallation of Ares, as used for Earth's year). This is one timescale, with a unit of measure "Mars Year" to avoidn confusion with Earth years. 
+A remote and partially autonomous 'rover' is on Mars. To manage activities, a Mars calendar is needed. The year is determined by Mars's orbit around the Sun with respect to a distant fixed point (usually in the constellation of Aries, as used for Earth's year). This is one timescale, with a unit of measure "Mars Year" to avoid confusion with Earth years. 
 
-Months are not useful as there are two small fast moving moons. One orbits three times per day, the other about every 1 1/2 days, so they do not supply a useful intermediate duration between years and days.
+Months are not useful as there are two small fast moving moons. One orbits three times per Mars day, the other about every 1 1/2 Mars days, so they do not supply a useful intermediate duration between years and days.
 
-The 'day', the rotation of Mars on its axis is the other timescale that comprises the calendar. To avoid confusion with Earth's days, they are called 'Sols'. But there is a choice of three possible 'Sols':
-1. A solar day, the rotation of Mars with respect to the Sun, the same definition as on Earth. This would be sueful for planning daytime/night time activities, pehaps requiring solar power generation;
-2. A sidereal day, the rotation of Mars with respect to the distant stars, like the sidereal day on Earth. This could be useful if the rover was performing astronomical measurement, such as for navigating using the equivalent of a sextant;
-3. An Earth orientated day, the rotation of Mars with respect to Earth in its orbit. This could be useful for planning activities needing extended communication periods with Earth.
+The 'day', the rotation of Mars on its axis with respect to the Sun, is the other timescale that comprises the Mars calendar. To avoid confusion with Earth's days, they are called 'Sols'. This solar day, with a similar definition to an Earth day, would be useful for planning day time and night time activities, pehaps requiring solar power generation.
+
+Other definitions of a day could have been adopted:
+1. A sidereal Mars day, the rotation of Mars with respect to the distant stars, like the sidereal day on Earth. This could be useful if the rover was performing astronomical measurements, such as for navigating using the equivalent of a sextant;
+2. An Earth orientated day, the rotation of Mars with respect to Earth in its orbit. This could be useful for planning activities needing extended communication periods with direct line-of-sight with Earth.
