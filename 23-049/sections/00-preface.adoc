@@ -1,7 +1,7 @@
 
 == Preface
 
-When OGC Standards involve time, they generally refer to the ISO documents such as Geographic information Temporal schema <<iso19108>> (now largely superseded), Geographic information Referencing by coordinates <<iso19111>>, Date and Time Format <<iso8601>>, and their freely available OGC equivalents, such as OGC Abstract Specification Topic 2: Referencing by coordinates  <<ogc18005>> (the equivalent to <<iso19111>>).
+When OGC Standards involve time, they generally refer to the ISO documents such as Geographic Information Temporal Schema <<iso19108>> (now largely superseded), Geographic information Referencing by coordinates <<iso19111>>, Date and Time Format <<iso8601>>, and the freely available OGC equivalents, such as OGC Abstract Specification Topic 2: Referencing by Coordinates  <<ogc18005>> (the equivalent to <<iso19111>>).
 
 Over decades, much effort has gone into establishing complex structures to represent calendar based time, such as the <<iso8601>> notation, and many date-time schemas. A consequence of this effort is that many end-users and developers of software use calendar based "coordinates", with the associated ambiguities about underlying algorithms, imprecision and inappropriate scope.
 
