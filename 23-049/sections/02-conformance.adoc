@@ -1,9 +1,11 @@
 
 == Conformance
 
-According to https://portal.ogc.org/files/?artifact_id=102806&version=6[OGC Policy] "The detail of the Abstract Specification shall be sufficient to provide normative references, including models, and technical guidelines as a foundation for Standards. Each Topic, to the extent possible, provides unambiguous normative and informative information that allows for implementation of Standards in software.
+According to https://portal.ogc.org/files/?artifact_id=102806&version=6[OGC Policy]:
 
-The level of detail of the Abstract Specification is at the discretion of the TC as reflected by the actual content that is approved for inclusion in the document itself.”
+"The detail of the Abstract Specification shall be sufficient to provide normative references, including models, and technical guidelines as a foundation for Standards. Each Topic, to the extent possible, provides unambiguous normative and informative information that allows for implementation of Standards in software.
+
+The level of detail of the Abstract Specification is at the discretion of the TC [Technical Committee] as reflected by the actual content that is approved for inclusion in the document itself.”
 
 This Abstract Specification does not include any specific requirements or conformance classes. However, it does include normative references and a normative Unified Modeling Language (UML) model. Conformance is demonstrated through inclusion of the normative references in any derivative specification and by basing any derived conceptual model on the abstract model provided in this Standard. 
 
