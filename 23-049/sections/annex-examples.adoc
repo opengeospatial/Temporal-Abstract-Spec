@@ -1,7 +1,7 @@
 [appendix,obligation="informative"]
 [[annex-examples]]
-[examples]
 == Examples
+
 These show how the concepts of the Abstract Cocenptual Model for Time can be applied to realistic use cases. Of course, the logical and implementation details are outside the scope of this standard.
 
 === Ordinal Temporal Reference System

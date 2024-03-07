@@ -1,6 +1,5 @@
 
 [appendix,obligation="informative"]
-[[annex-bibliography]]
 [bibliography]
 == Bibliography
 
