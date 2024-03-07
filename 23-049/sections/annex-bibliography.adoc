@@ -1,6 +1,5 @@
 
 [appendix,obligation="informative"]
-[[annex-bibliography]]
 [bibliography]
 == Bibliography
 
@@ -104,3 +103,8 @@ https://datatracker.ietf.org/doc/draft-ietf-sedate-datetime-extended[https://dat
 The Library of Congress: 
 _Extended Date/Time Format (EDTF) Specification_. (2019).
 https://www.loc.gov/standards/datetime[https://www.loc.gov/standards/datetime]. [last accessed 2024-02]
+
+* [[[mih, Motion Imagery Handbook]]]
+Motion Imagery Standards Board:
+_Motion Imagery Standards Profile-2023.2: Motion Imagery Handbook, Chapter 6_. (March 2023), 
+https://nsgreg.nga.mil/doc/view?i=5470[https://nsgreg.nga.mil/doc/view?i=5470]. [last accessed 2024-03]
