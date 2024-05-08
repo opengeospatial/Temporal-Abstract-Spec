@@ -21,7 +21,9 @@ image::images/GeologicalOrdinalExample.jpg[]
 2. Several timescales have been defined using the same atomic clocks. For various reasons, such as the year of starting, or the need to store numbers in limited length computer words, different epochs have been chosen. This is illustrated in Figure A.2. The figure also illustrates how UTC is not a timescale, but a timeline, as it has been adjusted with leap seconds to correspond to the Gregorian calendar and not deviate more than 0.6 seconds from Earth's actual day length. This is because UTC is based on the atomic definition of a second, the SI second, whereas the Gregorian calendar assumes that a day, based on Earth's rotation with respect to the sun, is 86,400 seconds, but this daily rotation varies in duration every day throughout the year for a variety of reasons. 
 
 [[fig-differing-timecales]]
-image::images/MISB_Figure_36.png[]
+image::images/MISB_Figure_36.png[]'
+
+3. NASA has requested the establishment of a Coordinated Lunar Time, because atomic clocks, landed on the moon's surface, keep a different time from identically made atomic clocks on the Earth's surface. This is a consequence of the General Theory of Gravity and the differing strengths of gravity. An atomic clock on the Moon will tick 'faster' relative to a similar clock on Earth. So the clocks have differing Temporal Coordinate Reference systems.
 
 === Calendar
 A remote and partially autonomous 'rover' is on Mars. To manage activities, a Mars calendar is needed. The year is determined by Mars's orbit around the Sun with respect to a distant fixed point (usually in the constellation of Aries, as used for Earth's year). This is one timescale, with a unit of measure "Mars Year" to avoid confusion with Earth years. 
