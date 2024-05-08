@@ -10,6 +10,19 @@ The aim of this OGC Temporal Abstract Specification is to establish clear concep
 [abstract]
 == Abstract
 
+“Quid est ergo tempus? 
+Si nemo ex me quaerat, scio.
+Si quaerenti explicare velim, 
+nescio.”
+
+“What then is time? 
+If no one asks me, I know. 
+If I wish to explain to him who asks, 
+I do not know.”
+
+_St. Augustine (354–430CE) Confessions, XI, 14_
+
+
 The primary goal of the Abstract Conceptual Model for Time is to establish clear concepts, their relationships, and terminology.
 
 The fundamental concepts of events, clocks, timescales, coordinates and calendars have been long established, but there is no clear, straightforward defining document. This Abstract Specification provides clear consistent definitions of the fundamental concepts and terminology. The conceptual model enables advantages and disadvantages of adopting a particular technological approach to be identified and provides an opportunity for communities to build consistent, interoperable representations regardless of implementation.
