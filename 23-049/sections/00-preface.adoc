@@ -9,18 +9,15 @@ The aim of this OGC Temporal Abstract Specification is to establish clear concep
 
 [abstract]
 == Abstract
+[frame=none]
+|===
+|  “Quid est ergo tempus? |  |  |  | “What then is time?
+|  Si nemo ex me quaerat, scio.|  |  |  | If no one asks me, I know. 
+|  Si quaerenti explicare velim,|  |  |  | If I wish to explain to him who asks, 
+|  nescio.”|  |  |  | I do not know.”
+|          |  |  |  | _St. Augustine (354–430CE) Confessions, XI, 14_
+|===
 
-“Quid est ergo tempus? 
-Si nemo ex me quaerat, scio.
-Si quaerenti explicare velim, 
-nescio.”
-
-“What then is time? 
-If no one asks me, I know. 
-If I wish to explain to him who asks, 
-I do not know.”
-
-_St. Augustine (354–430CE) Confessions, XI, 14_
 
 
 The primary goal of the Abstract Conceptual Model for Time is to establish clear concepts, their relationships, and terminology.
