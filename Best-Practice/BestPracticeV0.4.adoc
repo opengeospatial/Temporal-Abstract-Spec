@@ -1,0 +1,814 @@
+*Open Geospatial Consortium*
+
+Submission Date: 2024-dd-mm>
+
+Approval Date:2024-dd-mm>
+
+Publication Date:2024-dd-mm>
+
+External identifier of this OGC^®^ document: <http://www.opengis.net/def/doc-type/standard/1.0>
+
+Internal reference number of this OGC^®^ document: 14-108
+
+Version:0.4
+
+Category: OGC^®^ Best Practice
+
+Editors: Chris Little, Piero Campalani, Matthias Müller
+
+OGC Temporal Domain Working Group: Best Practice for Time
+
+*Copyright notice*
+
+Copyright © 2021 Open Geospatial Consortium +
+To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
+
+*Warning*
+
+This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.
+
+Document type:    OGC^®^ Best Practice
+
+Document subtype:    if applicable
+
+Document stage:    Draft
+
+Document language:  English
+
+Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+
+License Agreement
+
+Permission is hereby granted by the Open Geospatial Consortium, ("Licensor"), free of charge and subject to the terms set forth below, to any person obtaining a copy of this Intellectual Property and any associated documentation, to deal in the Intellectual Property without restriction (except as set forth below), including without limitation the rights to implement, use, copy, modify, merge, publish, distribute, and/or sublicense copies of the Intellectual Property, and to permit persons to whom the Intellectual Property is furnished to do so, provided that all copyright notices on the intellectual property are retained intact and that each person to whom the Intellectual Property is furnished agrees to the terms of this Agreement.
+
+If you modify the Intellectual Property, all copies of the modified Intellectual Property must include, in addition to the above copyright notice, a notice that the Intellectual Property includes modifications that have not been approved or adopted by LICENSOR.
+
+THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
+
+THE INTELLECTUAL PROPERTY IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER’S OWN RISK. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR PERFORMANCE OF THIS INTELLECTUAL PROPERTY.
+
+This license is effective until terminated. You may terminate it at any time by destroying the Intellectual Property together with all copies in any form. The license will also terminate if you fail to comply with any term or condition of this Agreement. Except as provided in the following sentence, no such termination of this license shall require the termination of any third party end-user sublicense to the Intellectual Property which is in force as of the date of notice of such termination. In addition, should the Intellectual Property, or the operation of the Intellectual Property, infringe, or in LICENSOR’s sole opinion be likely to infringe, any patent, copyright, trademark or other right of a third party, you agree that LICENSOR, in its sole discretion, may terminate this license without any compensation or liability to you, your licensees or any other party. You agree upon termination of any kind to destroy or cause to be destroyed the Intellectual Property together with all copies in any form, whether held by you or by any third party.
+
+Except as contained in this notice, the name of LICENSOR or of any other holder of a copyright in all or part of the Intellectual Property shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Intellectual Property without prior written authorization of LICENSOR or such copyright holder. LICENSOR is and shall at all times be the sole entity that may authorize you or any third party to use certification marks, trademarks or other special designations to indicate compliance with any LICENSOR standards or specifications. This Agreement is governed by the laws of the Commonwealth of Massachusetts. The application to this Agreement of the United Nations Convention on Contracts for the International Sale of Goods is hereby expressly excluded. In the event any provision of this Agreement shall be deemed unenforceable, void or invalid, such provision shall be modified so as to make it valid and enforceable, and as so modified the entire Agreement shall remain in full force and effect. No decision, action or inaction by LICENSOR shall be construed to be a waiver of any rights or remedies available to it.
+
+== Contents
+
+link:#introduction[1. Introduction link:#introduction[6]]
+
+link:#background[2. Background link:#background[6]]
+
+link:#calendars[2.1 Calendars link:#calendars[6]]
+
+link:#year[2.2 Year link:#year[7]]
+
+link:#day[2.3 Day link:#day[8]]
+
+link:#second[2.4 Second link:#second[8]]
+
+link:#weeks-and-months[2.5 Weeks and Months link:#weeks-and-months[9]]
+
+link:#scope[3. Scope link:#scope[12]]
+
+link:#temporal-reference-systems[4. Temporal reference systems link:#temporal-reference-systems[12]]
+
+link:#discrete-and-continuous-time[4.1 Discrete and continuous time link:#discrete-and-continuous-time[12]]
+
+link:#points-and-intervals-in-time[4.2 Points and intervals in time link:#points-and-intervals-in-time[13]]
+
+link:#conversion-between-continuous-and-discrete-time-systems[4.3 Conversion between continuous and discrete time systems link:#conversion-between-continuous-and-discrete-time-systems[14]]
+
+link:#temporal-coordinate-systems[4.4 Temporal coordinate systems link:#temporal-coordinate-systems[14]]
+
+link:#calendar-and-clock-systems[4.5 Calendar and clock systems link:#calendar-and-clock-systems[15]]
+
+link:#ordinal-temporal-reference-systems[4.6 Ordinal temporal reference systems link:#ordinal-temporal-reference-systems[15]]
+
+link:#temporal-geometry[5. Temporal Geometry link:#temporal-geometry[15]]
+
+link:#critical-review-of-time-encoding-standards[6. Critical review of time encoding standards link:#critical-review-of-time-encoding-standards[16]]
+
+link:#iso-86012004[6.1 ISO 8601:2004 link:#iso-86012004[17]]
+
+link:#iso-191072006[6.2 ISO 19107:2006 link:#iso-191072006[17]]
+
+link:#gml-and-temporal-geometry[6.3 GML and temporal geometry? link:#gml-and-temporal-geometry[17]]
+
+link:#conformance[7. Conformance link:#conformance[17]]
+
+link:#references[8. References link:#references[17]]
+
+link:#terms-and-definitions[9. Terms and Definitions link:#terms-and-definitions[18]]
+
+link:#conventions[10. Conventions link:#conventions[19]]
+
+link:#clauses-not-containing-normative-material[11. Clauses not Containing Normative Material link:#clauses-not-containing-normative-material[19]]
+
+link:#clauses-not-containing-normative-material-sub-clause-1[11.1 Clauses not containing normative material sub-clause 1 link:#clauses-not-containing-normative-material-sub-clause-1[19]]
+
+link:#clauses-not-containing-normative-material-sub-clause-2.[11.1.1 Clauses not containing normative material sub-clause 2 link:#clauses-not-containing-normative-material-sub-clause-2.[19]]
+
+link:#clause-containing-normative-material.[12. Clause containing normative material link:#clause-containing-normative-material.[19]]
+
+link:#requirement-class-a-or-requirement-a-example[12.1 Requirement Class A or Requirement A Example link:#requirement-class-a-or-requirement-a-example[20]]
+
+link:#requirement-class-b-or-requirement-b-example[12.2 Requirement Class B or Requirement B Example link:#requirement-class-b-or-requirement-b-example[20]]
+
+link:#dictionary-table-example.[12.3 Dictionary table example link:#dictionary-table-example.[20]]
+
+link:#media-types-for-any-data-encodings[13. Media Types for any data encoding(s) link:#media-types-for-any-data-encodings[20]]
+
+link:#conformance-class-aaaa-repeat-as-necessary[A.1 Conformance class: AAAA (repeat as necessary) link:#conformance-class-aaaa-repeat-as-necessary[22]]
+
+[lowerroman]
+. Abstract
+
+In 2013, there was significant interest within the OGC in establishing a Temporal Domain Working Group, and much discussion in open forum took place with reference material and use cases accumulated, including discussions of sensible scopes.
+
+Much geospatial software, systems and standards treat time as purely an attribute of features on maps, rather than as a first class coordinate entity along with location and altitude. In an increasingly mobile world, to know one’s location, one needs to know _when_, especially for faster moving features.
+
+There is much practice of handling time: some good, much indifferent and some bad. This Best Practice document aims to clarify the concepts of clocks, calendars, time scales, temporal notation and temporal coordinate reference systems in a geospatial context and identify those good practices and warn of the pitfalls.
+
+The document also suggests areas where changes to existing standards and conceptual models should be considered.
+
+[lowerroman, start=2]
+. Keywords
+
+The following are keywords to be used by search engines and document catalogues.
+
+ogcdoc, OGC document, time, calendar, clock, timescale, temporal, notation, CRS, coordinate reference system, best practice
+
+[lowerroman, start=3]
+. Preface
+
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+_Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation._
+
+[lowerroman, start=4]
+. Submitting organizations
+
+The following organizations submitted this Document to the Open Geospatial Consortium (OGC):
+
+____
+Met Office, UK
+
+Universität Bremen, Germany
+
+Technische Universität Dresden, Germany
+____
+
+[lowerroman, start=5]
+. Submitters
+
+All questions regarding this submission should be directed to the editor or the submitters:
+
+[width="100%",cols="37%,63%",]
+|===
+|*Name* |*Affiliation*
+|Chris Little |Met Office
+|Piero Campalani a|
+====== Università degli Studi di Ferrara
+
+|Matthias Müller |Technische Universität Dresden
+|===
+
+==  +
+Introduction
+
+Quid est ergo tempus?
+
+Si nemo ex me quaerat, scio.
+
+Si quaerenti explicare velim, nescio.
+
+_Saint Augustine, Confessions, XI, 14_
+
+What then is time?
+
+If no one asks me, I know.
+
+If I wish to explain to him who asks, I do not know.
+
+In the one and half millennia since Saint Augustine expressed his thoughts on time, we have learnt that the universe is 13.6 billion years old, that measuring to the precision of a millisecond has become commonplace, and to a precision of a nanosecond almost routine, and yet his writing still rings true.
+
+We have everyday expectations to time events to the precision of a second rather than a day, yet software still calculates leap days wrongly, even in normal years, never mind every 100, 400, 1000 or 4000 years. It is rarely clear whether software purporting to record and use times to the precision of a second takes into account the leap seconds that occur every few years.
+
+And much geospatial software, systems and standards treat time as purely an attribute of features on maps, rather than a first class coordinate entity along with location and altitude. In an increasingly mobile world, to know one’s location, one needs to know _when_, especially for faster moving features.
+
+In 2013, there was significant interest within the OGC in establishing a Temporal Domain Working Group, and much discussion in open forum took place with reference material and use cases accumulated, including discussions of sensible scopes.
+
+There is much practice of handling time: some good, much indifferent and some bad. This Best Practice document aims to clarify the concepts of clocks, calendars, time scales, temporal notation and temporal coordinate reference systems in a geospatial context with a recommended terminology and identify those good practices and warn of the pitfalls.
+
+The document also suggests areas where changes to existing standards and conceptual models should be considered.
+
+== Background
+
+=== Calendars
+
+We live our lives by calendars, which are our attempts to rationalise the arbitrary rotations of: the earth on its axis; the moon around the earth; and the earth around sun. Many calendars have been devised around the world, emphasising different aspects:
+
+Solar: rotations with respect to the sun;
+
+Sidereal: rotations with respect to the stars;
+
+Lunar: emphasising the rotation of the moon around the earth;
+
+And various combinations of the above, such as luni-solar, or even other possibilities.
+
+The durations of these rotations are arbitrary, unconnected, and slowly changing. Consequently, many calendars choose convenient integers as approximations to these durations, such as 4, 7 or 19, and use 'intercalations' - arbitrary insertions of extra ad hoc units into regular multiples of units to minimise the deviation of the calculated calendar from astronomical reality.
+
+The structures of many calendars and units are inherited from the Babylonian sexagesimal counting system: a minute is 60 seconds (usually), an hour is 60 minutes. Many emphasise patterns of integers and prime numbers.
+
+=== Year
+
+A Year is the time for the earth to orbit the sun. Strictly this is the ‘Tropical Year’ and is difficult to measure, and is slowly changing. It was 365.242196 days in 1900, is about 365.242190 days now, and is expected to be about 365.242184 days in the year 2100.
+
+The numbers quoted may look very precise, but they are only accurate to about one minute over the year. Accuracy of the order of a second every one year requires knowledge of the year duration to a precision of 8 decimal places.
+
+However, the year may vary by several minutes from year to year because of the gravitational influence of the other planets in the solar system.
+
+Calendar Years that are calculated are often defined in terms of days, either with respect to the sun or the stars. The original Julian calendar defined a year as precisely 365.25 solar days. Then the Gregorian calendar defined a year as precisely 365.2425 solar days and this is the modern definition too.
+
+*Figure 1*
+
+image:extracted-media/media/image1.png[Gregorian calendar seasons difference,width=582,height=290]
+
+Figure 1 shows how the timing of the northern hemisphere summer solstice apparently varies as the various leap days of the Gregorian calendar are inserted, or not, into each year. Even the full set of Gregorian calendar algorithms results in regular deviations of at least one day over the course of a century.
+
+=== Day
+
+A (solar) Day is the time for the earth to rotate on its axis with respect to the sun. This duration was divided into precisely 24 hours, or 1440 minutes or 86400 seconds. However, the day may vary by tens of seconds throughout the year because the orbit around the sun is inclined and elliptical. Also, the day may vary by several milliseconds from day to day because of the influence of the earth’s dynamic and molten core, earthquakes, weather and the demise of the last ice age. The day is also slowly getting longer by about 2 milliseconds per century because the earth’s axial rotation is being slowed by tidal friction caused by the moon.
+
+Days may start at midday (which is relatively easy to measure) and is convenient for astronomers who work at night. Other definitions have days starting at midnight, convenient for people who work in the daytime, or even at sunrise or sunset. These definitions are not possible if you live near the poles, away from the equator.
+
+=== Second
+
+A Second is now defined by atomic clocks, rather than as a fraction of a mean solar day. The current definition is accurate to about one tenth of a nanosecond per day, or one part in ten billion. Light can only travel about 30cms (about 1 foot) in one nanosecond.
+
+In the next few years, the definition of a second is likely to increase in precision to the femtosecond level, and be accurate and stable enough to measure the life of the universe to less than a tenth of a second. One thousand femtoseconds equal one nanosecond.
+
+As the solar and atomic definitions now slightly disagree, every few years an extra leap second may be inserted on one day to keep the atomic and solar time closely aligned. The International Earth Rotation and Reference Systems Service (IERS) gives several months notice of its intention to insert a leap second into Universal Coordinated Time (UTC).
+
+These are usually inserted at midnight at the end of June, or possibly December if there were a need for 2 leap seconds in one year. There are also provisions for using March and September too.
+
+In theory, the IERS can also subtract leap seconds to maintain the alignment, but at the time of writing, this has never happened. Consequently, in the current Gregorian calendar as defined by ISO 8601 [Ref 3], a minute may be 59, 60 or 61 seconds. A normal year (usually called a ‘common year’) could have as few as 31, 535,998 seconds and as many as 31, 536, 002 seconds, and leap year could be between 31, 622,398 and 31, 622,402 seconds.
+
+Consequently, calendars are complex, and prone to being implemented in software imprecisely, or even wrongly.
+
+Some calendars are even less amenable to automatic calculation in that they rely upon a physical observation made by a religious authority of an actual sunrise or sunset at a specific location, and this may be delayed by fog, cloud or storms, so may not be predictable.
+
+=== Weeks and Months
+
+A month is an approximation to the orbital period of the moon around the earth, with respect to the sun, and is slightly more than 29 days. This duration is usually approximated to 28 days, divided into 4 weeks of 7 days. Some cultures have opted for 7 weeks of four days each, and 8 day fortnights.
+
+As 28, 7 and 4 do not divide exactly into 365, many ingenious schemes have been used for calculating the alignment of weeks and months with the solar year.
+
+As the lunar month, determined by the phases of the moon, is about 29 1/2 days, 235 months correspond to nearly exactly 19 solar years. This cycle of 19 years is often used to construct calendars too.
+
+Because of the complexity, this version of this document does not address time measured in weeks or months, though it is recognized that there are important use cases that require these units, such as accountancy and assessing visibility at night.
+
+*Problems with Existing Standards, Definitions and Conceptual Models*
+
+*OGC Reference Model*
+
+The OGC Reference Model recognizes the use of time (as well as Altitude) as a Coordinate Reference System and that there may even be more than one time dimensions defined. An example is given of using two time dimensions. The Reference Model however has no explicit recognition that time may have much more structure, such as a calendar, than other coordinate dimensions.
+
+*ISO 19108 GC Reference Model*
+
+This standard only considers time as an attribute of features, rather than as a ‘first class’ Coordinate Reference System on par with location. Consequently, the standard suffices for the traditional 2D view of geospatial data, where features only change relatively slowly, and individual features can be time-stamped, but this approach may not be effective, or practical, if the features are intrinsically dynamic or large numbers of them need to be retrieved using time criteria rather than location.
+
+Much environmental data is fundamentally 4D, and only some ‘slices’ of the data are conventional maps. Other data ‘slice’ presentations could be animations or elevation-time diagrams, for example.
+
+*ISO 8601*
+
+The well-known ISO 8601:2004 standard contains much useful information and is widely promulgated, quoted and used. However, there is no clear distinction between its use as a notation for time stamping artefacts and features, and the associated underlying concepts of calendars, timescales, and coordinate reference systems. The use of notation seems to imply the accompanying use of the Gregorian calendar and the pro-leptic versions for dates earlier that 1588.
+
+The Gregorian calendar algorithms are explained, but there are no mechanisms for validating any software that claims to implement them.
+
+Clocks/notations
+
+Problematic dates
+
+1999/2000/2001
+
+1582/1700/1752/1923
+
+2038
+
+Problem:
+
+Other conceptual modelling problems (e.g. ISO19115)
+
+ISO SQL Time TC21/SC32/WG3 [.mark]#(Matthias to describe?)#
+
+Other, software problems ?e.g. CRS transformations?, Quality of Service?
+
+e.g. Missing Info on Maps vs zero info vs inapplicable [.mark]#(Phil Chaowei to describe?)#
+
+ISO8601 says leap seconds, ECMAscript says ignore.
+
+C library calcalc converts Julian to Gregorian, but country definitions?
+
+inconsistency in terminology in the use of coordinate system in 19111 versus 19108. It was decided that when it was revised, 19108 should be changed to follow the constructs of 19111 and so "temporal coordinate system" should mostly read "temporal coordinate reference system".
+
+No standardization of time zone names (BST, EDT, EST, JST) except UTC and Z.
+
+Stakeholders:
+
+OGC/ISO include TimeSeriesML SWG for structures and interpolation
+
+Others
+
+Proposed Basic model:
+
+Hierarchy of generality and complexity:
+
+Regime 0: Events, Allen operators – archaeological layers, sediments and ice core layers, geological. ISO7601 bad idea
+
+Regime 1: Physical regular event defines a clock, timescales, precision integer arithmetic ordinals ‘intervals’, no time <0, TAI. ISO8601 bad idea
+
+Regime 2: Temporal CRS with Epoch (datum), direction, tick marks/precision, normal real arithmetic, real number line, to interpolate below precision, extrapolate before 0
+
+Regime 3: Calendars, durations, complex calculations including the very simple Years BCE/CE. UT1 (UT0? UT2?)
+
+Regime 4: astronomical? local solar, sidereal time,
+
+Notation: ISO8601
+
+Spatial Structures Metaphor:
+
+Advantages
+
+Disadvantages
+
+When/where to use
+
+When/where not to use
+
+Other proposals:
+
+Preferred terminology and its scope
+
+Augment OGC Reference Model
+
+.
+
+Profiles of existing standards? E.g. W3C profile of ISO8601
+
+.
+
+Change ISO19108
+
+Change ISO8601? E.g. Z and Z’
+
+Software certification schemes
+
+Conclusion
+
+References
+
+Example Use Cases
+
+Leap second consequences: Big Ben, GPS, proposed abolition
+
+Julian to Gregorian switch in 1922/1923 for ships’ logs data
+
+Annexes
+
+== Scope
+
+This Best Practice does not address any calendars other than the Gregorian (and the pro-leptic Gregorian, which indicates dates before that calendar was introduced in 1588 CE, but using the calendar consistently, and retrospectively) as described in ISO 8601:2004 [Ref 3] and defined, along with Universal Coordinated Time (UTC), by the Bureau International des Poids et Mésures (BIPM) and the International Earth Rotation and Reference Systems Service (IERS).
+
+The many other calendars, whether solar, sidereal, lunar, luni-solar, etc, and high-quality algorithms for innumerable conversions, are exhaustively and authoritatively documented in the book Calendrical Calculations by Dershowitz and Reingold [Ref 1] and their website [Ref 2].
+
+The various uses of weeks within the Gregorian calendar as defined by ISO 8601:2004 are not addressed. Weeks are fundamentally related to lunar months, and do not impact the use of years, days, hours, minutes and seconds.
+
+The problems of relativistic time dilation and moving inertial reference frames and non-terrestrial timing are also out of scope, though it is recognized that these topics are becoming more relevant and may need to be tackled in the future.
+
+This document describes a consistent set of concepts forming a conceptual model, and recommends consistent terminology to be used to avoid confusion.
+
+It also recommends a set of practices to avoid common pitfalls and identifies areas in existing standards documents that should be changed for consistency with this Best Practice.
+
+It also recommends a restrictive profile of ISO8601:2004 to be used in preference to the full flexibility of the standard, to increase interoperability.
+
+In scope: ??
+
+Out of scope: ??
+
+== Temporal Regimes
+
+To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical concepts.
+
+The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime of calendars uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.
+
+=== Regime 0: Events and Operators
+
+In this regime, no clocks or time measurement are defined, only events, that may be ordered in relation to each other. For example, geological layers, sediment or ice core layers, archaeological sequences, sequential entries in computer logs without coordinated time . One set of events may be completely ordered with respect to each other, but another set of similar internally consistent events cannot be cross-referenced until extra information is available.
+
+In this regime, the Allen Operators [Allen, Ref 3] can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform operations like (C-A) as we have not defined any timescale or measurements. For example, ‘subtracting’ Ordovician from Jurassic is meaningless.
+
+=== Regime 1: Simple Clocks and Discrete Timescales
+
+In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth rotations, heart beats, or vibrations of electrically stimulated quartz crystals. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each ‘tick’.
+
+There is no sub-division of a single clock tick. Measuring time consists of counting the complete number of repetitions since the clock started, or since some other event at a given clock count.
+
+There is no time measurement before the clock started.
+
+It may seem that time can be measured between ‘ticks’ by interpolation, but this needs another clock, with faster ticks. This processing of devising more precise clocks continues down to the atomic scale, and then the process of physically trying to interpolate between ticks is not possible.
+
+The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time.
+
+=== Regime 2: CRS and Continuous Timescales
+
+This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using arithmetic.
+
+It is also assumed that time can be extrapolated to before the time when the clock started and into the future.
+
+This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic, we have a Coordinate Reference System.
+
+Some examples are:
+
+Unix milliseconds since 1970-01-01T00:00:00.0Z
+
+Julian Days, and fractions of a day, since noon on 1st January, http://en.wikipedia.org/wiki/4713_BC[4713 BC]E.
+
+=== Regime 3: Calendars
+
+In this regime, counts and measures of time are related to the rotations of the earth, moon and sun. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) must be a calendar, albeit a very simple one, as there is no year zero. That is, Year 3CE – Year 1CE is a duration of 2 years. Year 1CE-Year 1BCE is one year, not two.
+
+This Best Practice paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia.
+
+=== Regime 4: Others
+
+This may in fact be a series of regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography.
+
+A regime may be needed for ‘space time’, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
+
+== Temporal reference systems
+
+=== Discrete and continuous time
+
+Time is an abstract ordering concept for events. Formally, it has the structure of an ordered set (Zeigler 2000):
+
+time = (T,<)
+
+T – the domain of events t
+
+< – an ordering relation on T. For global temporal reference systems such as Unix time or the Julian date “<” defines a _total_ order on T.
+
+There are two topologically distinct modelling approaches for time. Depending on the topology of T, continuous time and discrete time can be distinguished.
+
+In _continuous time_, T is dense, and its elements are uncountable. Events may be specified with arbitrary precision. Between any two events t~1~, t~2~ with t~1~<>t~2~, there is an infinite number of events t~i~. Continuous time is usually represented as a subset of ℝ.
+
+In _discrete time_, T is discrete, and its elements are countable. The use of discrete time may either restrict the precision of the temporal domain to a manageable or meaningful resolution or simply acknowledge the fact that time can only be measured down to individual ticks on an atomic clock.
+
+*Examples*
+
+*Geological time scale*: The geological time scale consists of Eons, Eras, Periods, and Epochs, each defining a different partition of the past. Altogether, the geological time scale is a partially ordered set since ordering relations are only defined within each level of the hierarchy.
+
+*Julian date*: The Julian date is a floating-point representation of the days that have passed since 1 January, (minus) 4712 (=4713 BC), 12:00. The floating-point representation of events may be stated with arbitrary precision and thus be considered a dense set equivalent to the set of real numbers ℝ. The elements of the Julian date are totally ordered, i.e. “distances” can be calculated between any two given dates.
+
+=== Points and intervals in time
+
+Continuous and discrete time immediately allow the specification of “moments” or “points” with an arbitrary or predefined precision. If “<” specifies a _total_ order on T, a metric on T may be specified. This metric defines the distance between any two elements of T, that is, the timespan between these two events. With the notion of a total order and a distance metric on T the following terms can be defined:
+
+* An indivisible element on a time scale is referred to as an _instant_.
+* A structure that is started by an instant and ended by another instant is referred to as an _interval_.
+* The distance between two instants is referred to as a _duration_.
+
+For the remainder of this Best Practice paper, instants, intervals, and durations are recommended terminology used to discuss properties of temporal events and processes.
+
+=== Conversion between continuous and discrete time systems
+
+In practice, conversion issues arise when temporal structures must be transferred from one time system to another.
+
+*(1)* If the conversion happens between two continuous time systems, the conversion is a matter of defining and applying an isomorphism to convert between different representations of an instant.
+
+*(2)* Conversion between a continuous and a discrete time system.
+
+*(2.1)* A conversion from a continuous to a discrete system generally decreases precision due to reduced precision and / or discretization error. Nevertheless, the morphism from the continuous to the discrete time system is a functional relation, i.e. each instant in the continuous time system is mapped to one and only one instant in the discrete time system.
+
+*(2.2)* The opposite case, mapping an instant in the discrete system to an instant in the continuous time system is not a definite mapping. A corresponding morphism would yield a set of (connected) instants in the continuous time system, that is, an interval.
+
+*(3)* The conversion between two different discrete time systems T~A~ and T~B~ is not trivial.
+
+*(3.1)* T~A~ and T~B~ are related in such a way that all elements of T~A~ exactly fit into elements of T~B~ the conversion task is equivalent to (2.1).
+
+(3.2) Vice versa: If T~A~ and T~B~ are related in such a way that all elements of T~B~ exactly fit into elements of T~A~ the conversion task is equivalent to (2.2).
+
+*(3.3)* If (3.1) and (3.2) does not apply, the conversion involves a third intermediate temporal system.
+
+*(3.3.1)* If the intermediate system is continuous, the conversion steps follow the cases (2.1) and (2.2).
+
+*(3.3.2)* If the intermediate system T~C~ is discrete and fine enough (all elements of T~C~ fit exactly into elements of T~A~ and T~B~), the conversion task is equivalent to a sequence of cases (2.2), (2.1).
+
+*(3.4)* If no intermediate system TC is used or if its elements do not exactly fit into elements T~A~ and T~B~, the behaviour of the conversion cannot be described in general.
+
+=== Temporal coordinate systems
+
+A temporal coordinate system is specified by one temporal unit and a reference point in time, so that any other position can be described by the distance from that position to the reference point.
+
+TODO: Further definition.
+
+Def. of an instant in a TCS.
+
+Def. of an interval in a TCS.
+
+Def. of a duration in a TCS.
+
+=== Calendar and clock systems
+
+In scope: Gregorian + UTC
+
+TODO: Definition.
+
+Def. of an instant in a CC.
+
+Def. of an interval in a CC.
+
+Def. of a duration in a CC.
+
+=== Ordinal temporal reference systems
+
+TODO: Definition.
+
+Def. of an instant in an OTS.
+
+Def. of an interval in an OTS.
+
+Def. of a duration in an OTS.
+
+== Temporal Geometry
+
+With the notion of instants and intervals, time has similar geometric properties as space. In contrast to space, a single time axis may only represent zero- and one-dimensional geometries. The geometric primitives instant, interval and duration have been described in section 4.2.
+
+In addition, many applications provide extended modelling capabilities to account for repeated or even periodic events. For instance, ISO 8601:2004, a common temporal encoding standard, provides a shorthand constructor notation for periodic instants. The class hierarchy for temporal geometries (Figure 1) provides the following geometry classes:
+
+Instant – (see, section 4.2)
+
+Interval – (see section 4.2), an interval is sufficiently defined by a start and end instant.
+
+Multi-instant – a set of instants.
+
+Multi-interval – a set of intervals.
+
+Regular multi-instant – a tuple (<i>, <instant>, <duration>) that represents a constructor for an equidistant multi-instant. It consists of a first instant I~0~, a duration (distance) between I~i~ and I~i+1~, and an integer for the number of construction iterations. The total number of instants within a regular multi-instant is (i+1).
+
+Regular multi-period - a tuple (<regular multi-instant>, <duration>) that represents a constructor for an equidistant multi-interval. It consists of an equidistant multi-instant representing the start instants of each contained interval, and a duration expressing the distance between each pair of start and end instant. The total number of intervals within a regular multi-interval equals the total number of instants in <regular multi-instant>.
+
+.Figure 1: Temporal geometry class hierarchy for common temporal objects
+image::extracted-media/media/image2.emf[extracted-media/media/image2,width=576,height=397]
+
+== Critical review of time encoding standards
+
+=== ISO 8601:2004
+
+=== ISO 19107:2006
+
+=== GML and temporal geometry?
+
+== Conformance
+
+This standard defines XXXX.
+
+Requirements for N standardization target types are considered:
+
+* AAAA
+* BBBB
+
+Conformance with this standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web sitefootnote:[http://www.opengeospatial.org/cite[www.opengeospatial.org/cite]].
+
+In order to conform to this OGC™ interface standard, a software implementation shall choose to implement:
+
+[loweralpha]
+. Any one of the conformance levels specified in Annex B (normative).
+. Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).
+
+All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
+
+== References
+
+The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
+
+[1] Calendrical Calculations, Nachum Dershowitz, Edward M. Reingold. Paperback: 512 pages. Cambridge University Press; 3rd edition (10 Dec 2007) Language: English. ISBN-10: 0521702380 ISBN-13: 978-0521702386
+
+[2] http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition
+
+[3] Allen, J. F., 'Maintaining Knowledge about Temporal Intervals', Communications of the ACM, 1983, vol. 26 pp. 832-843.
+
+[4] ISO 8601:2004, Data elements and interchange formats - Information interchange - Representation of dates and times.
+
+Universal Coordinated Time (UTC),
+
+Bureau International des Poids et Mésures (BIPM)
+
+International Earth Rotation and Reference Systems Service (IERS).
+
+ISO 19107:
+
+ISO191??
+
+== Terms and Definitions
+
+This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
+
+For the purposes of this document, the following additional terms and definitions apply.
+
+Atomic clock
+
+Axis
+
+Axis Direction
+
+Calendar
+
+Clock
+
+Coordinate Reference System
+
+Datum
+
+Day
+
+Duration
+
+Solar Day
+
+Epoch
+
+Hour
+
+Instant
+
+Interval
+
+Leap day
+
+Leap second
+
+Leap year
+
+Minute
+
+Second
+
+Timescale
+
+Year
+
+Sidereal Year
+
+Operation
+
+Calculation
+
+Algebra
+
+Unit/precision?
+
+== Conventions
+
+This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
+
+== Clauses not Containing Normative Material
+
+Paragraph
+
+=== Clauses not containing normative material sub-clause 1
+
+Paragraph
+
+==== Clauses not containing normative material sub-clause 2.
+
+== Clause containing normative material.
+
+Paragraph
+
+=== Requirement Class A or Requirement A Example
+
+Paragraph – intro text. The following table is an example only. Modify as necessary.
+
+[width="100%",cols="<18%,<82%",]
+|===
+|*Requirements Class* |
+|*http://www.opengis.net/spec/ABCD/m.n/req/req-class-a* |
+|Target type |Token
+|Dependency |*http://www.example.org/req/blah*
+|Dependency |*urn:iso:ts:iso:19139:clause:6*
+|*Requirement* a|
+*http://www.opengis.net/spec/ABCD/m.n/req/req-class-a/req-name-1*
+
+_requirement description_
+
+|*Requirement* a|
+*http://www.opengis.net/spec/ABCD/m.n/req/req-class-a req-name-2*
+
+_requirement description_
+
+|*Requirement* a|
+*http://www.opengis.net/spec/ABCD/m.n/req/req-class-a /req-name-3*
+
+_requirement description_.
+
+|===
+
+=== Requirement Class B or Requirement B Example
+
+Paragraph – intro text. The following table is an example only. Modify as necessary.
+
+[arabic]
+. <Example – remove from document> When a WCS server encounters an error while performing a GetCapabilities operation, the server shall return an exception report message as specified in Clause 8 of [OGC 06-121r8]. http://opengis.net/spec/WCS/2.0/core/exception.
+
+=== Dictionary table example.
+
+Paragraph – intro text. The following table is an example only. Modify as necessary.
+
+[width="100%",cols="16%,34%,25%,25%",options="header",]
+|===
+|*Names* |*Definition* |*Data type and values* |*Multiplicity and use*
+a|
+mime
+
+MIME
+
+|A supported output format for the operation response |ows:MimeType |One (mandatory)
+a|
+fileExtension
+
+FileExtension
+
+|File extension compatible with output format without the initial dot |Character String type, not empty a|
+Zero or one (optional)
+
+Include when RESTful resource oriented architecture style is allowed
+
+| | | |
+|===
+
+== Media Types for any data encoding(s)
+
+A section describing the MIME-types to be used is mandatory for any standard involving data encodings. If no suitable MIME type exists in http://www.iana.org/assignments/media-types/index.html then this section may be used to define a new MIME type for registration with IANA.
+
+Annex A: Conformance Class Abstract Test Suite (Normative)
+
+=== Conformance class: AAAA (repeat as necessary)
+
+=== 
+
+Annex B: Revision history.
+
+[width="100%",cols="17%,9%,13%,22%,39%",]
+|===
+|Date |Release |Author |Paragraph modified |Description
+|2014-08-14 |0.1 |C Little |First few written |Initial very early draft to start
+|2014-08-18 |0.2 |M Mueller |4,5 |Work on temporal reference systems and temporal geometry
+|2014-11-08 |0.3 |C Little |2, Annex C |Expanded background, +
+annex on standards organisations, +
+described Temporal Regimes.
+|2021-05-11 |0.4 |C Little |Many |Reformatting, and typos
+|===
+
+Annex C: Existing standards and their organisations.
+
+*ISO, the International Standards Organisation,* is a governmental international treaty-based organisation, with representation from national standards organisations and at the highest level, voting is based on one country, one vote, though at the detailed technical expert level, it is more consensus based. The standards cover an enormous range of activity.
+
+Standards have a five-year life cycle when they can be re-endorsed or revised. Popular standards can persist for many years unchanged. The organisation does not concern itself with implementation of its standards.
+
+Standards documents must be bought.
+
+There have been several standards relating to time, most of which have been superseded by ISO 8601:2004. In particular, ISO standards 2014, 2015, 2711, 3307 and 4031 are all superseded, as are the previous version of ISO 8601: 1988 and 2000.
+
+Several other ISO standards address aspects of time, besides ISO8601 and 19108:
+
+ISO SQL??
+
+??
+
+*BIPM, the Bureau Internationale de Poids et Mésures,* is a governmental international treaty-based organisation that maintains the fundamental measures on which all our science and technology is based, such as the kilogram and the metre. In particular, they coordinate a global network of atomic clocks that define the second, our time and offer various time calibration services.
+
+When asked in 2014, they did not consider that hosting an online registry of temporal definitions relevant to geospatial location was in their remit, other than the most fundamental definitions and the details of the reference network of atomic clocks.
+
+They also offer the *IERS, the International Earth Rotation Service*, which relates their atomic time services to the timing determined by astronomy and the rotation of the earth. The service determines when leap seconds are needed to maintain any discrepancy to less than 0.9 second per year.
+
+*ITU, the International Telecommunications Union,* is a governmental international treaty-based organisation that deals with telecommunications in all its forms, such as cable and radio based, including electromagnetic spectrum allocation.
+
+Representation is from the national telecommunication authorities, but there is widespread involvement of private service providers and manufacturers in the technical committees. At the highest level, voting is based on one country, one vote, though at the detailed technical expert level it is more ‘one expert - one vote’.
+
+Standards are called Recommendations, and have a four-year life cycle, when they can be re-endorsed or revised. Popular standards can persist unchanged for many decades. The recommendations cover the complete range of telecommunications activity. The organisation is involved with underlying practical implementations of its standards.
+
+Standards documents must be bought.
+
+*OGC, the Open Geospatial Consortium*, is a voluntary, consensus-based standards organisation, composed of nearly 500 members, who may be private profit-making companies, non-profit, government or academic institutions, or individuals, who are all interested in increasing interoperability of geospatial information. The organisation’s standards have had a significant impact in the last 20 years since its inception.
+
+OGC’s approach has been to focus on interoperability Experiments and a relatively rapid development cycle of about a year or so, though most popular standards have become long-lived and adopted by other standards organisations, such as ISO.
+
+At the technical level, consensus is achieved by one member – one vote, though more expensive membership levels enable members to influence the strategic direction of the organisation.
+
+Standard documents are freely available online.
+
+The OGC also has an online registry of controlled information, such as definitions, that can be interrogated by software.
+
+Annex D: Bibliography
+
+<A Bibliography, if present, shall appear as the last annex. >
