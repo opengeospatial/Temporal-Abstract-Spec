@@ -1,26 +1,28 @@
 *Open Geospatial Consortium*
 
-Submission Date: 2024-dd-mm>
+Submission Date: 2024-08-07
 
-Approval Date:2024-dd-mm>
+Approval Date: 2024-dd-mm
 
-Publication Date:2024-dd-mm>
+Publication Date: 2024-dd-mm
 
 External identifier of this OGC^®^ document: <http://www.opengis.net/def/doc-type/standard/1.0>
 
-Internal reference number of this OGC^®^ document: 14-108
+Internal reference number of this OGC^®^ document: 14-108r1
 
-Version:0.4
+Version: 0.5
 
 Category: OGC^®^ Best Practice
 
-Editors: Chris Little, Piero Campalani, Matthias Müller
+Editors: Chris Little
+
+Contributors: Piero Campalani, Matthias Müller
 
 OGC Temporal Domain Working Group: Best Practice for Time
 
 *Copyright notice*
 
-Copyright © 2021 Open Geospatial Consortium +
+Copyright © 2024 Open Geospatial Consortium +
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
 
 *Warning*
@@ -151,10 +153,6 @@ The following organizations submitted this Document to the Open Geospatial Conso
 
 ____
 Met Office, UK
-
-Universität Bremen, Germany
-
-Technische Universität Dresden, Germany
 ____
 
 [lowerroman, start=5]
@@ -166,10 +164,6 @@ All questions regarding this submission should be directed to the editor or the 
 |===
 |*Name* |*Affiliation*
 |Chris Little |Met Office
-|Piero Campalani a|
-====== Università degli Studi di Ferrara
-
-|Matthias Müller |Technische Universität Dresden
 |===
 
 ==  +
@@ -568,6 +562,24 @@ image::extracted-media/media/image2.emf[extracted-media/media/image2,width=576,h
 
 === GML and temporal geometry?
 
+=== HTTP(S)
+The general headers of an HTTP(S) v1.1 (IETF RFC7231) Request or Response usually contain a date-time string. 
+
+The preferred format for the date-time is IETF RFC1123, but this refers to the UK national GMT rather than the international UTC. Fixed abbreviations for Days of the Week and Months of the Year are specified, in English.
+
+Example: `Wed, 07 Aug 2024 15:55:00 GMT`
+
+Other formats for the date-time are acceptable but not recommended:
+
+IETF RFC1036: `Wednesday, 07-Aug-24 15:55:00 GMT`. These strings are variable length, and there are only two digits for the year, leading to ambiguity and difficulty in parsing. The RFC1036 and its predecessor RFC850 were made obsolete by RFC1123.
+
+ANSI C asctime( ): `Wed Aug 7 15:55:00 2024`. These strings are ambiguous as the time zone is not explicitly indicated.
+
+=== Amazon Time Synchronization Service ATSS
+The ATSS supplies high precision dates and times, but 'smears' any leap seconds over a period of time, rather than insert an explicit 61st second after 23:59:59 and before 00:00:00 of the follwing day.
+
+[More text needed around leap second varying practice, latest leap second thinking and plans for 2035, etc]
+
 == Conformance
 
 This standard defines XXXX.
@@ -763,10 +775,9 @@ Annex B: Revision history.
 |Date |Release |Author |Paragraph modified |Description
 |2014-08-14 |0.1 |C Little |First few written |Initial very early draft to start
 |2014-08-18 |0.2 |M Mueller |4,5 |Work on temporal reference systems and temporal geometry
-|2014-11-08 |0.3 |C Little |2, Annex C |Expanded background, +
-annex on standards organisations, +
-described Temporal Regimes.
+|2014-11-08 |0.3 |C Little |2, Annex C |Expanded background, annex on standards organisations, described Temporal Regimes
 |2021-05-11 |0.4 |C Little |Many |Reformatting, and typos
+|2024-08-07 |0.5 |Chris Little|Critical Review | Added HTTP annd ATSS
 |===
 
 Annex C: Existing standards and their organisations.
