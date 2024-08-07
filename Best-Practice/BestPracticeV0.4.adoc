@@ -321,20 +321,6 @@ OGC/ISO include TimeSeriesML SWG for structures and interpolation
 
 Others
 
-Proposed Basic model:
-
-Hierarchy of generality and complexity:
-
-Regime 0: Events, Allen operators – archaeological layers, sediments and ice core layers, geological. ISO7601 bad idea
-
-Regime 1: Physical regular event defines a clock, timescales, precision integer arithmetic ordinals ‘intervals’, no time <0, TAI. ISO8601 bad idea
-
-Regime 2: Temporal CRS with Epoch (datum), direction, tick marks/precision, normal real arithmetic, real number line, to interpolate below precision, extrapolate before 0
-
-Regime 3: Calendars, durations, complex calculations including the very simple Years BCE/CE. UT1 (UT0? UT2?)
-
-Regime 4: astronomical? local solar, sidereal time,
-
 Notation: ISO8601
 
 Spatial Structures Metaphor:
@@ -731,7 +717,7 @@ Annex B: Revision history.
 |2014-08-18 |0.2 |M Mueller |4,5 |Work on temporal reference systems and temporal geometry
 |2014-11-08 |0.3 |C Little |2, Annex C |Expanded background, annex on standards organisations, described Temporal Regimes
 |2021-05-11 |0.4 |C Little |Many |Reformatting, and typos
-|2024-08-07 |0.5 |Chris Little|Critical Review | Added HTTP annd ATSS
+|2024-08-07 |0.5 |Chris Little|Many | Added HTTP annd ATSS, removed some duplications with 23-049r1
 |===
 
 Annex C: Existing standards and their organisations.
