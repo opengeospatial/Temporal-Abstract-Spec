@@ -249,7 +249,7 @@ In theory, the IERS can also subtract leap seconds to maintain the alignment, bu
 
 Consequently, calendars are complex, and prone to being implemented in software imprecisely, or even wrongly.
 
-Some calendars are even less amenable to automatic calculation in that they rely upon a physical observation made by a religious authority of an actual sunrise or sunset at a specific location, and this may be delayed by fog, cloud or storms, so may not be precisely predictable.
+Some calendars are even less amenable to automatic calculation in that they rely upon a physical observation made by a religious authority of an actual sunrise or sunset, or a new moon, at a specific location, and this may be delayed by fog, cloud or storms, so may not be precisely predictable.
 
 === Weeks and Months
 
@@ -373,7 +373,7 @@ The various uses of weeks within the Gregorian calendar as defined by ISO 8601:2
 
 The problems of relativistic time dilation and moving inertial reference frames and non-terrestrial timing are also out of scope, though it is recognized that these topics are becoming more relevant and may need to be tackled in the future.
 
-This document uses the consistent set of concepts defined in the OGC Abstract Topic 26 [??]: Abstract Conceptual Model for Time, OGC23-049r1, and recommends using that consistent terminology to avoid confusion. In particular: Temporal Reference System, Ordinal Temporal Reference System, Temporal Coordinate Reference System, Calendar and Notation are clearly distinguished.
+This document uses the consistent set of concepts defined in the OGC Abstract Topic 26 [??]: Abstract Conceptual Model for Time, OGC23-049r2, and recommends using that consistent terminology to avoid confusion. In particular: Temporal Reference System, Ordinal Temporal Reference System, Temporal Coordinate Reference System, Calendar and Notation are clearly distinguished.
 
 It also recommends a set of practices to avoid common pitfalls and identifies areas in existing standards documents that should be changed for consistency with this Best Practice.
 
@@ -717,7 +717,7 @@ Annex B: Revision history.
 |2014-08-18 |0.2 |M Mueller |4,5 |Work on temporal reference systems and temporal geometry
 |2014-11-08 |0.3 |C Little |2, Annex C |Expanded background, annex on standards organisations, described Temporal Regimes
 |2021-05-11 |0.4 |C Little |Many |Reformatting, and typos
-|2024-08-07 |0.5 |Chris Little|Many | Added HTTP annd ATSS, removed some duplications with 23-049r1
+|2024-08-07 |0.5 |Chris Little|Many | Added HTTP annd ATSS, removed some duplications with 23-049r2
 |===
 
 Annex C: Existing standards and their organisations.
