@@ -1,26 +1,28 @@
 *Open Geospatial Consortium*
 
-Submission Date: 2024-dd-mm>
+Submission Date: 2024-08-07
 
-Approval Date:2024-dd-mm>
+Approval Date: 2024-dd-mm
 
-Publication Date:2024-dd-mm>
+Publication Date: 2024-dd-mm
 
 External identifier of this OGC^®^ document: <http://www.opengis.net/def/doc-type/standard/1.0>
 
-Internal reference number of this OGC^®^ document: 14-108
+Internal reference number of this OGC^®^ document: 14-108r1
 
-Version:0.4
+Version: 0.5
 
 Category: OGC^®^ Best Practice
 
-Editors: Chris Little, Piero Campalani, Matthias Müller
+Editors: Chris Little
+
+Contributors: Piero Campalani, Matthias Müller
 
 OGC Temporal Domain Working Group: Best Practice for Time
 
 *Copyright notice*
 
-Copyright © 2021 Open Geospatial Consortium +
+Copyright © 2024 Open Geospatial Consortium +
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
 
 *Warning*
@@ -151,10 +153,6 @@ The following organizations submitted this Document to the Open Geospatial Conso
 
 ____
 Met Office, UK
-
-Universität Bremen, Germany
-
-Technische Universität Dresden, Germany
 ____
 
 [lowerroman, start=5]
@@ -166,10 +164,6 @@ All questions regarding this submission should be directed to the editor or the 
 |===
 |*Name* |*Affiliation*
 |Chris Little |Met Office
-|Piero Campalani a|
-====== Università degli Studi di Ferrara
-
-|Matthias Müller |Technische Universität Dresden
 |===
 
 ==  +
@@ -245,7 +239,7 @@ Days may start at midday (which is relatively easy to measure) and is convenient
 
 A Second is now defined by atomic clocks, rather than as a fraction of a mean solar day. The current definition is accurate to about one tenth of a nanosecond per day, or one part in ten billion. Light can only travel about 30cms (about 1 foot) in one nanosecond.
 
-In the next few years, the definition of a second is likely to increase in precision to the femtosecond level, and be accurate and stable enough to measure the life of the universe to less than a tenth of a second. One thousand femtoseconds equal one nanosecond.
+In the next few years, the definition of a second is likely to increase in precision to the femtosecond level, and be accurate and stable enough to measure times with an error of less than a tenth of a second over the life of the universe, about 14.7 billion years. One thousand femtoseconds equal one nanosecond.
 
 As the solar and atomic definitions now slightly disagree, every few years an extra leap second may be inserted on one day to keep the atomic and solar time closely aligned. The International Earth Rotation and Reference Systems Service (IERS) gives several months notice of its intention to insert a leap second into Universal Coordinated Time (UTC).
 
@@ -255,7 +249,7 @@ In theory, the IERS can also subtract leap seconds to maintain the alignment, bu
 
 Consequently, calendars are complex, and prone to being implemented in software imprecisely, or even wrongly.
 
-Some calendars are even less amenable to automatic calculation in that they rely upon a physical observation made by a religious authority of an actual sunrise or sunset at a specific location, and this may be delayed by fog, cloud or storms, so may not be predictable.
+Some calendars are even less amenable to automatic calculation in that they rely upon a physical observation made by a religious authority of an actual sunrise or sunset, or a new moon, at a specific location, and this may be delayed by fog, cloud or storms, so may not be precisely predictable.
 
 === Weeks and Months
 
@@ -265,6 +259,8 @@ As 28, 7 and 4 do not divide exactly into 365, many ingenious schemes have been 
 
 As the lunar month, determined by the phases of the moon, is about 29 1/2 days, 235 months correspond to nearly exactly 19 solar years. This cycle of 19 years is often used to construct calendars too.
 
+Some calendars have purely lunar months and then every few years insert a 'leap-month' to re-align solar and lunar regimes.
+
 Because of the complexity, this version of this document does not address time measured in weeks or months, though it is recognized that there are important use cases that require these units, such as accountancy and assessing visibility at night.
 
 *Problems with Existing Standards, Definitions and Conceptual Models*
@@ -273,15 +269,21 @@ Because of the complexity, this version of this document does not address time m
 
 The OGC Reference Model recognizes the use of time (as well as Altitude) as a Coordinate Reference System and that there may even be more than one time dimensions defined. An example is given of using two time dimensions. The Reference Model however has no explicit recognition that time may have much more structure, such as a calendar, than other coordinate dimensions.
 
-*ISO 19108 GC Reference Model*
+*ISO 19108:2002 Geographic information — Temporal schema*
+This standard was last reviewed and confirmed in 2021. Thes standard only considers time as an attribute of features, rather than as a ‘first class’ Coordinate Reference System on par with location. Consequently, the standard suffices for the traditional 2D view of geospatial data, where features only change relatively slowly, and individual features can be time-stamped, but this approach may not be effective, or practical, if the features are intrinsically dynamic or large numbers of them need to be retrieved using time criteria rather than location.
 
-This standard only considers time as an attribute of features, rather than as a ‘first class’ Coordinate Reference System on par with location. Consequently, the standard suffices for the traditional 2D view of geospatial data, where features only change relatively slowly, and individual features can be time-stamped, but this approach may not be effective, or practical, if the features are intrinsically dynamic or large numbers of them need to be retrieved using time criteria rather than location.
+Much environmental data is fundamentally 4D, and only some ‘slices’ of the data are conventional maps. Other data ‘slice’ presentations could be animations, time series, or elevation-time diagrams, for example.
 
-Much environmental data is fundamentally 4D, and only some ‘slices’ of the data are conventional maps. Other data ‘slice’ presentations could be animations or elevation-time diagrams, for example.
+*ISO 19111:2019 Geographic information — Referencing by coordinates*
+This standard was last reviewed and confirmed in 2024. Therefore this version remains current. The main revision was to support dynamic datums that change (slowly) over time. There are two amendments:
+
+ISO 19111:2019/Amd 1:2021(en) Geographic information — Referencing by coordinates — AMENDMENT 1. This corrects an omission when a Coordinate Reference System identification and its Datum Epoch is by reference to a register; 
+
+ISO 19111:2019/Amd 2:2023(en) Geographic information — Referencing by coordinates — AMENDMENT 2. This corrects some definitions and omissions, and makes some minor editorial improvements.
 
 *ISO 8601*
 
-The well-known ISO 8601:2004 standard contains much useful information and is widely promulgated, quoted and used. However, there is no clear distinction between its use as a notation for time stamping artefacts and features, and the associated underlying concepts of calendars, timescales, and coordinate reference systems. The use of notation seems to imply the accompanying use of the Gregorian calendar and the pro-leptic versions for dates earlier that 1588.
+The well-known ISO 8601 standard contains much useful information and is widely promulgated, quoted and used. However, there is no clear distinction between its use as a notation for time stamping artefacts and features, and the associated underlying concepts of calendars, timescales, and coordinate reference systems. The use of notation seems to imply the accompanying use of the Gregorian calendar and the pro-leptic versions for dates earlier than 1588.
 
 The Gregorian calendar algorithms are explained, but there are no mechanisms for validating any software that claims to implement them.
 
@@ -318,20 +320,6 @@ Stakeholders:
 OGC/ISO include TimeSeriesML SWG for structures and interpolation
 
 Others
-
-Proposed Basic model:
-
-Hierarchy of generality and complexity:
-
-Regime 0: Events, Allen operators – archaeological layers, sediments and ice core layers, geological. ISO7601 bad idea
-
-Regime 1: Physical regular event defines a clock, timescales, precision integer arithmetic ordinals ‘intervals’, no time <0, TAI. ISO8601 bad idea
-
-Regime 2: Temporal CRS with Epoch (datum), direction, tick marks/precision, normal real arithmetic, real number line, to interpolate below precision, extrapolate before 0
-
-Regime 3: Calendars, durations, complex calculations including the very simple Years BCE/CE. UT1 (UT0? UT2?)
-
-Regime 4: astronomical? local solar, sidereal time,
 
 Notation: ISO8601
 
@@ -377,7 +365,7 @@ Annexes
 
 == Scope
 
-This Best Practice does not address any calendars other than the Gregorian (and the pro-leptic Gregorian, which indicates dates before that calendar was introduced in 1588 CE, but using the calendar consistently, and retrospectively) as described in ISO 8601:2004 [Ref 3] and defined, along with Universal Coordinated Time (UTC), by the Bureau International des Poids et Mésures (BIPM) and the International Earth Rotation and Reference Systems Service (IERS).
+This Best Practice does not address any calendars other than the Gregorian (and the pro-leptic Gregorian, which indicates dates before that calendar was introduced in 1588 CE, but using the calendar consistently, and retrospectively) as described in ISO 8601 [Ref 3] and defined, along with Universal Coordinated Time (UTC), by the Bureau International des Poids et Mésures (BIPM) and the International Earth Rotation and Reference Systems Service (IERS).
 
 The many other calendars, whether solar, sidereal, lunar, luni-solar, etc, and high-quality algorithms for innumerable conversions, are exhaustively and authoritatively documented in the book Calendrical Calculations by Dershowitz and Reingold [Ref 1] and their website [Ref 2].
 
@@ -385,65 +373,11 @@ The various uses of weeks within the Gregorian calendar as defined by ISO 8601:2
 
 The problems of relativistic time dilation and moving inertial reference frames and non-terrestrial timing are also out of scope, though it is recognized that these topics are becoming more relevant and may need to be tackled in the future.
 
-This document describes a consistent set of concepts forming a conceptual model, and recommends consistent terminology to be used to avoid confusion.
+This document uses the consistent set of concepts defined in the OGC Abstract Topic 26 [??]: Abstract Conceptual Model for Time, OGC23-049r2, and recommends using that consistent terminology to avoid confusion. In particular: Temporal Reference System, Ordinal Temporal Reference System, Temporal Coordinate Reference System, Calendar and Notation are clearly distinguished.
 
 It also recommends a set of practices to avoid common pitfalls and identifies areas in existing standards documents that should be changed for consistency with this Best Practice.
 
-It also recommends a restrictive profile of ISO8601:2004 to be used in preference to the full flexibility of the standard, to increase interoperability.
-
-In scope: ??
-
-Out of scope: ??
-
-== Temporal Regimes
-
-To help us think more clearly about time, this paper adopts the term “Regime” to describe the fundamentally different types of time under consideration. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical concepts.
-
-The first three regimes have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime of calendars uses a seemingly random mixture of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, this regime has historically driven advances in mathematics and physics.
-
-=== Regime 0: Events and Operators
-
-In this regime, no clocks or time measurement are defined, only events, that may be ordered in relation to each other. For example, geological layers, sediment or ice core layers, archaeological sequences, sequential entries in computer logs without coordinated time . One set of events may be completely ordered with respect to each other, but another set of similar internally consistent events cannot be cross-referenced until extra information is available.
-
-In this regime, the Allen Operators [Allen, Ref 3] can be used. If A occurs before B and B occurs before C, then we can correctly deduce that A occurs before C. The full set of operators also covers pairs of intervals. So in our example, B occurs in the interval (A,C). However, we cannot perform operations like (C-A) as we have not defined any timescale or measurements. For example, ‘subtracting’ Ordovician from Jurassic is meaningless.
-
-=== Regime 1: Simple Clocks and Discrete Timescales
-
-In this regime, a clock is defined as any regularly repeating physical phenomena, such as pendulum swings, earth rotations, heart beats, or vibrations of electrically stimulated quartz crystals. Some phenomena make better clocks that others, in terms of the number of repetitions possible, the consistency of each repetition and the precision of each ‘tick’.
-
-There is no sub-division of a single clock tick. Measuring time consists of counting the complete number of repetitions since the clock started, or since some other event at a given clock count.
-
-There is no time measurement before the clock started.
-
-It may seem that time can be measured between ‘ticks’ by interpolation, but this needs another clock, with faster ticks. This processing of devising more precise clocks continues down to the atomic scale, and then the process of physically trying to interpolate between ticks is not possible.
-
-The internationally agreed atomic time, TAI, is an example of a timescale with an integer count as the measure of time.
-
-=== Regime 2: CRS and Continuous Timescales
-
-This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using arithmetic.
-
-It is also assumed that time can be extrapolated to before the time when the clock started and into the future.
-
-This gives us a continuous number line to perform theoretical measurements. It is a coordinate system. With a datum/origin/epoch, a unit of measure (‘tick marks’ on the axis), positive and negative directions and the full range of normal arithmetic, we have a Coordinate Reference System.
-
-Some examples are:
-
-Unix milliseconds since 1970-01-01T00:00:00.0Z
-
-Julian Days, and fractions of a day, since noon on 1st January, http://en.wikipedia.org/wiki/4713_BC[4713 BC]E.
-
-=== Regime 3: Calendars
-
-In this regime, counts and measures of time are related to the rotations of the earth, moon and sun. There is no simple arithmetic, so for example, the current civil year count of years in the Current Era (CE) and Before Current Era (BCE) must be a calendar, albeit a very simple one, as there is no year zero. That is, Year 3CE – Year 1CE is a duration of 2 years. Year 1CE-Year 1BCE is one year, not two.
-
-This Best Practice paper only addresses the internationally agreed Gregorian calendar. [Ref 1] gives overwhelming detail for conversion to numerous other calendars that have developed around the world and over the millennia.
-
-=== Regime 4: Others
-
-This may in fact be a series of regimes, which are out of scope of this document. This could include local solar time, useful, for example, for the calculation of illumination levels and the length of shadows on aerial photography.
-
-A regime may be needed for ‘space time’, off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects may be relevant.
+It also recommends a restrictive profile of ISO8601 to be used in preference to the full flexibility of the standard, to increase interoperability.
 
 == Temporal reference systems
 
@@ -567,6 +501,24 @@ image::extracted-media/media/image2.emf[extracted-media/media/image2,width=576,h
 === ISO 19107:2006
 
 === GML and temporal geometry?
+
+=== HTTP(S)
+The general headers of an HTTP(S) v1.1 (IETF RFC7231) Request or Response usually contain a date-time string. 
+
+The preferred format for the date-time is IETF RFC1123, but this refers to the UK national GMT rather than the international UTC. Fixed abbreviations for Days of the Week and Months of the Year are specified, in English.
+
+Example: `Wed, 07 Aug 2024 15:55:00 GMT`
+
+Other formats for the date-time are acceptable but not recommended:
+
+IETF RFC1036: `Wednesday, 07-Aug-24 15:55:00 GMT`. These strings are variable length, and there are only two digits for the year, leading to ambiguity and difficulty in parsing. The RFC1036 and its predecessor RFC850 were made obsolete by RFC1123.
+
+ANSI C asctime( ): `Wed Aug 7 15:55:00 2024`. These strings are ambiguous as the time zone is not explicitly indicated.
+
+=== Amazon Time Synchronization Service ATSS
+The ATSS supplies high precision dates and times, but 'smears' any leap seconds over a period of time, rather than insert an explicit 61st second after 23:59:59 and before 00:00:00 of the follwing day.
+
+[More text needed around leap second varying practice, latest leap second thinking and plans for 2035, etc]
 
 == Conformance
 
@@ -763,10 +715,9 @@ Annex B: Revision history.
 |Date |Release |Author |Paragraph modified |Description
 |2014-08-14 |0.1 |C Little |First few written |Initial very early draft to start
 |2014-08-18 |0.2 |M Mueller |4,5 |Work on temporal reference systems and temporal geometry
-|2014-11-08 |0.3 |C Little |2, Annex C |Expanded background, +
-annex on standards organisations, +
-described Temporal Regimes.
+|2014-11-08 |0.3 |C Little |2, Annex C |Expanded background, annex on standards organisations, described Temporal Regimes
 |2021-05-11 |0.4 |C Little |Many |Reformatting, and typos
+|2024-08-07 |0.5 |Chris Little|Many | Added HTTP annd ATSS, removed some duplications with 23-049r2
 |===
 
 Annex C: Existing standards and their organisations.
