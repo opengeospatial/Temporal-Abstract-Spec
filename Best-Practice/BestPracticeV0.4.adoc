@@ -341,9 +341,13 @@ Augment OGC Reference Model
 
 .
 
-Profiles of existing standards? E.g. W3C profile of ISO8601
+*Profiles of existing standards* 
 
-.
+W3C profile of ISO8601
+
+IETF RFC 3339 is useful,and very carefully states that it is about timestamps, and fully oreering them. It does not mention calculating durations by s"subtracting" onme timestamp from another.
+
+
 
 Change ISO19108
 
