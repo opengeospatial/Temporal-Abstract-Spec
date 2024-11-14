@@ -555,7 +555,7 @@ The following normative documents contain provisions that, through reference in 
 
 [4] ISO 8601:2004, Data elements and interchange formats - Information interchange - Representation of dates and times.
 
-Universal Coordinated Time (UTC),
+Universal Coordinated Time (UTC) is defined by the BIPM in Paris. The seconds are SI seconds determkned by a network of atomic clocks, and the calendar is Gregorian. Leap seconds are insterted whenever the IERS determins that the count of atomic seconds is likely to deviate by more than 0.6 seconds from the astronomical rotation of the earth wrt to the sun or stars.
 
 Bureau International des Poids et Mésures (BIPM)
 
