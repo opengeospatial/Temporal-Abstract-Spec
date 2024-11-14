@@ -297,33 +297,48 @@ Problematic dates
 
 2038
 
-Problem:
+*Problem:*
 
 Other conceptual modelling problems (e.g. ISO19115)
 
-ISO SQL Time TC21/SC32/WG3 [.mark]#(Matthias to describe?)#
+ISO SQL Time TC21/SC32/WG3 [.mark]#(Who to describe?)#
+
+Recommendation ITU-R TF.686-3 (12/2013) Glossary and definitions of time and frequency terms. Need to cross check with ISO 34000:2023 - Date and time — Vocabulary
+
+OASIS XACML V3.0 Time Extensions V1.0, 2019 Committee Draft
+
+OGC Open Search Geo and Time Extensions 10-032r8, 2014, 
 
 Other, software problems ?e.g. CRS transformations?, Quality of Service?
 
-e.g. Missing Info on Maps vs zero info vs inapplicable [.mark]#(Phil Chaowei to describe?)#
+e.g. Missing Info on Maps vs zero info vs inapplicable [.mark]#(who to describe?)#
 
 ISO8601 says leap seconds, ECMAscript says ignore.
 
 C library calcalc converts Julian to Gregorian, but country definitions?
 
-inconsistency in terminology in the use of coordinate system in 19111 versus 19108. It was decided that when it was revised, 19108 should be changed to follow the constructs of 19111 and so "temporal coordinate system" should mostly read "temporal coordinate reference system".
+inconsistency in terminology in the use of coordinate system in ISO 19111 versus ISO 19108. It was decided that when it was revised, 19108 should be changed to follow the constructs of 19111 and so "temporal coordinate system" should mostly read "temporal coordinate reference system".
 
-No standardization of time zone names (BST, EDT, EST, JST) except UTC and Z.
+No standardization of time zone names (BST, EDT, EST, JST) except UTC and Z. This is stating to be addressed by IETF with a Time Zone Format
 
-Stakeholders:
+*Stakeholders:*
 
-OGC/ISO include TimeSeriesML SWG for structures and interpolation
+OGC, as moving and dynamic features become more widespread, and off-planet use cases arise.
+ including TimeSeriesML SWG for structures and interpolation, forecasts and digital twins for multiple times, etc
+
+ISO TC/211 as responsible for ISO 19108 and 19111. Also ISO 19141 Moving Features, as a rigid body
+
+ISO TC/154 WG5 as responsible for ISO 8601 notation standard, with three parts, and also ISO 34000 Temporal Vocabualry which recognises the issues of relativity for fast moving objects and the influence of gravity.
+
+BIPM, Bureau of Weights and Measures,  who define the SI system of units including the second, coordinated global atomic time TAI, and coorindated global time and dates, UTC.
+
+IERS, International Earth Rotation Service, who correct UTC when it is about to deviate from astronomical time by more than 0.6 second.
+
+
 
 Others
 
-Notation: ISO8601
-
-Spatial Structures Metaphor:
+*Spatial Structures Metaphor:*
 
 Advantages
 
@@ -333,11 +348,13 @@ When/where to use
 
 When/where not to use
 
-Other proposals:
+*Other proposals:*
 
 Preferred terminology and its scope
 
-Augment OGC Reference Model
+OGC 11-014r3 OpenMI Interface standard refers to time, in the context of changing states of processes. Interfaces are defined in XML.
+
+.
 
 .
 
@@ -565,7 +582,9 @@ ISO 19107:
 
 ISO191??
 
-== Terms and Definitions
+== Terms and Definitions 
+
+NOTE Cross check with ISO 34000
 
 This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
 
