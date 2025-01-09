@@ -5,7 +5,7 @@
 
 The top level `Reference System` class is an abstract super-class and does not have many attributes or properties. Only the total dimension of the reference system and the location, time or domain of applicability have been identified as essential.
 
-The reference system class has two abstract sub-classes: `Spatial Reference System`, which is defined in <<iso19111>>, and `Temporal Reference System`, each with the inherited attributes of dimension and domains of applicability.
+The reference system class has two abstract sub-classes: `Spatial Reference System,` which is defined in <<iso19111>>, and `Temporal Reference System,` each with the inherited attributes of dimension and domains of applicability.
 
 The value for dimension is one for time, or a vertical reference system, but may be as high as six for spatial location with orientation as in the <<OGCgeopose,GeoPose Implementation Standard>>.
 
@@ -32,12 +32,12 @@ An ordinal temporal reference system does not have any attributes of its own. Ho
 . Event: An ordinal temporal reference system 'consists of' an ordered set of <<events_section,Events>>. These events are identifiable temporal instances.
 
 [example]
-Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Gaozu (Chinese: 漢高祖) built a canal", or may be used to date a particular reign. For example: "In the reign of Emperor Qin Shi Huang (Chinese: 秦始皇), a comet was sighted" and later research identifies this as an appearance of Halley's Comet.
+Ancient annals of a country may give a sequence of emperors which could be used to 'date' another event such as "Emperor Gaozu (Chinese: 漢高祖) built a canal," or may be used to date a particular reign. For example: "In the reign of Emperor Qin Shi Huang (Chinese: 秦始皇), a comet was sighted" and later research identifies this as an appearance of Halley's Comet.
 
 [[events_section]]
 ==== Events
 
-An event is an identifiable happening or occurence of something. The events can be instants, such as the ascension of a king to a throne, or intervals, such as the complete reign of each king.
+An event is an identifiable happening or occurrence of something. The events can be instants, such as the ascension of a king to a throne, or intervals, such as the complete reign of each king.
 
 Other documents may enable two such 'king lists' to be related, though usually not completely.
 
@@ -103,7 +103,7 @@ The modern Gregorian calendar is a calculated solar calendar, with various epoch
 The constituent timescales are days (earth's rotations), months (moon's orbit around the earth), years (earth's orbit around the sun) and seconds determined by atomic clocks. To accommodate discrepancies, leap days and leap seconds are intercalated in some years. The commonest notations for the Gregorian calendar are <<iso8601>> and its various restrictive profiles.
 
 [example]
-The timeline in a country may have gaps when clocks 'spring forward' for enacting daylight-saving time. There may not be any time corresponding to the times between 01:00 and 02:00. When the daylight-saving time is revoked, and clocks 'fall back', the times between 01:00 and 02:00 occur twice.
+The timeline in a country may have gaps when clocks 'spring forward' for enacting daylight-saving time. There may not be any time corresponding to the times between 01:00 and 02:00. When the daylight-saving time is revoked, and clocks 'fall back,' the times between 01:00 and 02:00 occur twice.
 
 [example]
 The modern Islamic calendar is an observed lunar calendar, and the major religious dates progress throughout the year, year on year. The important months are determined by the observation of new moons from Mecca.
@@ -177,7 +177,7 @@ A long, deep ice core is retrieved from an ice sheet. From chemical identificati
 A long, deep, sediment core is extracted from the bottom of a lake with a long geological history. Two layers in the core are dated using radiocarbon dating. Assuming steady rates of sediment deposition, a continuous timescale can be interpolated between the dated layers, and extrapolated before and after the dated layers.
 
 [example]
-A well preserved fossilized log is recovered and the tree rings establish an annual 'tick'. The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.
+A well preserved fossilized log is recovered and the tree rings establish an annual 'tick.' The start and end times may be known accurately by comparison and matching with other known tree ring sequences, or perhaps only dated imprecisely via Carbon Dating, or its archaeological or geological context.
 
 [example]
 A clock is started, but undergoes a calibration process against some standard clock, so the initial, reliable start time does not start at a count of zero. The clock is accidentally knocked so that it is no longer correctly calibrated, but is still working. The end time is not the last time that the clock ticks.
@@ -186,7 +186,7 @@ A clock is started, but undergoes a calibration process against some standard cl
 <<tai,TAI International Atomic Time>> (or Temps Atomique International) is coordinated by the <<bipm_define,BIPM>> (International Bureau of Weights and Measures, Bureau International de Poids et Measures) in Paris, France. TAI is based on the average of hundreds of separate atomic clocks around the world, all corrected to be at mean sea level and standard pressure and temperature. The epoch is defined by Julian Date 2443144.5003725 (1 January 1977 00:00:32.184).
 
 [example]
-The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as "Period 2". Many computer based timescales, such as <<unix_time,Unix Time>>, are based on the Julian Day timescale, but with different epochs, to fit the large numbers into computer words of limited size.
+The Julian Day is the continuous count of days (rotations of the Earth with respect to the Sun) since the beginning of the year 4173 BCE and will terminate at the end of the year 3267 CE. The count then starts again as "Period 2." Many computer based timescales, such as <<unix_time,Unix Time>>, are based on the Julian Day timescale, but with different epochs, to fit the large numbers into computer words of limited size.
 
 === Supporting Classes
 

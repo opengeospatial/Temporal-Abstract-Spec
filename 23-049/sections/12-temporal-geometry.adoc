@@ -1,6 +1,6 @@
 == Temporal Geometry
 
-The geospatial community has often used analogies between space and time to construct 'temporal-geometry'. This analogy is useful but can be misleading and must not be taken too far. For example, taken from <<treatise,A Treatise on Time and Space by J R Lucas>>, and assuming a `thing` has classical rather than quantum properties:
+The geospatial community has often used analogies between space and time to construct 'temporal-geometry.' This analogy is useful but can be misleading and must not be taken too far. For example, taken from <<treatise,A Treatise on Time and Space by J R Lucas>>, and assuming a `thing` has classical rather than quantum properties:
 
 1.1 A thing cannot be in two places at one time;
 

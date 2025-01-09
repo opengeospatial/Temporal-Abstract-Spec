@@ -4,7 +4,7 @@
 
 To enable more clear reasoning about time, this Abstract Specification uses the term “Regime” to describe the fundamentally different types of time and its measurement. This is a pragmatic approach that allows the grouping of recommendations and best practices in a practical way, but without obscuring the connection to the underlying theoretical components.
 
-The first three regimes, described below, have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, calendars, concerns social constructs using seemingly random mixtures of ad hoc algorithms, arithmetic, numerology and measurements. Paradoxically, the calendar regime has historically driven advances in mathematics and physics. See the article <<scientificamerican,A Chronicle Of Timekeeping>>.
+The first three regimes, described below, have deep underlying physical and mathematical foundations which cannot be legislated away. The fourth regime, calendars, concerns social constructs using seemingly random mixtures of ad hoc algorithms, arithmetic, numerology, and measurements. Paradoxically, the calendar regime has historically driven advances in mathematics and physics. See the article <<scientificamerican,A Chronicle Of Timekeeping>>.
 
 With due consideration, the regimes are applicable to other planets and outer space.
 
@@ -25,7 +25,7 @@ image::images/IntervalRelations.jpg[]
 
 === Simple Clocks and Discrete Timescales
 
-In this regime, a clock is defined as any regularly repeating physical phenomenon, such as a pendulum swing, earth's rotation about the sun, earth's rotation about its axis, heart beat, vibrations of electrically stimulated quartz crystals or the resonance of the unperturbed ground-state hyperfine transition frequency of the cesium-133 atom. Each occurrence of the repeating phenomenon is, of course, an event, but as there are usually very many that can only be distinguished by counting, they are considered a separate class of ticks.
+In this regime, a clock is defined as any regularly repeating physical phenomenon, such as a pendulum swing, earth's rotation about the sun, earth's rotation about its axis, heart beat, vibrations of electrically stimulated quartz crystals, or the resonance of the unperturbed ground-state hyperfine transition frequency of the cesium-133 atom. Each occurrence of the repeating phenomenon is, of course, an event, but as there are usually very many that can only be distinguished by counting, they are considered a separate class of ticks.
 
 In terms of the number of repetitions possible, some phenomena make better clocks than others, because of the consistency of each repetition and the precision of each tick. A mechanism for counting, or possibly measuring, the ticks is desirable.
 
@@ -121,11 +121,11 @@ Since the speed of light, stem:[c], in a vacuum is a observable constant, space-
 
 ==== Relativistic
 
-A regime may be needed for 'space-time', off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects such as gravity may be relevant.
+A regime may be needed for 'space-time,' off the planet Earth, such as for recording and predicting space weather approaching from the sun, where the speed of light and relativistic effects such as gravity may be relevant.
 
 Once off planet Earth, distances and velocities can become very large. The speed of light becomes a limiting factor in measuring both where and when an event takes place. Special Relativity deals with the accurate measurement of space-time events as measured between two moving objects. The core concepts are the <<lorentz_transform,Lorentz Transforms>>. These transforms allow one to calculate the degree of "contraction" a measurement undergoes due to the relative velocity between the observing and observed object.
 
-The key to this approach is to ensure each moving feature of interest has its own local clock and time, known as its 'proper time'. This example can be construed as a fitting into the clock and timescale regime of this Abstract Specification. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.
+The key to this approach is to ensure each moving feature of interest has its own local clock and time, known as its 'proper time.' This example can be construed as a fitting into the clock and timescale regime of this Abstract Specification. The relativistic effects are addressed through the relationships between the separate clocks, positions and velocities of the features.
 
 Relativistic effects may need to be considered for satellites and other spacecraft because of their relative speed and position in Earth's gravity well.
 

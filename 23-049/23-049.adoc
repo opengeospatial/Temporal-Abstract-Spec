@@ -5,9 +5,9 @@
 :committee: technical
 :edition: 1.0
 :docnumber: 23-049r2
-:received-date: 2023-05-23
-:issued-date: 2024-03-07
-:published-date: 2024-03-07
+:received-date: 2023-09-07
+:issued-date: 2024-06-03
+:published-date: 2025-MM-DD
 :external-id: http://www.opengis.net/doc/AS/temporal-conceptual-model/1.0
 :referenceURLID: http://docs.opengeospatial.org/as/23-049/23-049.html
 :fullname: Chris Little

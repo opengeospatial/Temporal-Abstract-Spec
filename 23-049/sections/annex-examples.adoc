@@ -2,7 +2,7 @@
 [[annex-examples]]
 == Examples
 
-These show how the concepts of the Abstract Cocenptual Model for Time can be applied to realistic use cases. Of course, the logical and implementation details are outside the scope of this standard.
+These show how the concepts of the Abstract Conceptual Model for Time can be applied to realistic use cases. Of course, the logical and implementation details are outside the scope of this standard.
 
 === Ordinal Temporal Reference System
 
@@ -16,6 +16,7 @@ Figure A.1 shows how the four different geological ordinal temporal reference sy
 image::images/GeologicalOrdinalExample.jpg[]
 
 === Temporal Coordinate Reference System
+
 1. A remote autonomous underwater drone, known as a 'glider' is making regular measurements of temperature and salinity deep in the Atlantic Ocean. The measurements are time-stamped by an on-board computer clock. The clock was synchronized to a satellite's atomic clock when the drone was launched. When the drone surfaces to report its findings, or to be picked up by a research vessel, it is found that the computer clock has 'drifted' compared to time from the satellite. The drone's clock is assumed to have 'drifted' in a consistent, linear, fashion, and the error correction is distributed proportionately along the time series of measurements.
 
 2. Several timescales have been defined using the same atomic clocks. For various reasons, such as the year of starting, or the need to store numbers in limited length computer words, different epochs have been chosen. This is illustrated in Figure A.2. The figure also illustrates how UTC is not a timescale, but a timeline, as it has been adjusted with leap seconds to correspond to the Gregorian calendar and not deviate more than 0.6 seconds from Earth's actual day length. This is because UTC is based on the atomic definition of a second, the SI second, whereas the Gregorian calendar assumes that a day, based on Earth's rotation with respect to the sun, is 86,400 seconds, but this daily rotation varies in duration every day throughout the year for a variety of reasons. 
@@ -30,10 +31,10 @@ A remote and partially autonomous 'rover' is on Mars. To manage activities, a Ma
 
 Months are not useful as there are two small fast moving moons. One orbits three times per Mars day, the other about every 1 1/2 Mars days, so they do not supply a useful intermediate duration between years and days.
 
-The 'day', the rotation of Mars on its axis with respect to the Sun, is the other timescale that comprises the Mars calendar. To avoid confusion with Earth's days, they are called 'Sols'. This solar day, with a similar definition to an Earth day, would be useful for planning day time and night time activities, pehaps requiring solar power generation.
+The 'day', the rotation of Mars on its axis with respect to the Sun, is the other timescale that comprises the Mars calendar. To avoid confusion with Earth's days, they are called 'Sols'. This solar day, with a similar definition to an Earth day, would be useful for planning day time and night time activities, perhaps requiring solar power generation.
 
-Other definitions of a day could have been adopted:
+Other definitions of a day could have been adopted.
 
-1. A sidereal Mars day, the rotation of Mars with respect to the distant stars, like the sidereal day on Earth. This could be useful if the rover was performing astronomical measurements, such as for navigating using the equivalent of a sextant;
+1. A sidereal Mars day, the rotation of Mars with respect to the distant stars, like the sidereal day on Earth. This could be useful if the rover was performing astronomical measurements, such as for navigating using the equivalent of a sextant.
 
 2. An Earth orientated day, the rotation of Mars with respect to Earth in its orbit. This could be useful for planning activities needing extended communication periods with direct line-of-sight with Earth.
