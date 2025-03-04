@@ -23,79 +23,11 @@ This attempt at a Temporal Abstract Conceptual Model follows <<iso19111>>, which
 
 The model is also informed by <<W3COWLTime>>.
 
-[NOTE]
-====
-This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing
-the Mermaid container with the following.
-====
+[plantuml]
+....
+include::../plantuml_diagrams/TemporalAbstractConceptualModel.puml[]
+....
 
-`[plantuml]
-@startuml
-.
-.
-@enduml`
-
-```mermaid
-classDiagram
-class ReferenceSystem {
-        <<abstract>>
-        dimension = 1..*
-        applicableLocationTimeOrDomain 
-    }
-class SpatialReferenceSystem {
-        <<abstract>>
-        dimension = 1..*
-        applicableLocationTimeOrDomain 
-    }
-class TemporalReferenceSystem {
-        <<abstract>>
-        dimension = 1
-        applicableLocationTimeOrDomain 
-    }
-note for ReferenceSystem "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem"
-ReferenceSystem <|-- SpatialReferenceSystem : is a
-ReferenceSystem <|-- TemporalReferenceSystem : is a
-class OrdinalTemporalReferenceSystem {
-        dimension = 1
-        applicableLocationTimeOrDomain 
-    }
-class TemporalCoordinateReferenceSystem {
-        dimension = 1
-        applicableLocationTimeOrDomain 
-    }
-class Calendar {
-        dimension = 1
-        applicableLocationTimeOrDomain 
-    }
-note for TemporalReferenceSystem "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem"
-TemporalReferenceSystem <|-- OrdinalTemporalReferenceSystem : is a
-TemporalReferenceSystem <|-- TemporalCoordinateReferenceSystem : is a
-TemporalReferenceSystem <|-- Calendar : is a
-
-OrdinalTemporalReferenceSystem "1" o-- "(ordered)" Events : consists of
-OrdinalTemporalReferenceSystem "1" o-- "0..1" Epoch : has an
-OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
-TemporalCoordinateReferenceSystem "1" o-- "1" Epoch : has an
-TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
-TemporalCoordinateReferenceSystem "1" o-- "1" Timescale : has a
-Calendar "1" o-- "0..1" Epoch : has an
-Calendar "1" --> "1..*" Notation : can use
-Calendar "1" o-- "1..*" Timescale : has a
-Calendar "1" o-- "1..*" Algorithm : has a
-class Timescale {
-        StartCount 
-        EndCount 
-        arithmetic 
-    }
-Timescale "1" o-- "1" Clock : has a
-Timescale "1" o-- "1" UnitOfMeasure : has a
-class Clock {
-        Tick definition
-    }
-class UnitOfMeasure {
-        Direction
-    }
-```
 == Temporal regimes
 
 === General
@@ -138,7 +70,7 @@ This regime constitutes a Temporal Coordinate Reference System, with discrete in
 
 === CRS and Continuous Timescales
 
-This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device. Units of Measure may be defrined that are different from the 'ticks'. For example, a second may be defined as 9,192,631,770 vibrations of the ground-state hyperfine transition of the caesium 133 atom. Alternatively and differently, a second may be defined as 1/86400th of the toataion of the earth on its axis with respect to the sun. The count of rotations are the 'ticks' of an earth-day clock. This latter definition is not precise enough for many uses, as the rotaion of the earth on its axis varies from day to day. 
+This regime takes a clock from the previous regime and assumes that between any two adjacent ticks, it is possible to interpolate indefinitely to finer and finer precision, using ordinary arithmetic, rather than any physical device. Units of Measure may be defrined that are different from the 'ticks'. For example, a second may be defined as 9,192,631,770 vibrations of the ground-state hyperfine transition of the caesium 133 atom. Alternatively and differently, a second may be defined as 1/86400th of the toataion of the earth on its axis with respect to the sun. The count of rotations are the 'ticks' of an earth-day clock. This latter definition is not precise enough for many uses, as the rotaion of the earth on its axis varies from day to day.
 
 Alternatively, it may be that the ticks are not counted but measured, and the precision of the clock is determined by the precision of the measurements, such as depth in an ice core, or angular position of an astronomical body,such as the sun, moon or a star.
 
@@ -176,7 +108,7 @@ Local solar time may or may not correspond to the local statutory or legal time 
 
 ==== Space-time
 
-When dealing with moving objects, we find that the location of the object in space depends on its location in time. That is to say, that the location is an event in space and time.  
+When dealing with moving objects, we find that the location of the object in space depends on its location in time. That is to say, that the location is an event in space and time.
 
 Originally developed by <<minkowski,Hermann Minkowski>> to support work in Special Relativity, the concept of Space-time is useful whenever the location of an object in space is dependent on its location in time.
 
