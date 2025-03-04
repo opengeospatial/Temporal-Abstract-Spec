@@ -3,6 +3,7 @@ metanorma:
   source:
     files:
       - 23-049/23-049.adoc
+      - 23-050/23-050.adoc
 
   collection:
     organization: "OGC"
