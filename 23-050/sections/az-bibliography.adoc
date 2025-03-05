@@ -31,11 +31,11 @@
 
 * [[[rfc3339,IETF RFC 3339]]] IETF: RFC 3339
 
-* [[[CEN_ENV_1613,nofetch(CEN ENV 1613:1995)]]] CEN: Cen Env 1613
+* [[[CEN_ENV_1613,ENV 1613:1995]]] CEN: ENV 1613
 
 * [[[astro_algo,nofetch(Astronomical Algorithms)]]], Jean Meeus. _Astronomical Algorithms_. https://www.agopax.it/Libri_astronomia/pdf/Astronomical%20Algorithms.pdf
 
-* [[[CCSDS_500x0g4,nofetch(CCDSS 500x0g4)]]], Consultative Committee for Space Data Systems. _Navigation Data — Definitions and Conventions_. 2019. https://public.ccsds.org/Pubs/500x0g4.pdf
+* [[[CCSDS_500x0g4,CCSDS 500.0-G-4]]], Consultative Committee for Space Data Systems. _Navigation Data — Definitions and Conventions_. 2019. https://public.ccsds.org/Pubs/500x0g4.pdf
 
 * [[[Springer_GNSS,doi(10.1007/978-3-319-42928-1)]]],
 Peter J.G. Teunissen, Oliver Montenbruck.
