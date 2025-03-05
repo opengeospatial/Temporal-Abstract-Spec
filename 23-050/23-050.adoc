@@ -12,10 +12,12 @@
 :referenceURLID: http://docs.opengeospatial.org/as/23-050/23-050.html
 :fullname: Chris Little
 :fullname_2: Charles Heazel
+:fullname_3: Ronald Tse
 :role: editor
 :role_2: editor
+:role_3: editor
 :keywords: ogcdoc, OGC document, abstract specification, conceptual model, time, temporal referencing, referencing by coordinates, calendar, clock, timescale
-:submitting-organizations: U.K. Met Office, HeazelTech
+:submitting-organizations: U.K. Met Office, HeazelTech, Ribose Inc.
 :mn-document-class: ogc
 :mn-output-extensions: html,pdf,rxl
 :local-cache-only:
@@ -38,12 +40,20 @@ include::sections/05-conventions.adoc[]
 include::sections/06-abstract_model.adoc[]
 
 // include::sections/07-formal_abstract_model.adoc[]
+include::sections/07-temporal_abstract_model.adoc[]
 
-// include::sections/08-data_dictionary.adoc[]
+include::sections/08-temporal_regimes.adoc[]
+
+include::sections/09-notation.adoc[]
+
+include::sections/10-attributes.adoc[]
+
+include::sections/11-sync-clocks.adoc[]
+
+// TODO: RT: propose to use dynamic generation of MBS
+include::sections/12-data_dictionary.adoc[]
 
 // Annexes (add annex files as needed)
-include::sections/aa-annexA.adoc[]
-
 include::sections/annex-ISO-glossary.adoc[]
 
 // Bibliography should be the last annex

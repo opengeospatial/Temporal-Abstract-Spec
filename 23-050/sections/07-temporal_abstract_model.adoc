@@ -1,0 +1,11 @@
+== Temporal Abstract Conceptual Model
+
+This attempt at a Temporal Abstract Conceptual Model follows <<iso19111>>, which is the ISO adoption of <<ogc18005r4>>.
+
+The model is also informed by <<W3COWLTime>>.
+
+[plantuml]
+....
+include::../plantuml_diagrams/TemporalAbstractConceptualModel.puml[]
+....
+
