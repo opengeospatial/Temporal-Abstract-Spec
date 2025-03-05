@@ -37,7 +37,7 @@
 
 * [[[CCSDS_500x0g4,nofetch(CCDSS 500x0g4)]]], Consultative Committee for Space Data Systems. _Navigation Data — Definitions and Conventions_. 2019. https://public.ccsds.org/Pubs/500x0g4.pdf
 
-* [[[Springer_GNSS,nofetch(Springer Handbook of Global Navigation Satellite Systems)]]],
+* [[[Springer_GNSS,doi(10.1007/978-3-319-42928-1)]]],
 Peter J.G. Teunissen, Oliver Montenbruck.
 _Springer Handbook of Global Navigation Satellite Systems_.
 https://doi.org/10.1007/978-3-319-42928-1
@@ -56,14 +56,14 @@ The Open Group.
 _UNIX Time_.
 https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16 [last accessed 2023-01]
 
-* [[[calendrical,nofetch(Calendrical Calculations)]]]
+* [[[calendrical,isbn(9781107683167)]]],
 Nachum Dershowitz, Edward M. Reingold.
 _Calendrical Calculations - The Ultimate Edition_.
 Cambridge University Press. 2018.
 ISBN-13: 978-1107683167.
 http://emr.cs.iit.edu/home/reingold/calendar-book/third-edition [last accessed 2023-01]
 
-* [[[history_timekeeping,nofetch(A Brief History of Timekeeping)]]]
+* [[[history_timekeeping,isbn(9780861543212)]]],
 Chad Orzell.
 _A Brief History of Timekeeping_.
 Oneworld Publications. 2022.
@@ -80,23 +80,23 @@ _Lorentz Transform_.
 Wolfram MathWorld.
 https://mathworld.wolfram.com/LorentzTransformation.html[https://mathworld.wolfram.com/LorentzTransformation.html]
 
-* [[[minkowski,nofetch(Minkowski Space and Time)]]] H. Minkowski. 
-_Space and Time, Minkowski's Papers on Relativity_ 
-Minkowski Institute Press, Montreal 2012. 
-https://minkowskiinstitute.org/ebookstore/book1/[https://minkowskiinstitute.org/ebookstore]
+* [[[minkowski,isbn(9780987987143)]]] H. Minkowski.
+_Space and Time, Minkowski's Papers on Relativity_
+Minkowski Institute Press, Montreal 2012.
+https://minkowskiinstitute.org/ebookstore/book1/
 
-* [[[treatise,nofetch(A Treatise on Time and Space)]]]
+* [[[treatise,isbn(9780416750706)]]]
 J. R. Lucas.
 _A Treatise on Time and Space_
 Methuen and Co. Ltd. 1973.
 ISBN 0-416-84190-2.
 
-* [[[temporal_knowledge,nofetch(Maintaining Knowledge about Temporal Intervals)]]]
+* [[[temporal_knowledge,doi(10.1631/FITEE.2400250)]]]
 Allen, J. F.
 _Maintaining Knowledge about Temporal Intervals_
 Communications of the ACM, 1983, vol. 26 pp. 832-843.
 
-* [[[theory,nofetch(Theory of Modelling and Simulation)]]]
+* [[[theory,isbn(978-0127784557)]]]
 B. P. Zeigler, H. Praehofer, T. G. Kim.
 _Theory of Modelling and Simulation: Integrating Discrete Event and Continuous Complex Dynamic Systems_
 Edition 2. San Diego: Academic Press. 2000.
