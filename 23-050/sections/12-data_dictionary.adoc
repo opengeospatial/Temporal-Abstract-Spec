@@ -1,0 +1,7 @@
+[[conceptual-model]]
+[lutaml_ea_xmi,./UML/20250304-temporal.xmi,lutaml_data_dictionary.yml]
+----
+[.diagram_include_block,base_path="./UML/Images",format="png"]
+....
+....
+----
