@@ -2,7 +2,7 @@ name: generate
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   pull_request:
   workflow_dispatch:
 
@@ -22,18 +22,19 @@ jobs:
       image: metanorma/metanorma:latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Cache Metanorma assets
         uses: actions-mn/cache@v1
 
       - name: Metanorma generate site
-        uses: actions-mn/build-and-publish@v1
+        uses: actions-mn/build-and-publish@v2
         with:
           agree-to-terms: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          destination: gh-pages
+
   deploy:
-    if: github.ref == github.event.repository.default_branch
+    if: ${{ github.ref == 'refs/heads/main' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -42,4 +43,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
