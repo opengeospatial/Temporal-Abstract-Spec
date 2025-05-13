@@ -1,0 +1,72 @@
+@startuml
+abstract class ReferenceSystem {
+    dimension = 1..*
+    applicableLocationTimeOrDomain
+}
+
+abstract class SpatialReferenceSystem {
+    dimension = 1..*
+    applicableLocationTimeOrDomain
+}
+
+abstract class TemporalReferenceSystem {
+    dimension = 1
+    applicableLocationTimeOrDomain
+}
+
+note "Note: Has at least one of:\nSpatialReferenceSystem, or \nTemporalReferenceSystem" as N1
+N1 .. ReferenceSystem
+
+SpatialReferenceSystem --|> ReferenceSystem : is a
+TemporalReferenceSystem --|> ReferenceSystem : is a
+
+class OrdinalTemporalReferenceSystem {
+    dimension = 1
+    applicableLocationTimeOrDomain
+}
+
+class TemporalCoordinateReferenceSystem {
+    dimension = 1
+    applicableLocationTimeOrDomain
+}
+
+class Calendar {
+    dimension = 1
+    applicableLocationTimeOrDomain
+}
+
+note "Note: Consists of one only of:\nTemporalCoordinateReferenceSystem,\nCalendar, or \nOrdinalTemporalReferenceSystem" as N2
+N2 .. TemporalReferenceSystem
+
+OrdinalTemporalReferenceSystem --|> TemporalReferenceSystem : is a
+TemporalCoordinateReferenceSystem --|> TemporalReferenceSystem : is a
+Calendar --|> TemporalReferenceSystem : is a
+
+OrdinalTemporalReferenceSystem "1" *-- "(ordered)" Events : consists of
+OrdinalTemporalReferenceSystem "1" *-- "0..1" Epoch : has an
+OrdinalTemporalReferenceSystem "1" --> "1..*" Notation : can use
+TemporalCoordinateReferenceSystem "1" *-- "1" Epoch : has an
+TemporalCoordinateReferenceSystem "1" --> "1..*" Notation : can use
+TemporalCoordinateReferenceSystem "1" *-- "1" Timescale : has a
+Calendar "1" *-- "0..1" Epoch : has an
+Calendar "1" --> "1..*" Notation : can use
+Calendar "1" *-- "1..*" Timescale : has a
+Calendar "1" *-- "1..*" Algorithm : has a
+
+class Timescale {
+    StartCount
+    EndCount
+    arithmetic
+}
+
+Timescale "1" *-- "1" Clock : has a
+Timescale "1" *-- "1" UnitOfMeasure : has a
+
+class Clock {
+    Tick definition
+}
+
+class UnitOfMeasure {
+    Direction
+}
+@enduml

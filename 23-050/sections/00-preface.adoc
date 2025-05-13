@@ -35,13 +35,14 @@ h| Name h| Affiliation
 
 | Chris Little (editor) | U.K. Met Office
 | Chuck Heazel | HeazelTech
+| Ronald Tse | Ribose Inc.
 
 |===
 
 [.preface]
 == Introduction
 
-When OGC standards involve time, they generally refer to the ISO documents such as <<iso19108>> (now largely superseded), <<iso19111>>, <<iso8601>>, and their freely available OGC equivalents, such as <<OGC_18-005r4>> (the equivalent to <<iso19111>>).
+When OGC standards involve time, they generally refer to the ISO documents such as <<iso19108>> (now largely superseded), <<iso19111>>, <<iso8601>>, and their freely available OGC equivalents, such as <<ogc18005r4>> (the equivalent to <<iso19111>>).
 
 Much effort over decades has gone into establishing complex structures to represent calendar based time, such as the <<iso8601>> notation, and many date-time schemas. Because of this effort, many people use calendar based "coordinates", with the attendant ambiguities, imprecision and inappropriate scope.
 
