@@ -1,4 +1,4 @@
-Figure 1, but using Mermaid markup rather than lantUML that is supported by Metanorma
+Figure 1, but using Mermaid markup rather than PlantUML that is supported by Metanorma
 [NOTE]
 ====
 This Mermaid diagram should be converted to PlantUML for Metanorma, by replacing the Mermaid container with the following.
